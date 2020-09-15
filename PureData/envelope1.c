@@ -22,8 +22,8 @@ typedef struct _envelope1 { //data space definition
     t_float release;    // >0 in ms
     t_float mode;       // 1 = ar, 2 = adsr, 3 = adshr
     t_float exp_setting;// curvature of attack
-    t_symbol *x_arrayname;      //aus tabwrite tilde
-    t_word *x_vec;              //aus tabwrite tilde
+    t_symbol *x_arrayname;      //arrayname speichern
+    t_word *x_vec;              //vector
     
     
     
@@ -45,39 +45,15 @@ void envelope1_bang(t_envelope1 *x) //has data space as argument, COULD manipula
     t_float f2 = x->decay;
     t_float f3 = x->sustain;
     t_float f4 = x->release;
-    t_float faktor = x->exp_setting;
+    t_float faktor = x->exp_setting;        // faktor = 1 -> linear, faktor > 1 -> exponential
+    
+    // cutting off a higher sustain than 1
     if (f3 >1){
         f3 = 1;
     }else if (f3<0){
         f3 = 0;
     };
     
-    t_float e = 1;
-    t_float f = 0;
-        
-   
-    if (faktor >40){
-        faktor = 40;
-        e = 0;
-        f = 1;
-    }else if(1<faktor && faktor<41){
-        e = 0;
-        f = 1;
-    }else if(faktor == 1){
-        e = 1;
-        f = 0;
-    }else if (faktor<1){
-        faktor = 0;
-        e = 1;
-        f = 0;
-    
-    
-    
-    
-    
-    };
-    
-    //post("Hello world!");
     //post(" T15: A = %f, D = %f, S = %f, R = %f, E = %f ", f1, f2, f3, f4, f5);
     
     t_float sr = 10000; //samplerate
@@ -91,30 +67,29 @@ void envelope1_bang(t_envelope1 *x) //has data space as argument, COULD manipula
     t_word *vec;    //
 
     if (!(a = (t_garray *)pd_findbyclass(x->x_arrayname, garray_class)))
-        pd_error(x, "%s: no such array", x->x_arrayname->s_name);
+        pd_error(x, "%s: no such array", x->x_arrayname->s_name); // Fehlermeldung wenn kein array
     else if (!garray_getfloatwords(a, &vecsize, &vec))
-        pd_error(x, "%s: bad template for tabwrite", x->x_arrayname->s_name);
+        pd_error(x, "%s: bad template for tabwrite", x->x_arrayname->s_name); // Fehlermeldung
     else
     {
-        
         garray_resize(a, length);   // ändert größe des arrays
         
         int n = 0;
-        if (e == 1){
+        if (faktor < 1){           // wenn exp setting 1 -> linear attack
             for (n = 0; n < a_sp; n++){
                 vec[n].w_float = ((1/a_sp) * n) ;
         }
-        }else if (e == 0){
+        }else if (faktor > 1){     // wenn exp setting > 1 -> exp attack
             for (n = 0; n < a_sp; n++){
                     vec[n].w_float = (pow(faktor,((2/a_sp)*n))-1)/(pow(faktor,2)-1);
             }
         };
-        for (n = a_sp; n < a_sp + d_sp; n++){
+        for (n = a_sp; n < a_sp + d_sp; n++){ // modelling the decay
         
             int j = n - a_sp;
             vec[n].w_float = 1-((1-f3)/d_sp)*j;
         };
-        for (n = a_sp + d_sp; n < length; n++){
+        for (n = a_sp + d_sp; n < length; n++){ // modelling the release
         
             int k = n - a_sp - d_sp;
             vec[n].w_float = f3 - (f3/r_sp)*k;
@@ -133,6 +108,8 @@ void envelope1_bang(t_envelope1 *x) //has data space as argument, COULD manipula
 void *envelope1_new(t_symbol *s)
 {
     t_envelope1 *x = (t_envelope1 *)pd_new(envelope1_class);
+    
+    // initialisieren der parameter
     
     x->x_arrayname = s;
     x->attack=20;
