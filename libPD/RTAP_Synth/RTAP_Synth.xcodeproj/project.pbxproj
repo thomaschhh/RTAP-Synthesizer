@@ -7,9 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E9AD50822513602B00BB0515 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9AD50812513602B00BB0515 /* ViewController.swift */; };
+		E9AD50832513602B00BB0515 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9AD50812513602B00BB0515 /* ViewController.swift */; };
+		E9AD50842513602B00BB0515 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9AD50812513602B00BB0515 /* ViewController.swift */; };
+		E9AD50892513610000BB0515 /* sine440.pd in Resources */ = {isa = PBXBuildFile; fileRef = E9AD50882513610000BB0515 /* sine440.pd */; };
+		E9AD508A2513610000BB0515 /* sine440.pd in Resources */ = {isa = PBXBuildFile; fileRef = E9AD50882513610000BB0515 /* sine440.pd */; };
+		E9AD508B2513610000BB0515 /* sine440.pd in Resources */ = {isa = PBXBuildFile; fileRef = E9AD50882513610000BB0515 /* sine440.pd */; };
+		E9AD508E2513612600BB0515 /* PDPatch.m in Sources */ = {isa = PBXBuildFile; fileRef = E9AD508D2513612600BB0515 /* PDPatch.m */; };
+		E9AD508F2513612600BB0515 /* PDPatch.m in Sources */ = {isa = PBXBuildFile; fileRef = E9AD508D2513612600BB0515 /* PDPatch.m */; };
+		E9AD50902513612600BB0515 /* PDPatch.m in Sources */ = {isa = PBXBuildFile; fileRef = E9AD508D2513612600BB0515 /* PDPatch.m */; };
 		E9C4361A250A2D830083F7DA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9C43619250A2D830083F7DA /* AppDelegate.swift */; };
-		E9C4361C250A2D830083F7DA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9C4361B250A2D830083F7DA /* SceneDelegate.swift */; };
-		E9C4361E250A2D830083F7DA /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9C4361D250A2D830083F7DA /* ContentView.swift */; };
 		E9C43620250A2D850083F7DA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E9C4361F250A2D850083F7DA /* Assets.xcassets */; };
 		E9C43623250A2D850083F7DA /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E9C43622250A2D850083F7DA /* Preview Assets.xcassets */; };
 		E9C43626250A2D850083F7DA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E9C43624250A2D850083F7DA /* LaunchScreen.storyboard */; };
@@ -18,6 +25,12 @@
 		E9C4365B250A2E470083F7DA /* libpd-ios.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E9C43651250A2DE20083F7DA /* libpd-ios.a */; };
 		E9C4365E250A2E470083F7DA /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E9C4365C250A2E470083F7DA /* AudioToolbox.framework */; };
 		E9C4365F250A2E470083F7DA /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E9C4365D250A2E470083F7DA /* AVFoundation.framework */; };
+		E9FF912C2513FF0E0074EBB8 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9FF912A2513FF0D0074EBB8 /* ContentView.swift */; };
+		E9FF912D2513FF0E0074EBB8 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9FF912A2513FF0D0074EBB8 /* ContentView.swift */; };
+		E9FF912E2513FF0E0074EBB8 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9FF912A2513FF0D0074EBB8 /* ContentView.swift */; };
+		E9FF912F2513FF0E0074EBB8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9FF912B2513FF0D0074EBB8 /* SceneDelegate.swift */; };
+		E9FF91302513FF0E0074EBB8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9FF912B2513FF0D0074EBB8 /* SceneDelegate.swift */; };
+		E9FF91312513FF0E0074EBB8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9FF912B2513FF0D0074EBB8 /* SceneDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,10 +86,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E9AD50812513602B00BB0515 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		E9AD50882513610000BB0515 /* sine440.pd */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = sine440.pd; path = ../../patches/sine440.pd; sourceTree = "<group>"; };
+		E9AD508C2513612600BB0515 /* PDPatch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PDPatch.h; path = ../../objectiveCFiles/PDPatch.h; sourceTree = "<group>"; };
+		E9AD508D2513612600BB0515 /* PDPatch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PDPatch.m; path = ../../objectiveCFiles/PDPatch.m; sourceTree = "<group>"; };
 		E9C43616250A2D830083F7DA /* RTAP_Synth.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RTAP_Synth.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E9C43619250A2D830083F7DA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		E9C4361B250A2D830083F7DA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		E9C4361D250A2D830083F7DA /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		E9C4361F250A2D850083F7DA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E9C43622250A2D850083F7DA /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		E9C43625250A2D850083F7DA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -91,6 +106,8 @@
 		E9C4365C250A2E470083F7DA /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		E9C4365D250A2E470083F7DA /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		E9C43660250A32A00083F7DA /* RTAP_Synth-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "RTAP_Synth-Bridging-Header.h"; sourceTree = "<group>"; };
+		E9FF912A2513FF0D0074EBB8 /* ContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		E9FF912B2513FF0D0074EBB8 /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -146,12 +163,16 @@
 		E9C43618250A2D830083F7DA /* RTAP_Synth */ = {
 			isa = PBXGroup;
 			children = (
+				E9AD50882513610000BB0515 /* sine440.pd */,
 				E9C43660250A32A00083F7DA /* RTAP_Synth-Bridging-Header.h */,
 				E9C43619250A2D830083F7DA /* AppDelegate.swift */,
-				E9C4361B250A2D830083F7DA /* SceneDelegate.swift */,
-				E9C4361D250A2D830083F7DA /* ContentView.swift */,
-				E9C4361F250A2D850083F7DA /* Assets.xcassets */,
+				E9AD50812513602B00BB0515 /* ViewController.swift */,
+				E9FF912A2513FF0D0074EBB8 /* ContentView.swift */,
+				E9FF912B2513FF0D0074EBB8 /* SceneDelegate.swift */,
+				E9AD508C2513612600BB0515 /* PDPatch.h */,
+				E9AD508D2513612600BB0515 /* PDPatch.m */,
 				E9C43624250A2D850083F7DA /* LaunchScreen.storyboard */,
+				E9C4361F250A2D850083F7DA /* Assets.xcassets */,
 				E9C43627250A2D850083F7DA /* Info.plist */,
 				E9C43621250A2D850083F7DA /* Preview Content */,
 			);
@@ -273,13 +294,16 @@
 				TargetAttributes = {
 					E9C43615250A2D830083F7DA = {
 						CreatedOnToolsVersion = 11.7;
+						LastSwiftMigration = 1170;
 					};
 					E9C4362B250A2D850083F7DA = {
 						CreatedOnToolsVersion = 11.7;
+						LastSwiftMigration = 1170;
 						TestTargetID = E9C43615250A2D830083F7DA;
 					};
 					E9C43636250A2D850083F7DA = {
 						CreatedOnToolsVersion = 11.7;
+						LastSwiftMigration = 1170;
 						TestTargetID = E9C43615250A2D830083F7DA;
 					};
 				};
@@ -349,6 +373,7 @@
 				E9C43626250A2D850083F7DA /* LaunchScreen.storyboard in Resources */,
 				E9C43623250A2D850083F7DA /* Preview Assets.xcassets in Resources */,
 				E9C43620250A2D850083F7DA /* Assets.xcassets in Resources */,
+				E9AD50892513610000BB0515 /* sine440.pd in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -356,6 +381,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E9AD508A2513610000BB0515 /* sine440.pd in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -363,6 +389,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E9AD508B2513610000BB0515 /* sine440.pd in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -373,9 +400,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E9FF912F2513FF0E0074EBB8 /* SceneDelegate.swift in Sources */,
+				E9AD508E2513612600BB0515 /* PDPatch.m in Sources */,
 				E9C4361A250A2D830083F7DA /* AppDelegate.swift in Sources */,
-				E9C4361C250A2D830083F7DA /* SceneDelegate.swift in Sources */,
-				E9C4361E250A2D830083F7DA /* ContentView.swift in Sources */,
+				E9FF912C2513FF0E0074EBB8 /* ContentView.swift in Sources */,
+				E9AD50822513602B00BB0515 /* ViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -383,6 +412,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E9FF91302513FF0E0074EBB8 /* SceneDelegate.swift in Sources */,
+				E9AD50832513602B00BB0515 /* ViewController.swift in Sources */,
+				E9AD508F2513612600BB0515 /* PDPatch.m in Sources */,
+				E9FF912D2513FF0E0074EBB8 /* ContentView.swift in Sources */,
 				E9C43631250A2D850083F7DA /* RTAP_SynthTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -391,6 +424,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E9FF91312513FF0E0074EBB8 /* SceneDelegate.swift in Sources */,
+				E9AD50842513602B00BB0515 /* ViewController.swift in Sources */,
+				E9AD50902513612600BB0515 /* PDPatch.m in Sources */,
+				E9FF912E2513FF0E0074EBB8 /* ContentView.swift in Sources */,
 				E9C4363C250A2D850083F7DA /* RTAP_SynthUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -483,7 +520,7 @@
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
-				SWIFT_OBJC_BRIDGING_HEADER = "RTAP-Synthesizer/libPD/RTAP_Synth/RTAP_Synth/RTAP_Synth-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "/Users/thomas/Documents/TU-Berlin/Fächer/Semester2/Real-Time Audio Programming/RTAP-Synthesizer/libPD/RTAP_Synth/RTAP_Synth/RTAP_Synth-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				USER_HEADER_SEARCH_PATHS = "../pd-for-ios/**";
 			};
@@ -538,7 +575,7 @@
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OBJC_BRIDGING_HEADER = "RTAP-Synthesizer/libPD/RTAP_Synth/RTAP_Synth/RTAP_Synth-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "/Users/thomas/Documents/TU-Berlin/Fächer/Semester2/Real-Time Audio Programming/RTAP-Synthesizer/libPD/RTAP_Synth/RTAP_Synth/RTAP_Synth-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				USER_HEADER_SEARCH_PATHS = "../pd-for-ios/**";
 				VALIDATE_PRODUCT = YES;
@@ -549,6 +586,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"RTAP_Synth/Preview Content\"";
 				DEVELOPMENT_TEAM = K3TJD2C4V2;
@@ -560,6 +598,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "holz.RTAP-Synth";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				USER_HEADER_SEARCH_PATHS = "../pd-for-ios/**";
@@ -570,6 +609,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"RTAP_Synth/Preview Content\"";
 				DEVELOPMENT_TEAM = K3TJD2C4V2;
@@ -592,6 +632,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = K3TJD2C4V2;
 				INFOPLIST_FILE = RTAP_SynthTests/Info.plist;
@@ -603,6 +644,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "holz.RTAP-SynthTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RTAP_Synth.app/RTAP_Synth";
@@ -614,6 +656,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = K3TJD2C4V2;
 				INFOPLIST_FILE = RTAP_SynthTests/Info.plist;
@@ -635,6 +678,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = K3TJD2C4V2;
 				INFOPLIST_FILE = RTAP_SynthUITests/Info.plist;
@@ -645,6 +689,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "holz.RTAP-SynthUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = RTAP_Synth;
@@ -655,6 +700,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = K3TJD2C4V2;
 				INFOPLIST_FILE = RTAP_SynthUITests/Info.plist;

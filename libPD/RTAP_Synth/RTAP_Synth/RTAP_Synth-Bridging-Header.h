@@ -9,8 +9,8 @@
 #ifndef RTAP_Synth_Bridging_Header_h
 #define RTAP_Synth_Bridging_Header_h
 
-# import "PdAudioController.h"
-# import "PdDispatcher.h"
-# import "PDPatch.h"
+# import "PdAudioController.h"  // added by Thomas
+# import "PdDispatcher.h"       // added by Thomas
+# import "PDPatch.h"            // added by Thomas
 
 #endif /* RTAP_Synth_Bridging_Header_h */

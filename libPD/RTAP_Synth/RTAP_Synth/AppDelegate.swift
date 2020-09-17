@@ -21,24 +21,31 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         pd = PdAudioController()
         
         // Start the pd instance and get a status update # Thomas
-        let pdInit = pd?.configureAmbientWithSampleRate(44100, numberChannels: 2, mixingEnabled: true)
+        let pdInit = pd?.configureAmbient(withSampleRate: 44100, numberChannels: 2, mixingEnabled: true)
         
-        if pdInit == PdAudioO{
+        if pdInit == PdAudioOK{
             print("Pd is ready to go.")
         } else {
             print("Something might be wrong with PD.")
         }
         return true
     }
-
+    
+    func applicationWillResignActive(_ application: UIApplication) {
+        // Stop the pd engine when the app closes # Thomas
+        pd?.isActive = false
+    }
+    
+    func applicationDidBecomeActive(_ application: UIApplication) {
+        // Start the pd engine when the app opens again # Thomas
+        pd?.isActive = true
+    }
+    
     // MARK: UISceneSession Lifecycle
 
     func application(_ application: UIApplication, configurationForConnecting connectingSceneSession: UISceneSession, options: UIScene.ConnectionOptions) -> UISceneConfiguration {
         // Called when a new scene session is being created.
         // Use this method to select a configuration to create the new scene with.
-        
-        // Stop the pd engine when the app closes # Thomas
-        // pd?.active = false
         
         return UISceneConfiguration(name: "Default Configuration", sessionRole: connectingSceneSession.role)
     }
@@ -47,8 +54,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Called when the user discards a scene session.
         // If any sessions were discarded while the application was not running, this will be called shortly after application:didFinishLaunchingWithOptions.
         // Use this method to release any resources that were specific to the discarded scenes, as they will not return.
-    }
-
-
+        }
 }
 
