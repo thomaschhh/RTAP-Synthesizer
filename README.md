@@ -9,5 +9,5 @@ We implemented our own PD patch into an already existing [basic.pd](https://hexl
 
 ## Course Material
 
-Here you can find all the materials related to the class: [class git](https://github.com/audio-communication-group/real-time-audio-programming-in-C_SoSe2020.git).
+Here you can find all the materials related to the [class](https://github.com/audio-communication-group/real-time-audio-programming-in-C_SoSe2020.git).
 
