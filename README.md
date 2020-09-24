@@ -1,6 +1,6 @@
 # Read Me
 
-This synthesizer was created in the 2nd of 2020 in the class [Real-time Audio Programming in C](https://github.com/audio-communication-group/real-time-audio-programming-in-C_SoSe2020.git).
+This synthesizer was created in the 2nd semester of 2020 in the class [Real-time Audio Programming in C](https://github.com/audio-communication-group/real-time-audio-programming-in-C_SoSe2020.git).
 
 The task consisted of creating a Pure Data patch and writing an external for it in C. 
 
