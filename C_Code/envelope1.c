@@ -169,15 +169,15 @@ void *envelope1_new(t_symbol *s)
 
 
 void envelope1_setup(void) { //generation of a new class
-    envelope1_class = class_new(gensym("envelope1"), //class_new creates new class and returns pointer, name in gensym needs to be the one called in pd
-        (t_newmethod)envelope1_new, //constructor
-        0,                          //empty destructor
-        sizeof(t_envelope1),        //pass the size of datastructure
-        CLASS_DEFAULT,              //graphical representation of object
+    envelope1_class = class_new(gensym("envelope1"), /* the object's name is "envelope1", class_new creates new class and returns pointer, name in gensym needs to be the one called in pd */
+        (t_newmethod)envelope1_new, /* the object's constructor is "envelope1_new()" */
+        0,                          /* no special destructor */
+        sizeof(t_envelope1),        /* the size of the data structure */
+        CLASS_DEFAULT,              /* a normal pd object, graphical representation of object */
         //A_DEFFLOAT,               //numeric object argument
-        A_DEFSYMBOL,                //symbolic object argument
+        A_DEFSYMBOL,                /* symbolic object argument */
                                     //no arguments need to be passed at creation time
-        0);                         //zero ends argument list
+        0);                         /* placeholder for something, zero ends argument list */
     class_addbang(envelope1_class, envelope1_bang); //add method space to class
     //class_addfloat(envelope1_class, (t_method)tabwrite_float); // aus tabwrite
     
