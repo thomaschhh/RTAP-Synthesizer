@@ -15,7 +15,7 @@ We implemented our own Pd patch into the already existing [basic.pd](https://hex
 - Load and open the TouchOSC app on your iPad.
     - Look for the network settings.
     - Type in your PC's IP-address.
-    ![Entire Pd Patch](https://github.com/thomaschhh/RTAP-Synthesizer/blob/master/Images/osc_connections.png?raw=true)
+    ![Entire Pd Patch](https://github.com/thomaschhh/RTAP-Synthesizer/blob/master/Images/osc_connections.jpg?raw=true)
 - In the synth.pd patch, type in the iPad's IP-address.
     - Click the connect message box.
     - Adjust the attack, decay, sustain, release sliders to your liking.
