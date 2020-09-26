@@ -11,14 +11,14 @@ We implemented our own Pd patch into the already existing [basic.pd](https://hex
 
 ### Steps to Get The Synth Running
 
-- Start purr-data and open the file [synth.pd](https://github.com/thomaschhh/RTAP-Synthesizer/blob/master/PureData/Synth.pd).
-- Load and open the TouchOSC app on your iPad.
+- Start *purr-data* and open the file [synth.pd](https://github.com/thomaschhh/RTAP-Synthesizer/blob/master/PureData/Synth.pd).
+- Load and open the *TouchOSC* app on your iPad.
     - Look for the network settings.
-    - Type in your PC's IP-address.
+    - Type in your PC's IPaddress.
     ![Entire Pd Patch](https://github.com/thomaschhh/RTAP-Synthesizer/blob/master/Images/osc_connections.jpg?raw=true)
-- In the synth.pd patch, type in the iPad's IP-address.
-    - Click the connect message box.
+- In the *synth.pd patch*, type in the iPad's IP address inside the connect box.
+    - Click the connect message box to connect to the iPad.
     - Adjust the attack, decay, sustain, release sliders to your liking.
     ![Entire Pd Patch](https://github.com/thomaschhh/RTAP-Synthesizer/blob/master/Images/envelope.png?raw=true)
-    - Do the same thing with the fundamentals, its Shimmer Strength, Shimmer Frequency as well as the master (gain)
+    - Do the same thing with the Fundamentals, its Shimmer Strength, Shimmer Frequency as well as the Master (gain)
     - Finally, turn on the dsp. Now you're ready to play. 
