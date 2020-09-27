@@ -14,11 +14,9 @@ We implemented our own Pd patch into the already existing [basic.pd](https://hex
 ![Entire Pd Patch](https://github.com/thomaschhh/RTAP-Synthesizer/blob/master/Images/pd_patch.png?raw=true)
 
 - Load and open the **TouchOSC** app on your iPad.
-
 ![Entire Pd Patch](https://github.com/thomaschhh/RTAP-Synthesizer/blob/master/Images/osc_layout.jpg?raw=true)
-
-- Look for the network settings (*Connections* --> *OSC: HOST IP*).
-- Type in your PC's IP address (*Host*).
+    - Look for the network settings (*Connections* --> *OSC: HOST IP*).
+    - Type in your PC's IP address (*Host*).
     
 ![Entire Pd Patch](https://github.com/thomaschhh/RTAP-Synthesizer/blob/master/Images/osc_connections.jpg?raw=true)
 
