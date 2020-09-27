@@ -16,12 +16,14 @@ We implemented our own Pd patch into the already existing [basic.pd](https://hex
 - Load and open the **TouchOSC** app on your iPad.
 
 ![Entire Pd Patch](https://github.com/thomaschhh/RTAP-Synthesizer/blob/master/Images/osc_layout.jpg?raw=true)
-    - Look for the network settings (*Connections* --> *OSC: HOST IP*).
-    - Type in your PC's IP address (Host).
+
+- Look for the network settings (*Connections* --> *OSC: HOST IP*).
+- Type in your PC's IP address (Host).
     
 ![Entire Pd Patch](https://github.com/thomaschhh/RTAP-Synthesizer/blob/master/Images/osc_connections.jpg?raw=true)
-    - Port 8000 is used in the *dumpOSC* box in Pd. 
-    - Port 9000 is used int the *connect* box in Pd.
+
+- Port 8000 is used in the *dumpOSC* box in Pd. 
+- 9000 is used int the *connect* box in Pd.
 - In the **synth.pd patch**, type in the iPad's IP address (*local IP address*) inside the connect box (**1**).
     - Click the connect message box to connect to the iPad (**1**).
     - Adjust the attack, decay, sustain, release sliders to your liking (**2**).
