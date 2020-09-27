@@ -18,16 +18,16 @@ We implemented our own Pd patch into the already existing [basic.pd](https://hex
 ![Entire Pd Patch](https://github.com/thomaschhh/RTAP-Synthesizer/blob/master/Images/osc_layout.jpg?raw=true)
 
 - Look for the network settings (*Connections* --> *OSC: HOST IP*).
-- Type in your PC's IP address (Host).
+- Type in your PC's IP address (*Host*).
     
 ![Entire Pd Patch](https://github.com/thomaschhh/RTAP-Synthesizer/blob/master/Images/osc_connections.jpg?raw=true)
 
 - Port 8000 is used in the *dumpOSC* box in Pd. 
 - Port 9000 is used int the *connect* box in Pd.
-- In the **synth.pd patch**, type in the iPad's IP address (*local IP address*) inside the connect box (**1**).
-    - Click the connect message box to connect to the iPad (**1**).
+- In the **synth.pd patch**, type in the iPad's IP address (*local IP address*) inside the *connect message box* (**1**).
+    - Click the *connect* message box in order to connect to the iPad.
     - Adjust the attack, decay, sustain, release sliders to your liking (**2**).
-    - Do the same thing with the Fundamentals (**3**) as well as its Shimmer Strength / Shimmer Frequency (**4**) 
+    - Do the same thing with the Fundamentals (**3**) as well as its Shimmer Strength / Shimmer Frequency (**4**).
     - Select the desired waveform (**5**), adjust the volume (**6**) and turn on the dsp (**7**). 
     - Now you're ready to play. 
     
