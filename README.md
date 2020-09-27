@@ -22,7 +22,7 @@ We implemented our own Pd patch into the already existing [basic.pd](https://hex
 
 - Port 8000 is used in the *dumpOSC* box in Pd. 
 - Port 9000 is used int the *connect* box in Pd.
-- In the **synth.pd patch**, type in the iPad's IP address (*local IP address*) inside the *connect message box* (**1**).
+- Inside the **synth.pd** patch, type in the iPad's IP address (*local IP address*) inside the *connect message box* (**1**).
     - Click the *connect* message box in order to connect to the iPad.
     - Adjust the attack, decay, sustain, release sliders to your liking (**2**).
     - Do the same thing with the Fundamentals (**3**) as well as its Shimmer Strength / Shimmer Frequency (**4**).
