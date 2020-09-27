@@ -29,8 +29,8 @@ static t_class *envelope1_class;
  * @var _envelope1::t_float attack
  * @var _envelope1::t_float decay
  * @var _envelope1::t_float sustain
- * @var _envelope1::t_float releae
- * @var _envelope1::t_float mode
+ * @var _envelope1::t_float release
+ // @var _envelope1::t_float mode
  * @var _envelope1::t_float exp_setting
  * @var _envelope1::t_symbol *x_arrayname
  * @var _envelope1::t_word *x_vec
@@ -39,29 +39,28 @@ static t_class *envelope1_class;
  * @var _envelope1::t_inlet *x_in3
  * @var _envelope1::t_inlet *x_in4
  * @var _envelope1::t_inlet *x_in5
- * @var _envelope1::t_inlet *x_in6
- * @var _envelope1::t_outlet *f_out
+ // @var _envelope1::t_inlet *x_in6
+ // @var _envelope1::t_outlet *f_out
  * @var _envelope1::t_envelope1
  */
 typedef struct _envelope1 { //data space definition
-    t_object  x_obj;    /**< necessary variable, needs to be FIRST */
+    t_object  x_obj;    /**< is used to store internal object-properties*/
     t_float attack;     /**< >0 in ms */
     t_float decay;      /**< >=0 in ms */
     t_float sustain;    /**< 1 - 0 */
     t_float release;    /**< >0 in ms*/
-    t_float mode;       /**<  1 = ar, 2 = adsr, 3 = adshr*/
+    //t_float mode;       /**<  1 = ar, 2 = adsr, 3 = adshr*/
     t_float exp_setting;/**<  curvature of attack*/
     t_symbol *x_arrayname;      /**< save array name*/
-    t_word *x_vec;              /**< vector*/
+    //t_word *x_vec;              /**< vector*/
     
     t_inlet *x_in1;     /**< XXXXXX */
     t_inlet *x_in2;     /**< XXXXXX */
     t_inlet *x_in3;     /**< XXXXXX */
     t_inlet *x_in4;     /**< XXXXXX */
     t_inlet *x_in5;     /**< XXXXXX */
-    t_inlet *x_in6;     /**< XXXXXX */
     
-    t_outlet *f_out, *b_out;    /**< XXXXXX f_out comment is missing*/
+    //t_outlet *f_out, *b_out;    /**< XXXXXX f_out comment is missing*/
     
 } t_envelope1; /**< structure t_envelope is the data space of the class */
 
@@ -69,68 +68,73 @@ typedef struct _envelope1 { //data space definition
 /**
  * @brief Envelope bang<br>
  * @param x data space as argument, COULD manipulate dataspace
- * @var envelope1_bang::t_float f1
- * @var envelope1_bang::t_float f2
- * @var envelope1_bang::t_float f3
- * @var envelope1_bang::t_float f4
- * @var envelope1_bang::t_float faktor
+ * @var envelope1_bang::t_float attack_ms
+ * @var envelope1_bang::t_float decay_ms
+ * @var envelope1_bang::t_float sustain
+ * @var envelope1_bang::t_float release_ms
+ * @var envelope1_bang::t_float curve_factor
  */
 void envelope1_bang(t_envelope1 *x) //has data space as argument, COULD manipulate dataspace
 {
-    t_float f1 = x->attack;     /**< XXXXXX */
-    t_float f2 = x->decay;      /**< XXXXXX */
-    t_float f3 = x->sustain;    /**< XXXXXX */
-    t_float f4 = x->release;    /**< XXXXXX */
-    t_float faktor = x->exp_setting;      /**< faktor = 1 -> linear, faktor > 1 -> exponential */
+    t_float attack_ms = x->attack;     /**< reads attack value from pointer x */
+    t_float decay_ms = x->decay;      /**<  reads decay value from pointer x */
+    t_float sustain = x->sustain;    /**<  reads sustain value from pointer x */
+    t_float release_ms = x->release;    /**<  reads release value from pointer x */
+    t_float curve_faktor = x->exp_setting;      /**<  reads exp setting value from pointer x, faktor = 1 -> linear, faktor > 1 -> exponential */
     
     // cutting off a higher sustain than 1
-    if (f3 >1){
-        f3 = 1;
-    }else if (f3<0){
-        f3 = 0;
+    if (sustain >1){
+        sustain = 1;
+    }else if (sustain<0){
+        sustain = 0;
     };
     
-    //post(" T15: A = %f, D = %f, S = %f, R = %f, E = %f ", f1, f2, f3, f4, f5);
+    t_float sr = 10000; /**< interne samplerate  */
+    t_float attack_sp = sr/1000 * attack_ms; /**< attack in number of samples  */
+    t_float decay_sp = sr/1000 * decay_ms; /**< decay in number of samples  */
+    t_float release_sp = sr/1000 * release_ms; /**< release in number of samples  */
+    t_float length = attack_sp + decay_sp + release_sp; /**< total length of array in samples  */
     
-    t_float sr = 10000; //samplerate
-    t_float a_sp = sr/1000 * f1;
-    t_float d_sp = sr/1000 * f2;
-    t_float r_sp = sr/1000 * f4;
-    t_float length = a_sp + d_sp + r_sp;
-    
-    int vecsize;    // size of vector or array
-    t_garray *a;    // an array
-    t_word *vec;    //
+    int vecsize;    /**< size of vector or array  */
+    t_garray *a;    /**< an array  */
+    t_word *vec;    /**< pointer to the vector */
 
+    //below: error handler from tabread_float: https://github.com/pure-data/pure-data/blob/master/src/d_array.c
+    
     if (!(a = (t_garray *)pd_findbyclass(x->x_arrayname, garray_class)))
         pd_error(x, "%s: no such array", x->x_arrayname->s_name); // error if no array
     else if (!garray_getfloatwords(a, &vecsize, &vec))
         pd_error(x, "%s: bad template for tabwrite", x->x_arrayname->s_name); // error
-    else
+    else if (length == 0){
+        printf("length = 0!!!");
+    }else
     {
-        garray_resize(a, length);   // changes the size of the arrays
+    
+        garray_resize_long(a, (long)length);   // changes the size of the arrays
+        
         
         int n = 0;
-        if (faktor < 1){           // if exp setting 1 -> linear attack
-            for (n = 0; n < a_sp; n++){
-                vec[n].w_float = ((1/a_sp) * n) ;
+        if (curve_faktor < 1){           // if exp setting 1 -> linear attack
+            for (n = 0; n < attack_sp; n++){
+                vec[n].w_float = ((1/attack_sp) * n) ;
         }
-        }else if (faktor > 1){     // if exp setting > 1 -> exp attack
-            for (n = 0; n < a_sp; n++){
-                    vec[n].w_float = (pow(faktor,((2/a_sp)*n))-1)/(pow(faktor,2)-1);
+        }else if (curve_faktor > 1){     // if exp setting > 1 -> exp attack
+            for (n = 0; n < attack_sp; n++){
+                    vec[n].w_float = (pow(curve_faktor,((2/attack_sp)*n))-1)/(pow(curve_faktor,2)-1);
             }
         };
-        for (n = a_sp; n < a_sp + d_sp; n++){ // modelling the decay
+        for (n = attack_sp; n < attack_sp + decay_sp; n++){ // modelling the decay
         
-            int j = n - a_sp;
-            vec[n].w_float = 1-((1-f3)/d_sp)*j;
+            int j = n - attack_sp;
+            vec[n].w_float = 1-((1-sustain)/decay_sp)*j;
         };
-        for (n = a_sp + d_sp; n < length; n++){ // modelling the release
+        for (n = attack_sp + decay_sp; n < length; n++){ // modelling the release
         
-            int k = n - a_sp - d_sp;
-            vec[n].w_float = f3 - (f3/r_sp)*k;
+            int k = n - attack_sp - decay_sp;
+            vec[n].w_float = sustain - (sustain/release_sp)*k;
         };
         garray_redraw(a);           // redraw array
+        
     }
     //outlet_float(x->f_out, length);
 }
@@ -157,11 +161,11 @@ void *envelope1_new(t_symbol *s)
     floatinlet_new(&x->x_obj, &x->decay);
     floatinlet_new(&x->x_obj, &x->sustain);
     floatinlet_new(&x->x_obj, &x->release);
-    floatinlet_new(&x->x_obj, &x->mode);
+    //floatinlet_new(&x->x_obj, &x->mode);
     floatinlet_new(&x->x_obj, &x->exp_setting);
     
-    x->f_out = outlet_new(&x->x_obj, &s_float);
-    x->b_out = outlet_new(&x->x_obj, &s_bang);
+    //x->f_out = outlet_new(&x->x_obj, &s_float);
+    //x->b_out = outlet_new(&x->x_obj, &s_bang);
     
   return (void *)x;
 }
