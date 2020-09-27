@@ -1,14 +1,14 @@
-#N canvas 0 23 1440 855 10;
+#N canvas 0 23 1792 1075 10;
 #X text 556 22 TouchOSC;
 #X text 557 37 http://hexler.net/touchosc;
 #X obj 382 84 sendOSC;
 #X obj 29 46 dumpOSC 8000;
 #X text 557 52 basic.pd v1.0;
 #X obj 110 46 print osc;
-#X obj 1727 410 vsl 15 130 0 1 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 0 1;
-#X msg 1710 210 \; pd dsp 0;
-#X msg 1710 245 \; pd dsp 1;
+#X obj 1727 410 vsl 15 130 0 1 0 0 empty empty empty 0 -9 0 10 #fcfcfc
+#000000 #000000 0 1;
+#X msg 1747 210 \; pd dsp 0;
+#X msg 1747 245 \; pd dsp 1;
 #X obj 1330 96 notein;
 #X obj 1330 229 pack f f f;
 #X obj 1043 488 *~ 1;
@@ -18,14 +18,14 @@
 #X msg 1497 169 stop;
 #X msg 1406 128 60 100;
 #X msg 1406 170 60 0;
-#X obj 133 765 vsl 15 128 0 1 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 6350 1;
-#X obj 158 764 vsl 15 128 0 3000 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 42 1;
-#X obj 88 764 vsl 15 128 0 500 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 254 1;
-#X obj 111 764 vsl 15 128 0 500 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 762 1;
+#X obj 133 765 vsl 15 128 0 1 0 0 empty empty empty 0 -9 0 10 #fcfcfc
+#000000 #000000 0 1;
+#X obj 158 764 vsl 15 128 0 3000 0 0 empty empty empty 0 -9 0 10 #fcfcfc
+#000000 #000000 0 1;
+#X obj 88 764 vsl 15 128 0 500 0 0 empty empty empty 0 -9 0 10 #fcfcfc
+#000000 #000000 0 1;
+#X obj 111 764 vsl 15 128 0 500 0 0 empty empty empty 0 -9 0 10 #fcfcfc
+#000000 #000000 0 1;
 #X text 109 743 A D S R;
 #X obj 72 907 s attack;
 #X obj 109 924 s decay;
@@ -36,36 +36,36 @@
 #X obj 296 396 s funda2;
 #X obj 295 468 s funda3;
 #X obj 293 539 s funda4;
-#X obj 295 231 hsl 128 15 0 1 0 0 empty empty empty -2 -8 0 10 -262144
--1 -1 0 1;
-#X obj 295 304 hsl 128 15 0 1 0 0 empty empty empty -2 -8 0 10 -4032
--1 -1 0 1;
-#X obj 296 374 hsl 128 15 0 1 0 0 empty empty empty -2 -8 0 10 -257985
--1 -1 0 1;
-#X obj 295 449 hsl 128 15 0 1 0 0 empty empty empty -2 -8 0 10 -4034
--1 -1 0 1;
-#X obj 293 518 hsl 128 15 0 1 0 0 empty empty empty -2 -8 0 10 -258113
--1 -1 0 1;
+#X obj 295 231 hsl 128 15 0 1 0 0 empty empty empty -2 -8 0 10 #fcfcfc
+#000000 #000000 0 1;
+#X obj 295 304 hsl 128 15 0 1 0 0 empty empty empty -2 -8 0 10 #00f8fc
+#000000 #000000 0 1;
+#X obj 296 374 hsl 128 15 0 1 0 0 empty empty empty -2 -8 0 10 #f8fc00
+#000000 #000000 0 1;
+#X obj 295 449 hsl 128 15 0 1 0 0 empty empty empty -2 -8 0 10 #00fc04
+#000000 #000000 0 1;
+#X obj 293 518 hsl 128 15 0 1 0 0 empty empty empty -2 -8 0 10 #fc0400
+#000000 #000000 0 1;
 #X obj 672 242 s shimfreq1;
 #X obj 786 194 s shimstr1;
 #X obj 673 393 s shimfreq2;
 #X obj 782 343 s shimstr2;
-#X obj 672 222 hsl 256 15 0 20 0 0 empty empty empty -2 -8 0 10 -4032
--1 -1 0 1;
-#X obj 786 176 hsl 128 15 0 10 0 0 empty empty empty -2 -8 0 10 -4032
--1 -1 0 1;
-#X obj 673 372 hsl 256 15 0 20 0 0 empty empty empty -2 -8 0 10 -257985
--1 -1 0 1;
-#X obj 782 325 hsl 128 15 0 10 0 0 empty empty empty -2 -8 0 10 -257985
--1 -1 0 1;
-#X obj 672 507 hsl 256 15 0 20 0 0 empty empty empty -2 -8 0 10 -4034
--1 -1 0 1;
-#X obj 785 465 hsl 128 15 0 10 0 0 empty empty empty -2 -8 0 10 -4034
--1 -1 0 1;
-#X obj 670 647 hsl 256 15 0 20 0 0 empty empty empty -2 -8 0 10 -258113
--1 -1 0 1;
-#X obj 784 602 hsl 128 15 0 10 0 0 empty empty empty -2 -8 0 10 -258625
--1 -1 0 1;
+#X obj 672 222 hsl 256 15 0 20 0 0 empty empty empty -2 -8 0 10 #00f8fc
+#000000 #000000 0 1;
+#X obj 786 176 hsl 128 15 0 10 0 0 empty empty empty -2 -8 0 10 #00f8fc
+#000000 #000000 0 1;
+#X obj 673 372 hsl 256 15 0 20 0 0 empty empty empty -2 -8 0 10 #f8fc00
+#000000 #000000 0 1;
+#X obj 782 325 hsl 128 15 0 10 0 0 empty empty empty -2 -8 0 10 #f8fc00
+#000000 #000000 0 1;
+#X obj 672 507 hsl 256 15 0 20 0 0 empty empty empty -2 -8 0 10 #00fc04
+#000000 #000000 0 1;
+#X obj 785 465 hsl 128 15 0 10 0 0 empty empty empty -2 -8 0 10 #00fc04
+#000000 #000000 0 1;
+#X obj 670 647 hsl 256 15 0 20 0 0 empty empty empty -2 -8 0 10 #fc0400
+#000000 #000000 0 1;
+#X obj 784 602 hsl 128 15 0 10 0 0 empty empty empty -2 -8 0 10 #fc2400
+#000000 #000000 0 1;
 #X obj 672 526 s shimfreq3;
 #X obj 785 483 s shimstr3;
 #X obj 670 665 s shimfreq4;
@@ -118,26 +118,26 @@
 #X obj 1357 565 *~ 0.5;
 #N canvas 0 23 464 315 spacexplorer 0;
 #X obj 37 19 r spac;
-#X floatatom 37 42 5 0 0 0 - - -;
+#X floatatom 37 42 5 0 0 0 - - -, f 5;
 #X obj 72 103 - 1;
-#X floatatom 23 124 5 0 0 0 - - -;
+#X floatatom 23 124 5 0 0 0 - - -, f 5;
 #X obj 23 146 * -1;
-#X floatatom 81 168 5 0 0 0 - - -;
+#X floatatom 81 168 5 0 0 0 - - -, f 5;
 #X obj 37 64 s live;
 #X obj 23 169 s kill;
-#X floatatom 156 50 5 0 0 0 - - -;
+#X floatatom 156 50 5 0 0 0 - - -, f 5;
 #X obj 191 111 - 1;
-#X floatatom 142 132 5 0 0 0 - - -;
+#X floatatom 142 132 5 0 0 0 - - -, f 5;
 #X obj 142 154 * -1;
-#X floatatom 200 176 5 0 0 0 - - -;
+#X floatatom 200 176 5 0 0 0 - - -, f 5;
 #X obj 156 27 r spac2;
 #X obj 156 72 s live2;
 #X obj 142 177 s kill2;
-#X floatatom 246 54 5 0 0 0 - - -;
+#X floatatom 246 54 5 0 0 0 - - -, f 5;
 #X obj 281 115 - 1;
-#X floatatom 232 136 5 0 0 0 - - -;
+#X floatatom 232 136 5 0 0 0 - - -, f 5;
 #X obj 232 158 * -1;
-#X floatatom 290 180 5 0 0 0 - - -;
+#X floatatom 290 180 5 0 0 0 - - -, f 5;
 #X obj 246 31 r spac3;
 #X obj 232 181 s kill3;
 #X obj 246 76 s live3;
@@ -193,8 +193,8 @@
 #X obj 86 703 * 500;
 #X obj 322 721 / 127;
 #X obj 322 744 * 3000;
-#X obj 1711 103 hsl 128 15 0 1 0 0 empty empty empty -2 -8 0 10 -262144
--1 -1 0 1;
+#X obj 1711 103 hsl 128 15 0 1 0 0 empty empty empty -2 -8 0 10 #fcfcfc
+#000000 #000000 0 1;
 #X msg 1457 128 30 100;
 #X msg 1457 169 30 0;
 #X text 1406 107 midi befehl an;
@@ -202,7 +202,7 @@
 #X text 1330 76 midi keyboard in;
 #X obj 1330 204 poly 8 1;
 #X obj 1710 288 ctlin;
-#X floatatom 1724 309 4 0 0 0 - - -;
+#X floatatom 1724 309 4 0 0 0 - - -, f 4;
 #X obj 671 152 ctlin 20;
 #X obj 752 131 ctlin 21;
 #X obj 671 301 ctlin 71;
@@ -238,14 +238,14 @@
 #X msg 1577 748 set sawtooth;
 #X msg 1690 748 set triangle;
 #X msg 1804 748 set square;
-#X obj 1479 695 bng 50 250 50 0 empty empty empty 17 7 0 10 -204786
--1 -1;
-#X obj 1804 695 bng 50 250 50 0 empty empty empty 17 7 0 10 -232576
--1 -1;
-#X obj 1690 695 bng 50 250 50 0 empty empty empty 17 7 0 10 -203904
--1 -1;
-#X obj 1577 695 bng 50 250 50 0 empty empty empty 17 7 0 10 -204800
--1 -1;
+#X obj 1479 695 bng 50 250 50 0 empty empty empty 17 7 0 10 #c4fcc4
+#000000 #000000;
+#X obj 1804 695 bng 50 250 50 0 empty empty empty 17 7 0 10 #e0c4fc
+#000000 #000000;
+#X obj 1690 695 bng 50 250 50 0 empty empty empty 17 7 0 10 #c4c4fc
+#000000 #000000;
+#X obj 1577 695 bng 50 250 50 0 empty empty empty 17 7 0 10 #c4fcfc
+#000000 #000000;
 #X text 1567 652 WAVEFORM SELECTOR;
 #X text 987 696 subpatch for replacing the osc~ in the pd voicer (not
 those used for FM);
@@ -255,8 +255,8 @@ those used for FM);
 #X obj 1577 675 route /1/sawtooth;
 #X obj 1690 675 route /1/triangle;
 #X obj 1804 675 route /1/square;
-#X floatatom 1330 118 4 0 0 0 - - -;
-#X floatatom 1359 118 4 0 0 0 - - -;
+#X floatatom 1330 118 4 0 0 0 - - -, f 4;
+#X floatatom 1359 118 4 0 0 0 - - -, f 4;
 #X msg 1784 546 send /1/master/ \$1;
 #X msg 437 253 send /1/Fundamentals/5 \$1;
 #X msg 438 324 send /1/Fundamentals/4 \$1;
@@ -267,7 +267,7 @@ those used for FM);
 #X msg 69 976 send /1/decay \$1;
 #X msg 68 1001 send /1/sustain \$1;
 #X msg 69 1022 send /1/release \$1;
-#X text 1771 234 DSP on/off;
+#X text 1808 234 DSP on/off;
 #X text 1760 297 Check MIDI controller;
 #X obj 509 365 s Fundamentals;
 #X obj 273 52 r Fundamentals;
@@ -281,8 +281,8 @@ those used for FM);
 #X obj 155 588 r env;
 #X obj 183 122 s shimfreq;
 #X obj 628 96 r shimfreq;
-#X obj 782 325 hsl 128 15 0 10 0 0 empty empty empty -2 -8 0 10 -257985
--1 -1 0 1;
+#X obj 782 325 hsl 128 15 0 10 0 0 empty empty empty -2 -8 0 10 #f8fc00
+#000000 #000000 0 1;
 #X obj 182 94 s master;
 #X obj 1727 361 r master;
 #X obj 1784 570 s mast;
@@ -292,19 +292,19 @@ those used for FM);
 #X text 272 27 Sending values to the iPhone on port 9000;
 #X text 647 54 OSC messages --> /pagenumber/controlname;
 #X obj 183 144 s shimFreqStr;
-#X floatatom 31 199 5 0 0 0 - - -;
-#X floatatom 67 199 5 0 0 0 - - -;
+#X floatatom 31 199 5 0 0 0 - - -, f 5;
+#X floatatom 67 199 5 0 0 0 - - -, f 5;
 #X obj 31 177 unpack f f;
-#X floatatom 31 279 5 0 0 0 - - -;
-#X floatatom 67 279 5 0 0 0 - - -;
+#X floatatom 31 279 5 0 0 0 - - -, f 5;
+#X floatatom 67 279 5 0 0 0 - - -, f 5;
 #X obj 31 257 unpack f f;
 #X obj 31 156 route /1/multixy1/1;
 #X obj 31 236 route /1/multixy1/2;
-#X obj 202 769 vsl 15 128 0 127 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 500 1;
+#X obj 202 769 vsl 15 128 0 127 0 0 empty empty empty 0 -9 0 10 #fcfcfc
+#000000 #000000 0 1;
 #X obj 243 911 s exp;
 #N canvas 0 22 450 278 (subpatch) 0;
-#X array array3 1200 float 3;
+#X array array3 1200 float 3 black black;
 #A 0 0 0.0025 0.005 0.0075 0.01 0.0125 0.015 0.0175 0.02 0.0225 0.025
 0.0275 0.03 0.0325 0.035 0.0375 0.04 0.0425 0.045 0.0475 0.05 0.0525
 0.055 0.0575 0.06 0.0625 0.065 0.0675 0.07 0.0725 0.075 0.0775 0.08
@@ -417,7 +417,6 @@ those used for FM);
 #X obj 796 576 route /1/ShimmerStr/1;
 #X obj 249 771 route /1/exp;
 #X msg 199 952 send /1/exp \$1;
-#X msg 382 52 connect 192.168.178.155 9000;
 #X obj 183 188 s space;
 #X obj 1795 57 r space;
 #X obj 1766 77 route /1/space;
@@ -425,7 +424,7 @@ those used for FM);
 #X obj 1589 156 s spacer;
 #X obj 368 147 r spacer;
 #N canvas 0 23 1792 1075 keyboard 0;
-#X floatatom 126 188 4 0 0 0 - - -;
+#X floatatom 126 188 4 0 0 0 - - -, f 4;
 #X obj 126 167 route /1/push1;
 #X obj 126 145 r keys;
 #X obj 126 209 select 0;
@@ -434,7 +433,7 @@ those used for FM);
 #X msg 125 233 0;
 #X obj 125 258 +;
 #X obj 976 516 outlet;
-#X floatatom 246 188 4 0 0 0 - - -;
+#X floatatom 246 188 4 0 0 0 - - -, f 4;
 #X obj 246 145 r keys;
 #X obj 246 209 select 0;
 #X msg 245 281 \$1 0;
@@ -442,7 +441,7 @@ those used for FM);
 #X msg 245 233 0;
 #X obj 245 258 +;
 #X obj 246 167 route /1/push2;
-#X floatatom 366 188 4 0 0 0 - - -;
+#X floatatom 366 188 4 0 0 0 - - -, f 4;
 #X obj 366 145 r keys;
 #X obj 366 209 select 0;
 #X msg 365 281 \$1 0;
@@ -450,21 +449,21 @@ those used for FM);
 #X msg 365 233 0;
 #X obj 365 258 +;
 #X obj 366 167 route /1/push3;
-#X floatatom 485 188 4 0 0 0 - - -;
+#X floatatom 485 188 4 0 0 0 - - -, f 4;
 #X obj 485 145 r keys;
 #X obj 485 209 select 0;
 #X msg 484 281 \$1 0;
 #X msg 530 260 \$1 80;
 #X msg 484 233 0;
 #X obj 484 258 +;
-#X floatatom 605 188 4 0 0 0 - - -;
+#X floatatom 605 188 4 0 0 0 - - -, f 4;
 #X obj 605 145 r keys;
 #X obj 605 209 select 0;
 #X msg 604 281 \$1 0;
 #X msg 650 260 \$1 80;
 #X msg 604 233 0;
 #X obj 604 258 +;
-#X floatatom 725 188 4 0 0 0 - - -;
+#X floatatom 725 188 4 0 0 0 - - -, f 4;
 #X obj 725 145 r keys;
 #X obj 725 209 select 0;
 #X msg 724 281 \$1 0;
@@ -474,42 +473,42 @@ those used for FM);
 #X obj 485 167 route /1/push4;
 #X obj 605 167 route /1/push5;
 #X obj 725 167 route /1/push6;
-#X floatatom 840 188 4 0 0 0 - - -;
+#X floatatom 840 188 4 0 0 0 - - -, f 4;
 #X obj 840 145 r keys;
 #X obj 840 209 select 0;
 #X msg 839 281 \$1 0;
 #X msg 885 260 \$1 80;
 #X msg 839 233 0;
 #X obj 839 258 +;
-#X floatatom 960 188 4 0 0 0 - - -;
+#X floatatom 960 188 4 0 0 0 - - -, f 4;
 #X obj 960 145 r keys;
 #X obj 960 209 select 0;
 #X msg 959 281 \$1 0;
 #X msg 1005 260 \$1 80;
 #X msg 959 233 0;
 #X obj 959 258 +;
-#X floatatom 1080 188 4 0 0 0 - - -;
+#X floatatom 1080 188 4 0 0 0 - - -, f 4;
 #X obj 1080 145 r keys;
 #X obj 1080 209 select 0;
 #X msg 1079 281 \$1 0;
 #X msg 1125 260 \$1 80;
 #X msg 1079 233 0;
 #X obj 1079 258 +;
-#X floatatom 1199 188 4 0 0 0 - - -;
+#X floatatom 1199 188 4 0 0 0 - - -, f 4;
 #X obj 1199 145 r keys;
 #X obj 1199 209 select 0;
 #X msg 1198 281 \$1 0;
 #X msg 1244 260 \$1 80;
 #X msg 1198 233 0;
 #X obj 1198 258 +;
-#X floatatom 1319 188 4 0 0 0 - - -;
+#X floatatom 1319 188 4 0 0 0 - - -, f 4;
 #X obj 1319 145 r keys;
 #X obj 1319 209 select 0;
 #X msg 1318 281 \$1 0;
 #X msg 1364 260 \$1 80;
 #X msg 1318 233 0;
 #X obj 1318 258 +;
-#X floatatom 1439 188 4 0 0 0 - - -;
+#X floatatom 1439 188 4 0 0 0 - - -, f 4;
 #X obj 1439 145 r keys;
 #X obj 1439 209 select 0;
 #X msg 1438 281 \$1 0;
@@ -522,84 +521,84 @@ those used for FM);
 #X obj 1199 167 route /1/push10;
 #X obj 1319 167 route /1/push11;
 #X obj 1439 167 route /1/push12;
-#X floatatom 116 728 4 0 0 0 - - -;
+#X floatatom 116 728 4 0 0 0 - - -, f 4;
 #X obj 116 685 r keys;
 #X obj 116 749 select 0;
 #X msg 115 821 \$1 0;
 #X msg 161 800 \$1 80;
 #X msg 115 773 0;
 #X obj 115 798 +;
-#X floatatom 236 728 4 0 0 0 - - -;
+#X floatatom 236 728 4 0 0 0 - - -, f 4;
 #X obj 236 685 r keys;
 #X obj 236 749 select 0;
 #X msg 235 821 \$1 0;
 #X msg 281 800 \$1 80;
 #X msg 235 773 0;
 #X obj 235 798 +;
-#X floatatom 356 728 4 0 0 0 - - -;
+#X floatatom 356 728 4 0 0 0 - - -, f 4;
 #X obj 356 685 r keys;
 #X obj 356 749 select 0;
 #X msg 355 821 \$1 0;
 #X msg 401 800 \$1 80;
 #X msg 355 773 0;
 #X obj 355 798 +;
-#X floatatom 475 728 4 0 0 0 - - -;
+#X floatatom 475 728 4 0 0 0 - - -, f 4;
 #X obj 475 685 r keys;
 #X obj 475 749 select 0;
 #X msg 474 821 \$1 0;
 #X msg 520 800 \$1 80;
 #X msg 474 773 0;
 #X obj 474 798 +;
-#X floatatom 595 728 4 0 0 0 - - -;
+#X floatatom 595 728 4 0 0 0 - - -, f 4;
 #X obj 595 685 r keys;
 #X obj 595 749 select 0;
 #X msg 594 821 \$1 0;
 #X msg 640 800 \$1 80;
 #X msg 594 773 0;
 #X obj 594 798 +;
-#X floatatom 715 728 4 0 0 0 - - -;
+#X floatatom 715 728 4 0 0 0 - - -, f 4;
 #X obj 715 685 r keys;
 #X obj 715 749 select 0;
 #X msg 714 821 \$1 0;
 #X msg 760 800 \$1 80;
 #X msg 714 773 0;
 #X obj 714 798 +;
-#X floatatom 830 728 4 0 0 0 - - -;
+#X floatatom 830 728 4 0 0 0 - - -, f 4;
 #X obj 830 685 r keys;
 #X obj 830 749 select 0;
 #X msg 829 821 \$1 0;
 #X msg 875 800 \$1 80;
 #X msg 829 773 0;
 #X obj 829 798 +;
-#X floatatom 950 728 4 0 0 0 - - -;
+#X floatatom 950 728 4 0 0 0 - - -, f 4;
 #X obj 950 685 r keys;
 #X obj 950 749 select 0;
 #X msg 949 821 \$1 0;
 #X msg 995 800 \$1 80;
 #X msg 949 773 0;
 #X obj 949 798 +;
-#X floatatom 1070 728 4 0 0 0 - - -;
+#X floatatom 1070 728 4 0 0 0 - - -, f 4;
 #X obj 1070 685 r keys;
 #X obj 1070 749 select 0;
 #X msg 1069 821 \$1 0;
 #X msg 1115 800 \$1 80;
 #X msg 1069 773 0;
 #X obj 1069 798 +;
-#X floatatom 1189 728 4 0 0 0 - - -;
+#X floatatom 1189 728 4 0 0 0 - - -, f 4;
 #X obj 1189 685 r keys;
 #X obj 1189 749 select 0;
 #X msg 1188 821 \$1 0;
 #X msg 1234 800 \$1 80;
 #X msg 1188 773 0;
 #X obj 1188 798 +;
-#X floatatom 1309 728 4 0 0 0 - - -;
+#X floatatom 1309 728 4 0 0 0 - - -, f 4;
 #X obj 1309 685 r keys;
 #X obj 1309 749 select 0;
 #X msg 1308 821 \$1 0;
 #X msg 1354 800 \$1 80;
 #X msg 1308 773 0;
 #X obj 1308 798 +;
-#X floatatom 1429 728 4 0 0 0 - - -;
+#X floatatom 1429 728 4 0 0 0 - - -, f 4;
 #X obj 1429 685 r keys;
 #X obj 1429 749 select 0;
 #X msg 1428 821 \$1 0;
@@ -867,30 +866,30 @@ those used for FM);
 #X obj 185 256 +~;
 #X obj 141 112 *~;
 #X obj 141 90 osc~;
-#X floatatom 141 69 5 0 0 0 - - -;
-#X floatatom 194 142 5 0 0 0 - - -;
+#X floatatom 141 69 5 0 0 0 - - -, f 5;
+#X floatatom 194 142 5 0 0 0 - - -, f 5;
 #X obj 289 333 *~ 1;
 #X obj 324 256 +~;
 #X obj 280 112 *~;
 #X obj 280 90 osc~;
-#X floatatom 280 69 5 0 0 0 - - -;
-#X floatatom 333 142 5 0 0 0 - - -;
+#X floatatom 280 69 5 0 0 0 - - -, f 5;
+#X floatatom 333 142 5 0 0 0 - - -, f 5;
 #X obj 279 211 * 3;
 #X obj 443 333 *~ 1;
 #X obj 478 256 +~;
 #X obj 434 112 *~;
 #X obj 434 90 osc~;
-#X floatatom 434 69 5 0 0 0 - - -;
-#X floatatom 487 142 5 0 0 0 - - -;
+#X floatatom 434 69 5 0 0 0 - - -, f 5;
+#X floatatom 487 142 5 0 0 0 - - -, f 5;
 #X obj 582 333 *~ 1;
 #X obj 617 256 +~;
 #X obj 573 112 *~;
 #X obj 573 90 osc~;
-#X floatatom 573 69 5 0 0 0 - - -;
-#X floatatom 626 142 5 0 0 0 - - -;
+#X floatatom 573 69 5 0 0 0 - - -, f 5;
+#X floatatom 626 142 5 0 0 0 - - -, f 5;
 #X obj 433 211 * 4;
 #X obj 572 211 * 5;
-#X floatatom 18 198 5 0 0 0 - - -;
+#X floatatom 18 198 5 0 0 0 - - -, f 5;
 #X obj 102 656 *~;
 #X obj 101 736 outlet~;
 #X obj 21 114 mtof;
@@ -934,8 +933,8 @@ number \, it outputs the value corresponding to this index in the indicated
 array (table). The number 4 indicates that an interpolation of 4 points
 is done. This is \, the output value is a kind of mean of the 4 samples
 around the current one.;
-#X obj 900 435 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
-1;
+#X obj 900 435 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000
+#000000 0 1;
 #X obj 881 484 metro 200;
 #X obj 874 553 tabwrite~ waveout;
 #X obj 792 396 tabread4~ sine;
@@ -956,41 +955,41 @@ around the current one.;
 #X obj 908 437 line;
 #X obj 874 781 * 1;
 #X obj 887 167 stripnote;
-#X obj 905 275 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
--1 -1;
+#X obj 905 275 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
+#000000 #000000;
 #X obj 1101 261 sel 0;
 #X obj 1094 177 unpack;
-#X floatatom 1151 224 5 0 0 0 - - -;
-#X floatatom 831 206 5 0 0 0 - - -;
-#X obj 1094 319 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
--1 -1;
+#X floatatom 1151 224 5 0 0 0 - - -, f 5;
+#X floatatom 831 206 5 0 0 0 - - -, f 5;
+#X obj 1094 319 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
+#000000 #000000;
 #X obj 942 304 pack 1 2 3;
 #X obj 943 328 route 1;
 #X obj 1000 175 r aplusd;
 #X obj 1155 304 r releasezeit;
-#X floatatom 1016 203 5 0 0 0 - - -;
-#X floatatom 1124 327 5 0 0 0 - - -;
+#X floatatom 1016 203 5 0 0 0 - - -, f 5;
+#X floatatom 1124 327 5 0 0 0 - - -, f 5;
 #X obj 992 280 * 10;
 #X obj 976 563 +;
-#X floatatom 916 461 10 0 0 0 - - -;
+#X floatatom 916 461 10 0 0 0 - - -, f 10;
 #X obj 971 521 line;
-#X floatatom 973 541 10 0 0 0 - - -;
+#X floatatom 973 541 10 0 0 0 - - -, f 10;
 #X obj 1139 346 * 10;
 #X obj 1046 398 route 1;
-#X floatatom 977 584 10 0 0 0 - - -;
+#X floatatom 977 584 10 0 0 0 - - -, f 10;
 #X obj 1060 375 pack 1 2 3 4;
 #X msg 1128 421 \$3;
-#X floatatom 1128 441 10 0 0 0 - - -;
+#X floatatom 1128 441 10 0 0 0 - - -, f 10;
 #X msg 1061 422 0 \, \$2 \$1;
 #X msg 1069 288 0;
-#X floatatom 950 718 10 0 0 0 - - -;
+#X floatatom 950 718 10 0 0 0 - - -, f 10;
 #X obj 923 672 tabread4 array3;
 #X msg 1153 571 0;
 #X obj 1181 510 del;
 #X msg 1152 484 bang;
 #X obj 1197 346 + 5;
-#X obj 1189 542 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
--1 -1;
+#X obj 1189 542 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
+#000000 #000000;
 #X msg 943 351 0 \, \$2 \$1;
 #X obj 843 435 vline~;
 #X obj 782 664 tabread4~ array3;
@@ -1020,8 +1019,8 @@ number \, it outputs the value corresponding to this index in the indicated
 array (table). The number 4 indicates that an interpolation of 4 points
 is done. This is \, the output value is a kind of mean of the 4 samples
 around the current one.;
-#X obj 900 435 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
-1;
+#X obj 900 435 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000
+#000000 0 1;
 #X obj 881 484 metro 200;
 #X obj 874 553 tabwrite~ waveout;
 #X obj 792 396 tabread4~ sine;
@@ -1051,8 +1050,8 @@ number \, it outputs the value corresponding to this index in the indicated
 array (table). The number 4 indicates that an interpolation of 4 points
 is done. This is \, the output value is a kind of mean of the 4 samples
 around the current one.;
-#X obj 900 435 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
-1;
+#X obj 900 435 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000
+#000000 0 1;
 #X obj 881 484 metro 200;
 #X obj 874 553 tabwrite~ waveout;
 #X obj 792 396 tabread4~ sine;
@@ -1082,8 +1081,8 @@ number \, it outputs the value corresponding to this index in the indicated
 array (table). The number 4 indicates that an interpolation of 4 points
 is done. This is \, the output value is a kind of mean of the 4 samples
 around the current one.;
-#X obj 900 435 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
-1;
+#X obj 900 435 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000
+#000000 0 1;
 #X obj 881 484 metro 200;
 #X obj 874 553 tabwrite~ waveout;
 #X obj 792 396 tabread4~ sine;
@@ -1113,8 +1112,8 @@ number \, it outputs the value corresponding to this index in the indicated
 array (table). The number 4 indicates that an interpolation of 4 points
 is done. This is \, the output value is a kind of mean of the 4 samples
 around the current one.;
-#X obj 900 435 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
-1;
+#X obj 900 435 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000
+#000000 0 1;
 #X obj 881 484 metro 200;
 #X obj 874 553 tabwrite~ waveout;
 #X obj 792 396 tabread4~ sine;
@@ -1255,22 +1254,22 @@ around the current one.;
 #X connect 115 0 21 0;
 #X restore 1043 386 pd voicer;
 #N canvas 0 23 739 541 envelope 0;
-#X floatatom 104 128 5 0 0 0 - - -;
-#X floatatom 153 120 5 0 0 0 - - -;
-#X floatatom 206 125 5 0 127 0 - - -;
-#X floatatom 265 118 5 0 0 0 - - -;
-#X floatatom 325 124 5 0 0 0 - - -;
+#X floatatom 104 128 5 0 0 0 - - -, f 5;
+#X floatatom 153 120 5 0 0 0 - - -, f 5;
+#X floatatom 206 125 5 0 127 0 - - -, f 5;
+#X floatatom 265 118 5 0 0 0 - - -, f 5;
+#X floatatom 325 124 5 0 0 0 - - -, f 5;
 #X obj 87 76 * 4;
 #X obj 151 70 * 4;
 #X obj 221 69 * 1;
 #X obj 362 83 / 2;
-#X obj 60 260 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
--1;
+#X obj 60 260 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc #000000
+#000000;
 #X obj 307 223 s length;
 #X obj 308 201 expr $f1 + $f2 + $f3;
-#X floatatom 387 235 5 0 0 0 - - -;
-#X obj 324 166 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
--1 -1;
+#X floatatom 387 235 5 0 0 0 - - -, f 5;
+#X obj 324 166 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
+#000000 #000000;
 #X obj 88 45 r attack;
 #X obj 155 45 r decay;
 #X obj 227 40 r sustain;
@@ -1281,8 +1280,8 @@ around the current one.;
 #X obj 61 289 del 10;
 #X obj 385 155 s releasezeit;
 #X obj 280 285 expr $f1 + $f2;
-#X obj 278 259 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
--1 -1;
+#X obj 278 259 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
+#000000 #000000;
 #X obj 279 322 s aplusd;
 #X text 474 154 sendet release zeit in ms;
 #X text 385 219 sendet gesamt envelope zeit in ms;
@@ -1293,12 +1292,12 @@ around the current one.;
 #X obj 362 103 div;
 #X text 390 101 div \, weil kommazahlen das external überfordern;
 #N canvas 0 22 450 278 (subpatch) 0;
-#X array array1 100 float 3;
+#X array array1 100 float 3 black black;
 #A 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
 0;
-#X coords 0 1 100 -1 200 140 1 0 0;
+#X coords 0 1 100 -1 200 140 1;
 #X restore 399 378 graph;
 #X text 456 363 nicht ändern! muss 0 bleiben;
 #X connect 0 0 9 0;
@@ -1343,13 +1342,13 @@ around the current one.;
 #X connect 32 0 4 0;
 #X restore 863 730 pd envelope;
 #X msg 372 790 200;
-#X obj 505 602 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
--1 -1;
+#X obj 505 602 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
+#000000 #000000;
 #N canvas 0 22 2736 1660 wavygen 0;
 #X obj 756 559 outlet~;
 #X obj 804 132 inlet~;
 #N canvas 0 50 450 212 (subpatch) 0;
-#X array sine 2051 float 3;
+#X array sine 2051 float 3 black black;
 #A 0 -0.00306795 0 0.00306795 0.00613588 0.00920375 0.0122715 0.0153392
 0.0184067 0.0214741 0.0245412 0.0276081 0.0306748 0.0337411 0.0368072
 0.0398729 0.0429382 0.0460031 0.0490676 0.0521317 0.0551952 0.0582582
@@ -1630,7 +1629,7 @@ around the current one.;
 #X coords 0 1 2051 -1 200 140 1;
 #X restore 90 170 graph;
 #N canvas 0 50 450 250 (subpatch) 0;
-#X array sawtooth 2051 float 3;
+#X array sawtooth 2051 float 3 black black;
 #A 0 -0.0229404 0 0.0229404 0.0458672 0.0687669 0.0916258 0.11443 0.137167
 0.159823 0.182384 0.204838 0.227171 0.24937 0.271423 0.293316 0.315038
 0.336576 0.357917 0.37905 0.399962 0.420644 0.441082 0.461267 0.481187
@@ -1922,12 +1921,12 @@ number \, it outputs the value corresponding to this index in the indicated
 array (table). The number 4 indicates that an interpolation of 4 points
 is done. This is \, the output value is a kind of mean of the 4 samples
 around the current one.;
-#X obj 900 435 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
-1;
+#X obj 900 435 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000
+#000000 0 1;
 #X obj 881 484 metro 200;
 #X obj 874 553 tabwrite~ waveout;
 #N canvas 0 50 450 250 (subpatch) 0;
-#X array waveout 4000 float 3;
+#X array waveout 4000 float 3 black black;
 #A 0 -0.969445 -0.958318 -0.945509 -0.931041 -0.914937 -0.897228 -0.877943
 -0.857118 -0.834788 -0.810992 -0.785772 -0.759174 -0.731242 -0.702027
 -0.671579 -0.639953 -0.607203 -0.573387 -0.538565 -0.502797 -0.466146
@@ -2469,7 +2468,7 @@ around the current one.;
 #X coords 0 1 4000 -1 200 140 1;
 #X restore 1078 516 graph;
 #N canvas 0 50 450 250 (subpatch) 0;
-#X array triangle 2051 float 3;
+#X array triangle 2051 float 3 black black;
 #A 0 -0.00191475 0 0.00191475 0.00382964 0.00574482 0.00766044 0.00957663
 0.0114936 0.0134113 0.0153301 0.0172501 0.0191713 0.0210939 0.0230181
 0.024944 0.0268717 0.0288014 0.0307331 0.032667 0.0346033 0.0365419
@@ -2761,7 +2760,7 @@ around the current one.;
 #X msg 99 974 \; square sinesum 2051 1 0 0.333333 0 0.2 0 0.123857
 0 0.111111 0 0.090909 0.076923;
 #N canvas 0 50 450 250 (subpatch) 0;
-#X array square 2051 float 3;
+#X array square 2051 float 3 black black;
 #A 0 -0.022379 0 0.022379 0.0447453 0.0670859 0.0893883 0.11164 0.133827
 0.155938 0.177961 0.199882 0.22169 0.243371 0.264915 0.286309 0.307541
 0.3286 0.349473 0.370151 0.390621 0.410873 0.430896 0.450679 0.470213
@@ -3061,30 +3060,30 @@ around the current one.;
 #X obj 185 256 +~;
 #X obj 141 112 *~;
 #X obj 141 90 osc~;
-#X floatatom 141 69 5 0 0 0 - - -;
-#X floatatom 194 142 5 0 0 0 - - -;
+#X floatatom 141 69 5 0 0 0 - - -, f 5;
+#X floatatom 194 142 5 0 0 0 - - -, f 5;
 #X obj 289 333 *~ 1;
 #X obj 324 256 +~;
 #X obj 280 112 *~;
 #X obj 280 90 osc~;
-#X floatatom 280 69 5 0 0 0 - - -;
-#X floatatom 333 142 5 0 0 0 - - -;
+#X floatatom 280 69 5 0 0 0 - - -, f 5;
+#X floatatom 333 142 5 0 0 0 - - -, f 5;
 #X obj 279 211 * 3;
 #X obj 443 333 *~ 1;
 #X obj 478 256 +~;
 #X obj 434 112 *~;
 #X obj 434 90 osc~;
-#X floatatom 434 69 5 0 0 0 - - -;
-#X floatatom 487 142 5 0 0 0 - - -;
+#X floatatom 434 69 5 0 0 0 - - -, f 5;
+#X floatatom 487 142 5 0 0 0 - - -, f 5;
 #X obj 582 333 *~ 1;
 #X obj 617 256 +~;
 #X obj 573 112 *~;
 #X obj 573 90 osc~;
-#X floatatom 573 69 5 0 0 0 - - -;
-#X floatatom 626 142 5 0 0 0 - - -;
+#X floatatom 573 69 5 0 0 0 - - -, f 5;
+#X floatatom 626 142 5 0 0 0 - - -, f 5;
 #X obj 433 211 * 4;
 #X obj 572 211 * 5;
-#X floatatom 18 198 5 0 0 0 - - -;
+#X floatatom 18 198 5 0 0 0 - - -, f 5;
 #X obj 102 656 *~;
 #X obj 101 736 outlet~;
 #X obj 21 114 mtof;
@@ -3128,8 +3127,8 @@ number \, it outputs the value corresponding to this index in the indicated
 array (table). The number 4 indicates that an interpolation of 4 points
 is done. This is \, the output value is a kind of mean of the 4 samples
 around the current one.;
-#X obj 900 435 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
-1;
+#X obj 900 435 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000
+#000000 0 1;
 #X obj 881 484 metro 200;
 #X obj 874 553 tabwrite~ waveout;
 #X obj 792 396 tabread4~ sine;
@@ -3150,41 +3149,41 @@ around the current one.;
 #X obj 908 437 line;
 #X obj 874 781 * 1;
 #X obj 887 167 stripnote;
-#X obj 905 275 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
--1 -1;
+#X obj 905 275 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
+#000000 #000000;
 #X obj 1101 261 sel 0;
 #X obj 1094 177 unpack;
-#X floatatom 1151 224 5 0 0 0 - - -;
-#X floatatom 831 206 5 0 0 0 - - -;
-#X obj 1094 319 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
--1 -1;
+#X floatatom 1151 224 5 0 0 0 - - -, f 5;
+#X floatatom 831 206 5 0 0 0 - - -, f 5;
+#X obj 1094 319 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
+#000000 #000000;
 #X obj 942 304 pack 1 2 3;
 #X obj 943 328 route 1;
 #X obj 1000 175 r aplusd;
 #X obj 1155 304 r releasezeit;
-#X floatatom 1016 203 5 0 0 0 - - -;
-#X floatatom 1124 327 5 0 0 0 - - -;
+#X floatatom 1016 203 5 0 0 0 - - -, f 5;
+#X floatatom 1124 327 5 0 0 0 - - -, f 5;
 #X obj 992 280 * 10;
 #X obj 976 563 +;
-#X floatatom 916 461 10 0 0 0 - - -;
+#X floatatom 916 461 10 0 0 0 - - -, f 10;
 #X obj 971 521 line;
-#X floatatom 973 541 10 0 0 0 - - -;
+#X floatatom 973 541 10 0 0 0 - - -, f 10;
 #X obj 1139 346 * 10;
 #X obj 1046 398 route 1;
-#X floatatom 977 584 10 0 0 0 - - -;
+#X floatatom 977 584 10 0 0 0 - - -, f 10;
 #X obj 1060 375 pack 1 2 3 4;
 #X msg 1128 421 \$3;
-#X floatatom 1128 441 10 0 0 0 - - -;
+#X floatatom 1128 441 10 0 0 0 - - -, f 10;
 #X msg 1061 422 0 \, \$2 \$1;
 #X msg 1069 288 0;
-#X floatatom 950 718 10 0 0 0 - - -;
+#X floatatom 950 718 10 0 0 0 - - -, f 10;
 #X obj 923 672 tabread4 array3;
 #X msg 1153 571 0;
 #X obj 1181 510 del;
 #X msg 1152 484 bang;
 #X obj 1197 346 + 5;
-#X obj 1189 542 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
--1 -1;
+#X obj 1189 542 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
+#000000 #000000;
 #X msg 943 351 0 \, \$2 \$1;
 #X obj 843 435 vline~;
 #X obj 782 664 tabread4~ array3;
@@ -3214,8 +3213,8 @@ number \, it outputs the value corresponding to this index in the indicated
 array (table). The number 4 indicates that an interpolation of 4 points
 is done. This is \, the output value is a kind of mean of the 4 samples
 around the current one.;
-#X obj 900 435 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
-1;
+#X obj 900 435 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000
+#000000 0 1;
 #X obj 881 484 metro 200;
 #X obj 874 553 tabwrite~ waveout;
 #X obj 792 396 tabread4~ sine;
@@ -3245,8 +3244,8 @@ number \, it outputs the value corresponding to this index in the indicated
 array (table). The number 4 indicates that an interpolation of 4 points
 is done. This is \, the output value is a kind of mean of the 4 samples
 around the current one.;
-#X obj 900 435 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
-1;
+#X obj 900 435 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000
+#000000 0 1;
 #X obj 881 484 metro 200;
 #X obj 874 553 tabwrite~ waveout;
 #X obj 792 396 tabread4~ sine;
@@ -3276,8 +3275,8 @@ number \, it outputs the value corresponding to this index in the indicated
 array (table). The number 4 indicates that an interpolation of 4 points
 is done. This is \, the output value is a kind of mean of the 4 samples
 around the current one.;
-#X obj 900 435 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
-1;
+#X obj 900 435 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000
+#000000 0 1;
 #X obj 881 484 metro 200;
 #X obj 874 553 tabwrite~ waveout;
 #X obj 792 396 tabread4~ sine;
@@ -3307,8 +3306,8 @@ number \, it outputs the value corresponding to this index in the indicated
 array (table). The number 4 indicates that an interpolation of 4 points
 is done. This is \, the output value is a kind of mean of the 4 samples
 around the current one.;
-#X obj 900 435 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
-1;
+#X obj 900 435 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000
+#000000 0 1;
 #X obj 881 484 metro 200;
 #X obj 874 553 tabwrite~ waveout;
 #X obj 792 396 tabread4~ sine;
@@ -3455,30 +3454,30 @@ around the current one.;
 #X obj 185 256 +~;
 #X obj 141 112 *~;
 #X obj 141 90 osc~;
-#X floatatom 141 69 5 0 0 0 - - -;
-#X floatatom 194 142 5 0 0 0 - - -;
+#X floatatom 141 69 5 0 0 0 - - -, f 5;
+#X floatatom 194 142 5 0 0 0 - - -, f 5;
 #X obj 289 333 *~ 1;
 #X obj 324 256 +~;
 #X obj 280 112 *~;
 #X obj 280 90 osc~;
-#X floatatom 280 69 5 0 0 0 - - -;
-#X floatatom 333 142 5 0 0 0 - - -;
+#X floatatom 280 69 5 0 0 0 - - -, f 5;
+#X floatatom 333 142 5 0 0 0 - - -, f 5;
 #X obj 279 211 * 3;
 #X obj 443 333 *~ 1;
 #X obj 478 256 +~;
 #X obj 434 112 *~;
 #X obj 434 90 osc~;
-#X floatatom 434 69 5 0 0 0 - - -;
-#X floatatom 487 142 5 0 0 0 - - -;
+#X floatatom 434 69 5 0 0 0 - - -, f 5;
+#X floatatom 487 142 5 0 0 0 - - -, f 5;
 #X obj 582 333 *~ 1;
 #X obj 617 256 +~;
 #X obj 573 112 *~;
 #X obj 573 90 osc~;
-#X floatatom 573 69 5 0 0 0 - - -;
-#X floatatom 626 142 5 0 0 0 - - -;
+#X floatatom 573 69 5 0 0 0 - - -, f 5;
+#X floatatom 626 142 5 0 0 0 - - -, f 5;
 #X obj 433 211 * 4;
 #X obj 572 211 * 5;
-#X floatatom 18 198 5 0 0 0 - - -;
+#X floatatom 18 198 5 0 0 0 - - -, f 5;
 #X obj 102 656 *~;
 #X obj 101 736 outlet~;
 #X obj 21 114 mtof;
@@ -3522,8 +3521,8 @@ number \, it outputs the value corresponding to this index in the indicated
 array (table). The number 4 indicates that an interpolation of 4 points
 is done. This is \, the output value is a kind of mean of the 4 samples
 around the current one.;
-#X obj 900 435 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
-1;
+#X obj 900 435 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000
+#000000 0 1;
 #X obj 881 484 metro 200;
 #X obj 874 553 tabwrite~ waveout;
 #X obj 792 396 tabread4~ sine;
@@ -3544,41 +3543,41 @@ around the current one.;
 #X obj 908 437 line;
 #X obj 874 781 * 1;
 #X obj 887 167 stripnote;
-#X obj 905 275 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
--1 -1;
+#X obj 905 275 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
+#000000 #000000;
 #X obj 1101 261 sel 0;
 #X obj 1094 177 unpack;
-#X floatatom 1151 224 5 0 0 0 - - -;
-#X floatatom 831 206 5 0 0 0 - - -;
-#X obj 1094 319 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
--1 -1;
+#X floatatom 1151 224 5 0 0 0 - - -, f 5;
+#X floatatom 831 206 5 0 0 0 - - -, f 5;
+#X obj 1094 319 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
+#000000 #000000;
 #X obj 942 304 pack 1 2 3;
 #X obj 943 328 route 1;
 #X obj 1000 175 r aplusd;
 #X obj 1155 304 r releasezeit;
-#X floatatom 1016 203 5 0 0 0 - - -;
-#X floatatom 1124 327 5 0 0 0 - - -;
+#X floatatom 1016 203 5 0 0 0 - - -, f 5;
+#X floatatom 1124 327 5 0 0 0 - - -, f 5;
 #X obj 992 280 * 10;
 #X obj 976 563 +;
-#X floatatom 916 461 10 0 0 0 - - -;
+#X floatatom 916 461 10 0 0 0 - - -, f 10;
 #X obj 971 521 line;
-#X floatatom 973 541 10 0 0 0 - - -;
+#X floatatom 973 541 10 0 0 0 - - -, f 10;
 #X obj 1139 346 * 10;
 #X obj 1046 398 route 1;
-#X floatatom 977 584 10 0 0 0 - - -;
+#X floatatom 977 584 10 0 0 0 - - -, f 10;
 #X obj 1060 375 pack 1 2 3 4;
 #X msg 1128 421 \$3;
-#X floatatom 1128 441 10 0 0 0 - - -;
+#X floatatom 1128 441 10 0 0 0 - - -, f 10;
 #X msg 1061 422 0 \, \$2 \$1;
 #X msg 1069 288 0;
-#X floatatom 950 718 10 0 0 0 - - -;
+#X floatatom 950 718 10 0 0 0 - - -, f 10;
 #X obj 923 672 tabread4 array3;
 #X msg 1153 571 0;
 #X obj 1181 510 del;
 #X msg 1152 484 bang;
 #X obj 1197 346 + 5;
-#X obj 1189 542 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
--1 -1;
+#X obj 1189 542 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
+#000000 #000000;
 #X msg 943 351 0 \, \$2 \$1;
 #X obj 843 435 vline~;
 #X obj 782 664 tabread4~ array3;
@@ -3608,8 +3607,8 @@ number \, it outputs the value corresponding to this index in the indicated
 array (table). The number 4 indicates that an interpolation of 4 points
 is done. This is \, the output value is a kind of mean of the 4 samples
 around the current one.;
-#X obj 900 435 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
-1;
+#X obj 900 435 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000
+#000000 0 1;
 #X obj 881 484 metro 200;
 #X obj 874 553 tabwrite~ waveout;
 #X obj 792 396 tabread4~ sine;
@@ -3639,8 +3638,8 @@ number \, it outputs the value corresponding to this index in the indicated
 array (table). The number 4 indicates that an interpolation of 4 points
 is done. This is \, the output value is a kind of mean of the 4 samples
 around the current one.;
-#X obj 900 435 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
-1;
+#X obj 900 435 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000
+#000000 0 1;
 #X obj 881 484 metro 200;
 #X obj 874 553 tabwrite~ waveout;
 #X obj 792 396 tabread4~ sine;
@@ -3670,8 +3669,8 @@ number \, it outputs the value corresponding to this index in the indicated
 array (table). The number 4 indicates that an interpolation of 4 points
 is done. This is \, the output value is a kind of mean of the 4 samples
 around the current one.;
-#X obj 900 435 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
-1;
+#X obj 900 435 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000
+#000000 0 1;
 #X obj 881 484 metro 200;
 #X obj 874 553 tabwrite~ waveout;
 #X obj 792 396 tabread4~ sine;
@@ -3701,8 +3700,8 @@ number \, it outputs the value corresponding to this index in the indicated
 array (table). The number 4 indicates that an interpolation of 4 points
 is done. This is \, the output value is a kind of mean of the 4 samples
 around the current one.;
-#X obj 900 435 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
-1;
+#X obj 900 435 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000
+#000000 0 1;
 #X obj 881 484 metro 200;
 #X obj 874 553 tabwrite~ waveout;
 #X obj 792 396 tabread4~ sine;
@@ -3849,30 +3848,30 @@ around the current one.;
 #X obj 185 256 +~;
 #X obj 141 112 *~;
 #X obj 141 90 osc~;
-#X floatatom 141 69 5 0 0 0 - - -;
-#X floatatom 194 142 5 0 0 0 - - -;
+#X floatatom 141 69 5 0 0 0 - - -, f 5;
+#X floatatom 194 142 5 0 0 0 - - -, f 5;
 #X obj 289 333 *~ 1;
 #X obj 324 256 +~;
 #X obj 280 112 *~;
 #X obj 280 90 osc~;
-#X floatatom 280 69 5 0 0 0 - - -;
-#X floatatom 333 142 5 0 0 0 - - -;
+#X floatatom 280 69 5 0 0 0 - - -, f 5;
+#X floatatom 333 142 5 0 0 0 - - -, f 5;
 #X obj 279 211 * 3;
 #X obj 443 333 *~ 1;
 #X obj 478 256 +~;
 #X obj 434 112 *~;
 #X obj 434 90 osc~;
-#X floatatom 434 69 5 0 0 0 - - -;
-#X floatatom 487 142 5 0 0 0 - - -;
+#X floatatom 434 69 5 0 0 0 - - -, f 5;
+#X floatatom 487 142 5 0 0 0 - - -, f 5;
 #X obj 582 333 *~ 1;
 #X obj 617 256 +~;
 #X obj 573 112 *~;
 #X obj 573 90 osc~;
-#X floatatom 573 69 5 0 0 0 - - -;
-#X floatatom 626 142 5 0 0 0 - - -;
+#X floatatom 573 69 5 0 0 0 - - -, f 5;
+#X floatatom 626 142 5 0 0 0 - - -, f 5;
 #X obj 433 211 * 4;
 #X obj 572 211 * 5;
-#X floatatom 18 198 5 0 0 0 - - -;
+#X floatatom 18 198 5 0 0 0 - - -, f 5;
 #X obj 102 656 *~;
 #X obj 101 736 outlet~;
 #X obj 21 114 mtof;
@@ -3916,8 +3915,8 @@ number \, it outputs the value corresponding to this index in the indicated
 array (table). The number 4 indicates that an interpolation of 4 points
 is done. This is \, the output value is a kind of mean of the 4 samples
 around the current one.;
-#X obj 900 435 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
-1;
+#X obj 900 435 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000
+#000000 0 1;
 #X obj 881 484 metro 200;
 #X obj 874 553 tabwrite~ waveout;
 #X obj 792 396 tabread4~ sine;
@@ -3938,41 +3937,41 @@ around the current one.;
 #X obj 908 437 line;
 #X obj 874 781 * 1;
 #X obj 887 167 stripnote;
-#X obj 905 275 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
--1 -1;
+#X obj 905 275 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
+#000000 #000000;
 #X obj 1101 261 sel 0;
 #X obj 1094 177 unpack;
-#X floatatom 1151 224 5 0 0 0 - - -;
-#X floatatom 831 206 5 0 0 0 - - -;
-#X obj 1094 319 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
--1 -1;
+#X floatatom 1151 224 5 0 0 0 - - -, f 5;
+#X floatatom 831 206 5 0 0 0 - - -, f 5;
+#X obj 1094 319 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
+#000000 #000000;
 #X obj 942 304 pack 1 2 3;
 #X obj 943 328 route 1;
 #X obj 1000 175 r aplusd;
 #X obj 1155 304 r releasezeit;
-#X floatatom 1016 203 5 0 0 0 - - -;
-#X floatatom 1124 327 5 0 0 0 - - -;
+#X floatatom 1016 203 5 0 0 0 - - -, f 5;
+#X floatatom 1124 327 5 0 0 0 - - -, f 5;
 #X obj 992 280 * 10;
 #X obj 976 563 +;
-#X floatatom 916 461 10 0 0 0 - - -;
+#X floatatom 916 461 10 0 0 0 - - -, f 10;
 #X obj 971 521 line;
-#X floatatom 973 541 10 0 0 0 - - -;
+#X floatatom 973 541 10 0 0 0 - - -, f 10;
 #X obj 1139 346 * 10;
 #X obj 1046 398 route 1;
-#X floatatom 977 584 10 0 0 0 - - -;
+#X floatatom 977 584 10 0 0 0 - - -, f 10;
 #X obj 1060 375 pack 1 2 3 4;
 #X msg 1128 421 \$3;
-#X floatatom 1128 441 10 0 0 0 - - -;
+#X floatatom 1128 441 10 0 0 0 - - -, f 10;
 #X msg 1061 422 0 \, \$2 \$1;
 #X msg 1069 288 0;
-#X floatatom 950 718 10 0 0 0 - - -;
+#X floatatom 950 718 10 0 0 0 - - -, f 10;
 #X obj 923 672 tabread4 array3;
 #X msg 1153 571 0;
 #X obj 1181 510 del;
 #X msg 1152 484 bang;
 #X obj 1197 346 + 5;
-#X obj 1189 542 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
--1 -1;
+#X obj 1189 542 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
+#000000 #000000;
 #X msg 943 351 0 \, \$2 \$1;
 #X obj 843 435 vline~;
 #X obj 782 664 tabread4~ array3;
@@ -4002,8 +4001,8 @@ number \, it outputs the value corresponding to this index in the indicated
 array (table). The number 4 indicates that an interpolation of 4 points
 is done. This is \, the output value is a kind of mean of the 4 samples
 around the current one.;
-#X obj 900 435 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
-1;
+#X obj 900 435 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000
+#000000 0 1;
 #X obj 881 484 metro 200;
 #X obj 874 553 tabwrite~ waveout;
 #X obj 792 396 tabread4~ sine;
@@ -4033,8 +4032,8 @@ number \, it outputs the value corresponding to this index in the indicated
 array (table). The number 4 indicates that an interpolation of 4 points
 is done. This is \, the output value is a kind of mean of the 4 samples
 around the current one.;
-#X obj 900 435 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
-1;
+#X obj 900 435 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000
+#000000 0 1;
 #X obj 881 484 metro 200;
 #X obj 874 553 tabwrite~ waveout;
 #X obj 792 396 tabread4~ sine;
@@ -4064,8 +4063,8 @@ number \, it outputs the value corresponding to this index in the indicated
 array (table). The number 4 indicates that an interpolation of 4 points
 is done. This is \, the output value is a kind of mean of the 4 samples
 around the current one.;
-#X obj 900 435 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
-1;
+#X obj 900 435 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000
+#000000 0 1;
 #X obj 881 484 metro 200;
 #X obj 874 553 tabwrite~ waveout;
 #X obj 792 396 tabread4~ sine;
@@ -4095,8 +4094,8 @@ number \, it outputs the value corresponding to this index in the indicated
 array (table). The number 4 indicates that an interpolation of 4 points
 is done. This is \, the output value is a kind of mean of the 4 samples
 around the current one.;
-#X obj 900 435 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
-1;
+#X obj 900 435 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000
+#000000 0 1;
 #X obj 881 484 metro 200;
 #X obj 874 553 tabwrite~ waveout;
 #X obj 792 396 tabread4~ sine;
@@ -4243,30 +4242,30 @@ around the current one.;
 #X obj 185 256 +~;
 #X obj 141 112 *~;
 #X obj 141 90 osc~;
-#X floatatom 141 69 5 0 0 0 - - -;
-#X floatatom 194 142 5 0 0 0 - - -;
+#X floatatom 141 69 5 0 0 0 - - -, f 5;
+#X floatatom 194 142 5 0 0 0 - - -, f 5;
 #X obj 289 333 *~ 1;
 #X obj 324 256 +~;
 #X obj 280 112 *~;
 #X obj 280 90 osc~;
-#X floatatom 280 69 5 0 0 0 - - -;
-#X floatatom 333 142 5 0 0 0 - - -;
+#X floatatom 280 69 5 0 0 0 - - -, f 5;
+#X floatatom 333 142 5 0 0 0 - - -, f 5;
 #X obj 279 211 * 3;
 #X obj 443 333 *~ 1;
 #X obj 478 256 +~;
 #X obj 434 112 *~;
 #X obj 434 90 osc~;
-#X floatatom 434 69 5 0 0 0 - - -;
-#X floatatom 487 142 5 0 0 0 - - -;
+#X floatatom 434 69 5 0 0 0 - - -, f 5;
+#X floatatom 487 142 5 0 0 0 - - -, f 5;
 #X obj 582 333 *~ 1;
 #X obj 617 256 +~;
 #X obj 573 112 *~;
 #X obj 573 90 osc~;
-#X floatatom 573 69 5 0 0 0 - - -;
-#X floatatom 626 142 5 0 0 0 - - -;
+#X floatatom 573 69 5 0 0 0 - - -, f 5;
+#X floatatom 626 142 5 0 0 0 - - -, f 5;
 #X obj 433 211 * 4;
 #X obj 572 211 * 5;
-#X floatatom 18 198 5 0 0 0 - - -;
+#X floatatom 18 198 5 0 0 0 - - -, f 5;
 #X obj 102 656 *~;
 #X obj 101 736 outlet~;
 #X obj 21 114 mtof;
@@ -4310,8 +4309,8 @@ number \, it outputs the value corresponding to this index in the indicated
 array (table). The number 4 indicates that an interpolation of 4 points
 is done. This is \, the output value is a kind of mean of the 4 samples
 around the current one.;
-#X obj 900 435 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
-1;
+#X obj 900 435 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000
+#000000 0 1;
 #X obj 881 484 metro 200;
 #X obj 874 553 tabwrite~ waveout;
 #X obj 792 396 tabread4~ sine;
@@ -4332,41 +4331,41 @@ around the current one.;
 #X obj 908 437 line;
 #X obj 874 781 * 1;
 #X obj 887 167 stripnote;
-#X obj 905 275 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
--1 -1;
+#X obj 905 275 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
+#000000 #000000;
 #X obj 1101 261 sel 0;
 #X obj 1094 177 unpack;
-#X floatatom 1151 224 5 0 0 0 - - -;
-#X floatatom 831 206 5 0 0 0 - - -;
-#X obj 1094 319 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
--1 -1;
+#X floatatom 1151 224 5 0 0 0 - - -, f 5;
+#X floatatom 831 206 5 0 0 0 - - -, f 5;
+#X obj 1094 319 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
+#000000 #000000;
 #X obj 942 304 pack 1 2 3;
 #X obj 943 328 route 1;
 #X obj 1000 175 r aplusd;
 #X obj 1155 304 r releasezeit;
-#X floatatom 1016 203 5 0 0 0 - - -;
-#X floatatom 1124 327 5 0 0 0 - - -;
+#X floatatom 1016 203 5 0 0 0 - - -, f 5;
+#X floatatom 1124 327 5 0 0 0 - - -, f 5;
 #X obj 992 280 * 10;
 #X obj 976 563 +;
-#X floatatom 916 461 10 0 0 0 - - -;
+#X floatatom 916 461 10 0 0 0 - - -, f 10;
 #X obj 971 521 line;
-#X floatatom 973 541 10 0 0 0 - - -;
+#X floatatom 973 541 10 0 0 0 - - -, f 10;
 #X obj 1139 346 * 10;
 #X obj 1046 398 route 1;
-#X floatatom 977 584 10 0 0 0 - - -;
+#X floatatom 977 584 10 0 0 0 - - -, f 10;
 #X obj 1060 375 pack 1 2 3 4;
 #X msg 1128 421 \$3;
-#X floatatom 1128 441 10 0 0 0 - - -;
+#X floatatom 1128 441 10 0 0 0 - - -, f 10;
 #X msg 1061 422 0 \, \$2 \$1;
 #X msg 1069 288 0;
-#X floatatom 950 718 10 0 0 0 - - -;
+#X floatatom 950 718 10 0 0 0 - - -, f 10;
 #X obj 923 672 tabread4 array3;
 #X msg 1153 571 0;
 #X obj 1181 510 del;
 #X msg 1152 484 bang;
 #X obj 1197 346 + 5;
-#X obj 1189 542 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
--1 -1;
+#X obj 1189 542 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
+#000000 #000000;
 #X msg 943 351 0 \, \$2 \$1;
 #X obj 843 435 vline~;
 #X obj 782 664 tabread4~ array3;
@@ -4396,8 +4395,8 @@ number \, it outputs the value corresponding to this index in the indicated
 array (table). The number 4 indicates that an interpolation of 4 points
 is done. This is \, the output value is a kind of mean of the 4 samples
 around the current one.;
-#X obj 900 435 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
-1;
+#X obj 900 435 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000
+#000000 0 1;
 #X obj 881 484 metro 200;
 #X obj 874 553 tabwrite~ waveout;
 #X obj 792 396 tabread4~ sine;
@@ -4427,8 +4426,8 @@ number \, it outputs the value corresponding to this index in the indicated
 array (table). The number 4 indicates that an interpolation of 4 points
 is done. This is \, the output value is a kind of mean of the 4 samples
 around the current one.;
-#X obj 900 435 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
-1;
+#X obj 900 435 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000
+#000000 0 1;
 #X obj 881 484 metro 200;
 #X obj 874 553 tabwrite~ waveout;
 #X obj 792 396 tabread4~ sine;
@@ -4458,8 +4457,8 @@ number \, it outputs the value corresponding to this index in the indicated
 array (table). The number 4 indicates that an interpolation of 4 points
 is done. This is \, the output value is a kind of mean of the 4 samples
 around the current one.;
-#X obj 900 435 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
-1;
+#X obj 900 435 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000
+#000000 0 1;
 #X obj 881 484 metro 200;
 #X obj 874 553 tabwrite~ waveout;
 #X obj 792 396 tabread4~ sine;
@@ -4489,8 +4488,8 @@ number \, it outputs the value corresponding to this index in the indicated
 array (table). The number 4 indicates that an interpolation of 4 points
 is done. This is \, the output value is a kind of mean of the 4 samples
 around the current one.;
-#X obj 900 435 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
-1;
+#X obj 900 435 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000
+#000000 0 1;
 #X obj 881 484 metro 200;
 #X obj 874 553 tabwrite~ waveout;
 #X obj 792 396 tabread4~ sine;
@@ -4637,30 +4636,30 @@ around the current one.;
 #X obj 185 256 +~;
 #X obj 141 112 *~;
 #X obj 141 90 osc~;
-#X floatatom 141 69 5 0 0 0 - - -;
-#X floatatom 194 142 5 0 0 0 - - -;
+#X floatatom 141 69 5 0 0 0 - - -, f 5;
+#X floatatom 194 142 5 0 0 0 - - -, f 5;
 #X obj 289 333 *~ 1;
 #X obj 324 256 +~;
 #X obj 280 112 *~;
 #X obj 280 90 osc~;
-#X floatatom 280 69 5 0 0 0 - - -;
-#X floatatom 333 142 5 0 0 0 - - -;
+#X floatatom 280 69 5 0 0 0 - - -, f 5;
+#X floatatom 333 142 5 0 0 0 - - -, f 5;
 #X obj 279 211 * 3;
 #X obj 443 333 *~ 1;
 #X obj 478 256 +~;
 #X obj 434 112 *~;
 #X obj 434 90 osc~;
-#X floatatom 434 69 5 0 0 0 - - -;
-#X floatatom 487 142 5 0 0 0 - - -;
+#X floatatom 434 69 5 0 0 0 - - -, f 5;
+#X floatatom 487 142 5 0 0 0 - - -, f 5;
 #X obj 582 333 *~ 1;
 #X obj 617 256 +~;
 #X obj 573 112 *~;
 #X obj 573 90 osc~;
-#X floatatom 573 69 5 0 0 0 - - -;
-#X floatatom 626 142 5 0 0 0 - - -;
+#X floatatom 573 69 5 0 0 0 - - -, f 5;
+#X floatatom 626 142 5 0 0 0 - - -, f 5;
 #X obj 433 211 * 4;
 #X obj 572 211 * 5;
-#X floatatom 18 198 5 0 0 0 - - -;
+#X floatatom 18 198 5 0 0 0 - - -, f 5;
 #X obj 102 656 *~;
 #X obj 101 736 outlet~;
 #X obj 21 114 mtof;
@@ -4704,8 +4703,8 @@ number \, it outputs the value corresponding to this index in the indicated
 array (table). The number 4 indicates that an interpolation of 4 points
 is done. This is \, the output value is a kind of mean of the 4 samples
 around the current one.;
-#X obj 900 435 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
-1;
+#X obj 900 435 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000
+#000000 0 1;
 #X obj 881 484 metro 200;
 #X obj 874 553 tabwrite~ waveout;
 #X obj 792 396 tabread4~ sine;
@@ -4726,41 +4725,41 @@ around the current one.;
 #X obj 908 437 line;
 #X obj 874 781 * 1;
 #X obj 887 167 stripnote;
-#X obj 905 275 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
--1 -1;
+#X obj 905 275 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
+#000000 #000000;
 #X obj 1101 261 sel 0;
 #X obj 1094 177 unpack;
-#X floatatom 1151 224 5 0 0 0 - - -;
-#X floatatom 831 206 5 0 0 0 - - -;
-#X obj 1094 319 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
--1 -1;
+#X floatatom 1151 224 5 0 0 0 - - -, f 5;
+#X floatatom 831 206 5 0 0 0 - - -, f 5;
+#X obj 1094 319 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
+#000000 #000000;
 #X obj 942 304 pack 1 2 3;
 #X obj 943 328 route 1;
 #X obj 1000 175 r aplusd;
 #X obj 1155 304 r releasezeit;
-#X floatatom 1016 203 5 0 0 0 - - -;
-#X floatatom 1124 327 5 0 0 0 - - -;
+#X floatatom 1016 203 5 0 0 0 - - -, f 5;
+#X floatatom 1124 327 5 0 0 0 - - -, f 5;
 #X obj 992 280 * 10;
 #X obj 976 563 +;
-#X floatatom 916 461 10 0 0 0 - - -;
+#X floatatom 916 461 10 0 0 0 - - -, f 10;
 #X obj 971 521 line;
-#X floatatom 973 541 10 0 0 0 - - -;
+#X floatatom 973 541 10 0 0 0 - - -, f 10;
 #X obj 1139 346 * 10;
 #X obj 1046 398 route 1;
-#X floatatom 977 584 10 0 0 0 - - -;
+#X floatatom 977 584 10 0 0 0 - - -, f 10;
 #X obj 1060 375 pack 1 2 3 4;
 #X msg 1128 421 \$3;
-#X floatatom 1128 441 10 0 0 0 - - -;
+#X floatatom 1128 441 10 0 0 0 - - -, f 10;
 #X msg 1061 422 0 \, \$2 \$1;
 #X msg 1069 288 0;
-#X floatatom 950 718 10 0 0 0 - - -;
+#X floatatom 950 718 10 0 0 0 - - -, f 10;
 #X obj 923 672 tabread4 array3;
 #X msg 1153 571 0;
 #X obj 1181 510 del;
 #X msg 1152 484 bang;
 #X obj 1197 346 + 5;
-#X obj 1189 542 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
--1 -1;
+#X obj 1189 542 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
+#000000 #000000;
 #X msg 943 351 0 \, \$2 \$1;
 #X obj 843 435 vline~;
 #X obj 782 664 tabread4~ array3;
@@ -4790,8 +4789,8 @@ number \, it outputs the value corresponding to this index in the indicated
 array (table). The number 4 indicates that an interpolation of 4 points
 is done. This is \, the output value is a kind of mean of the 4 samples
 around the current one.;
-#X obj 900 435 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
-1;
+#X obj 900 435 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000
+#000000 0 1;
 #X obj 881 484 metro 200;
 #X obj 874 553 tabwrite~ waveout;
 #X obj 792 396 tabread4~ sine;
@@ -4821,8 +4820,8 @@ number \, it outputs the value corresponding to this index in the indicated
 array (table). The number 4 indicates that an interpolation of 4 points
 is done. This is \, the output value is a kind of mean of the 4 samples
 around the current one.;
-#X obj 900 435 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
-1;
+#X obj 900 435 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000
+#000000 0 1;
 #X obj 881 484 metro 200;
 #X obj 874 553 tabwrite~ waveout;
 #X obj 792 396 tabread4~ sine;
@@ -4852,8 +4851,8 @@ number \, it outputs the value corresponding to this index in the indicated
 array (table). The number 4 indicates that an interpolation of 4 points
 is done. This is \, the output value is a kind of mean of the 4 samples
 around the current one.;
-#X obj 900 435 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
-1;
+#X obj 900 435 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000
+#000000 0 1;
 #X obj 881 484 metro 200;
 #X obj 874 553 tabwrite~ waveout;
 #X obj 792 396 tabread4~ sine;
@@ -4883,8 +4882,8 @@ number \, it outputs the value corresponding to this index in the indicated
 array (table). The number 4 indicates that an interpolation of 4 points
 is done. This is \, the output value is a kind of mean of the 4 samples
 around the current one.;
-#X obj 900 435 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
-1;
+#X obj 900 435 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000
+#000000 0 1;
 #X obj 881 484 metro 200;
 #X obj 874 553 tabwrite~ waveout;
 #X obj 792 396 tabread4~ sine;
@@ -5031,30 +5030,30 @@ around the current one.;
 #X obj 185 256 +~;
 #X obj 141 112 *~;
 #X obj 141 90 osc~;
-#X floatatom 141 69 5 0 0 0 - - -;
-#X floatatom 194 142 5 0 0 0 - - -;
+#X floatatom 141 69 5 0 0 0 - - -, f 5;
+#X floatatom 194 142 5 0 0 0 - - -, f 5;
 #X obj 289 333 *~ 1;
 #X obj 324 256 +~;
 #X obj 280 112 *~;
 #X obj 280 90 osc~;
-#X floatatom 280 69 5 0 0 0 - - -;
-#X floatatom 333 142 5 0 0 0 - - -;
+#X floatatom 280 69 5 0 0 0 - - -, f 5;
+#X floatatom 333 142 5 0 0 0 - - -, f 5;
 #X obj 279 211 * 3;
 #X obj 443 333 *~ 1;
 #X obj 478 256 +~;
 #X obj 434 112 *~;
 #X obj 434 90 osc~;
-#X floatatom 434 69 5 0 0 0 - - -;
-#X floatatom 487 142 5 0 0 0 - - -;
+#X floatatom 434 69 5 0 0 0 - - -, f 5;
+#X floatatom 487 142 5 0 0 0 - - -, f 5;
 #X obj 582 333 *~ 1;
 #X obj 617 256 +~;
 #X obj 573 112 *~;
 #X obj 573 90 osc~;
-#X floatatom 573 69 5 0 0 0 - - -;
-#X floatatom 626 142 5 0 0 0 - - -;
+#X floatatom 573 69 5 0 0 0 - - -, f 5;
+#X floatatom 626 142 5 0 0 0 - - -, f 5;
 #X obj 433 211 * 4;
 #X obj 572 211 * 5;
-#X floatatom 18 198 5 0 0 0 - - -;
+#X floatatom 18 198 5 0 0 0 - - -, f 5;
 #X obj 102 656 *~;
 #X obj 101 736 outlet~;
 #X obj 21 114 mtof;
@@ -5098,8 +5097,8 @@ number \, it outputs the value corresponding to this index in the indicated
 array (table). The number 4 indicates that an interpolation of 4 points
 is done. This is \, the output value is a kind of mean of the 4 samples
 around the current one.;
-#X obj 900 435 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
-1;
+#X obj 900 435 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000
+#000000 0 1;
 #X obj 881 484 metro 200;
 #X obj 874 553 tabwrite~ waveout;
 #X obj 792 396 tabread4~ sine;
@@ -5120,41 +5119,41 @@ around the current one.;
 #X obj 908 437 line;
 #X obj 874 781 * 1;
 #X obj 887 167 stripnote;
-#X obj 905 275 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
--1 -1;
+#X obj 905 275 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
+#000000 #000000;
 #X obj 1101 261 sel 0;
 #X obj 1094 177 unpack;
-#X floatatom 1151 224 5 0 0 0 - - -;
-#X floatatom 831 206 5 0 0 0 - - -;
-#X obj 1094 319 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
--1 -1;
+#X floatatom 1151 224 5 0 0 0 - - -, f 5;
+#X floatatom 831 206 5 0 0 0 - - -, f 5;
+#X obj 1094 319 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
+#000000 #000000;
 #X obj 942 304 pack 1 2 3;
 #X obj 943 328 route 1;
 #X obj 1000 175 r aplusd;
 #X obj 1155 304 r releasezeit;
-#X floatatom 1016 203 5 0 0 0 - - -;
-#X floatatom 1124 327 5 0 0 0 - - -;
+#X floatatom 1016 203 5 0 0 0 - - -, f 5;
+#X floatatom 1124 327 5 0 0 0 - - -, f 5;
 #X obj 992 280 * 10;
 #X obj 976 563 +;
-#X floatatom 916 461 10 0 0 0 - - -;
+#X floatatom 916 461 10 0 0 0 - - -, f 10;
 #X obj 971 521 line;
-#X floatatom 973 541 10 0 0 0 - - -;
+#X floatatom 973 541 10 0 0 0 - - -, f 10;
 #X obj 1139 346 * 10;
 #X obj 1046 398 route 1;
-#X floatatom 977 584 10 0 0 0 - - -;
+#X floatatom 977 584 10 0 0 0 - - -, f 10;
 #X obj 1060 375 pack 1 2 3 4;
 #X msg 1128 421 \$3;
-#X floatatom 1128 441 10 0 0 0 - - -;
+#X floatatom 1128 441 10 0 0 0 - - -, f 10;
 #X msg 1061 422 0 \, \$2 \$1;
 #X msg 1069 288 0;
-#X floatatom 950 718 10 0 0 0 - - -;
+#X floatatom 950 718 10 0 0 0 - - -, f 10;
 #X obj 923 672 tabread4 array3;
 #X msg 1153 571 0;
 #X obj 1181 510 del;
 #X msg 1152 484 bang;
 #X obj 1197 346 + 5;
-#X obj 1189 542 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
--1 -1;
+#X obj 1189 542 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
+#000000 #000000;
 #X msg 943 351 0 \, \$2 \$1;
 #X obj 843 435 vline~;
 #X obj 782 664 tabread4~ array3;
@@ -5184,8 +5183,8 @@ number \, it outputs the value corresponding to this index in the indicated
 array (table). The number 4 indicates that an interpolation of 4 points
 is done. This is \, the output value is a kind of mean of the 4 samples
 around the current one.;
-#X obj 900 435 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
-1;
+#X obj 900 435 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000
+#000000 0 1;
 #X obj 881 484 metro 200;
 #X obj 874 553 tabwrite~ waveout;
 #X obj 792 396 tabread4~ sine;
@@ -5215,8 +5214,8 @@ number \, it outputs the value corresponding to this index in the indicated
 array (table). The number 4 indicates that an interpolation of 4 points
 is done. This is \, the output value is a kind of mean of the 4 samples
 around the current one.;
-#X obj 900 435 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
-1;
+#X obj 900 435 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000
+#000000 0 1;
 #X obj 881 484 metro 200;
 #X obj 874 553 tabwrite~ waveout;
 #X obj 792 396 tabread4~ sine;
@@ -5246,8 +5245,8 @@ number \, it outputs the value corresponding to this index in the indicated
 array (table). The number 4 indicates that an interpolation of 4 points
 is done. This is \, the output value is a kind of mean of the 4 samples
 around the current one.;
-#X obj 900 435 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
-1;
+#X obj 900 435 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000
+#000000 0 1;
 #X obj 881 484 metro 200;
 #X obj 874 553 tabwrite~ waveout;
 #X obj 792 396 tabread4~ sine;
@@ -5277,8 +5276,8 @@ number \, it outputs the value corresponding to this index in the indicated
 array (table). The number 4 indicates that an interpolation of 4 points
 is done. This is \, the output value is a kind of mean of the 4 samples
 around the current one.;
-#X obj 900 435 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
-1;
+#X obj 900 435 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000
+#000000 0 1;
 #X obj 881 484 metro 200;
 #X obj 874 553 tabwrite~ waveout;
 #X obj 792 396 tabread4~ sine;
@@ -5425,30 +5424,30 @@ around the current one.;
 #X obj 185 256 +~;
 #X obj 141 112 *~;
 #X obj 141 90 osc~;
-#X floatatom 141 69 5 0 0 0 - - -;
-#X floatatom 194 142 5 0 0 0 - - -;
+#X floatatom 141 69 5 0 0 0 - - -, f 5;
+#X floatatom 194 142 5 0 0 0 - - -, f 5;
 #X obj 289 333 *~ 1;
 #X obj 324 256 +~;
 #X obj 280 112 *~;
 #X obj 280 90 osc~;
-#X floatatom 280 69 5 0 0 0 - - -;
-#X floatatom 333 142 5 0 0 0 - - -;
+#X floatatom 280 69 5 0 0 0 - - -, f 5;
+#X floatatom 333 142 5 0 0 0 - - -, f 5;
 #X obj 279 211 * 3;
 #X obj 443 333 *~ 1;
 #X obj 478 256 +~;
 #X obj 434 112 *~;
 #X obj 434 90 osc~;
-#X floatatom 434 69 5 0 0 0 - - -;
-#X floatatom 487 142 5 0 0 0 - - -;
+#X floatatom 434 69 5 0 0 0 - - -, f 5;
+#X floatatom 487 142 5 0 0 0 - - -, f 5;
 #X obj 582 333 *~ 1;
 #X obj 617 256 +~;
 #X obj 573 112 *~;
 #X obj 573 90 osc~;
-#X floatatom 573 69 5 0 0 0 - - -;
-#X floatatom 626 142 5 0 0 0 - - -;
+#X floatatom 573 69 5 0 0 0 - - -, f 5;
+#X floatatom 626 142 5 0 0 0 - - -, f 5;
 #X obj 433 211 * 4;
 #X obj 572 211 * 5;
-#X floatatom 18 198 5 0 0 0 - - -;
+#X floatatom 18 198 5 0 0 0 - - -, f 5;
 #X obj 102 656 *~;
 #X obj 101 736 outlet~;
 #X obj 21 114 mtof;
@@ -5492,8 +5491,8 @@ number \, it outputs the value corresponding to this index in the indicated
 array (table). The number 4 indicates that an interpolation of 4 points
 is done. This is \, the output value is a kind of mean of the 4 samples
 around the current one.;
-#X obj 900 435 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
-1;
+#X obj 900 435 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000
+#000000 0 1;
 #X obj 881 484 metro 200;
 #X obj 874 553 tabwrite~ waveout;
 #X obj 792 396 tabread4~ sine;
@@ -5514,41 +5513,41 @@ around the current one.;
 #X obj 908 437 line;
 #X obj 874 781 * 1;
 #X obj 887 167 stripnote;
-#X obj 905 275 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
--1 -1;
+#X obj 905 275 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
+#000000 #000000;
 #X obj 1101 261 sel 0;
 #X obj 1094 177 unpack;
-#X floatatom 1151 224 5 0 0 0 - - -;
-#X floatatom 831 206 5 0 0 0 - - -;
-#X obj 1094 319 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
--1 -1;
+#X floatatom 1151 224 5 0 0 0 - - -, f 5;
+#X floatatom 831 206 5 0 0 0 - - -, f 5;
+#X obj 1094 319 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
+#000000 #000000;
 #X obj 942 304 pack 1 2 3;
 #X obj 943 328 route 1;
 #X obj 1000 175 r aplusd;
 #X obj 1155 304 r releasezeit;
-#X floatatom 1016 203 5 0 0 0 - - -;
-#X floatatom 1124 327 5 0 0 0 - - -;
+#X floatatom 1016 203 5 0 0 0 - - -, f 5;
+#X floatatom 1124 327 5 0 0 0 - - -, f 5;
 #X obj 992 280 * 10;
 #X obj 976 563 +;
-#X floatatom 916 461 10 0 0 0 - - -;
+#X floatatom 916 461 10 0 0 0 - - -, f 10;
 #X obj 971 521 line;
-#X floatatom 973 541 10 0 0 0 - - -;
+#X floatatom 973 541 10 0 0 0 - - -, f 10;
 #X obj 1139 346 * 10;
 #X obj 1046 398 route 1;
-#X floatatom 977 584 10 0 0 0 - - -;
+#X floatatom 977 584 10 0 0 0 - - -, f 10;
 #X obj 1060 375 pack 1 2 3 4;
 #X msg 1128 421 \$3;
-#X floatatom 1128 441 10 0 0 0 - - -;
+#X floatatom 1128 441 10 0 0 0 - - -, f 10;
 #X msg 1061 422 0 \, \$2 \$1;
 #X msg 1069 288 0;
-#X floatatom 950 718 10 0 0 0 - - -;
+#X floatatom 950 718 10 0 0 0 - - -, f 10;
 #X obj 923 672 tabread4 array3;
 #X msg 1153 571 0;
 #X obj 1181 510 del;
 #X msg 1152 484 bang;
 #X obj 1197 346 + 5;
-#X obj 1189 542 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
--1 -1;
+#X obj 1189 542 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
+#000000 #000000;
 #X msg 943 351 0 \, \$2 \$1;
 #X obj 843 435 vline~;
 #X obj 782 664 tabread4~ array3;
@@ -5578,8 +5577,8 @@ number \, it outputs the value corresponding to this index in the indicated
 array (table). The number 4 indicates that an interpolation of 4 points
 is done. This is \, the output value is a kind of mean of the 4 samples
 around the current one.;
-#X obj 900 435 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
-1;
+#X obj 900 435 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000
+#000000 0 1;
 #X obj 881 484 metro 200;
 #X obj 874 553 tabwrite~ waveout;
 #X obj 792 396 tabread4~ sine;
@@ -5609,8 +5608,8 @@ number \, it outputs the value corresponding to this index in the indicated
 array (table). The number 4 indicates that an interpolation of 4 points
 is done. This is \, the output value is a kind of mean of the 4 samples
 around the current one.;
-#X obj 900 435 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
-1;
+#X obj 900 435 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000
+#000000 0 1;
 #X obj 881 484 metro 200;
 #X obj 874 553 tabwrite~ waveout;
 #X obj 792 396 tabread4~ sine;
@@ -5640,8 +5639,8 @@ number \, it outputs the value corresponding to this index in the indicated
 array (table). The number 4 indicates that an interpolation of 4 points
 is done. This is \, the output value is a kind of mean of the 4 samples
 around the current one.;
-#X obj 900 435 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
-1;
+#X obj 900 435 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000
+#000000 0 1;
 #X obj 881 484 metro 200;
 #X obj 874 553 tabwrite~ waveout;
 #X obj 792 396 tabread4~ sine;
@@ -5671,8 +5670,8 @@ number \, it outputs the value corresponding to this index in the indicated
 array (table). The number 4 indicates that an interpolation of 4 points
 is done. This is \, the output value is a kind of mean of the 4 samples
 around the current one.;
-#X obj 900 435 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
-1;
+#X obj 900 435 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000
+#000000 0 1;
 #X obj 881 484 metro 200;
 #X obj 874 553 tabwrite~ waveout;
 #X obj 792 396 tabread4~ sine;
@@ -5817,6 +5816,11 @@ around the current one.;
 #X msg 573 660 5;
 #X msg 439 663 10;
 #X msg 539 660 10;
+#X msg 382 52 connect 192.168.178.29 9000;
+#X obj 182 48 s dsp;
+#X obj 1641 227 route /1/dsp/1/1;
+#X obj 1642 255 route /1/dsp/1/2;
+#X obj 1642 201 r dsp;
 #X connect 3 0 5 0;
 #X connect 3 0 204 0;
 #X connect 3 0 207 0;
@@ -5828,7 +5832,8 @@ around the current one.;
 #X connect 3 0 228 0;
 #X connect 3 0 229 0;
 #X connect 3 0 239 0;
-#X connect 3 0 258 0;
+#X connect 3 0 257 0;
+#X connect 3 0 282 0;
 #X connect 6 0 83 0;
 #X connect 6 0 188 0;
 #X connect 9 0 186 0;
@@ -5901,14 +5906,14 @@ around the current one.;
 #X connect 74 0 36 0;
 #X connect 75 0 71 0;
 #X connect 76 0 74 0;
-#X connect 77 0 265 0;
-#X connect 77 1 270 0;
-#X connect 77 2 271 0;
-#X connect 77 3 272 0;
-#X connect 77 4 273 0;
-#X connect 77 5 274 0;
-#X connect 77 6 275 0;
-#X connect 77 7 276 0;
+#X connect 77 0 264 0;
+#X connect 77 1 269 0;
+#X connect 77 2 270 0;
+#X connect 77 3 271 0;
+#X connect 77 4 272 0;
+#X connect 77 5 273 0;
+#X connect 77 6 274 0;
+#X connect 77 7 275 0;
 #X connect 78 0 101 0;
 #X connect 78 0 102 0;
 #X connect 79 0 98 0;
@@ -5966,7 +5971,7 @@ around the current one.;
 #X connect 130 0 120 0;
 #X connect 130 0 121 0;
 #X connect 130 0 123 0;
-#X connect 130 0 261 0;
+#X connect 130 0 260 0;
 #X connect 131 0 136 0;
 #X connect 132 0 136 0;
 #X connect 136 0 10 0;
@@ -6086,29 +6091,33 @@ around the current one.;
 #X connect 254 0 48 0;
 #X connect 255 0 230 0;
 #X connect 256 0 202 0;
-#X connect 257 0 2 0;
-#X connect 259 0 260 0;
-#X connect 260 0 130 0;
-#X connect 261 0 262 0;
-#X connect 263 0 2 0;
-#X connect 264 0 136 0;
-#X connect 265 0 11 0;
-#X connect 267 0 19 0;
-#X connect 268 0 280 0;
-#X connect 268 0 277 0;
-#X connect 268 0 278 0;
-#X connect 268 0 281 0;
-#X connect 268 0 279 0;
-#X connect 270 0 78 0;
-#X connect 271 0 12 0;
-#X connect 272 0 79 0;
-#X connect 273 0 13 0;
-#X connect 274 0 80 0;
-#X connect 275 0 14 0;
-#X connect 276 0 81 0;
-#X connect 277 0 21 0;
-#X connect 278 0 18 0;
-#X connect 279 0 230 0;
-#X connect 280 0 20 0;
-#X connect 281 0 19 0;
+#X connect 258 0 259 0;
+#X connect 259 0 130 0;
+#X connect 260 0 261 0;
+#X connect 262 0 2 0;
+#X connect 263 0 136 0;
+#X connect 264 0 11 0;
+#X connect 266 0 19 0;
+#X connect 267 0 279 0;
+#X connect 267 0 276 0;
+#X connect 267 0 277 0;
+#X connect 267 0 280 0;
+#X connect 267 0 278 0;
+#X connect 269 0 78 0;
+#X connect 270 0 12 0;
+#X connect 271 0 79 0;
+#X connect 272 0 13 0;
+#X connect 273 0 80 0;
+#X connect 274 0 14 0;
+#X connect 275 0 81 0;
+#X connect 276 0 21 0;
+#X connect 277 0 18 0;
+#X connect 278 0 230 0;
+#X connect 279 0 20 0;
+#X connect 280 0 19 0;
+#X connect 281 0 2 0;
+#X connect 283 0 7 0;
+#X connect 284 0 8 0;
+#X connect 285 0 283 0;
+#X connect 285 0 284 0;
 #X coords 0 0 1 1 85 60 0;
