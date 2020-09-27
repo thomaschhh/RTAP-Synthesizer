@@ -5,20 +5,24 @@ This synthesizer was created in the 2nd semester of 2020 as a final project in t
 After we had decided to develop a synthesizer and create an app for the iPad, we found the option to use [TouchOSC](https://hexler.net/docs/touchosc-getting-started). 
 We implemented our own Pd patch into the already existing [basic.pd](https://hexler.net/pub/touchosc/basic.pd) patch and found out that we had to work with [purr-data](https://agraef.github.io/purr-data/) instead of [Pd Vanilla](http://puredata.info/downloads/pure-data). The reason for this was the fact we actually needed [Pd-Extended](http://puredata.info/downloads/pd-extended) for OSC to work which is no longer supported.
 
-![Entire Pd Patch](https://github.com/thomaschhh/RTAP-Synthesizer/blob/master/Images/pd_patch.png?raw=true)
-
 ***
 
 ### Steps to Get The Synth Running
 
-- Start *purr-data* and open the file [synth.pd](https://github.com/thomaschhh/RTAP-Synthesizer/blob/master/PureData/Synth.pd).
-- Load and open the *TouchOSC* app on your iPad.
+- Start **purr-data** and open the file [synth.pd](https://github.com/thomaschhh/RTAP-Synthesizer/blob/master/PureData/Synth.pd).
+
+![Entire Pd Patch](https://github.com/thomaschhh/RTAP-Synthesizer/blob/master/Images/pd_patch.png?raw=true)
+
+- Load and open the **TouchOSC** app on your iPad.
+![Entire Pd Patch](https://github.com/thomaschhh/RTAP-Synthesizer/blob/master/Images/osc_layout.jpg?raw=true)
     - Look for the network settings.
-    - Type in your PC's IPaddress.
+    - Type in your PC's IP address (Host).
     ![Entire Pd Patch](https://github.com/thomaschhh/RTAP-Synthesizer/blob/master/Images/osc_connections.jpg?raw=true)
-- In the *synth.pd patch*, type in the iPad's IP address inside the connect box.
-    - Click the connect message box to connect to the iPad.
-    - Adjust the attack, decay, sustain, release sliders to your liking.
-    ![Entire Pd Patch](https://github.com/thomaschhh/RTAP-Synthesizer/blob/master/Images/envelope.png?raw=true)
-    - Do the same thing with the Fundamentals, its Shimmer Strength, Shimmer Frequency as well as the Master (gain)
-    - Finally, turn on the dsp. Now you're ready to play. 
+    - Port 8000 is used in the *dumpOSC* box in Pd. 
+    - Port 9000 is used int the *connect box* in Pd.
+- In the **synth.pd patch**, type in the iPad's IP address (*local IP address*) inside the connect box (**1**).
+    - Click the connect message box to connect to the iPad (**1**).
+    - Adjust the attack, decay, sustain, release sliders to your liking (**2**).
+    - Do the same thing with the Fundamentals (**3**) as well as its Shimmer Strength / Shimmer Frequency (**4**) 
+    - Select the desired waveform, adjust the volume (**5**) and turn on the dsp. 
+    - Now you're ready to play. 
