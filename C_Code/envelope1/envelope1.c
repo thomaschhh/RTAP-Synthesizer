@@ -7,7 +7,7 @@
  * @author Tim-Tarek Grund
  * @author Gonzalo Gallo
  * @author Thomas Holz
- * @bug No known bugs.
+ * @bug Envelope randomly crashes.
  */
 
 /* -- Includes -- */
