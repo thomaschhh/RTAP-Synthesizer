@@ -1,0 +1,4902 @@
+#N canvas 0 23 1440 855 10;
+#X obj 937 97 vsl 15 130 0 1 0 0 empty empty empty 0 -9 0 10 #40a8f8
+#000000 #000000 0 1;
+#X msg 1192 51 \; pd dsp 0;
+#X msg 1192 86 \; pd dsp 1;
+#X obj 1317 89 notein;
+#X obj 1317 222 pack f f f;
+#X obj 1003 326 *~ 1;
+#X obj 1191 325 *~ 1;
+#X obj 1365 326 *~ 1;
+#X obj 1541 329 *~ 1;
+#X msg 1484 162 stop;
+#X msg 1393 121 60 100;
+#X msg 1393 163 60 0;
+#X obj 125 743 vsl 15 128 0 1 0 0 empty empty empty 0 -9 0 10 #fcfc78
+#000000 #000000 0 1;
+#X obj 150 743 vsl 15 128 0 3000 0 0 empty empty empty 0 -9 0 10 #d4f878
+#000000 #000000 0 1;
+#X obj 80 743 vsl 15 128 0 500 0 0 empty empty empty 0 -9 0 10 #fc7c78
+#000000 #000000 0 1;
+#X obj 103 743 vsl 15 128 0 500 0 0 empty empty empty 0 -9 0 10 #fcd478
+#000000 #000000 0 1;
+#X obj 16 876 s attack;
+#X obj 17 899 s decay;
+#X obj 85 889 s sustain;
+#X obj 150 889 s release;
+#X obj 86 218 s funda0;
+#X obj 86 288 s funda1;
+#X obj 87 360 s funda2;
+#X obj 86 432 s funda3;
+#X obj 84 503 s funda4;
+#X obj 86 195 hsl 128 15 0 1 0 0 empty empty empty -2 -8 0 10 #fcfcfc
+#000000 #000000 0 1;
+#X obj 86 268 hsl 128 15 0 1 0 0 empty empty empty -2 -8 0 10 #00f8fc
+#000000 #000000 0 1;
+#X obj 87 338 hsl 128 15 0 1 0 0 empty empty empty -2 -8 0 10 #f8fc00
+#000000 #000000 0 1;
+#X obj 86 413 hsl 128 15 0 1 0 0 empty empty empty -2 -8 0 10 #00fc04
+#000000 #000000 0 1;
+#X obj 84 482 hsl 128 15 0 1 0 0 empty empty empty -2 -8 0 10 #fc0400
+#000000 #000000 0 1;
+#X obj 496 184 s shimfreq1;
+#X obj 613 136 s shimstr1;
+#X obj 500 338 s shimfreq2;
+#X obj 613 288 s shimstr2;
+#X obj 496 164 hsl 256 15 0 20 0 0 empty empty empty -2 -8 0 10 #00f8fc
+#000000 #000000 0 1;
+#X obj 613 118 hsl 128 15 0 10 0 0 empty empty empty -2 -8 0 10 #00f8fc
+#000000 #000000 0 1;
+#X obj 500 317 hsl 256 15 0 20 0 0 empty empty empty -2 -8 0 10 #f8fc00
+#000000 #000000 0 1;
+#X obj 614 268 hsl 128 15 0 10 0 0 empty empty empty -2 -8 0 10 #f8fc00
+#000000 #000000 0 1;
+#X obj 505 466 hsl 256 15 0 20 0 0 empty empty empty -2 -8 0 10 #00fc04
+#000000 #000000 0 1;
+#X obj 620 424 hsl 128 15 0 10 0 0 empty empty empty -2 -8 0 10 #00fc04
+#000000 #000000 0 1;
+#X obj 508 618 hsl 256 15 0 20 0 0 empty empty empty -2 -8 0 10 #fc0400
+#000000 #000000 0 1;
+#X obj 624 573 hsl 128 15 0 10 0 0 empty empty empty -2 -8 0 10 #fc2400
+#000000 #000000 0 1;
+#X obj 505 485 s shimfreq3;
+#X obj 620 442 s shimstr3;
+#X obj 508 636 s shimfreq4;
+#X obj 624 591 s shimstr4;
+#X obj 1317 245 route 1 2 3 4 5 6 7 8;
+#X obj 1115 329 *~ 1;
+#X obj 1297 328 *~ 1;
+#X obj 1469 326 *~ 1;
+#X obj 1644 330 *~ 1;
+#X obj 1302 493 dac~;
+#X obj 937 239 s gain;
+#X obj 1054 303 r gain;
+#X obj 1243 302 r gain;
+#X obj 1413 303 r gain;
+#X obj 1589 305 r gain;
+#X obj 974 392 *~ 1;
+#X obj 1628 376 *~ 1;
+#X obj 870 916 s spac;
+#X obj 1025 388 *~ 1;
+#X obj 1670 376 *~ 1;
+#X obj 968 365 r live;
+#X obj 1018 364 r kill;
+#X obj 920 916 s spac2;
+#X obj 1667 352 r live;
+#X obj 1621 351 r kill;
+#X obj 1302 424 *~ 0.5;
+#N canvas 0 23 464 315 spacexplorer 0;
+#X obj 37 19 r spac;
+#X floatatom 37 42 5 0 0 0 - - -, f 5;
+#X obj 72 103 - 1;
+#X floatatom 23 124 5 0 0 0 - - -, f 5;
+#X obj 23 146 * -1;
+#X floatatom 81 168 5 0 0 0 - - -, f 5;
+#X obj 37 64 s live;
+#X obj 23 169 s kill;
+#X floatatom 156 50 5 0 0 0 - - -, f 5;
+#X obj 191 111 - 1;
+#X floatatom 142 132 5 0 0 0 - - -, f 5;
+#X obj 142 154 * -1;
+#X floatatom 200 176 5 0 0 0 - - -, f 5;
+#X obj 156 27 r spac2;
+#X obj 156 72 s live2;
+#X obj 142 177 s kill2;
+#X floatatom 246 54 5 0 0 0 - - -, f 5;
+#X obj 281 115 - 1;
+#X floatatom 232 136 5 0 0 0 - - -, f 5;
+#X obj 232 158 * -1;
+#X floatatom 290 180 5 0 0 0 - - -, f 5;
+#X obj 246 31 r spac3;
+#X obj 232 181 s kill3;
+#X obj 246 76 s live3;
+#X connect 0 0 1 0;
+#X connect 1 0 2 0;
+#X connect 1 0 6 0;
+#X connect 2 0 3 0;
+#X connect 3 0 4 0;
+#X connect 4 0 5 0;
+#X connect 4 0 7 0;
+#X connect 8 0 9 0;
+#X connect 8 0 14 0;
+#X connect 9 0 10 0;
+#X connect 10 0 11 0;
+#X connect 11 0 12 0;
+#X connect 11 0 15 0;
+#X connect 13 0 8 0;
+#X connect 16 0 17 0;
+#X connect 16 0 23 0;
+#X connect 17 0 18 0;
+#X connect 18 0 19 0;
+#X connect 19 0 20 0;
+#X connect 19 0 22 0;
+#X connect 21 0 16 0;
+#X restore 869 776 pd spacexplorer;
+#X obj 976 916 s spac3;
+#X obj 1084 386 *~ 1;
+#X obj 1135 386 *~ 1;
+#X obj 1073 364 r live2;
+#X obj 1129 364 r kill2;
+#X obj 1219 382 *~ 1;
+#X obj 1270 381 *~ 1;
+#X obj 1209 360 r live3;
+#X obj 1263 360 r kill3;
+#X obj 1517 374 *~ 1;
+#X obj 1568 374 *~ 1;
+#X obj 1507 351 r kill2;
+#X obj 1558 351 r live2;
+#X obj 1392 377 *~ 1;
+#X obj 1443 377 *~ 1;
+#X obj 1381 352 r kill3;
+#X obj 1433 352 r live3;
+#X obj 870 894 + 0.5;
+#X obj 870 873 * 0.5;
+#X obj 920 872 * 0.25;
+#X obj 920 894 + 0.5;
+#X obj 976 871 * 0.1;
+#X obj 976 892 + 0.5;
+#X obj 870 844 hsl 128 15 0 1 0 0 empty empty empty -2 -8 0 10 #9434fc
+#000000 #000000 0 1;
+#X msg 1444 121 30 100;
+#X msg 1444 162 30 0;
+#X text 1317 69 midi keyboard in;
+#X obj 1317 197 poly 8 1;
+#X obj 1409 47 ctlin;
+#X floatatom 1423 68 4 0 0 0 - - -, f 4;
+#X obj 1094 650 s waveform-selector;
+#X msg 883 619 set sine;
+#X msg 969 618 set sawtooth;
+#X msg 1078 618 set triangle;
+#X msg 1188 618 set square;
+#X obj 883 565 bng 50 250 50 0 empty empty empty 17 7 0 10 #c4fcc4
+#000000 #000000;
+#X obj 1188 565 bng 50 250 50 0 empty empty empty 17 7 0 10 #e0c4fc
+#000000 #000000;
+#X obj 1078 565 bng 50 250 50 0 empty empty empty 17 7 0 10 #c4c4fc
+#000000 #000000;
+#X obj 969 565 bng 50 250 50 0 empty empty empty 17 7 0 10 #c4fcfc
+#000000 #000000;
+#X text 882 498 WAVEFORM SELECTOR;
+#X floatatom 1317 111 4 0 0 0 - - -, f 4;
+#X floatatom 1346 111 4 0 0 0 - - -, f 4;
+#X text 1104 38 DSP on/off;
+#X text 1411 26 Check MIDI controller;
+#X obj 175 742 vsl 15 128 0 127 0 0 empty empty empty 0 -9 0 10 #70f878
+#000000 #000000 0 1;
+#N canvas 0 22 450 278 (subpatch) 0;
+#X array array3 1200 float 3 black black;
+#A 0 0 0.0025 0.005 0.0075 0.01 0.0125 0.015 0.0175 0.02 0.0225 0.025
+0.0275 0.03 0.0325 0.035 0.0375 0.04 0.0425 0.045 0.0475 0.05 0.0525
+0.055 0.0575 0.06 0.0625 0.065 0.0675 0.07 0.0725 0.075 0.0775 0.08
+0.0825 0.085 0.0875 0.09 0.0925 0.095 0.0975 0.1 0.1025 0.105 0.1075
+0.11 0.1125 0.115 0.1175 0.12 0.1225 0.125 0.1275 0.13 0.1325 0.135
+0.1375 0.14 0.1425 0.145 0.1475 0.15 0.1525 0.155 0.1575 0.16 0.1625
+0.165 0.1675 0.17 0.1725 0.175 0.1775 0.18 0.1825 0.185 0.1875 0.19
+0.1925 0.195 0.1975 0.2 0.2025 0.205 0.2075 0.21 0.2125 0.215 0.2175
+0.22 0.2225 0.225 0.2275 0.23 0.2325 0.235 0.2375 0.24 0.2425 0.245
+0.2475 0.25 0.2525 0.255 0.2575 0.26 0.2625 0.265 0.2675 0.27 0.2725
+0.275 0.2775 0.28 0.2825 0.285 0.2875 0.29 0.2925 0.295 0.2975 0.3
+0.3025 0.305 0.3075 0.31 0.3125 0.315 0.3175 0.32 0.3225 0.325 0.3275
+0.33 0.3325 0.335 0.3375 0.34 0.3425 0.345 0.3475 0.35 0.3525 0.355
+0.3575 0.36 0.3625 0.365 0.3675 0.37 0.3725 0.375 0.3775 0.38 0.3825
+0.385 0.3875 0.39 0.3925 0.395 0.3975 0.4 0.4025 0.405 0.4075 0.41
+0.4125 0.415 0.4175 0.42 0.4225 0.425 0.4275 0.43 0.4325 0.435 0.4375
+0.44 0.4425 0.445 0.4475 0.45 0.4525 0.455 0.4575 0.46 0.4625 0.465
+0.4675 0.47 0.4725 0.475 0.4775 0.48 0.4825 0.485 0.4875 0.49 0.4925
+0.495 0.4975 0.5 0.5025 0.505 0.5075 0.51 0.5125 0.515 0.5175 0.52
+0.5225 0.525 0.5275 0.53 0.5325 0.535 0.5375 0.54 0.5425 0.545 0.5475
+0.55 0.5525 0.555 0.5575 0.56 0.5625 0.565 0.5675 0.57 0.5725 0.575
+0.5775 0.58 0.5825 0.585 0.5875 0.59 0.5925 0.595 0.5975 0.6 0.6025
+0.605 0.6075 0.61 0.6125 0.615 0.6175 0.62 0.6225 0.625 0.6275 0.63
+0.6325 0.635 0.6375 0.64 0.6425 0.645 0.6475 0.65 0.6525 0.655 0.6575
+0.66 0.6625 0.665 0.6675 0.67 0.6725 0.675 0.6775 0.68 0.6825 0.685
+0.6875 0.69 0.6925 0.695 0.6975 0.7 0.7025 0.705 0.7075 0.71 0.7125
+0.715 0.7175 0.72 0.7225 0.725 0.7275 0.73 0.7325 0.735 0.7375 0.74
+0.7425 0.745 0.7475 0.75 0.7525 0.755 0.7575 0.76 0.7625 0.765 0.7675
+0.77 0.7725 0.775 0.7775 0.78 0.7825 0.785 0.7875 0.79 0.7925 0.795
+0.7975 0.8 0.8025 0.805 0.8075 0.81 0.8125 0.815 0.8175 0.82 0.8225
+0.825 0.8275 0.83 0.8325 0.835 0.8375 0.84 0.8425 0.845 0.8475 0.85
+0.8525 0.855 0.8575 0.86 0.8625 0.865 0.8675 0.87 0.8725 0.875 0.8775
+0.88 0.8825 0.885 0.8875 0.89 0.8925 0.895 0.8975 0.9 0.9025 0.905
+0.9075 0.91 0.9125 0.915 0.9175 0.92 0.9225 0.925 0.9275 0.93 0.9325
+0.935 0.9375 0.94 0.9425 0.945 0.9475 0.95 0.9525 0.955 0.9575 0.96
+0.9625 0.965 0.9675 0.97 0.9725 0.975 0.9775 0.98 0.9825 0.985 0.9875
+0.99 0.9925 0.995 0.9975 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+1 1 1 1 1 1 0.9975 0.995 0.9925 0.99 0.9875 0.985 0.9825 0.98 0.9775
+0.975 0.9725 0.97 0.9675 0.965 0.9625 0.96 0.9575 0.955 0.9525 0.95
+0.9475 0.945 0.9425 0.94 0.9375 0.935 0.9325 0.93 0.9275 0.925 0.9225
+0.92 0.9175 0.915 0.9125 0.91 0.9075 0.905 0.9025 0.9 0.8975 0.895
+0.8925 0.89 0.8875 0.885 0.8825 0.88 0.8775 0.875 0.8725 0.87 0.8675
+0.865 0.8625 0.86 0.8575 0.855 0.8525 0.85 0.8475 0.845 0.8425 0.84
+0.8375 0.835 0.8325 0.83 0.8275 0.825 0.8225 0.82 0.8175 0.815 0.8125
+0.81 0.8075 0.805 0.8025 0.8 0.7975 0.795 0.7925 0.79 0.7875 0.785
+0.7825 0.78 0.7775 0.775 0.7725 0.77 0.7675 0.765 0.7625 0.76 0.7575
+0.755 0.7525 0.75 0.7475 0.745 0.7425 0.74 0.7375 0.735 0.7325 0.73
+0.7275 0.725 0.7225 0.72 0.7175 0.715 0.7125 0.71 0.7075 0.705 0.7025
+0.7 0.6975 0.695 0.6925 0.69 0.6875 0.685 0.6825 0.68 0.6775 0.675
+0.6725 0.67 0.6675 0.665 0.6625 0.66 0.6575 0.655 0.6525 0.65 0.6475
+0.645 0.6425 0.64 0.6375 0.635 0.6325 0.63 0.6275 0.625 0.6225 0.62
+0.6175 0.615 0.6125 0.61 0.6075 0.605 0.6025 0.6 0.5975 0.595 0.5925
+0.59 0.5875 0.585 0.5825 0.58 0.5775 0.575 0.5725 0.57 0.5675 0.565
+0.5625 0.56 0.5575 0.555 0.5525 0.55 0.5475 0.545 0.5425 0.54 0.5375
+0.535 0.5325 0.53 0.5275 0.525 0.5225 0.52 0.5175 0.515 0.5125 0.51
+0.5075 0.505 0.5025;
+#A 1000 0.5 0.4975 0.495 0.4925 0.49 0.4875 0.485 0.4825 0.48 0.4775
+0.475 0.4725 0.47 0.4675 0.465 0.4625 0.46 0.4575 0.455 0.4525 0.45
+0.4475 0.445 0.4425 0.44 0.4375 0.435 0.4325 0.43 0.4275 0.425 0.4225
+0.42 0.4175 0.415 0.4125 0.41 0.4075 0.405 0.4025 0.4 0.3975 0.395
+0.3925 0.39 0.3875 0.385 0.3825 0.38 0.3775 0.375 0.3725 0.37 0.3675
+0.365 0.3625 0.36 0.3575 0.355 0.3525 0.35 0.3475 0.345 0.3425 0.34
+0.3375 0.335 0.3325 0.33 0.3275 0.325 0.3225 0.32 0.3175 0.315 0.3125
+0.31 0.3075 0.305 0.3025 0.3 0.2975 0.295 0.2925 0.29 0.2875 0.285
+0.2825 0.28 0.2775 0.275 0.2725 0.27 0.2675 0.265 0.2625 0.26 0.2575
+0.255 0.2525 0.25 0.2475 0.245 0.2425 0.24 0.2375 0.235 0.2325 0.23
+0.2275 0.225 0.2225 0.22 0.2175 0.215 0.2125 0.21 0.2075 0.205 0.2025
+0.2 0.1975 0.195 0.1925 0.19 0.1875 0.185 0.1825 0.18 0.1775 0.175
+0.1725 0.17 0.1675 0.165 0.1625 0.16 0.1575 0.155 0.1525 0.15 0.1475
+0.145 0.1425 0.14 0.1375 0.135 0.1325 0.13 0.1275 0.125 0.1225 0.12
+0.1175 0.115 0.1125 0.11 0.1075 0.105 0.1025 0.1 0.0975 0.095 0.0925
+0.09 0.0875 0.085 0.0825 0.08 0.0775 0.075 0.0725001 0.07 0.0675 0.065
+0.0625 0.06 0.0575 0.055 0.0525 0.05 0.0475 0.045 0.0425 0.04 0.0375
+0.035 0.0325 0.03 0.0275 0.025 0.0225 0.02 0.0175 0.015 0.0125 0.0100001
+0.00749999 0.005 0.0025;
+#X coords 0 1 1200 -1 200 140 1;
+#X restore 526 774 graph;
+#N canvas 176 23 1440 880 keyboard 1;
+#X floatatom 125 186 4 0 0 0 - - -, f 4;
+#X obj 125 209 select 0;
+#X msg 125 257 \$1 0;
+#X msg 171 258 \$1 80;
+#X msg 125 233 0;
+#X obj 125 281 +;
+#X obj 976 516 outlet;
+#X floatatom 246 186 4 0 0 0 - - -, f 4;
+#X obj 246 209 select 0;
+#X msg 246 257 \$1 0;
+#X msg 291 258 \$1 80;
+#X msg 246 233 0;
+#X obj 246 281 +;
+#X floatatom 366 188 4 0 0 0 - - -, f 4;
+#X obj 366 209 select 0;
+#X msg 365 281 \$1 0;
+#X msg 411 260 \$1 80;
+#X msg 365 233 0;
+#X obj 365 258 +;
+#X floatatom 485 188 4 0 0 0 - - -, f 4;
+#X obj 485 209 select 0;
+#X msg 484 281 \$1 0;
+#X msg 530 260 \$1 80;
+#X msg 484 233 0;
+#X obj 484 258 +;
+#X floatatom 605 188 4 0 0 0 - - -, f 4;
+#X obj 605 209 select 0;
+#X msg 604 281 \$1 0;
+#X msg 650 260 \$1 80;
+#X msg 604 233 0;
+#X obj 604 258 +;
+#X floatatom 725 188 4 0 0 0 - - -, f 4;
+#X obj 725 209 select 0;
+#X msg 724 281 \$1 0;
+#X msg 770 260 \$1 80;
+#X msg 724 233 0;
+#X obj 724 258 +;
+#X floatatom 840 188 4 0 0 0 - - -, f 4;
+#X obj 840 209 select 0;
+#X msg 839 281 \$1 0;
+#X msg 885 260 \$1 80;
+#X msg 839 233 0;
+#X obj 839 258 +;
+#X floatatom 960 188 4 0 0 0 - - -, f 4;
+#X obj 960 209 select 0;
+#X msg 959 281 \$1 0;
+#X msg 1005 260 \$1 80;
+#X msg 959 233 0;
+#X obj 959 258 +;
+#X floatatom 1080 188 4 0 0 0 - - -, f 4;
+#X obj 1080 209 select 0;
+#X msg 1079 281 \$1 0;
+#X msg 1125 260 \$1 80;
+#X msg 1079 233 0;
+#X obj 1079 258 +;
+#X floatatom 1199 188 4 0 0 0 - - -, f 4;
+#X obj 1199 209 select 0;
+#X msg 1198 281 \$1 0;
+#X msg 1244 260 \$1 80;
+#X msg 1198 233 0;
+#X obj 1198 258 +;
+#X floatatom 1319 188 4 0 0 0 - - -, f 4;
+#X obj 1319 209 select 0;
+#X msg 1318 281 \$1 0;
+#X msg 1364 260 \$1 80;
+#X msg 1318 233 0;
+#X obj 1318 258 +;
+#X floatatom 1439 188 4 0 0 0 - - -, f 4;
+#X obj 1439 209 select 0;
+#X msg 1438 281 \$1 0;
+#X msg 1484 260 \$1 80;
+#X msg 1438 233 0;
+#X obj 1438 258 +;
+#X floatatom 116 728 4 0 0 0 - - -, f 4;
+#X obj 116 749 select 0;
+#X msg 115 821 \$1 0;
+#X msg 161 800 \$1 80;
+#X msg 115 773 0;
+#X obj 115 798 +;
+#X floatatom 236 728 4 0 0 0 - - -, f 4;
+#X obj 236 749 select 0;
+#X msg 235 821 \$1 0;
+#X msg 281 800 \$1 80;
+#X msg 235 773 0;
+#X obj 235 798 +;
+#X floatatom 356 728 4 0 0 0 - - -, f 4;
+#X obj 356 749 select 0;
+#X msg 355 821 \$1 0;
+#X msg 401 800 \$1 80;
+#X msg 355 773 0;
+#X obj 355 798 +;
+#X floatatom 475 728 4 0 0 0 - - -, f 4;
+#X obj 475 749 select 0;
+#X msg 474 821 \$1 0;
+#X msg 520 800 \$1 80;
+#X msg 474 773 0;
+#X obj 474 798 +;
+#X floatatom 595 728 4 0 0 0 - - -, f 4;
+#X obj 595 749 select 0;
+#X msg 594 821 \$1 0;
+#X msg 640 800 \$1 80;
+#X msg 594 773 0;
+#X obj 594 798 +;
+#X floatatom 715 728 4 0 0 0 - - -, f 4;
+#X obj 715 749 select 0;
+#X msg 714 821 \$1 0;
+#X msg 760 800 \$1 80;
+#X msg 714 773 0;
+#X obj 714 798 +;
+#X floatatom 830 728 4 0 0 0 - - -, f 4;
+#X obj 830 749 select 0;
+#X msg 829 821 \$1 0;
+#X msg 875 800 \$1 80;
+#X msg 829 773 0;
+#X obj 829 798 +;
+#X floatatom 950 728 4 0 0 0 - - -, f 4;
+#X obj 950 749 select 0;
+#X msg 949 821 \$1 0;
+#X msg 995 800 \$1 80;
+#X msg 949 773 0;
+#X obj 949 798 +;
+#X floatatom 1070 728 4 0 0 0 - - -, f 4;
+#X obj 1070 749 select 0;
+#X msg 1069 821 \$1 0;
+#X msg 1115 800 \$1 80;
+#X msg 1069 773 0;
+#X obj 1069 798 +;
+#X floatatom 1189 728 4 0 0 0 - - -, f 4;
+#X obj 1189 749 select 0;
+#X msg 1188 821 \$1 0;
+#X msg 1234 800 \$1 80;
+#X msg 1188 773 0;
+#X obj 1188 798 +;
+#X floatatom 1309 728 4 0 0 0 - - -, f 4;
+#X obj 1309 749 select 0;
+#X msg 1308 821 \$1 0;
+#X msg 1354 800 \$1 80;
+#X msg 1308 773 0;
+#X obj 1308 798 +;
+#X floatatom 1429 728 4 0 0 0 - - -, f 4;
+#X obj 1429 749 select 0;
+#X msg 1428 821 \$1 0;
+#X msg 1474 800 \$1 80;
+#X msg 1428 773 0;
+#X obj 1428 798 +;
+#X text 1022 516 outlet;
+#X obj 125 162 r button_note1;
+#X obj 246 162 r button_note2;
+#X obj 365 162 r button_note3;
+#X obj 487 160 r button_note4;
+#X obj 602 160 r button_note5;
+#X obj 723 160 r button_note6;
+#X obj 842 160 r button_note7;
+#X obj 964 158 r button_note8;
+#X obj 1074 158 r button_note9;
+#X obj 1195 158 r button_note10;
+#X obj 1314 158 r button_note11;
+#X obj 1436 156 r button_note12;
+#X obj 116 702 r button_note13;
+#X obj 237 702 r button_note14;
+#X obj 356 702 r button_note15;
+#X obj 478 700 r button_note16;
+#X obj 593 700 r button_note17;
+#X obj 714 700 r button_note18;
+#X obj 833 700 r button_note19;
+#X obj 955 698 r button_note20;
+#X obj 1065 698 r button_note21;
+#X obj 1305 698 r button_note23;
+#X obj 1427 696 r button_note24;
+#X floatatom 1417 565 4 0 0 0 - - -, f 4;
+#X obj 1417 586 select 0;
+#X msg 1416 658 \$1 0;
+#X msg 1462 637 \$1 80;
+#X msg 1416 610 0;
+#X obj 1416 635 +;
+#X obj 1415 533 r button_note25;
+#X obj 1186 698 r button_note22;
+#X connect 0 0 1 0;
+#X connect 1 0 4 0;
+#X connect 1 1 3 0;
+#X connect 1 1 5 1;
+#X connect 2 0 6 0;
+#X connect 3 0 6 0;
+#X connect 4 0 5 0;
+#X connect 5 0 2 0;
+#X connect 7 0 8 0;
+#X connect 8 0 11 0;
+#X connect 8 1 10 0;
+#X connect 8 1 12 1;
+#X connect 9 0 6 0;
+#X connect 10 0 6 0;
+#X connect 11 0 12 0;
+#X connect 12 0 9 0;
+#X connect 13 0 14 0;
+#X connect 14 0 17 0;
+#X connect 14 1 16 0;
+#X connect 14 1 18 1;
+#X connect 15 0 6 0;
+#X connect 16 0 6 0;
+#X connect 17 0 18 0;
+#X connect 18 0 15 0;
+#X connect 19 0 20 0;
+#X connect 20 0 23 0;
+#X connect 20 1 22 0;
+#X connect 20 1 24 1;
+#X connect 21 0 6 0;
+#X connect 22 0 6 0;
+#X connect 23 0 24 0;
+#X connect 24 0 21 0;
+#X connect 25 0 26 0;
+#X connect 26 0 29 0;
+#X connect 26 1 28 0;
+#X connect 26 1 30 1;
+#X connect 27 0 6 0;
+#X connect 28 0 6 0;
+#X connect 29 0 30 0;
+#X connect 30 0 27 0;
+#X connect 31 0 32 0;
+#X connect 32 0 35 0;
+#X connect 32 1 34 0;
+#X connect 32 1 36 1;
+#X connect 33 0 6 0;
+#X connect 34 0 6 0;
+#X connect 35 0 36 0;
+#X connect 36 0 33 0;
+#X connect 37 0 38 0;
+#X connect 38 0 41 0;
+#X connect 38 1 40 0;
+#X connect 38 1 42 1;
+#X connect 39 0 6 0;
+#X connect 40 0 6 0;
+#X connect 41 0 42 0;
+#X connect 42 0 39 0;
+#X connect 43 0 44 0;
+#X connect 44 0 47 0;
+#X connect 44 1 46 0;
+#X connect 44 1 48 1;
+#X connect 45 0 6 0;
+#X connect 46 0 6 0;
+#X connect 47 0 48 0;
+#X connect 48 0 45 0;
+#X connect 49 0 50 0;
+#X connect 50 0 53 0;
+#X connect 50 1 52 0;
+#X connect 50 1 54 1;
+#X connect 51 0 6 0;
+#X connect 52 0 6 0;
+#X connect 53 0 54 0;
+#X connect 54 0 51 0;
+#X connect 55 0 56 0;
+#X connect 56 0 59 0;
+#X connect 56 1 58 0;
+#X connect 56 1 60 1;
+#X connect 57 0 6 0;
+#X connect 58 0 6 0;
+#X connect 59 0 60 0;
+#X connect 60 0 57 0;
+#X connect 61 0 62 0;
+#X connect 62 0 65 0;
+#X connect 62 1 64 0;
+#X connect 62 1 66 1;
+#X connect 63 0 6 0;
+#X connect 64 0 6 0;
+#X connect 65 0 66 0;
+#X connect 66 0 63 0;
+#X connect 67 0 68 0;
+#X connect 68 0 71 0;
+#X connect 68 1 70 0;
+#X connect 68 1 72 1;
+#X connect 69 0 6 0;
+#X connect 70 0 6 0;
+#X connect 71 0 72 0;
+#X connect 72 0 69 0;
+#X connect 73 0 74 0;
+#X connect 74 0 77 0;
+#X connect 74 1 76 0;
+#X connect 74 1 78 1;
+#X connect 75 0 6 0;
+#X connect 76 0 6 0;
+#X connect 77 0 78 0;
+#X connect 78 0 75 0;
+#X connect 79 0 80 0;
+#X connect 80 0 83 0;
+#X connect 80 1 82 0;
+#X connect 80 1 84 1;
+#X connect 81 0 6 0;
+#X connect 82 0 6 0;
+#X connect 83 0 84 0;
+#X connect 84 0 81 0;
+#X connect 85 0 86 0;
+#X connect 86 0 89 0;
+#X connect 86 1 88 0;
+#X connect 86 1 90 1;
+#X connect 87 0 6 0;
+#X connect 88 0 6 0;
+#X connect 89 0 90 0;
+#X connect 90 0 87 0;
+#X connect 91 0 92 0;
+#X connect 92 0 95 0;
+#X connect 92 1 94 0;
+#X connect 92 1 96 1;
+#X connect 93 0 6 0;
+#X connect 94 0 6 0;
+#X connect 95 0 96 0;
+#X connect 96 0 93 0;
+#X connect 97 0 98 0;
+#X connect 98 0 101 0;
+#X connect 98 1 100 0;
+#X connect 98 1 102 1;
+#X connect 99 0 6 0;
+#X connect 100 0 6 0;
+#X connect 101 0 102 0;
+#X connect 102 0 99 0;
+#X connect 103 0 104 0;
+#X connect 104 0 107 0;
+#X connect 104 1 106 0;
+#X connect 104 1 108 1;
+#X connect 105 0 6 0;
+#X connect 106 0 6 0;
+#X connect 107 0 108 0;
+#X connect 108 0 105 0;
+#X connect 109 0 110 0;
+#X connect 110 0 113 0;
+#X connect 110 1 112 0;
+#X connect 110 1 114 1;
+#X connect 111 0 6 0;
+#X connect 112 0 6 0;
+#X connect 113 0 114 0;
+#X connect 114 0 111 0;
+#X connect 115 0 116 0;
+#X connect 116 0 119 0;
+#X connect 116 1 118 0;
+#X connect 116 1 120 1;
+#X connect 117 0 6 0;
+#X connect 118 0 6 0;
+#X connect 119 0 120 0;
+#X connect 120 0 117 0;
+#X connect 121 0 122 0;
+#X connect 122 0 125 0;
+#X connect 122 1 124 0;
+#X connect 122 1 126 1;
+#X connect 123 0 6 0;
+#X connect 124 0 6 0;
+#X connect 125 0 126 0;
+#X connect 126 0 123 0;
+#X connect 127 0 128 0;
+#X connect 128 0 131 0;
+#X connect 128 1 130 0;
+#X connect 128 1 132 1;
+#X connect 129 0 6 0;
+#X connect 130 0 6 0;
+#X connect 131 0 132 0;
+#X connect 132 0 129 0;
+#X connect 133 0 134 0;
+#X connect 134 0 137 0;
+#X connect 134 1 136 0;
+#X connect 134 1 138 1;
+#X connect 135 0 6 0;
+#X connect 136 0 6 0;
+#X connect 137 0 138 0;
+#X connect 138 0 135 0;
+#X connect 139 0 140 0;
+#X connect 140 0 143 0;
+#X connect 140 1 142 0;
+#X connect 140 1 144 1;
+#X connect 141 0 6 0;
+#X connect 142 0 6 0;
+#X connect 143 0 144 0;
+#X connect 144 0 141 0;
+#X connect 146 0 0 0;
+#X connect 147 0 7 0;
+#X connect 148 0 13 0;
+#X connect 149 0 19 0;
+#X connect 150 0 25 0;
+#X connect 151 0 31 0;
+#X connect 152 0 37 0;
+#X connect 153 0 43 0;
+#X connect 154 0 49 0;
+#X connect 155 0 55 0;
+#X connect 156 0 61 0;
+#X connect 157 0 67 0;
+#X connect 158 0 73 0;
+#X connect 159 0 79 0;
+#X connect 160 0 85 0;
+#X connect 161 0 91 0;
+#X connect 162 0 97 0;
+#X connect 163 0 103 0;
+#X connect 164 0 109 0;
+#X connect 165 0 115 0;
+#X connect 166 0 121 0;
+#X connect 167 0 133 0;
+#X connect 168 0 139 0;
+#X connect 169 0 170 0;
+#X connect 170 0 173 0;
+#X connect 170 1 172 0;
+#X connect 170 1 174 1;
+#X connect 171 0 6 0;
+#X connect 172 0 6 0;
+#X connect 173 0 174 0;
+#X connect 174 0 171 0;
+#X connect 175 0 169 0;
+#X connect 176 0 127 0;
+#X restore 1247 163 pd keyboard;
+#N canvas 0 22 2736 1660 voicer 0;
+#X obj 180 230 * 2;
+#X obj 50 322 *~ 1;
+#X obj 180 323 *~ 1;
+#X obj 180 277 +~;
+#X obj 224 253 *~;
+#X obj 224 231 osc~;
+#X floatatom 224 210 5 0 0 0 - - -, f 5;
+#X floatatom 265 237 5 0 0 0 - - -, f 5;
+#X obj 309 322 *~ 1;
+#X obj 309 279 +~;
+#X obj 353 260 *~;
+#X obj 353 238 osc~;
+#X floatatom 353 217 5 0 0 0 - - -, f 5;
+#X floatatom 391 244 5 0 0 0 - - -, f 5;
+#X obj 309 236 * 3;
+#X obj 458 322 *~ 1;
+#X obj 458 278 +~;
+#X obj 504 258 *~;
+#X obj 504 236 osc~;
+#X floatatom 504 215 5 0 0 0 - - -, f 5;
+#X floatatom 542 242 5 0 0 0 - - -, f 5;
+#X obj 613 322 *~ 1;
+#X obj 613 278 +~;
+#X obj 660 256 *~;
+#X obj 660 234 osc~;
+#X floatatom 660 213 5 0 0 0 - - -, f 5;
+#X floatatom 703 240 5 0 0 0 - - -, f 5;
+#X obj 458 235 * 4;
+#X obj 613 233 * 5;
+#X floatatom 50 278 5 0 0 0 - - -, f 5;
+#X obj 309 372 *~;
+#X obj 309 397 outlet~;
+#X obj 92 146 mtof;
+#X obj 92 170 * 1;
+#X obj 180 252 vline~;
+#X obj 309 258 vline~;
+#X obj 458 257 vline~;
+#X obj 613 255 vline~;
+#X obj 224 166 r shimfreq1;
+#X obj 660 171 r shimfreq4;
+#X obj 504 171 r shimfreq3;
+#X obj 353 172 r shimfreq2;
+#X obj 265 215 r shimstr1;
+#X obj 391 221 r shimstr2;
+#X obj 542 218 r shimstr3;
+#X obj 703 217 r shimstr4;
+#X obj 249 283 r funda1;
+#X obj 118 282 r funda0;
+#X obj 378 282 r funda2;
+#X obj 529 282 r funda3;
+#X obj 685 282 r funda4;
+#X obj 224 187 +;
+#X obj 353 193 +;
+#X obj 504 191 +;
+#X obj 660 190 +;
+#X obj 118 305 * 1;
+#X obj 249 306 * 1;
+#X obj 378 305 * 1;
+#X obj 529 305 * 1;
+#X obj 685 305 * 1;
+#X obj 836 29 inlet;
+#X obj 894 519 line;
+#X obj 894 601 * 1;
+#X obj 777 58 stripnote;
+#X obj 777 142 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
+#000000 #000000;
+#X obj 959 159 sel 0;
+#X obj 897 57 unpack;
+#X floatatom 959 139 5 0 0 0 - - -, f 5;
+#X floatatom 748 82 5 0 0 0 - - -, f 5;
+#X obj 959 213 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
+#000000 #000000;
+#X obj 812 157 pack 1 2 3;
+#X obj 812 179 route 1;
+#X obj 840 58 r aplusd;
+#X obj 982 201 r releasezeit;
+#X floatatom 840 80 5 0 0 0 - - -, f 5;
+#X floatatom 982 223 5 0 0 0 - - -, f 5;
+#X obj 882 140 * 10;
+#X obj 867 478 +;
+#X floatatom 894 544 10 0 0 0 - - -, f 10;
+#X obj 867 435 line;
+#X floatatom 867 456 10 0 0 0 - - -, f 10;
+#X obj 1021 255 * 10;
+#X obj 959 312 route 1;
+#X floatatom 867 499 10 0 0 0 - - -, f 10;
+#X obj 959 285 pack 1 2 3 4;
+#X msg 1036 338 \$3;
+#X floatatom 1036 358 10 0 0 0 - - -, f 10;
+#X msg 959 340 0 \, \$2 \$1;
+#X msg 959 181 0;
+#X floatatom 925 601 10 0 0 0 - - -, f 10;
+#X obj 894 573 tabread4 array3;
+#X msg 1039 456 0;
+#X obj 1039 429 del;
+#X msg 1039 400 bang;
+#X obj 1054 255 + 5;
+#X obj 1072 456 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
+#000000 #000000;
+#X msg 812 202 0 \, \$2 \$1;
+#X obj 692 597 vline~;
+#X obj 743 622 tabread4~ array3;
+#X obj 894 621 sig~;
+#X obj 743 654 *~ 1;
+#X msg 814 597 set array1;
+#X msg 743 597 set array3;
+#X text 836 415 liest den release aus von atk plus dec;
+#X text 107 373 multiplication with the envelope;
+#X text 367 134 sound synthesis;
+#X text 1017 147 trigger the release;
+#X text 748 119 attack & decay formation;
+#X text 369 597 vline~ in order to avoid noise \, better interpolation
+;
+#X text 1043 478 to avoid multiplication by 0;
+#X text 897 478 until end of release;
+#N canvas 0 22 2736 1660 wavygen 0;
+#X obj 219 302 outlet~;
+#X obj 219 102 inlet~;
+#X obj 219 126 phasor~;
+#X text 274 126 Creates a ramp from 0 to 1 at the given f;
+#X obj 219 150 *~ 2051;
+#X text 274 149 Multiplyer with the length in samples of our waveform
+;
+#X obj 219 175 tabread4~ sine;
+#X text 283 300 OUTLET to VOICER-SUBPATCH;
+#X text 267 102 INLET from VOICER-SUBPATCH;
+#X obj 57 133 r waveform-selector;
+#X text 318 197 The waveform by default is a sine;
+#X text 316 174 Play table as audio signal;
+#X text 28 111 receives chosen waveform;
+#X connect 1 0 2 0;
+#X connect 2 0 4 0;
+#X connect 4 0 6 0;
+#X connect 6 0 0 0;
+#X connect 9 0 6 0;
+#X restore 50 300 pd wavygen;
+#N canvas 0 22 2736 1660 wavygen 0;
+#X obj 219 302 outlet~;
+#X obj 219 102 inlet~;
+#X obj 219 126 phasor~;
+#X text 274 126 Creates a ramp from 0 to 1 at the given f;
+#X obj 219 150 *~ 2051;
+#X text 274 149 Multiplyer with the length in samples of our waveform
+;
+#X obj 219 175 tabread4~ sine;
+#X text 283 300 OUTLET to VOICER-SUBPATCH;
+#X text 267 102 INLET from VOICER-SUBPATCH;
+#X obj 57 133 r waveform-selector;
+#X text 318 197 The waveform by default is a sine;
+#X text 316 174 Play table as audio signal;
+#X text 28 111 receives chosen waveform;
+#X connect 1 0 2 0;
+#X connect 2 0 4 0;
+#X connect 4 0 6 0;
+#X connect 6 0 0 0;
+#X connect 9 0 6 0;
+#X restore 180 301 pd wavygen;
+#N canvas 0 22 2736 1660 wavygen 0;
+#X obj 219 302 outlet~;
+#X obj 219 102 inlet~;
+#X obj 219 126 phasor~;
+#X text 274 126 Creates a ramp from 0 to 1 at the given f;
+#X obj 219 150 *~ 2051;
+#X text 274 149 Multiplyer with the length in samples of our waveform
+;
+#X obj 219 175 tabread4~ sine;
+#X text 283 300 OUTLET to VOICER-SUBPATCH;
+#X text 267 102 INLET from VOICER-SUBPATCH;
+#X obj 57 133 r waveform-selector;
+#X text 318 197 The waveform by default is a sine;
+#X text 316 174 Play table as audio signal;
+#X text 28 111 receives chosen waveform;
+#X connect 1 0 2 0;
+#X connect 2 0 4 0;
+#X connect 4 0 6 0;
+#X connect 6 0 0 0;
+#X connect 9 0 6 0;
+#X restore 309 300 pd wavygen;
+#N canvas 0 22 2736 1660 wavygen 0;
+#X obj 219 302 outlet~;
+#X obj 219 102 inlet~;
+#X obj 219 126 phasor~;
+#X text 274 126 Creates a ramp from 0 to 1 at the given f;
+#X obj 219 150 *~ 2051;
+#X text 274 149 Multiplyer with the length in samples of our waveform
+;
+#X obj 219 175 tabread4~ sine;
+#X text 283 300 OUTLET to VOICER-SUBPATCH;
+#X text 267 102 INLET from VOICER-SUBPATCH;
+#X obj 57 133 r waveform-selector;
+#X text 318 197 The waveform by default is a sine;
+#X text 316 174 Play table as audio signal;
+#X text 28 111 receives chosen waveform;
+#X connect 1 0 2 0;
+#X connect 2 0 4 0;
+#X connect 4 0 6 0;
+#X connect 6 0 0 0;
+#X connect 9 0 6 0;
+#X restore 613 299 pd wavygen;
+#N canvas 0 22 2736 1660 wavygen 0;
+#X obj 219 302 outlet~;
+#X obj 219 102 inlet~;
+#X obj 219 126 phasor~;
+#X text 274 126 Creates a ramp from 0 to 1 at the given f;
+#X obj 219 150 *~ 2051;
+#X text 274 149 Multiplyer with the length in samples of our waveform
+;
+#X obj 219 175 tabread4~ sine;
+#X text 283 300 OUTLET to VOICER-SUBPATCH;
+#X text 267 102 INLET from VOICER-SUBPATCH;
+#X obj 57 133 r waveform-selector;
+#X text 318 197 The waveform by default is a sine;
+#X text 316 174 Play table as audio signal;
+#X text 28 111 receives chosen waveform;
+#X connect 1 0 2 0;
+#X connect 2 0 4 0;
+#X connect 4 0 6 0;
+#X connect 6 0 0 0;
+#X connect 9 0 6 0;
+#X restore 458 300 pd wavygen;
+#X connect 0 0 34 0;
+#X connect 1 0 30 0;
+#X connect 2 0 30 0;
+#X connect 3 0 112 0;
+#X connect 4 0 3 1;
+#X connect 5 0 4 0;
+#X connect 6 0 5 0;
+#X connect 7 0 4 1;
+#X connect 8 0 30 0;
+#X connect 9 0 113 0;
+#X connect 10 0 9 1;
+#X connect 11 0 10 0;
+#X connect 12 0 11 0;
+#X connect 13 0 10 1;
+#X connect 14 0 35 0;
+#X connect 15 0 30 0;
+#X connect 16 0 115 0;
+#X connect 17 0 16 1;
+#X connect 18 0 17 0;
+#X connect 19 0 18 0;
+#X connect 20 0 17 1;
+#X connect 21 0 30 0;
+#X connect 22 0 114 0;
+#X connect 23 0 22 1;
+#X connect 24 0 23 0;
+#X connect 25 0 24 0;
+#X connect 26 0 23 1;
+#X connect 27 0 36 0;
+#X connect 28 0 37 0;
+#X connect 29 0 111 0;
+#X connect 30 0 31 0;
+#X connect 32 0 33 0;
+#X connect 33 0 29 0;
+#X connect 33 0 0 0;
+#X connect 33 0 14 0;
+#X connect 33 0 27 0;
+#X connect 33 0 28 0;
+#X connect 34 0 3 0;
+#X connect 35 0 9 0;
+#X connect 36 0 16 0;
+#X connect 37 0 22 0;
+#X connect 38 0 51 0;
+#X connect 39 0 54 0;
+#X connect 40 0 53 0;
+#X connect 41 0 52 0;
+#X connect 42 0 7 0;
+#X connect 43 0 13 0;
+#X connect 44 0 20 0;
+#X connect 45 0 26 0;
+#X connect 46 0 56 0;
+#X connect 47 0 55 0;
+#X connect 48 0 57 0;
+#X connect 49 0 58 0;
+#X connect 50 0 59 0;
+#X connect 51 0 6 0;
+#X connect 52 0 12 0;
+#X connect 53 0 19 0;
+#X connect 54 0 25 0;
+#X connect 55 0 1 1;
+#X connect 56 0 2 1;
+#X connect 57 0 8 1;
+#X connect 58 0 15 1;
+#X connect 59 0 21 1;
+#X connect 60 0 63 0;
+#X connect 60 0 66 0;
+#X connect 61 0 78 0;
+#X connect 62 0 99 0;
+#X connect 63 0 64 0;
+#X connect 63 0 68 0;
+#X connect 64 0 70 0;
+#X connect 64 0 102 0;
+#X connect 65 0 88 0;
+#X connect 66 1 67 0;
+#X connect 67 0 65 0;
+#X connect 68 0 32 0;
+#X connect 69 0 84 0;
+#X connect 69 0 93 0;
+#X connect 69 0 101 0;
+#X connect 70 0 71 0;
+#X connect 71 0 96 0;
+#X connect 72 0 74 0;
+#X connect 73 0 75 0;
+#X connect 74 0 76 0;
+#X connect 74 0 70 1;
+#X connect 75 0 81 0;
+#X connect 75 0 84 1;
+#X connect 75 0 94 0;
+#X connect 76 0 70 2;
+#X connect 76 0 84 3;
+#X connect 76 0 77 1;
+#X connect 77 0 83 0;
+#X connect 78 0 90 0;
+#X connect 79 0 80 0;
+#X connect 80 0 77 0;
+#X connect 81 0 84 2;
+#X connect 82 0 87 0;
+#X connect 82 0 85 0;
+#X connect 83 0 90 0;
+#X connect 84 0 82 0;
+#X connect 85 0 86 0;
+#X connect 87 0 79 0;
+#X connect 88 0 69 0;
+#X connect 88 0 97 0;
+#X connect 90 0 62 0;
+#X connect 90 0 89 0;
+#X connect 91 0 62 0;
+#X connect 92 0 91 0;
+#X connect 92 0 95 0;
+#X connect 93 0 92 0;
+#X connect 94 0 92 1;
+#X connect 96 0 97 0;
+#X connect 97 0 98 0;
+#X connect 98 0 100 0;
+#X connect 99 0 100 0;
+#X connect 100 0 30 1;
+#X connect 101 0 98 0;
+#X connect 102 0 98 0;
+#X connect 111 0 1 0;
+#X connect 112 0 2 0;
+#X connect 113 0 8 0;
+#X connect 114 0 21 0;
+#X connect 115 0 15 0;
+#X restore 991 303 pd voicer;
+#N canvas 0 312 739 566 envelope 0;
+#X floatatom 88 110 5 0 0 0 - - -, f 5;
+#X floatatom 144 109 5 0 0 0 - - -, f 5;
+#X floatatom 194 90 5 0 127 0 - - -, f 5;
+#X floatatom 256 111 5 0 0 0 - - -, f 5;
+#X floatatom 317 111 5 0 0 0 - - -, f 5;
+#X obj 88 68 * 4;
+#X obj 144 67 * 4;
+#X obj 194 68 * 1;
+#X obj 317 69 / 2;
+#X obj 88 226 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc #000000
+#000000;
+#X obj 378 232 s length;
+#X obj 378 201 expr $f1 + $f2 + $f3;
+#X floatatom 443 241 5 0 0 0 - - -, f 5;
+#X obj 378 180 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
+#000000 #000000;
+#X obj 88 45 r attack;
+#X obj 144 45 r decay;
+#X obj 194 45 r sustain;
+#X obj 256 45 r release;
+#X obj 317 46 r exp;
+#X obj 166 308 envelope1 array3;
+#X obj 256 69 * 4;
+#X obj 88 247 del 10;
+#X obj 378 140 s releasezeit;
+#X obj 325 296 expr $f1 + $f2;
+#X obj 325 273 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
+#000000 #000000;
+#X obj 325 323 s aplusd;
+#X obj 88 88 div;
+#X obj 144 87 div;
+#X obj 256 89 div;
+#X obj 317 89 div;
+#X text 345 87 div \, weil kommazahlen das external überfordern;
+#N canvas 0 22 450 278 (subpatch) 0;
+#X array array1 100 float 3 black black;
+#A 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0;
+#X coords 0 1 100 -1 200 140 1;
+#X restore 399 378 graph;
+#X text 467 139 send release in ms;
+#X text 443 221 sends entire envelope in ms;
+#X text 388 324 sends attack + decay;
+#X text 399 360 don't change has to stay 0;
+#X connect 0 0 9 0;
+#X connect 0 0 11 0;
+#X connect 0 0 19 1;
+#X connect 0 0 23 0;
+#X connect 1 0 9 0;
+#X connect 1 0 11 1;
+#X connect 1 0 13 0;
+#X connect 1 0 19 2;
+#X connect 1 0 23 1;
+#X connect 1 0 24 0;
+#X connect 2 0 9 0;
+#X connect 2 0 19 3;
+#X connect 3 0 9 0;
+#X connect 3 0 11 2;
+#X connect 3 0 13 0;
+#X connect 3 0 19 4;
+#X connect 3 0 22 0;
+#X connect 4 0 9 0;
+#X connect 4 0 19 5;
+#X connect 5 0 26 0;
+#X connect 6 0 27 0;
+#X connect 7 0 2 0;
+#X connect 8 0 29 0;
+#X connect 9 0 21 0;
+#X connect 11 0 10 0;
+#X connect 11 0 12 0;
+#X connect 13 0 11 0;
+#X connect 14 0 5 0;
+#X connect 15 0 6 0;
+#X connect 16 0 7 0;
+#X connect 17 0 20 0;
+#X connect 18 0 8 0;
+#X connect 20 0 28 0;
+#X connect 21 0 19 0;
+#X connect 23 0 25 0;
+#X connect 24 0 23 0;
+#X connect 26 0 0 0;
+#X connect 27 0 1 0;
+#X connect 28 0 3 0;
+#X connect 29 0 4 0;
+#X restore 526 752 pd envelope;
+#X msg 418 744 200;
+#X obj 388 699 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
+#000000 #000000;
+#X msg 357 722 30;
+#X msg 388 722 0.5;
+#X msg 449 722 5;
+#X msg 329 722 10;
+#X msg 418 722 10;
+#X text 414 698 TEMP: init. envelope;
+#X text 63 120 Fundamentals;
+#X text 143 547 Envelope;
+#X text 573 47 ShimmerFreq/Strength;
+#X text 869 750 Spacer;
+#X text 936 27 Volume;
+#X obj 337 872 s exp;
+#X text 83 757 A;
+#X text 83 808 A;
+#X text 83 774 T;
+#X text 83 791 T;
+#X text 83 825 C;
+#X text 83 842 K;
+#X text 106 808 A;
+#X text 106 757 D;
+#X text 106 774 E;
+#X text 106 791 C;
+#X text 106 825 Y;
+#X text 127 756 S;
+#X text 127 773 U;
+#X text 127 790 S;
+#X text 127 807 T;
+#X text 127 824 A;
+#X text 127 841 I;
+#X text 127 858 N;
+#X text 152 824 A;
+#X text 152 756 R;
+#X text 152 773 E;
+#X text 152 790 L;
+#X text 152 807 E;
+#X text 152 841 S;
+#X text 152 858 E;
+#X text 178 756 A;
+#X text 178 773 T;
+#X text 178 807 E;
+#X text 178 824 X;
+#X text 178 841 P;
+#X text 1393 100 midi on;
+#X text 1393 142 midi off;
+#X text 1146 753 Waveform definition;
+#N canvas 0 22 2736 1660 wavedef 0;
+#N canvas 0 50 450 212 (subpatch) 0;
+#X array sine 2051 float 3 black black;
+#A 0 -0.00306795 0 0.00306795 0.00613588 0.00920375 0.0122715 0.0153392
+0.0184067 0.0214741 0.0245412 0.0276081 0.0306748 0.0337411 0.0368072
+0.0398729 0.0429382 0.0460031 0.0490676 0.0521317 0.0551952 0.0582582
+0.0613207 0.0643826 0.0674439 0.0705045 0.0735645 0.0766238 0.0796824
+0.0827402 0.0857972 0.0888535 0.0919089 0.0949634 0.0980171 0.10107
+0.104122 0.107172 0.110222 0.113271 0.116319 0.119365 0.122411 0.125455
+0.128498 0.13154 0.134581 0.13762 0.140658 0.143695 0.14673 0.149764
+0.152797 0.155828 0.158858 0.161886 0.164913 0.167938 0.170962 0.173984
+0.177004 0.180023 0.18304 0.186055 0.189069 0.19208 0.19509 0.198098
+0.201104 0.204109 0.207111 0.210112 0.21311 0.216107 0.219101 0.222093
+0.225084 0.228072 0.231058 0.234042 0.237023 0.240003 0.24298 0.245955
+0.248927 0.251898 0.254865 0.257831 0.260794 0.263754 0.266713 0.269668
+0.272621 0.275572 0.278519 0.281465 0.284407 0.287347 0.290284 0.293219
+0.296151 0.29908 0.302006 0.304929 0.307849 0.310767 0.313681 0.316593
+0.319502 0.322407 0.32531 0.32821 0.331106 0.333999 0.33689 0.339777
+0.34266 0.345541 0.348418 0.351292 0.354163 0.357031 0.359895 0.362755
+0.365613 0.368467 0.371317 0.374164 0.377007 0.379847 0.382683 0.385516
+0.388345 0.39117 0.393992 0.39681 0.399624 0.402434 0.405241 0.408044
+0.410843 0.413638 0.416429 0.419217 0.422 0.424779 0.427555 0.430326
+0.433093 0.435857 0.438616 0.441371 0.444122 0.446868 0.449611 0.452349
+0.455083 0.457813 0.460538 0.463259 0.465976 0.468688 0.471396 0.4741
+0.476799 0.479493 0.482183 0.484869 0.48755 0.490226 0.492898 0.495565
+0.498227 0.500885 0.503538 0.506186 0.50883 0.511468 0.514102 0.516731
+0.519356 0.521975 0.524589 0.527199 0.529803 0.532403 0.534997 0.537587
+0.540171 0.54275 0.545325 0.547894 0.550458 0.553016 0.55557 0.558118
+0.560661 0.563199 0.565731 0.568259 0.57078 0.573297 0.575808 0.578313
+0.580814 0.583308 0.585797 0.588281 0.590759 0.593232 0.595699 0.59816
+0.600616 0.603066 0.605511 0.607949 0.610382 0.61281 0.615231 0.617647
+0.620057 0.622461 0.624859 0.627251 0.629638 0.632018 0.634393 0.636761
+0.639124 0.641481 0.643831 0.646176 0.648514 0.650846 0.653172 0.655492
+0.657806 0.660114 0.662415 0.664711 0.666999 0.669282 0.671558 0.673829
+0.676092 0.67835 0.680601 0.682845 0.685083 0.687315 0.68954 0.691759
+0.693971 0.696177 0.698376 0.700568 0.702754 0.704934 0.707106 0.709272
+0.711432 0.713584 0.71573 0.71787 0.720002 0.722128 0.724247 0.726359
+0.728464 0.730562 0.732654 0.734738 0.736816 0.738887 0.740951 0.743007
+0.745057 0.7471 0.749136 0.751165 0.753186 0.755201 0.757208 0.759209
+0.761202 0.763188 0.765167 0.767138 0.769103 0.77106 0.77301 0.774953
+0.776888 0.778816 0.780737 0.78265 0.784556 0.786455 0.788346 0.79023
+0.792106 0.793975 0.795836 0.79769 0.799537 0.801376 0.803207 0.805031
+0.806847 0.808656 0.810457 0.81225 0.814036 0.815814 0.817584 0.819347
+0.821102 0.822849 0.824589 0.826321 0.828045 0.829761 0.831469 0.83317
+0.834862 0.836547 0.838224 0.839893 0.841555 0.843208 0.844853 0.846491
+0.84812 0.849741 0.851355 0.85296 0.854558 0.856147 0.857728 0.859301
+0.860866 0.862424 0.863972 0.865513 0.867046 0.86857 0.870087 0.871595
+0.873095 0.874586 0.87607 0.877545 0.879012 0.88047 0.881921 0.883363
+0.884797 0.886222 0.887639 0.889048 0.890448 0.89184 0.893224 0.894599
+0.895966 0.897324 0.898674 0.900015 0.901348 0.902673 0.903989 0.905296
+0.906595 0.907886 0.909168 0.910441 0.911706 0.912962 0.914209 0.915448
+0.916679 0.9179 0.919113 0.920318 0.921514 0.922701 0.923879 0.925049
+0.92621 0.927362 0.928506 0.929641 0.930767 0.931884 0.932992 0.934092
+0.935183 0.936265 0.937339 0.938403 0.939459 0.940506 0.941544 0.942573
+0.943593 0.944605 0.945607 0.946601 0.947585 0.948561 0.949528 0.950486
+0.951435 0.952375 0.953306 0.954228 0.955141 0.956045 0.95694 0.957826
+0.958703 0.959571 0.96043 0.96128 0.962121 0.962953 0.963776 0.964589
+0.965394 0.96619 0.966976 0.967754 0.968522 0.969281 0.970031 0.970772
+0.971504 0.972226 0.97294 0.973644 0.974339 0.975025 0.975702 0.97637
+0.977028 0.977677 0.978317 0.978948 0.97957 0.980182 0.980785 0.981379
+0.981964 0.982539 0.983105 0.983662 0.98421 0.984748 0.985277 0.985797
+0.986308 0.986809 0.987301 0.987784 0.988257 0.988721 0.989176 0.989622
+0.990058 0.990485 0.990902 0.991311 0.99171 0.992099 0.992479 0.99285
+0.993212 0.993564 0.993907 0.99424 0.994564 0.994879 0.995185 0.995481
+0.995767 0.996045 0.996312 0.996571 0.99682 0.99706 0.99729 0.997511
+0.997723 0.997925 0.998118 0.998301 0.998475 0.99864 0.998795 0.998941
+0.999078 0.999205 0.999322 0.999431 0.999529 0.999619 0.999699 0.999769
+0.999831 0.999882 0.999925 0.999958 0.999981 0.999995 1 0.999995 0.999981
+0.999958 0.999925 0.999882 0.999831 0.999769 0.999699 0.999619 0.999529
+0.999431 0.999322 0.999205 0.999078 0.998941 0.998796 0.99864 0.998476
+0.998302 0.998118 0.997925 0.997723 0.997512 0.997291 0.99706 0.99682
+0.996571 0.996313 0.996045 0.995768 0.995481 0.995185 0.994879 0.994565
+0.994241 0.993907 0.993564 0.993212 0.992851 0.99248 0.992099 0.99171
+0.991311 0.990903 0.990485 0.990058 0.989622 0.989177 0.988722 0.988258
+0.987784 0.987302 0.98681 0.986308 0.985798 0.985278 0.984749 0.98421
+0.983663 0.983106 0.98254 0.981964 0.98138 0.980786 0.980182 0.97957
+0.978948 0.978318 0.977678 0.977028 0.97637 0.975702 0.975026 0.97434
+0.973645 0.97294 0.972227 0.971504 0.970773 0.970032 0.969282 0.968522
+0.967754 0.966977 0.96619 0.965395 0.96459 0.963776 0.962954 0.962122
+0.961281 0.960431 0.959572 0.958704 0.957827 0.956941 0.956046 0.955142
+0.954229 0.953306 0.952375 0.951436 0.950487 0.949529 0.948562 0.947586
+0.946601 0.945608 0.944605 0.943594 0.942574 0.941545 0.940507 0.93946
+0.938404 0.93734 0.936266 0.935184 0.934093 0.932993 0.931885 0.930768
+0.929641 0.928507 0.927363 0.926211 0.92505 0.92388 0.922702 0.921515
+0.920319 0.919115 0.917901 0.91668 0.915449 0.91421 0.912963 0.911707
+0.910442 0.909169 0.907887 0.906596 0.905297 0.90399 0.902674 0.90135
+0.900017 0.898675 0.897325 0.895967 0.8946 0.893225 0.891841 0.89045
+0.889049 0.88764 0.886223 0.884798 0.883364 0.881922 0.880472 0.879013
+0.877546 0.876071 0.874587 0.873096 0.871596 0.870088 0.868572 0.867047
+0.865515 0.863974 0.862425 0.860868 0.859303 0.85773 0.856148 0.854559
+0.852962 0.851356 0.849743 0.848121 0.846492 0.844855 0.843209 0.841556
+0.839895 0.838226 0.836549 0.834864 0.833171 0.831471 0.829762 0.828046
+0.826322 0.82459 0.822851 0.821104 0.819349 0.817586 0.815816 0.814037
+0.812252 0.810458 0.808657 0.806849 0.805032 0.803209 0.801377 0.799538
+0.797692 0.795838 0.793977 0.792108 0.790231 0.788348 0.786456 0.784558
+0.782652 0.780738 0.778818 0.77689 0.774954 0.773012 0.771062 0.769105
+0.76714 0.765168 0.76319 0.761204 0.75921 0.75721 0.755203 0.753188
+0.751166 0.749138 0.747102 0.745059 0.743009 0.740952 0.738889 0.736818
+0.73474 0.732656 0.730564 0.728466 0.72636 0.724248 0.72213 0.720004
+0.717871 0.715732 0.713586 0.711434 0.709274 0.707108 0.704935 0.702756
+0.70057 0.698378 0.696179 0.693973 0.691761 0.689542 0.687317 0.685085
+0.682847 0.680602 0.678352 0.676094 0.673831 0.67156 0.669284 0.667001
+0.664712 0.662417 0.660116 0.657808 0.655494 0.653174 0.650848 0.648516
+0.646178 0.643833 0.641483 0.639126 0.636763 0.634395 0.63202 0.62964
+0.627253 0.624861 0.622463 0.620059 0.617649 0.615233 0.612812 0.610384
+0.607951 0.605513 0.603068 0.600618 0.598162 0.595701 0.593234 0.590761
+0.588283 0.5858 0.58331 0.580816 0.578316 0.57581 0.573299 0.570782
+0.568261 0.565734 0.563201 0.560663 0.55812 0.555572 0.553019 0.55046
+0.547896 0.545327 0.542753 0.540173 0.537589 0.534999 0.532405 0.529805
+0.527201 0.524592 0.521977 0.519358 0.516734 0.514105 0.511471 0.508832
+0.506189 0.50354 0.500887 0.49823 0.495567 0.4929 0.490228 0.487552
+0.484871 0.482186 0.479496 0.476801 0.474102 0.471399 0.468691 0.465978
+0.463262 0.460541 0.457815 0.455086 0.452352 0.449613 0.446871 0.444124
+0.441373 0.438618 0.435859 0.433096 0.430329 0.427557 0.424782 0.422002
+0.419219 0.416432 0.41364 0.410845 0.408046 0.405243 0.402437 0.399626
+0.396812 0.393994 0.391173 0.388347 0.385518 0.382686 0.379849 0.37701
+0.374166 0.371319 0.368469 0.365615 0.362758 0.359897 0.357033 0.354166
+0.351295 0.348421 0.345544 0.342663 0.339779 0.336892 0.334002 0.331109
+0.328212 0.325313 0.32241 0.319504 0.316596 0.313684 0.310769 0.307852
+0.304932 0.302008 0.299082 0.296153 0.293221 0.290287 0.28735 0.28441
+0.281467 0.278522 0.275574 0.272624 0.269671 0.266715 0.263757 0.260796
+0.257833 0.254868 0.2519 0.24893 0.245957 0.242983 0.240005 0.237026
+0.234044 0.231061 0.228074 0.225086 0.222096 0.219104 0.216109 0.213113
+0.210114 0.207114 0.204111 0.201107 0.198101 0.195093 0.192083 0.189071
+0.186058 0.183042 0.180025 0.177007 0.173986 0.170964 0.167941 0.164916
+0.161889 0.158861 0.155831 0.1528 0.149767 0.146733 0.143698 0.140661
+0.137623 0.134583 0.131543 0.128501 0.125458 0.122413 0.119368 0.116321
+0.113273 0.110225 0.107175 0.104124 0.101072 0.0980197 0.0949661 0.0919115
+0.0888561 0.0857999 0.0827428 0.079685;
+#A 1000 0.0766264 0.0735671 0.0705072 0.0674465 0.0643852 0.0613233
+0.0582609 0.0551978 0.0521343 0.0490703 0.0460058 0.0429409 0.0398755
+0.0368098 0.0337438 0.0306774 0.0276108 0.0245439 0.0214767 0.0184094
+0.0153418 0.0122742 0.0092064 0.00613853 0.00307061 2.65359e-06 -0.0030653
+-0.00613323 -0.00920109 -0.0122689 -0.0153365 -0.0184041 -0.0214714
+-0.0245386 -0.0276055 -0.0306721 -0.0337385 -0.0368045 -0.0398702 -0.0429356
+-0.0460005 -0.049065 -0.052129 -0.0551925 -0.0582556 -0.061318 -0.0643799
+-0.0674412 -0.0705019 -0.0735619 -0.0766212 -0.0796797 -0.0827376 -0.0857946
+-0.0888508 -0.0919062 -0.0949608 -0.0980144 -0.101067 -0.104119 -0.10717
+-0.110219 -0.113268 -0.116316 -0.119362 -0.122408 -0.125452 -0.128495
+-0.131537 -0.134578 -0.137617 -0.140655 -0.143692 -0.146728 -0.149762
+-0.152794 -0.155826 -0.158855 -0.161884 -0.16491 -0.167936 -0.170959
+-0.173981 -0.177001 -0.18002 -0.183037 -0.186052 -0.189066 -0.192078
+-0.195088 -0.198096 -0.201102 -0.204106 -0.207109 -0.210109 -0.213108
+-0.216104 -0.219098 -0.222091 -0.225081 -0.228069 -0.231055 -0.234039
+-0.237021 -0.24 -0.242977 -0.245952 -0.248925 -0.251895 -0.254863 -0.257828
+-0.260791 -0.263752 -0.26671 -0.269666 -0.272619 -0.275569 -0.278517
+-0.281462 -0.284405 -0.287345 -0.290282 -0.293216 -0.296148 -0.299077
+-0.302003 -0.304926 -0.307847 -0.310764 -0.313679 -0.316591 -0.319499
+-0.322405 -0.325308 -0.328207 -0.331104 -0.333997 -0.336887 -0.339774
+-0.342658 -0.345539 -0.348416 -0.35129 -0.354161 -0.357028 -0.359892
+-0.362753 -0.36561 -0.368464 -0.371314 -0.374161 -0.377005 -0.379844
+-0.382681 -0.385513 -0.388342 -0.391168 -0.393989 -0.396807 -0.399621
+-0.402432 -0.405239 -0.408041 -0.41084 -0.413636 -0.416427 -0.419214
+-0.421998 -0.424777 -0.427552 -0.430324 -0.433091 -0.435854 -0.438614
+-0.441369 -0.444119 -0.446866 -0.449609 -0.452347 -0.455081 -0.457811
+-0.460536 -0.463257 -0.465974 -0.468686 -0.471394 -0.474098 -0.476797
+-0.479491 -0.482181 -0.484867 -0.487547 -0.490224 -0.492896 -0.495563
+-0.498225 -0.500883 -0.503536 -0.506184 -0.508827 -0.511466 -0.5141
+-0.516729 -0.519353 -0.521973 -0.524587 -0.527196 -0.529801 -0.5324
+-0.534995 -0.537584 -0.540169 -0.542748 -0.545322 -0.547891 -0.550455
+-0.553014 -0.555568 -0.558116 -0.560659 -0.563197 -0.565729 -0.568256
+-0.570778 -0.573295 -0.575806 -0.578311 -0.580811 -0.583306 -0.585795
+-0.588279 -0.590757 -0.59323 -0.595697 -0.598158 -0.600614 -0.603064
+-0.605509 -0.607947 -0.61038 -0.612808 -0.615229 -0.617645 -0.620055
+-0.622459 -0.624857 -0.627249 -0.629636 -0.632016 -0.634391 -0.636759
+-0.639122 -0.641479 -0.643829 -0.646174 -0.648512 -0.650844 -0.65317
+-0.65549 -0.657804 -0.660112 -0.662413 -0.664709 -0.666997 -0.66928
+-0.671557 -0.673827 -0.67609 -0.678348 -0.680599 -0.682843 -0.685081
+-0.687313 -0.689538 -0.691757 -0.693969 -0.696175 -0.698374 -0.700566
+-0.702752 -0.704932 -0.707104 -0.70927 -0.71143 -0.713583 -0.715729
+-0.717868 -0.72 -0.722126 -0.724245 -0.726357 -0.728462 -0.73056 -0.732652
+-0.734737 -0.736814 -0.738885 -0.740949 -0.743006 -0.745056 -0.747098
+-0.749134 -0.751163 -0.753185 -0.755199 -0.757207 -0.759207 -0.7612
+-0.763186 -0.765165 -0.767137 -0.769101 -0.771058 -0.773008 -0.774951
+-0.776886 -0.778814 -0.780735 -0.782648 -0.784554 -0.786453 -0.788344
+-0.790228 -0.792104 -0.793973 -0.795835 -0.797689 -0.799535 -0.801374
+-0.803205 -0.805029 -0.806846 -0.808654 -0.810455 -0.812249 -0.814034
+-0.815812 -0.817583 -0.819346 -0.821101 -0.822848 -0.824587 -0.826319
+-0.828043 -0.829759 -0.831468 -0.833168 -0.834861 -0.836546 -0.838223
+-0.839892 -0.841553 -0.843206 -0.844852 -0.846489 -0.848118 -0.84974
+-0.851353 -0.852959 -0.854556 -0.856146 -0.857727 -0.8593 -0.860865
+-0.862422 -0.863971 -0.865512 -0.867045 -0.868569 -0.870085 -0.871593
+-0.873093 -0.874585 -0.876068 -0.877544 -0.879011 -0.880469 -0.88192
+-0.883362 -0.884795 -0.886221 -0.887638 -0.889047 -0.890447 -0.891839
+-0.893223 -0.894598 -0.895965 -0.897323 -0.898673 -0.900014 -0.901347
+-0.902672 -0.903988 -0.905295 -0.906594 -0.907885 -0.909166 -0.91044
+-0.911705 -0.912961 -0.914208 -0.915447 -0.916678 -0.917899 -0.919112
+-0.920317 -0.921513 -0.9227 -0.923878 -0.925048 -0.926209 -0.927361
+-0.928505 -0.92964 -0.930766 -0.931883 -0.932992 -0.934091 -0.935182
+-0.936264 -0.937338 -0.938402 -0.939458 -0.940505 -0.941543 -0.942572
+-0.943592 -0.944604 -0.945606 -0.9466 -0.947584 -0.94856 -0.949527
+-0.950485 -0.951434 -0.952374 -0.953305 -0.954227 -0.95514 -0.956044
+-0.956939 -0.957825 -0.958702 -0.95957 -0.960429 -0.961279 -0.96212
+-0.962952 -0.963775 -0.964589 -0.965393 -0.966189 -0.966976 -0.967753
+-0.968521 -0.96928 -0.97003 -0.970771 -0.971503 -0.972226 -0.972939
+-0.973643 -0.974339 -0.975025 -0.975701 -0.976369 -0.977027 -0.977677
+-0.978317 -0.978947 -0.979569 -0.980181 -0.980785 -0.981378 -0.981963
+-0.982539 -0.983105 -0.983662 -0.984209 -0.984748 -0.985277 -0.985797
+-0.986307 -0.986809 -0.987301 -0.987784 -0.988257 -0.988721 -0.989176
+-0.989621 -0.990058 -0.990485 -0.990902 -0.99131 -0.991709 -0.992099
+-0.992479 -0.99285 -0.993212 -0.993564 -0.993907 -0.99424 -0.994564
+-0.994879 -0.995184 -0.99548 -0.995767 -0.996044 -0.996312 -0.996571
+-0.99682 -0.99706 -0.99729 -0.997511 -0.997723 -0.997925 -0.998118
+-0.998301 -0.998475 -0.99864 -0.998795 -0.998941 -0.999078 -0.999205
+-0.999322 -0.99943 -0.999529 -0.999619 -0.999699 -0.999769 -0.99983
+-0.999882 -0.999925 -0.999958 -0.999981 -0.999995 -1 -0.999995 -0.999981
+-0.999958 -0.999925 -0.999882 -0.999831 -0.99977 -0.999699 -0.999619
+-0.99953 -0.999431 -0.999323 -0.999205 -0.999078 -0.998941 -0.998796
+-0.99864 -0.998476 -0.998302 -0.998118 -0.997926 -0.997723 -0.997512
+-0.997291 -0.99706 -0.996821 -0.996571 -0.996313 -0.996045 -0.995768
+-0.995481 -0.995185 -0.99488 -0.994565 -0.994241 -0.993907 -0.993565
+-0.993212 -0.992851 -0.99248 -0.9921 -0.99171 -0.991311 -0.990903 -0.990486
+-0.990059 -0.989623 -0.989177 -0.988722 -0.988258 -0.987785 -0.987302
+-0.98681 -0.986309 -0.985798 -0.985278 -0.984749 -0.984211 -0.983663
+-0.983106 -0.98254 -0.981965 -0.98138 -0.980786 -0.980183 -0.979571
+-0.978949 -0.978318 -0.977678 -0.977029 -0.976371 -0.975703 -0.975026
+-0.97434 -0.973645 -0.972941 -0.972227 -0.971505 -0.970773 -0.970032
+-0.969282 -0.968523 -0.967755 -0.966978 -0.966191 -0.965396 -0.964591
+-0.963777 -0.962954 -0.962123 -0.961282 -0.960432 -0.959573 -0.958705
+-0.957828 -0.956942 -0.956047 -0.955142 -0.954229 -0.953307 -0.952376
+-0.951436 -0.950487 -0.94953 -0.948563 -0.947587 -0.946602 -0.945609
+-0.944606 -0.943595 -0.942575 -0.941545 -0.940508 -0.939461 -0.938405
+-0.93734 -0.936267 -0.935185 -0.934094 -0.932994 -0.931886 -0.930769
+-0.929642 -0.928508 -0.927364 -0.926212 -0.925051 -0.923881 -0.922703
+-0.921516 -0.92032 -0.919116 -0.917902 -0.916681 -0.91545 -0.914212
+-0.912964 -0.911708 -0.910443 -0.90917 -0.907888 -0.906598 -0.905299
+-0.903991 -0.902675 -0.901351 -0.900018 -0.898676 -0.897327 -0.895968
+-0.894601 -0.893226 -0.891843 -0.890451 -0.88905 -0.887642 -0.886225
+-0.884799 -0.883365 -0.881923 -0.880473 -0.879014 -0.877547 -0.876072
+-0.874589 -0.873097 -0.871597 -0.870089 -0.868573 -0.867048 -0.865516
+-0.863975 -0.862426 -0.860869 -0.859304 -0.857731 -0.85615 -0.85456
+-0.852963 -0.851358 -0.849744 -0.848123 -0.846493 -0.844856 -0.843211
+-0.841557 -0.839896 -0.838227 -0.83655 -0.834865 -0.833173 -0.831472
+-0.829764 -0.828048 -0.826324 -0.824592 -0.822852 -0.821105 -0.81935
+-0.817587 -0.815817 -0.814039 -0.812253 -0.81046 -0.808659 -0.80685
+-0.805034 -0.80321 -0.801379 -0.79954 -0.797694 -0.79584 -0.793978
+-0.792109 -0.790233 -0.788349 -0.786458 -0.784559 -0.782653 -0.78074
+-0.778819 -0.776891 -0.774956 -0.773013 -0.771063 -0.769106 -0.767142
+-0.76517 -0.763191 -0.761205 -0.759212 -0.757212 -0.755204 -0.75319
+-0.751168 -0.749139 -0.747104 -0.745061 -0.743011 -0.740954 -0.73889
+-0.73682 -0.734742 -0.732657 -0.730566 -0.728468 -0.726362 -0.72425
+-0.722131 -0.720006 -0.717873 -0.715734 -0.713588 -0.711435 -0.709276
+-0.70711 -0.704937 -0.702758 -0.700572 -0.69838 -0.69618 -0.693975
+-0.691763 -0.689544 -0.687319 -0.685087 -0.682849 -0.680604 -0.678353
+-0.676096 -0.673832 -0.671562 -0.669286 -0.667003 -0.664714 -0.662419
+-0.660118 -0.65781 -0.655496 -0.653176 -0.65085 -0.648518 -0.64618
+-0.643835 -0.641485 -0.639128 -0.636765 -0.634397 -0.632022 -0.629642
+-0.627255 -0.624863 -0.622465 -0.620061 -0.617651 -0.615235 -0.612814
+-0.610387 -0.607954 -0.605515 -0.60307 -0.60062 -0.598164 -0.595703
+-0.593236 -0.590764 -0.588285 -0.585802 -0.583313 -0.580818 -0.578318
+-0.575812 -0.573301 -0.570785 -0.568263 -0.565736 -0.563203 -0.560666
+-0.558123 -0.555574 -0.553021 -0.550462 -0.547898 -0.545329 -0.542755
+-0.540176 -0.537591 -0.535002 -0.532407 -0.529808 -0.527203 -0.524594
+-0.521979 -0.51936 -0.516736 -0.514107 -0.511473 -0.508834 -0.506191
+-0.503543 -0.50089 -0.498232 -0.495569 -0.492902 -0.490231 -0.487554
+-0.484874 -0.482188 -0.479498 -0.476804 -0.474105 -0.471401 -0.468693
+-0.465981 -0.463264 -0.460543 -0.457818 -0.455088 -0.452354 -0.449616
+-0.446873 -0.444127 -0.441376 -0.438621 -0.435862 -0.433098 -0.430331
+-0.42756 -0.424784 -0.422005 -0.419221 -0.416434 -0.413643 -0.410848
+-0.408049 -0.405246 -0.402439 -0.399629 -0.396815 -0.393997 -0.391175
+-0.38835 -0.385521 -0.382688 -0.379852 -0.377012 -0.374169 -0.371322
+-0.368471 -0.365618 -0.36276 -0.3599 -0.357036 -0.354168 -0.351297
+-0.348423 -0.345546 -0.342665 -0.339782 -0.336895 -0.334004 -0.331111
+-0.328215 -0.325315 -0.322412 -0.319507 -0.316598 -0.313687 -0.310772
+-0.307854 -0.304934 -0.302011 -0.299085 -0.296156 -0.293224 -0.29029
+-0.287352 -0.284412 -0.28147 -0.278525 -0.275577 -0.272626 -0.269673
+-0.266718 -0.26376 -0.260799 -0.257836 -0.254871 -0.251903 -0.248933
+-0.24596 -0.242985 -0.240008 -0.237029 -0.234047 -0.231063 -0.228077
+-0.225089 -0.222099 -0.219106 -0.216112 -0.213115 -0.210117 -0.207116
+-0.204114 -0.20111 -0.198103 -0.195095 -0.192085 -0.189074 -0.18606
+-0.183045 -0.180028 -0.177009 -0.173989 -0.170967 -0.167943 -0.164918
+-0.161891 -0.158863 -0.155834 -0.152802;
+#A 2000 -0.14977 -0.146736 -0.1437 -0.140663 -0.137625 -0.134586 -0.131545
+-0.128503 -0.12546 -0.122416 -0.11937 -0.116324 -0.113276 -0.110227
+-0.107178 -0.104127 -0.101075 -0.0980223 -0.0949687 -0.0919142 -0.0888588
+-0.0858025 -0.0827455 -0.0796877 -0.0766291 -0.0735698 -0.0705098 -0.0674492
+-0.0643879 -0.061326 -0.0582635 -0.0552005 -0.052137 -0.0490729 -0.0460084
+-0.0429435 -0.0398782 -0.0368125 -0.0337464 -0.0306801 -0.0276134 -0.0245465
+-0.0214794 -0.018412 -0.0153445 -0.0122768 -0.00920905 -0.00614119
+-0.00307326 -5.30718e-06 0.00306265;
+#X coords 0 1 2051 -1 200 140 1;
+#X restore 90 170 graph;
+#N canvas 0 50 450 250 (subpatch) 0;
+#X array sawtooth 2051 float 3 black black;
+#A 0 -0.0229404 0 0.0229404 0.0458672 0.0687669 0.0916258 0.11443 0.137167
+0.159823 0.182384 0.204838 0.227171 0.24937 0.271423 0.293316 0.315038
+0.336576 0.357917 0.37905 0.399962 0.420644 0.441082 0.461267 0.481187
+0.500831 0.52019 0.539254 0.558013 0.576457 0.594578 0.612366 0.629814
+0.646913 0.663656 0.680035 0.696044 0.711675 0.726923 0.741781 0.756244
+0.770307 0.783966 0.797215 0.810052 0.822471 0.834472 0.846049 0.857202
+0.867929 0.878227 0.888096 0.897534 0.906543 0.915121 0.923269 0.930988
+0.938279 0.945145 0.951586 0.957605 0.963206 0.96839 0.973162 0.977526
+0.981486 0.985045 0.98821 0.990985 0.993376 0.995389 0.997029 0.998303
+0.999219 0.999782 1 0.999881 0.999432 0.998661 0.997577 0.996187 0.994501
+0.992527 0.990274 0.987752 0.984969 0.981935 0.97866 0.975153 0.971424
+0.967483 0.963339 0.959004 0.954486 0.949796 0.944945 0.939942 0.934797
+0.929521 0.924124 0.918616 0.913006 0.907306 0.901525 0.895672 0.889759
+0.883793 0.877786 0.871746 0.865684 0.859607 0.853525 0.847448 0.841383
+0.835339 0.829326 0.82335 0.817421 0.811545 0.80573 0.799984 0.794314
+0.788726 0.783228 0.777825 0.772524 0.767331 0.762251 0.75729 0.752452
+0.747743 0.743167 0.738728 0.734431 0.730278 0.726274 0.722422 0.718723
+0.715182 0.7118 0.708578 0.70552 0.702626 0.699897 0.697334 0.694937
+0.692708 0.690646 0.68875 0.687021 0.685457 0.684058 0.682821 0.681747
+0.680832 0.680075 0.679473 0.679025 0.678727 0.678577 0.678572 0.678707
+0.67898 0.679388 0.679926 0.68059 0.681376 0.68228 0.683297 0.684424
+0.685654 0.686984 0.688408 0.689922 0.69152 0.693197 0.694949 0.696768
+0.698651 0.700592 0.702585 0.704625 0.706707 0.708824 0.710972 0.713144
+0.715337 0.717543 0.719757 0.721976 0.724191 0.7264 0.728596 0.730775
+0.73293 0.735058 0.737154 0.739213 0.741229 0.743199 0.745118 0.746983
+0.748788 0.75053 0.752204 0.753808 0.755337 0.756789 0.75816 0.759446
+0.760645 0.761755 0.762772 0.763695 0.76452 0.765247 0.765873 0.766396
+0.766815 0.767129 0.767337 0.767437 0.767429 0.767313 0.767088 0.766753
+0.76631 0.765757 0.765096 0.764327 0.763451 0.762468 0.76138 0.760187
+0.758892 0.757496 0.756 0.754407 0.752718 0.750935 0.749062 0.747099
+0.74505 0.742918 0.740705 0.738414 0.736049 0.733611 0.731106 0.728535
+0.725902 0.72321 0.720464 0.717667 0.714822 0.711933 0.709004 0.706039
+0.703041 0.700015 0.696964 0.693891 0.690802 0.6877 0.684589 0.681472
+0.678353 0.675237 0.672127 0.669027 0.665941 0.662871 0.659823 0.656799
+0.653803 0.650838 0.647908 0.645016 0.642164 0.639357 0.636598 0.633888
+0.631231 0.628629 0.626086 0.623603 0.621183 0.618827 0.616539 0.614321
+0.612173 0.610097 0.608096 0.606171 0.604322 0.602552 0.600861 0.599249
+0.597719 0.59627 0.594902 0.593617 0.592414 0.591293 0.590254 0.589298
+0.588423 0.587629 0.586916 0.586282 0.585727 0.58525 0.58485 0.584524
+0.584273 0.584094 0.583986 0.583947 0.583975 0.584068 0.584225 0.584443
+0.584719 0.585052 0.585439 0.585878 0.586366 0.5869 0.587478 0.588097
+0.588755 0.589447 0.590173 0.590928 0.591709 0.592515 0.59334 0.594184
+0.595042 0.595912 0.59679 0.597673 0.598559 0.599444 0.600326 0.6012
+0.602066 0.602918 0.603755 0.604574 0.605371 0.606145 0.606892 0.60761
+0.608296 0.608948 0.609563 0.610138 0.610672 0.611163 0.611608 0.612004
+0.612351 0.612647 0.612889 0.613076 0.613206 0.613278 0.613291 0.613244
+0.613134 0.612962 0.612726 0.612425 0.612059 0.611628 0.61113 0.610565
+0.609934 0.609236 0.608471 0.607639 0.606741 0.605776 0.604746 0.60365
+0.60249 0.601266 0.599979 0.59863 0.597221 0.595751 0.594223 0.592638
+0.590998 0.589303 0.587556 0.585759 0.583912 0.582018 0.58008 0.578098
+0.576075 0.574013 0.571914 0.569781 0.567616 0.56542 0.563198 0.56095
+0.558679 0.556388 0.55408 0.551756 0.54942 0.547074 0.54472 0.542361
+0.539999 0.537638 0.535279 0.532925 0.530579 0.528243 0.525919 0.52361
+0.521319 0.519047 0.516797 0.514571 0.512372 0.510201 0.508061 0.505953
+0.50388 0.501844 0.499845 0.497887 0.495971 0.494098 0.49227 0.490488
+0.488754 0.487069 0.485435 0.483851 0.48232 0.480842 0.479417 0.478048
+0.476734 0.475476 0.474274 0.473129 0.47204 0.471009 0.470035 0.469118
+0.468257 0.467454 0.466706 0.466015 0.465378 0.464797 0.464269 0.463795
+0.463373 0.463002 0.462682 0.46241 0.462187 0.46201 0.461879 0.461791
+0.461745 0.461741 0.461775 0.461847 0.461954 0.462095 0.462269 0.462472
+0.462703 0.46296 0.463242 0.463545 0.463868 0.464209 0.464566 0.464935
+0.465317 0.465707 0.466104 0.466505 0.466909 0.467313 0.467715 0.468113
+0.468505 0.468888 0.46926 0.46962 0.469965 0.470293 0.470601 0.470889
+0.471155 0.471395 0.471609 0.471794 0.47195 0.472073 0.472163 0.472219
+0.472237 0.472218 0.47216 0.472061 0.47192 0.471736 0.471509 0.471236
+0.470918 0.470553 0.47014 0.46968 0.46917 0.468612 0.468004 0.467346
+0.466638 0.465879 0.46507 0.464211 0.463302 0.462343 0.461333 0.460275
+0.459167 0.458011 0.456807 0.455557 0.454259 0.452916 0.451529 0.450098
+0.448624 0.447109 0.445553 0.443959 0.442327 0.440658 0.438955 0.437219
+0.43545 0.433652 0.431825 0.429971 0.428092 0.42619 0.424266 0.422322
+0.420361 0.418383 0.416392 0.414389 0.412375 0.410353 0.408325 0.406293
+0.404259 0.402224 0.400191 0.398162 0.396138 0.394122 0.392116 0.39012
+0.388138 0.386171 0.384221 0.38229 0.380379 0.37849 0.376625 0.374786
+0.372973 0.37119 0.369436 0.367713 0.366024 0.364368 0.362748 0.361164
+0.359618 0.35811 0.356643 0.355215 0.35383 0.352486 0.351185 0.349928
+0.348714 0.347545 0.346421 0.345342 0.344309 0.343321 0.342378 0.341481
+0.34063 0.339824 0.339063 0.338348 0.337676 0.337049 0.336465 0.335924
+0.335425 0.334967 0.33455 0.334173 0.333834 0.333533 0.333269 0.333041
+0.332847 0.332685 0.332556 0.332457 0.332387 0.332345 0.332329 0.332337
+0.332368 0.332421 0.332493 0.332583 0.33269 0.332811 0.332945 0.33309
+0.333244 0.333406 0.333574 0.333745 0.333919 0.334093 0.334265 0.334434
+0.334598 0.334755 0.334903 0.335041 0.335167 0.335279 0.335375 0.335455
+0.335515 0.335555 0.335573 0.335568 0.335538 0.335482 0.335398 0.335285
+0.335142 0.334968 0.334761 0.33452 0.334245 0.333934 0.333586 0.333201
+0.332778 0.332316 0.331814 0.331272 0.33069 0.330066 0.329401 0.328695
+0.327946 0.327155 0.326322 0.325446 0.324529 0.323569 0.322568 0.321525
+0.320441 0.319316 0.318151 0.316946 0.315702 0.314419 0.313099 0.311742
+0.310349 0.308921 0.307459 0.305963 0.304436 0.302878 0.301291 0.299675
+0.298032 0.296364 0.294671 0.292955 0.291219 0.289462 0.287687 0.285895
+0.284088 0.282267 0.280434 0.278591 0.276739 0.274881 0.273017 0.271149
+0.269279 0.267409 0.265541 0.263676 0.261815 0.259961 0.258115 0.256279
+0.254455 0.252643 0.250846 0.249065 0.247301 0.245557 0.243833 0.242131
+0.240453 0.238799 0.237171 0.23557 0.233997 0.232454 0.230942 0.229461
+0.228013 0.226599 0.225218 0.223873 0.222564 0.221292 0.220057 0.218859
+0.2177 0.21658 0.215498 0.214456 0.213454 0.212491 0.211568 0.210685
+0.209841 0.209038 0.208273 0.207548 0.206862 0.206214 0.205604 0.205032
+0.204497 0.203998 0.203535 0.203107 0.202712 0.202351 0.202022 0.201724
+0.201456 0.201218 0.201007 0.200823 0.200665 0.200531 0.20042 0.200331
+0.200262 0.200211 0.200178 0.200161 0.200159 0.200169 0.20019 0.200222
+0.200261 0.200307 0.200358 0.200413 0.200469 0.200526 0.200581 0.200633
+0.200681 0.200722 0.200755 0.200779 0.200793 0.200794 0.200781 0.200752
+0.200707 0.200644 0.200561 0.200457 0.20033 0.20018 0.200006 0.199805
+0.199578 0.199322 0.199037 0.198721 0.198375 0.197996 0.197585 0.19714
+0.19666 0.196146 0.195595 0.195009 0.194386 0.193726 0.193029 0.192293
+0.19152 0.190709 0.18986 0.188973 0.188047 0.187084 0.186083 0.185044
+0.183968 0.182855 0.181705 0.180519 0.179298 0.178043 0.176753 0.175429
+0.174073 0.172685 0.171266 0.169817 0.168339 0.166833 0.165301 0.163742
+0.162159 0.160553 0.158924 0.157275 0.155607 0.15392 0.152217 0.150498
+0.148765 0.147021 0.145265 0.1435 0.141727 0.139948 0.138164 0.136376
+0.134587 0.132798 0.131011 0.129226 0.127446 0.125671 0.123905 0.122147
+0.1204 0.118666 0.116944 0.115238 0.113547 0.111875 0.110222 0.108588
+0.106977 0.105388 0.103824 0.102284 0.100771 0.0992856 0.0978283 0.0964003
+0.0950026 0.093636 0.0923014 0.0909994 0.0897309 0.0884964 0.0872965
+0.0861317 0.0850026 0.0839094 0.0828526 0.0818325 0.0808491 0.0799028
+0.0789936 0.0781214 0.0772864 0.0764883 0.075727 0.0750023 0.0743138
+0.0736613 0.0730444 0.0724625 0.0719151 0.0714017 0.0709215 0.0704739
+0.0700582 0.0696734 0.0693188 0.0689934 0.0686962 0.0684263 0.0681826
+0.0679639 0.0677691 0.0675971 0.0674466 0.0673164 0.067205 0.0671114
+0.0670339 0.0669714 0.0669223 0.0668852 0.0668588 0.0668414 0.0668317
+0.0668281 0.0668291 0.0668333 0.066839 0.0668448 0.0668491 0.0668505
+0.0668474 0.0668383 0.0668217 0.0667961 0.0667602 0.0667123 0.0666512
+0.0665753 0.0664834 0.066374 0.066246 0.0660978 0.0659284 0.0657365
+0.0655209 0.0652805 0.0650143 0.064721 0.0643998 0.0640497 0.0636698
+0.0632593 0.0628172 0.062343 0.0618358 0.0612951 0.0607203 0.0601109
+0.0594664 0.0587863 0.0580705 0.0573185 0.0565302 0.0557054 0.054844
+0.0539461 0.0530115 0.0520405 0.0510332 0.0499898 0.0489105 0.0477958
+0.046646 0.0454616 0.0442432 0.0429912 0.0417063;
+#A 1000 0.0403893 0.0390409 0.0376618 0.0362529 0.0348152 0.0333496
+0.0318571 0.0303387 0.0287955 0.0272287 0.0256394 0.0240289 0.0223984
+0.0207491 0.0190825 0.0173998 0.0157024 0.0139917 0.0122691 0.0105361
+0.00879414 0.00704466 0.00528916 0.00352913 0.00176608 1.52645e-06
+-0.00176303 -0.00352608 -0.00528611 -0.00704163 -0.00879112 -0.0105331
+-0.0122661 -0.0139887 -0.0156994 -0.0173968 -0.0190796 -0.0207463 -0.0223955
+-0.0240261 -0.0256366 -0.027226 -0.0287928 -0.030336 -0.0318545 -0.033347
+-0.0348127 -0.0362505 -0.0376594 -0.0390385 -0.040387 -0.0417041 -0.042989
+-0.044241 -0.0454596 -0.046644 -0.0477939 -0.0489086 -0.0499879 -0.0510314
+-0.0520388 -0.0530099 -0.0539445 -0.0548425 -0.0557039 -0.0565288 -0.0573172
+-0.0580692 -0.0587851 -0.0594652 -0.0601098 -0.0607193 -0.0612942 -0.0618349
+-0.0623421 -0.0628164 -0.0632585 -0.0636691 -0.0640491 -0.0643992 -0.0647205
+-0.0650138 -0.0652801 -0.0655205 -0.0657362 -0.0659281 -0.0660976 -0.0662457
+-0.0663738 -0.0664832 -0.0665752 -0.066651 -0.0667122 -0.0667601 -0.0667961
+-0.0668216 -0.0668382 -0.0668474 -0.0668505 -0.0668491 -0.0668448 -0.066839
+-0.0668333 -0.0668291 -0.0668281 -0.0668317 -0.0668414 -0.0668587 -0.0668852
+-0.0669222 -0.0669713 -0.0670338 -0.0671112 -0.0672049 -0.0673162 -0.0674464
+-0.0675968 -0.0677688 -0.0679635 -0.0681822 -0.0684259 -0.0686957 -0.0689928
+-0.0693182 -0.0696728 -0.0700575 -0.0704732 -0.0709207 -0.0714008 -0.0719142
+-0.0724615 -0.0730434 -0.0736603 -0.0743127 -0.075001 -0.0757257 -0.0764869
+-0.0772849 -0.0781199 -0.078992 -0.0799012 -0.0808475 -0.0818307 -0.0828508
+-0.0839076 -0.0850006 -0.0861297 -0.0872944 -0.0884942 -0.0897287 -0.0909972
+-0.0922991 -0.0936337 -0.0950002 -0.0963978 -0.0978258 -0.0992831 -0.100769
+-0.102282 -0.103821 -0.105386 -0.106974 -0.108586 -0.110219 -0.111872
+-0.113545 -0.115235 -0.116941 -0.118663 -0.120397 -0.122144 -0.123902
+-0.125668 -0.127443 -0.129223 -0.131007 -0.132795 -0.134584 -0.136373
+-0.13816 -0.139945 -0.141724 -0.143497 -0.145262 -0.147018 -0.148762
+-0.150495 -0.152214 -0.153917 -0.155604 -0.157272 -0.158922 -0.16055
+-0.162156 -0.163739 -0.165298 -0.166831 -0.168337 -0.169814 -0.171263
+-0.172682 -0.17407 -0.175427 -0.17675 -0.17804 -0.179296 -0.180517
+-0.181703 -0.182853 -0.183966 -0.185042 -0.186081 -0.187082 -0.188046
+-0.188971 -0.189859 -0.190708 -0.191519 -0.192292 -0.193027 -0.193725
+-0.194385 -0.195008 -0.195594 -0.196145 -0.196659 -0.197139 -0.197584
+-0.197995 -0.198374 -0.198721 -0.199036 -0.199321 -0.199577 -0.199805
+-0.200006 -0.20018 -0.20033 -0.200456 -0.20056 -0.200643 -0.200707
+-0.200752 -0.200781 -0.200794 -0.200793 -0.200779 -0.200755 -0.200722
+-0.200681 -0.200633 -0.200581 -0.200526 -0.200469 -0.200413 -0.200359
+-0.200307 -0.200261 -0.200222 -0.20019 -0.200169 -0.200159 -0.200161
+-0.200178 -0.200211 -0.200262 -0.200331 -0.20042 -0.200531 -0.200665
+-0.200823 -0.201007 -0.201217 -0.201456 -0.201724 -0.202021 -0.20235
+-0.202711 -0.203106 -0.203534 -0.203997 -0.204496 -0.205031 -0.205603
+-0.206213 -0.206861 -0.207547 -0.208272 -0.209036 -0.20984 -0.210683
+-0.211566 -0.212489 -0.213452 -0.214454 -0.215496 -0.216578 -0.217698
+-0.218857 -0.220055 -0.22129 -0.222562 -0.223871 -0.225216 -0.226596
+-0.228011 -0.229459 -0.23094 -0.232452 -0.233995 -0.235567 -0.237168
+-0.238796 -0.24045 -0.242128 -0.24383 -0.245554 -0.247298 -0.249062
+-0.250843 -0.25264 -0.254452 -0.256276 -0.258112 -0.259958 -0.261812
+-0.263673 -0.265538 -0.267406 -0.269276 -0.271146 -0.273013 -0.274877
+-0.276736 -0.278588 -0.280431 -0.282264 -0.284084 -0.285892 -0.287684
+-0.289459 -0.291216 -0.292952 -0.294668 -0.296361 -0.298029 -0.299672
+-0.301288 -0.302875 -0.304433 -0.305961 -0.307456 -0.308918 -0.310346
+-0.31174 -0.313097 -0.314417 -0.3157 -0.316944 -0.318149 -0.319314
+-0.320439 -0.321523 -0.322566 -0.323568 -0.324527 -0.325445 -0.32632
+-0.327153 -0.327944 -0.328693 -0.3294 -0.330065 -0.330689 -0.331271
+-0.331813 -0.332315 -0.332777 -0.3332 -0.333585 -0.333933 -0.334244
+-0.33452 -0.33476 -0.334967 -0.335142 -0.335285 -0.335398 -0.335482
+-0.335538 -0.335568 -0.335573 -0.335555 -0.335515 -0.335455 -0.335376
+-0.335279 -0.335167 -0.335042 -0.334904 -0.334755 -0.334598 -0.334435
+-0.334266 -0.334093 -0.333919 -0.333746 -0.333574 -0.333407 -0.333245
+-0.33309 -0.332945 -0.332811 -0.33269 -0.332583 -0.332493 -0.332421
+-0.332368 -0.332337 -0.332329 -0.332345 -0.332387 -0.332457 -0.332556
+-0.332685 -0.332846 -0.33304 -0.333269 -0.333533 -0.333834 -0.334172
+-0.334549 -0.334966 -0.335424 -0.335923 -0.336464 -0.337048 -0.337675
+-0.338346 -0.339062 -0.339823 -0.340629 -0.34148 -0.342377 -0.343319
+-0.344307 -0.34534 -0.346419 -0.347543 -0.348712 -0.349925 -0.351183
+-0.352484 -0.353827 -0.355213 -0.35664 -0.358108 -0.359615 -0.361161
+-0.362745 -0.364365 -0.366021 -0.36771 -0.369433 -0.371187 -0.37297
+-0.374783 -0.376622 -0.378487 -0.380376 -0.382287 -0.384218 -0.386168
+-0.388135 -0.390117 -0.392112 -0.394119 -0.396135 -0.398158 -0.400188
+-0.402221 -0.404255 -0.40629 -0.408322 -0.41035 -0.412372 -0.414385
+-0.416389 -0.41838 -0.420357 -0.422319 -0.424262 -0.426186 -0.428089
+-0.429968 -0.431822 -0.433649 -0.435447 -0.437216 -0.438952 -0.440656
+-0.442324 -0.443956 -0.445551 -0.447106 -0.448621 -0.450095 -0.451526
+-0.452914 -0.454257 -0.455554 -0.456805 -0.458009 -0.459165 -0.460273
+-0.461332 -0.462341 -0.4633 -0.46421 -0.465069 -0.465878 -0.466636
+-0.467344 -0.468003 -0.468611 -0.469169 -0.469679 -0.470139 -0.470552
+-0.470917 -0.471236 -0.471508 -0.471736 -0.47192 -0.472061 -0.47216
+-0.472218 -0.472237 -0.472219 -0.472164 -0.472073 -0.47195 -0.471795
+-0.471609 -0.471395 -0.471155 -0.47089 -0.470602 -0.470293 -0.469965
+-0.469621 -0.469261 -0.468889 -0.468506 -0.468114 -0.467716 -0.467314
+-0.46691 -0.466506 -0.466104 -0.465707 -0.465317 -0.464936 -0.464566
+-0.46421 -0.463869 -0.463546 -0.463242 -0.462961 -0.462703 -0.462472
+-0.462269 -0.462096 -0.461955 -0.461847 -0.461775 -0.461741 -0.461745
+-0.461791 -0.461878 -0.46201 -0.462186 -0.46241 -0.462681 -0.463001
+-0.463372 -0.463794 -0.464268 -0.464796 -0.465377 -0.466013 -0.466705
+-0.467452 -0.468256 -0.469116 -0.470033 -0.471007 -0.472039 -0.473127
+-0.474272 -0.475474 -0.476732 -0.478046 -0.479415 -0.480839 -0.482317
+-0.483848 -0.485432 -0.487067 -0.488751 -0.490485 -0.492267 -0.494095
+-0.495968 -0.497884 -0.499842 -0.50184 -0.503876 -0.505949 -0.508057
+-0.510197 -0.512368 -0.514567 -0.516793 -0.519043 -0.521315 -0.523606
+-0.525915 -0.528238 -0.530575 -0.532921 -0.535275 -0.537634 -0.539995
+-0.542357 -0.544716 -0.54707 -0.549416 -0.551752 -0.554076 -0.556385
+-0.558675 -0.560946 -0.563194 -0.565417 -0.567612 -0.569777 -0.571911
+-0.574009 -0.576071 -0.578094 -0.580076 -0.582015 -0.583909 -0.585755
+-0.587553 -0.5893 -0.590995 -0.592636 -0.594221 -0.595749 -0.597218
+-0.598628 -0.599977 -0.601264 -0.602488 -0.603648 -0.604744 -0.605775
+-0.606739 -0.607638 -0.60847 -0.609235 -0.609933 -0.610564 -0.611129
+-0.611627 -0.612058 -0.612424 -0.612725 -0.612961 -0.613134 -0.613243
+-0.613291 -0.613279 -0.613206 -0.613076 -0.612889 -0.612647 -0.612352
+-0.612005 -0.611608 -0.611164 -0.610673 -0.610139 -0.609564 -0.608949
+-0.608297 -0.607611 -0.606894 -0.606147 -0.605373 -0.604575 -0.603757
+-0.60292 -0.602067 -0.601202 -0.600327 -0.599446 -0.598561 -0.597675
+-0.596791 -0.595913 -0.595044 -0.594185 -0.593342 -0.592516 -0.591711
+-0.590929 -0.590174 -0.589449 -0.588756 -0.588098 -0.587479 -0.586901
+-0.586367 -0.585879 -0.58544 -0.585053 -0.58472 -0.584443 -0.584225
+-0.584069 -0.583975 -0.583947 -0.583986 -0.584094 -0.584273 -0.584524
+-0.584849 -0.585249 -0.585726 -0.586281 -0.586915 -0.587628 -0.588422
+-0.589296 -0.590253 -0.591291 -0.592412 -0.593615 -0.5949 -0.596267
+-0.597716 -0.599247 -0.600858 -0.602549 -0.604319 -0.606168 -0.608093
+-0.610094 -0.612169 -0.614317 -0.616536 -0.618823 -0.621178 -0.623598
+-0.626081 -0.628625 -0.631226 -0.633883 -0.636593 -0.639353 -0.64216
+-0.645011 -0.647903 -0.650833 -0.653798 -0.656794 -0.659818 -0.662866
+-0.665935 -0.669022 -0.672122 -0.675232 -0.678348 -0.681466 -0.684583
+-0.687695 -0.690797 -0.693886 -0.696958 -0.70001 -0.703036 -0.706034
+-0.708999 -0.711928 -0.714817 -0.717662 -0.720459 -0.723206 -0.725897
+-0.72853 -0.731101 -0.733607 -0.736045 -0.73841 -0.740701 -0.742914
+-0.745047 -0.747096 -0.749058 -0.750932 -0.752715 -0.754404 -0.755998
+-0.757494 -0.75889 -0.760185 -0.761378 -0.762466 -0.763449 -0.764326
+-0.765095 -0.765756 -0.766309 -0.766753 -0.767087 -0.767313 -0.767429
+-0.767437 -0.767337 -0.76713 -0.766816 -0.766397 -0.765874 -0.765248
+-0.764522 -0.763696 -0.762774 -0.761757 -0.760647 -0.759448 -0.758162
+-0.756791 -0.75534 -0.753811 -0.752207 -0.750532 -0.748791 -0.746986
+-0.745122 -0.743203 -0.741232 -0.739216 -0.737158 -0.735062 -0.732934
+-0.730778 -0.7286 -0.726404 -0.724195 -0.721979 -0.719761 -0.717546
+-0.71534 -0.713148 -0.710975 -0.708828 -0.70671 -0.704629 -0.702589
+-0.700595 -0.698655 -0.696772 -0.694952 -0.6932 -0.691523 -0.689925
+-0.688411 -0.686987 -0.685656 -0.684426 -0.683299 -0.682282 -0.681377
+-0.680591 -0.679927 -0.679389 -0.678981 -0.678707 -0.678572 -0.678577
+-0.678727 -0.679024 -0.679472 -0.680074 -0.68083 -0.681745 -0.682819
+-0.684055 -0.685454 -0.687018 -0.688747 -0.690642 -0.692704 -0.694933
+-0.697329 -0.699892 -0.702621 -0.705515 -0.708573 -0.711794 -0.715176
+-0.718717 -0.722415 -0.726268 -0.730271 -0.734424 -0.738721 -0.743159
+-0.747735 -0.752444 -0.757281 -0.762242 -0.767322 -0.772515 -0.777816
+-0.783218 -0.788716 -0.794304 -0.799974 -0.80572 -0.811534 -0.81741
+-0.82334 -0.829316 -0.835329 -0.841372 -0.847437 -0.853515 -0.859596
+-0.865673 -0.871736 -0.877776 -0.883783 -0.889748 -0.895662 -0.901515
+-0.907296 -0.912996 -0.918606 -0.924114 -0.929512 -0.934788 -0.939933
+-0.944937 -0.949788 -0.954478 -0.958996 -0.963332 -0.967476 -0.971417
+-0.975147 -0.978654 -0.98193 -0.984964 -0.987747 -0.99027 -0.992523
+-0.994498 -0.996184 -0.997574 -0.998659 -0.999431 -0.99988 -1 -0.999782
+-0.99922 -0.998305 -0.997032 -0.995392 -0.99338 -0.99099 -0.988215
+-0.985051 -0.981492 -0.977533 -0.97317 -0.968399 -0.963215 -0.957615
+-0.951596 -0.945156 -0.938291 -0.931001 -0.923282 -0.915135 -0.906558
+-0.89755;
+#A 2000 -0.888112 -0.878244 -0.867947 -0.857221 -0.846069 -0.834492
+-0.822492 -0.810073 -0.797238 -0.783989 -0.770331 -0.756269 -0.741806
+-0.726948 -0.711702 -0.696071 -0.680063 -0.663685 -0.646942 -0.629844
+-0.612397 -0.594609 -0.576489 -0.558045 -0.539287 -0.520224 -0.500865
+-0.481221 -0.461302 -0.441117 -0.420679 -0.399998 -0.379086 -0.357953
+-0.336613 -0.315075 -0.293354 -0.271461 -0.249409 -0.22721 -0.204877
+-0.182423 -0.159862 -0.137207 -0.11447 -0.0916653 -0.0688065 -0.0459069
+-0.0229801 -3.96879e-05 0.0229007;
+#X coords 0 1 2051 -1 200 140 1;
+#X restore 89 451 graph;
+#N canvas 0 50 450 250 (subpatch) 0;
+#X array triangle 2051 float 3 black black;
+#A 0 -0.00191475 0 0.00191475 0.00382964 0.00574482 0.00766044 0.00957663
+0.0114936 0.0134113 0.0153301 0.0172501 0.0191713 0.0210939 0.0230181
+0.024944 0.0268717 0.0288014 0.0307331 0.032667 0.0346033 0.0365419
+0.0384831 0.040427 0.0423737 0.0443232 0.0462756 0.0482311 0.0501898
+0.0521517 0.054117 0.0560856 0.0580577 0.0600333 0.0620126 0.0639955
+0.0659821 0.0679725 0.0699667 0.0719648 0.0739667 0.0759726 0.0779824
+0.0799962 0.0820139 0.0840356 0.0860613 0.088091 0.0901247 0.0921623
+0.0942038 0.0962493 0.0982986 0.100352 0.102409 0.10447 0.106534 0.108602
+0.110674 0.112749 0.114828 0.11691 0.118995 0.121084 0.123176 0.125271
+0.127368 0.129469 0.131572 0.133678 0.135787 0.137898 0.140011 0.142126
+0.144244 0.146363 0.148484 0.150607 0.152731 0.154857 0.156984 0.159112
+0.16124 0.16337 0.1655 0.167631 0.169762 0.171894 0.174025 0.176156
+0.178287 0.180418 0.182548 0.184677 0.186806 0.188933 0.19106 0.193185
+0.195309 0.197431 0.199551 0.20167 0.203786 0.2059 0.208013 0.210122
+0.21223 0.214334 0.216436 0.218535 0.220631 0.222724 0.224813 0.2269
+0.228983 0.231062 0.233138 0.23521 0.237279 0.239344 0.241405 0.243462
+0.245514 0.247563 0.249608 0.251649 0.253685 0.255717 0.257745 0.259769
+0.261789 0.263804 0.265815 0.267822 0.269824 0.271822 0.273816 0.275806
+0.277792 0.279773 0.28175 0.283724 0.285693 0.287658 0.28962 0.291578
+0.293532 0.295482 0.297429 0.299373 0.301313 0.303249 0.305183 0.307114
+0.309041 0.310966 0.312889 0.314808 0.316726 0.318641 0.320553 0.322464
+0.324373 0.32628 0.328186 0.33009 0.331993 0.333895 0.335796 0.337696
+0.339596 0.341495 0.343394 0.345293 0.347192 0.349091 0.35099 0.35289
+0.354791 0.356692 0.358595 0.360499 0.362404 0.364311 0.36622 0.36813
+0.370043 0.371958 0.373875 0.375794 0.377717 0.379642 0.38157 0.383501
+0.385435 0.387373 0.389314 0.391259 0.393207 0.39516 0.397116 0.399077
+0.401041 0.40301 0.404983 0.406961 0.408943 0.410929 0.412921 0.414917
+0.416918 0.418923 0.420934 0.422949 0.424969 0.426995 0.429025 0.43106
+0.4331 0.435146 0.437196 0.439251 0.441311 0.443376 0.445446 0.447521
+0.4496 0.451684 0.453773 0.455866 0.457964 0.460067 0.462173 0.464284
+0.466399 0.468518 0.470641 0.472768 0.474899 0.477033 0.47917 0.481311
+0.483454 0.485601 0.487751 0.489903 0.492057 0.494214 0.496373 0.498535
+0.500697 0.502862 0.505027 0.507194 0.509362 0.511531 0.513701 0.51587
+0.51804 0.52021 0.52238 0.52455 0.526718 0.528886 0.531053 0.533219
+0.535383 0.537546 0.539706 0.541865 0.544021 0.546175 0.548326 0.550474
+0.55262 0.554762 0.5569 0.559035 0.561166 0.563293 0.565416 0.567534
+0.569648 0.571758 0.573862 0.575962 0.578056 0.580145 0.582229 0.584307
+0.58638 0.588446 0.590507 0.592562 0.594611 0.596654 0.598691 0.600721
+0.602745 0.604763 0.606774 0.608779 0.610777 0.612769 0.614754 0.616733
+0.618705 0.620671 0.62263 0.624583 0.62653 0.62847 0.630403 0.632331
+0.634252 0.636168 0.638077 0.639981 0.641879 0.643771 0.645658 0.647539
+0.649415 0.651287 0.653153 0.655015 0.656872 0.658725 0.660574 0.662418
+0.66426 0.666097 0.667932 0.669763 0.671592 0.673418 0.675242 0.677064
+0.678884 0.680702 0.68252 0.684336 0.686152 0.687967 0.689782 0.691598
+0.693413 0.69523 0.697048 0.698867 0.700688 0.702511 0.704336 0.706164
+0.707994 0.709828 0.711665 0.713506 0.715352 0.717201 0.719056 0.720915
+0.72278 0.72465 0.726526 0.728408 0.730297 0.732192 0.734094 0.736004
+0.73792 0.739845 0.741777 0.743718 0.745667 0.747624 0.74959 0.751565
+0.75355 0.755543 0.757547 0.759559 0.761582 0.763614 0.765657 0.76771
+0.769772 0.771846 0.773929 0.776023 0.778128 0.780243 0.782368 0.784504
+0.786651 0.788808 0.790976 0.793154 0.795342 0.79754 0.799749 0.801968
+0.804196 0.806435 0.808683 0.81094 0.813206 0.815482 0.817766 0.820059
+0.82236 0.824669 0.826985 0.82931 0.831641 0.833979 0.836323 0.838673
+0.841029 0.84339 0.845756 0.848126 0.8505 0.852877 0.855258 0.857641
+0.860026 0.862412 0.864799 0.867187 0.869574 0.871961 0.874346 0.87673
+0.879111 0.881488 0.883862 0.886232 0.888596 0.890955 0.893307 0.895652
+0.897989 0.900318 0.902638 0.904947 0.907246 0.909534 0.91181 0.914072
+0.916322 0.918557 0.920776 0.92298 0.925168 0.927338 0.92949 0.931623
+0.933737 0.93583 0.937902 0.939953 0.94198 0.943984 0.945964 0.947919
+0.949849 0.951752 0.953628 0.955476 0.957296 0.959086 0.960846 0.962576
+0.964274 0.96594 0.967573 0.969173 0.970739 0.97227 0.973766 0.975225
+0.976648 0.978034 0.979382 0.980692 0.981962 0.983194 0.984385 0.985536
+0.986646 0.987714 0.98874 0.989724 0.990665 0.991563 0.992417 0.993228
+0.993994 0.994715 0.995391 0.996022 0.996607 0.997147 0.99764 0.998087
+0.998488 0.998841 0.999148 0.999408 0.999621 0.999787 0.999905 0.999976
+1 0.999976 0.999905 0.999787 0.999621 0.999408 0.999149 0.998842 0.998488
+0.998087 0.99764 0.997147 0.996608 0.996022 0.995392 0.994715 0.993994
+0.993228 0.992418 0.991564 0.990666 0.989725 0.988741 0.987715 0.986647
+0.985537 0.984386 0.983195 0.981964 0.980693 0.979383 0.978035 0.97665
+0.975226 0.973767 0.972271 0.97074 0.969175 0.967575 0.965942 0.964275
+0.962577 0.960848 0.959088 0.957297 0.955478 0.95363 0.951754 0.949851
+0.947921 0.945966 0.943986 0.941982 0.939954 0.937904 0.935832 0.933739
+0.931625 0.929492 0.92734 0.92517 0.922982 0.920778 0.918558 0.916324
+0.914074 0.911812 0.909536 0.907248 0.904949 0.90264 0.90032 0.897991
+0.895654 0.893309 0.890957 0.888598 0.886234 0.883864 0.881491 0.879113
+0.876732 0.874349 0.871963 0.869577 0.867189 0.864801 0.862414 0.860028
+0.857643 0.85526 0.852879 0.850502 0.848128 0.845758 0.843392 0.841031
+0.838675 0.836325 0.833981 0.831643 0.829312 0.826987 0.824671 0.822362
+0.820061 0.817768 0.815484 0.813208 0.810942 0.808684 0.806436 0.804198
+0.80197 0.799751 0.797542 0.795344 0.793155 0.790977 0.78881 0.786653
+0.784506 0.78237 0.780245 0.77813 0.776025 0.773931 0.771847 0.769774
+0.767711 0.765659 0.763616 0.761584 0.759561 0.757548 0.755545 0.753552
+0.751567 0.749592 0.747626 0.745668 0.743719 0.741779 0.739846 0.737922
+0.736005 0.734096 0.732194 0.730298 0.72841 0.726528 0.724652 0.722781
+0.720917 0.719057 0.717203 0.715353 0.713508 0.711667 0.70983 0.707996
+0.706165 0.704337 0.702512 0.700689 0.698869 0.697049 0.695232 0.693415
+0.691599 0.689784 0.687968 0.686153 0.684337 0.682521 0.680704 0.678885
+0.677065 0.675243 0.67342 0.671593 0.669765 0.667933 0.666099 0.664261
+0.66242 0.660575 0.658726 0.656874 0.655016 0.653155 0.651288 0.649417
+0.647541 0.645659 0.643773 0.64188 0.639982 0.638079 0.636169 0.634254
+0.632333 0.630405 0.628471 0.626531 0.624585 0.622632 0.620673 0.618707
+0.616735 0.614756 0.612771 0.610779 0.608781 0.606776 0.604765 0.602747
+0.600723 0.598693 0.596656 0.594613 0.592564 0.590509 0.588448 0.586381
+0.584309 0.582231 0.580147 0.578058 0.575963 0.573864 0.571759 0.56965
+0.567536 0.565418 0.563295 0.561168 0.559037 0.556902 0.554763 0.552621
+0.550476 0.548328 0.546177 0.544023 0.541867 0.539708 0.537547 0.535385
+0.533221 0.531055 0.528888 0.52672 0.524551 0.522382 0.520212 0.518042
+0.515872 0.513702 0.511533 0.509364 0.507196 0.505029 0.502864 0.500699
+0.498536 0.496375 0.494216 0.492059 0.489905 0.487752 0.485603 0.483456
+0.481312 0.479172 0.477034 0.4749 0.47277 0.470643 0.46852 0.466401
+0.464286 0.462175 0.460068 0.457966 0.455868 0.453775 0.451686 0.449602
+0.447522 0.445448 0.443378 0.441313 0.439253 0.437198 0.435147 0.433102
+0.431062 0.429027 0.426996 0.424971 0.422951 0.420935 0.418925 0.416919
+0.414918 0.412922 0.410931 0.408944 0.406962 0.404985 0.403012 0.401043
+0.399078 0.397118 0.395162 0.393209 0.391261 0.389316 0.387375 0.385437
+0.383503 0.381571 0.379643 0.377718 0.375796 0.373876 0.371959 0.370045
+0.368132 0.366222 0.364313 0.362406 0.360501 0.358597 0.356694 0.354793
+0.352892 0.350992 0.349092 0.347193 0.345294 0.343396 0.341497 0.339598
+0.337698 0.335798 0.333897 0.331995 0.330092 0.328188 0.326282 0.324375
+0.322466 0.320555 0.318642 0.316727 0.31481 0.31289 0.310968 0.309043
+0.307115 0.305185 0.303251 0.301314 0.299374 0.297431 0.295484 0.293534
+0.291579 0.289622 0.28766 0.285695 0.283725 0.281752 0.279775 0.277793
+0.275808 0.273818 0.271824 0.269826 0.267823 0.265817 0.263806 0.26179
+0.259771 0.257747 0.255719 0.253687 0.25165 0.24961 0.247565 0.245516
+0.243463 0.241406 0.239346 0.237281 0.235212 0.23314 0.231064 0.228985
+0.226902 0.224815 0.222726 0.220633 0.218537 0.216438 0.214336 0.212231
+0.210124 0.208014 0.205902 0.203788 0.201671 0.199553 0.197433 0.19531
+0.193187 0.191062 0.188935 0.186808 0.184679 0.18255 0.18042 0.178289
+0.176158 0.174027 0.171895 0.169764 0.167633 0.165502 0.163372 0.161242
+0.159113 0.156985 0.154859 0.152733 0.150609 0.148486 0.146365 0.144246
+0.142128 0.140013 0.1379 0.135789 0.13368 0.131574 0.129471 0.12737
+0.125273 0.123178 0.121086 0.118997 0.116912 0.11483 0.112751 0.110676
+0.108604 0.106536 0.104471 0.102411 0.100354 0.0983004 0.096251 0.0942056
+0.092164 0.0901264 0.0880928 0.0860631 0.0840374 0.0820157 0.0799979
+0.0779842 0.0759744 0.0739685 0.0719665 0.0699685 0.0679742 0.0659838
+0.0639972 0.0620143 0.060035 0.0580594 0.0560873 0.0541187 0.0521534
+0.0501915;
+#A 1000 0.0482328 0.0462773 0.0443248 0.0423753 0.0404287 0.0384848
+0.0365436 0.0346049 0.0326687 0.0307348 0.028803 0.0268734 0.0249457
+0.0230198 0.0210956 0.0191729 0.0172517 0.0153318 0.013413 0.0114952
+0.00957829 0.00766209 0.00574648 0.00383129 0.0019164 1.65611e-06 -0.00191309
+-0.00382798 -0.00574316 -0.00765878 -0.00957498 -0.0114919 -0.0134097
+-0.0153285 -0.0172484 -0.0191696 -0.0210923 -0.0230165 -0.0249423 -0.0268701
+-0.0287997 -0.0307314 -0.0326653 -0.0346016 -0.0365403 -0.0384815 -0.0404253
+-0.042372 -0.0443215 -0.0462739 -0.0482294 -0.0501881 -0.05215 -0.0541153
+-0.0560839 -0.058056 -0.0600316 -0.0620109 -0.0639938 -0.0659804 -0.0679708
+-0.069965 -0.0719631 -0.073965 -0.0759709 -0.0779807 -0.0799944 -0.0820122
+-0.0840339 -0.0860596 -0.0880893 -0.0901229 -0.0921605 -0.094202 -0.0962475
+-0.0982968 -0.10035 -0.102407 -0.104468 -0.106532 -0.1086 -0.110672
+-0.112747 -0.114826 -0.116908 -0.118994 -0.121082 -0.123174 -0.125269
+-0.127367 -0.129467 -0.131571 -0.133677 -0.135785 -0.137896 -0.140009
+-0.142125 -0.144242 -0.146361 -0.148482 -0.150605 -0.152729 -0.154855
+-0.156982 -0.15911 -0.161239 -0.163368 -0.165499 -0.167629 -0.16976
+-0.171892 -0.174023 -0.176154 -0.178285 -0.180416 -0.182546 -0.184676
+-0.186804 -0.188932 -0.191058 -0.193183 -0.195307 -0.197429 -0.199549
+-0.201668 -0.203784 -0.205899 -0.208011 -0.21012 -0.212228 -0.214332
+-0.216434 -0.218533 -0.220629 -0.222722 -0.224812 -0.226898 -0.228981
+-0.23106 -0.233136 -0.235209 -0.237277 -0.239342 -0.241403 -0.24346
+-0.245513 -0.247562 -0.249606 -0.251647 -0.253683 -0.255716 -0.257744
+-0.259767 -0.261787 -0.263802 -0.265813 -0.26782 -0.269822 -0.271821
+-0.273814 -0.275804 -0.27779 -0.279771 -0.281749 -0.283722 -0.285691
+-0.287657 -0.289618 -0.291576 -0.29353 -0.295481 -0.297427 -0.299371
+-0.301311 -0.303248 -0.305181 -0.307112 -0.30904 -0.310965 -0.312887
+-0.314807 -0.316724 -0.318639 -0.320552 -0.322462 -0.324371 -0.326279
+-0.328184 -0.330089 -0.331992 -0.333894 -0.335795 -0.337695 -0.339594
+-0.341494 -0.343392 -0.345291 -0.34719 -0.349089 -0.350988 -0.352888
+-0.354789 -0.356691 -0.358594 -0.360497 -0.362403 -0.36431 -0.366218
+-0.368129 -0.370041 -0.371956 -0.373873 -0.375793 -0.377715 -0.37964
+-0.381568 -0.383499 -0.385434 -0.387371 -0.389312 -0.391257 -0.393206
+-0.395158 -0.397114 -0.399075 -0.401039 -0.403008 -0.404981 -0.406959
+-0.408941 -0.410928 -0.412919 -0.414915 -0.416916 -0.418922 -0.420932
+-0.422947 -0.424968 -0.426993 -0.429023 -0.431058 -0.433099 -0.435144
+-0.437194 -0.439249 -0.441309 -0.443374 -0.445444 -0.447519 -0.449598
+-0.451682 -0.453771 -0.455865 -0.457962 -0.460065 -0.462171 -0.464282
+-0.466397 -0.468516 -0.470639 -0.472766 -0.474897 -0.477031 -0.479168
+-0.481309 -0.483452 -0.485599 -0.487749 -0.489901 -0.492056 -0.494213
+-0.496372 -0.498533 -0.500695 -0.50286 -0.505026 -0.507193 -0.50936
+-0.511529 -0.513699 -0.515868 -0.518039 -0.520208 -0.522378 -0.524548
+-0.526716 -0.528884 -0.531051 -0.533217 -0.535381 -0.537544 -0.539704
+-0.541863 -0.544019 -0.546173 -0.548324 -0.550473 -0.552618 -0.55476
+-0.556898 -0.559033 -0.561164 -0.563291 -0.565414 -0.567532 -0.569646
+-0.571756 -0.57386 -0.57596 -0.578054 -0.580143 -0.582227 -0.584305
+-0.586378 -0.588445 -0.590506 -0.592561 -0.59461 -0.596653 -0.598689
+-0.60072 -0.602744 -0.604761 -0.606773 -0.608777 -0.610776 -0.612768
+-0.614753 -0.616731 -0.618704 -0.620669 -0.622629 -0.624581 -0.626528
+-0.628468 -0.630402 -0.632329 -0.634251 -0.636166 -0.638076 -0.639979
+-0.641877 -0.643769 -0.645656 -0.647538 -0.649414 -0.651285 -0.653151
+-0.655013 -0.65687 -0.658723 -0.660572 -0.662417 -0.664258 -0.666096
+-0.66793 -0.669762 -0.67159 -0.673416 -0.67524 -0.677062 -0.678882
+-0.680701 -0.682518 -0.684334 -0.68615 -0.687965 -0.689781 -0.691596
+-0.693412 -0.695229 -0.697046 -0.698865 -0.700686 -0.702509 -0.704334
+-0.706162 -0.707993 -0.709826 -0.711664 -0.713505 -0.71535 -0.7172
+-0.719054 -0.720913 -0.722778 -0.724648 -0.726524 -0.728406 -0.730295
+-0.73219 -0.734093 -0.736002 -0.737919 -0.739843 -0.741776 -0.743716
+-0.745665 -0.747622 -0.749589 -0.751564 -0.753548 -0.755542 -0.757545
+-0.759558 -0.76158 -0.763613 -0.765655 -0.767708 -0.769771 -0.771844
+-0.773927 -0.776021 -0.778126 -0.780241 -0.782366 -0.784503 -0.786649
+-0.788806 -0.790974 -0.793152 -0.79534 -0.797538 -0.799747 -0.801966
+-0.804194 -0.806433 -0.808681 -0.810938 -0.813204 -0.81548 -0.817764
+-0.820057 -0.822358 -0.824667 -0.826983 -0.829308 -0.831639 -0.833977
+-0.836321 -0.838671 -0.841027 -0.843388 -0.845754 -0.848124 -0.850498
+-0.852875 -0.855256 -0.857639 -0.860024 -0.86241 -0.864797 -0.867185
+-0.869572 -0.871959 -0.874344 -0.876728 -0.879109 -0.881486 -0.88386
+-0.88623 -0.888594 -0.890953 -0.893305 -0.89565 -0.897987 -0.900316
+-0.902636 -0.904945 -0.907244 -0.909532 -0.911808 -0.91407 -0.91632
+-0.918555 -0.920774 -0.922978 -0.925166 -0.927336 -0.929488 -0.931621
+-0.933735 -0.935828 -0.9379 -0.939951 -0.941978 -0.943983 -0.945963
+-0.947918 -0.949847 -0.95175 -0.953627 -0.955475 -0.957294 -0.959085
+-0.960845 -0.962574 -0.964273 -0.965939 -0.967572 -0.969172 -0.970738
+-0.972269 -0.973764 -0.975224 -0.976647 -0.978033 -0.979381 -0.980691
+-0.981961 -0.983193 -0.984384 -0.985535 -0.986645 -0.987713 -0.988739
+-0.989723 -0.990664 -0.991562 -0.992417 -0.993227 -0.993993 -0.994714
+-0.99539 -0.996021 -0.996607 -0.997146 -0.99764 -0.998087 -0.998487
+-0.998841 -0.999148 -0.999408 -0.999621 -0.999787 -0.999905 -0.999976
+-1 -0.999976 -0.999905 -0.999787 -0.999621 -0.999409 -0.999149 -0.998842
+-0.998488 -0.998088 -0.997641 -0.997148 -0.996608 -0.996023 -0.995392
+-0.994716 -0.993995 -0.993229 -0.992419 -0.991565 -0.990667 -0.989726
+-0.988742 -0.987716 -0.986647 -0.985538 -0.984387 -0.983196 -0.981965
+-0.980694 -0.979384 -0.978036 -0.976651 -0.975228 -0.973768 -0.972273
+-0.970742 -0.969176 -0.967576 -0.965943 -0.964277 -0.962579 -0.960849
+-0.959089 -0.957299 -0.955479 -0.953631 -0.951755 -0.949852 -0.947923
+-0.945968 -0.943988 -0.941984 -0.939956 -0.937906 -0.935834 -0.933741
+-0.931627 -0.929494 -0.927342 -0.925172 -0.922984 -0.92078 -0.91856
+-0.916325 -0.914076 -0.911813 -0.909538 -0.90725 -0.904951 -0.902642
+-0.900322 -0.897993 -0.895656 -0.893311 -0.890959 -0.8886 -0.886236
+-0.883866 -0.881493 -0.879115 -0.876734 -0.874351 -0.871965 -0.869579
+-0.867191 -0.864803 -0.862416 -0.86003 -0.857645 -0.855262 -0.852881
+-0.850504 -0.84813 -0.84576 -0.843394 -0.841033 -0.838677 -0.836327
+-0.833983 -0.831645 -0.829314 -0.826989 -0.824673 -0.822364 -0.820063
+-0.81777 -0.815486 -0.81321 -0.810944 -0.808686 -0.806438 -0.8042 -0.801972
+-0.799753 -0.797544 -0.795346 -0.793157 -0.790979 -0.788812 -0.786655
+-0.784508 -0.782372 -0.780246 -0.778131 -0.776027 -0.773933 -0.771849
+-0.769776 -0.767713 -0.76566 -0.763618 -0.761585 -0.759563 -0.75755
+-0.755547 -0.753553 -0.751569 -0.749594 -0.747627 -0.74567 -0.743721
+-0.741781 -0.739848 -0.737924 -0.736007 -0.734097 -0.732195 -0.7303
+-0.728411 -0.726529 -0.724653 -0.722783 -0.720918 -0.719059 -0.717205
+-0.715355 -0.71351 -0.711668 -0.709831 -0.707997 -0.706167 -0.704339
+-0.702514 -0.700691 -0.69887 -0.697051 -0.695233 -0.693417 -0.691601
+-0.689785 -0.68797 -0.686155 -0.684339 -0.682523 -0.680705 -0.678887
+-0.677067 -0.675245 -0.673421 -0.671595 -0.669766 -0.667935 -0.666101
+-0.664263 -0.662422 -0.660577 -0.658728 -0.656875 -0.655018 -0.653156
+-0.65129 -0.649419 -0.647542 -0.645661 -0.643774 -0.641882 -0.639984
+-0.63808 -0.636171 -0.634256 -0.632334 -0.630407 -0.628473 -0.626533
+-0.624587 -0.622634 -0.620674 -0.618709 -0.616737 -0.614758 -0.612773
+-0.610781 -0.608783 -0.606778 -0.604767 -0.602749 -0.600725 -0.598695
+-0.596658 -0.594615 -0.592566 -0.590511 -0.58845 -0.586383 -0.584311
+-0.582232 -0.580149 -0.57806 -0.575965 -0.573866 -0.571761 -0.569652
+-0.567538 -0.565419 -0.563297 -0.56117 -0.559039 -0.556904 -0.554765
+-0.552623 -0.550478 -0.54833 -0.546179 -0.544025 -0.541869 -0.53971
+-0.537549 -0.535387 -0.533223 -0.531057 -0.52889 -0.526722 -0.524553
+-0.522384 -0.520214 -0.518044 -0.515874 -0.513704 -0.511535 -0.509366
+-0.507198 -0.505031 -0.502865 -0.500701 -0.498538 -0.496377 -0.494218
+-0.492061 -0.489907 -0.487754 -0.485605 -0.483458 -0.481314 -0.479174
+-0.477036 -0.474902 -0.472772 -0.470645 -0.468522 -0.466403 -0.464288
+-0.462177 -0.46007 -0.457968 -0.45587 -0.453777 -0.451688 -0.449604
+-0.447524 -0.445449 -0.44338 -0.441315 -0.439255 -0.437199 -0.435149
+-0.433104 -0.431064 -0.429029 -0.426998 -0.424973 -0.422953 -0.420937
+-0.418927 -0.416921 -0.41492 -0.412924 -0.410933 -0.408946 -0.406964
+-0.404986 -0.403013 -0.401044 -0.39908 -0.39712 -0.395163 -0.393211
+-0.391262 -0.389318 -0.387376 -0.385439 -0.383504 -0.381573 -0.379645
+-0.37772 -0.375798 -0.373878 -0.371961 -0.370046 -0.368134 -0.366223
+-0.364315 -0.362408 -0.360502 -0.358598 -0.356696 -0.354794 -0.352893
+-0.350993 -0.349094 -0.347195 -0.345296 -0.343397 -0.341498 -0.339599
+-0.3377 -0.335799 -0.333898 -0.331997 -0.330094 -0.328189 -0.326284
+-0.324376 -0.322467 -0.320557 -0.318644 -0.316729 -0.314812 -0.312892
+-0.31097 -0.309045 -0.307117 -0.305186 -0.303253 -0.301316 -0.299376
+-0.297432 -0.295486 -0.293535 -0.291581 -0.289623 -0.287662 -0.285696
+-0.283727 -0.281754 -0.279776 -0.277795 -0.275809 -0.27382 -0.271826
+-0.269828 -0.267825 -0.265818 -0.263807 -0.261792 -0.259773 -0.257749
+-0.255721 -0.253689 -0.251652 -0.249612 -0.247567 -0.245518 -0.243465
+-0.241408 -0.239347 -0.237283 -0.235214 -0.233142 -0.231066 -0.228986
+-0.226903 -0.224817 -0.222727 -0.220634 -0.218539 -0.21644 -0.214338
+-0.212233 -0.210126 -0.208016 -0.205904 -0.20379 -0.201673 -0.199555
+-0.197434 -0.195312 -0.193189 -0.191064 -0.188937 -0.18681 -0.184681
+-0.182552 -0.180422 -0.178291 -0.17616 -0.174029 -0.171897 -0.169766
+-0.167635 -0.165504 -0.163374 -0.161244 -0.159115 -0.156987 -0.154861
+-0.152735 -0.150611 -0.148488 -0.146367 -0.144248 -0.14213 -0.140015
+-0.137902 -0.135791 -0.133682 -0.131576 -0.129473 -0.127372 -0.125274
+-0.123179 -0.121088 -0.118999 -0.116914 -0.114831 -0.112753 -0.110677
+-0.108606 -0.106538 -0.104473 -0.102412 -0.100355 -0.0983021;
+#A 2000 -0.0962528 -0.0942073 -0.0921658 -0.0901282 -0.0880945 -0.0860648
+-0.0840391 -0.0820174 -0.0799997 -0.0779859 -0.0759761 -0.0739702 -0.0719683
+-0.0699702 -0.067976 -0.0659856 -0.0639989 -0.062016 -0.0600368 -0.0580611
+-0.056089 -0.0541204 -0.0521551 -0.0501932 -0.0482345 -0.046279 -0.0443265
+-0.042377 -0.0404304 -0.0384865 -0.0365453 -0.0346066 -0.0326704 -0.0307364
+-0.0288047 -0.0268751 -0.0249473 -0.0230215 -0.0210973 -0.0191746 -0.0172534
+-0.0153334 -0.0134147 -0.0114969 -0.00957995 -0.00766375 -0.00574813
+-0.00383295 -0.00191806 -3.31223e-06 0.00191143;
+#X coords 0 1 2051 -1 200 140 1;
+#X restore 92 724 graph;
+#X msg 360 454 \; sawtooth normalize 1;
+#X msg 90 355 \; sawtooth sinesum 2051 1 0.5 0.333333 0.25 0.2 0.166667
+0.142857 0.125 0.111111 0.1 0.090909 0.0833333 0.076923;
+#X msg 92 86 \; sine sinesum 2051 1;
+#X msg 90 632 \; triangle sinesum 2051 1 0 -0.111111 0 0.04 0 -0.0204082
+0 0.0123457 0 -0.00826446 0;
+#X msg 375 729 \; triangle normalize 1;
+#X msg 99 974 \; square sinesum 2051 1 0 0.333333 0 0.2 0 0.123857
+0 0.111111 0 0.090909 0.076923;
+#N canvas 0 50 450 250 (subpatch) 0;
+#X array square 2051 float 3 black black;
+#A 0 -0.022379 0 0.022379 0.0447453 0.0670859 0.0893883 0.11164 0.133827
+0.155938 0.177961 0.199882 0.22169 0.243371 0.264915 0.286309 0.307541
+0.3286 0.349473 0.370151 0.390621 0.410873 0.430896 0.450679 0.470213
+0.489487 0.508492 0.527217 0.545655 0.563795 0.58163 0.59915 0.616348
+0.633216 0.649747 0.665934 0.681769 0.697246 0.71236 0.727104 0.741473
+0.755462 0.769066 0.782282 0.795104 0.80753 0.819556 0.83118 0.842398
+0.853209 0.863611 0.873603 0.883184 0.892353 0.901109 0.909454 0.917388
+0.924911 0.932025 0.938731 0.945032 0.950929 0.956426 0.961525 0.96623
+0.970545 0.974473 0.978019 0.981188 0.983985 0.986415 0.988483 0.990196
+0.99156 0.992581 0.993266 0.993621 0.993656 0.993375 0.992788 0.991903
+0.990727 0.989268 0.987536 0.98554 0.983287 0.980787 0.978049 0.975083
+0.971898 0.968503 0.964909 0.961125 0.95716 0.953025 0.94873 0.944285
+0.9397 0.934985 0.930149 0.925204 0.920159 0.915025 0.90981 0.904526
+0.899182 0.893789 0.888355 0.882891 0.877406 0.87191 0.866412 0.860921
+0.855447 0.849998 0.844583 0.839212 0.833891 0.828631 0.823438 0.818321
+0.813287 0.808344 0.8035 0.79876 0.794132 0.789623 0.785239 0.780986
+0.776869 0.772894 0.769067 0.765393 0.761875 0.75852 0.75533 0.75231
+0.749463 0.746793 0.744302 0.741994 0.739871 0.737934 0.736186 0.734629
+0.733263 0.73209 0.73111 0.730323 0.72973 0.729331 0.729125 0.729111
+0.729288 0.729655 0.73021 0.730953 0.731879 0.732988 0.734276 0.735741
+0.737379 0.739188 0.741163 0.743301 0.745598 0.74805 0.750653 0.753401
+0.75629 0.759316 0.762472 0.765754 0.769157 0.772674 0.7763 0.78003
+0.783857 0.787775 0.791778 0.79586 0.800015 0.804235 0.808515 0.812849
+0.817229 0.821649 0.826102 0.830582 0.835082 0.839596 0.844116 0.848637
+0.853151 0.857652 0.862134 0.86659 0.871014 0.875399 0.879739 0.884029
+0.888261 0.892431 0.896532 0.900558 0.904505 0.908366 0.912136 0.915811
+0.919384 0.922852 0.92621 0.929453 0.932576 0.935577 0.93845 0.941192
+0.9438 0.94627 0.948599 0.950784 0.952822 0.954712 0.956449 0.958034
+0.959462 0.960734 0.961848 0.962801 0.963595 0.964227 0.964697 0.965005
+0.965151 0.965135 0.964958 0.96462 0.964122 0.963464 0.962649 0.961678
+0.960553 0.959274 0.957846 0.956269 0.954547 0.952681 0.950676 0.948533
+0.946258 0.943851 0.941318 0.938663 0.935888 0.932998 0.929998 0.926892
+0.923683 0.920378 0.91698 0.913494 0.909926 0.90628 0.902562 0.898776
+0.894928 0.891024 0.887069 0.883068 0.879027 0.874952 0.870847 0.866719
+0.862574 0.858416 0.854252 0.850087 0.845927 0.841777 0.837643 0.83353
+0.829445 0.825392 0.821376 0.817404 0.81348 0.809609 0.805796 0.802047
+0.798365 0.794757 0.791226 0.787777 0.784415 0.781143 0.777965 0.774887
+0.77191 0.76904 0.76628 0.763632 0.7611 0.758688 0.756397 0.754231
+0.752193 0.750283 0.748505 0.74686 0.745351 0.743978 0.742743 0.741647
+0.740691 0.739876 0.739203 0.738671 0.738281 0.738033 0.737927 0.737962
+0.738138 0.738454 0.738908 0.739501 0.740229 0.741093 0.742089 0.743217
+0.744474 0.745857 0.747365 0.748995 0.750744 0.752609 0.754587 0.756675
+0.75887 0.761168 0.763565 0.766058 0.768643 0.771316 0.774072 0.776908
+0.77982 0.782802 0.785852 0.788962 0.792131 0.795352 0.798621 0.801933
+0.805283 0.808667 0.812079 0.815515 0.81897 0.822438 0.825915 0.829396
+0.832875 0.836349 0.839811 0.843258 0.846684 0.850084 0.853454 0.856789
+0.860085 0.863336 0.866539 0.869689 0.872781 0.875812 0.878777 0.881672
+0.884494 0.887238 0.889902 0.89248 0.894971 0.89737 0.899675 0.901882
+0.903989 0.905993 0.907892 0.909682 0.911363 0.912931 0.914385 0.915723
+0.916943 0.918045 0.919026 0.919887 0.920625 0.92124 0.921733 0.922102
+0.922347 0.922468 0.922466 0.92234 0.922092 0.921722 0.921231 0.92062
+0.91989 0.919043 0.918081 0.917004 0.915815 0.914516 0.913109 0.911596
+0.90998 0.908264 0.906451 0.904543 0.902543 0.900454 0.898281 0.896025
+0.893692 0.891284 0.888805 0.886259 0.883651 0.880983 0.87826 0.875486
+0.872666 0.869804 0.866904 0.86397 0.861008 0.858021 0.855013 0.851991
+0.848958 0.845918 0.842876 0.839838 0.836807 0.833788 0.830785 0.827803
+0.824847 0.821921 0.819029 0.816176 0.813366 0.810603 0.807892 0.805236
+0.802639 0.800105 0.797639 0.795244 0.792923 0.79068 0.788518 0.786441
+0.784452 0.782554 0.78075 0.779042 0.777434 0.775927 0.774524 0.773227
+0.772039 0.770961 0.769995 0.769142 0.768404 0.767783 0.767278 0.766892
+0.766625 0.766478 0.76645 0.766543 0.766756 0.767089 0.767543 0.768115
+0.768807 0.769617 0.770545 0.771588 0.772746 0.774018 0.775402 0.776896
+0.778498 0.780206 0.782019 0.783933 0.785946 0.788056 0.790259 0.792553
+0.794935 0.797402 0.79995 0.802576 0.805277 0.808048 0.810886 0.813788
+0.816749 0.819765 0.822833 0.825947 0.829105 0.832301 0.835531 0.838791
+0.842076 0.845383 0.848705 0.85204 0.855381 0.858725 0.862067 0.865403
+0.868727 0.872035 0.875323 0.878586 0.88182 0.885019 0.88818 0.891297
+0.894368 0.897387 0.90035 0.903252 0.906091 0.908862 0.91156 0.914182
+0.916725 0.919184 0.921556 0.923838 0.926026 0.928117 0.930109 0.931997
+0.933779 0.935453 0.937016 0.938466 0.9398 0.941016 0.942112 0.943087
+0.943939 0.944667 0.945268 0.945742 0.946089 0.946306 0.946394 0.946352
+0.94618 0.945877 0.945444 0.94488 0.944187 0.943364 0.942413 0.941334
+0.940129 0.938798 0.937343 0.935766 0.934067 0.93225 0.930316 0.928267
+0.926106 0.923835 0.921456 0.918973 0.916389 0.913705 0.910926 0.908055
+0.905096 0.902051 0.898924 0.89572 0.892442 0.889094 0.88568 0.882204
+0.87867 0.875084 0.871448 0.867768 0.864049 0.860293 0.856508 0.852696
+0.848862 0.845012 0.84115 0.837281 0.83341 0.829541 0.82568 0.82183
+0.817998 0.814187 0.810402 0.806648 0.80293 0.799253 0.79562 0.792037
+0.788508 0.785037 0.781628 0.778287 0.775017 0.771823 0.768707 0.765675
+0.762729 0.759874 0.757114 0.754451 0.75189 0.749432 0.747082 0.744843
+0.742716 0.740706 0.738814 0.737042 0.735394 0.733871 0.732475 0.731209
+0.730072 0.729068 0.728196 0.72746 0.726858 0.726393 0.726065 0.725874
+0.72582 0.725904 0.726126 0.726485 0.726981 0.727614 0.728382 0.729285
+0.730321 0.731491 0.732791 0.734221 0.735779 0.737462 0.73927 0.741199
+0.743248 0.745413 0.747693 0.750084 0.752584 0.755189 0.757897 0.760704
+0.763606 0.7666 0.769683 0.772851 0.7761 0.779425 0.782823 0.78629
+0.789821 0.793413 0.79706 0.800759 0.804504 0.808292 0.812117 0.815975
+0.819862 0.823772 0.827701 0.831644 0.835597 0.839553 0.84351 0.847461
+0.851402 0.855329 0.859236 0.863118 0.866972 0.870792 0.874574 0.878314
+0.882006 0.885646 0.88923 0.892754 0.896212 0.899603 0.90292 0.90616
+0.909319 0.912394 0.915381 0.918276 0.921075 0.923776 0.926375 0.928869
+0.931256 0.933532 0.935694 0.937741 0.939669 0.941477 0.943162 0.944722
+0.946157 0.947463 0.94864 0.949686 0.9506 0.951381 0.952028 0.952541
+0.952919 0.953161 0.953268 0.95324 0.953076 0.952778 0.952344 0.951777
+0.951077 0.950245 0.949282 0.94819 0.946969 0.945622 0.94415 0.942555
+0.94084 0.939006 0.937055 0.934992 0.932817 0.930534 0.928145 0.925654
+0.923064 0.920379 0.9176 0.914733 0.911781 0.908747 0.905635 0.902449
+0.899193 0.895872 0.892489 0.889049 0.885555 0.882013 0.878426 0.8748
+0.871139 0.867447 0.863729 0.859989 0.856233 0.852465 0.84869 0.844912
+0.841136 0.837367 0.83361 0.82987 0.82615 0.822456 0.818792 0.815164
+0.811574 0.808029 0.804533 0.801089 0.797703 0.794378 0.791119 0.787931
+0.784816 0.781779 0.778824 0.775955 0.773175 0.770489 0.767899 0.765409
+0.763022 0.760741 0.75857 0.756511 0.754567 0.75274 0.751034 0.749451
+0.747992 0.74666 0.745457 0.744385 0.743445 0.742639 0.741968 0.741433
+0.741035 0.740776 0.740656 0.740675 0.740834 0.741134 0.741573 0.742153
+0.742873 0.743732 0.74473 0.745867 0.74714 0.74855 0.750096 0.751775
+0.753586 0.755528 0.757598 0.759796 0.762118 0.764562 0.767127 0.769809
+0.772606 0.775515 0.778533 0.781657 0.784884 0.78821 0.791633 0.795147
+0.79875 0.802439 0.806208 0.810054 0.813973 0.817961 0.822013 0.826125
+0.830292 0.83451 0.838775 0.843081 0.847424 0.851799 0.856201 0.860625
+0.865066 0.869519 0.87398 0.878442 0.8829 0.88735 0.891787 0.896204
+0.900598 0.904961 0.90929 0.913579 0.917823 0.922017 0.926154 0.930231
+0.934241 0.93818 0.942043 0.945824 0.949518 0.95312 0.956626 0.96003
+0.963328 0.966514 0.969583 0.972532 0.975355 0.978048 0.980606 0.983026
+0.985301 0.987429 0.989405 0.991224 0.992884 0.99438 0.995707 0.996863
+0.997844 0.998646 0.999266 0.999701 0.999946 1 0.999859 0.99952 0.998981
+0.998239 0.99729 0.996134 0.994768 0.993188 0.991395 0.989384 0.987155
+0.984706 0.982035 0.979142 0.976023 0.972679 0.969108 0.965309 0.961282
+0.957025 0.952539 0.947822 0.942874 0.937695 0.932285 0.926644 0.920772
+0.914669 0.908336 0.901772 0.894979 0.887958 0.880708 0.873232 0.86553
+0.857602 0.849452 0.841079 0.832485 0.823672 0.814641 0.805394 0.795934
+0.786261 0.776378 0.766287 0.755991 0.745491 0.734791 0.723891 0.712796
+0.701508 0.690029 0.678362 0.66651 0.654476 0.642264 0.629875 0.617314
+0.604584 0.591688 0.578628 0.56541 0.552036 0.538509 0.524834 0.511014
+0.497052 0.482953 0.46872 0.454357 0.439869 0.425258 0.41053;
+#A 1000 0.395687 0.380734 0.365676 0.350516 0.335258 0.319908 0.304468
+0.288943 0.273338 0.257657 0.241904 0.226084 0.210201 0.194259 0.178263
+0.162217 0.146126 0.129994 0.113826 0.0976261 0.0813991 0.0651494 0.0488815
+0.0325999 0.0163093 1.4095e-05 -0.0162811 -0.0325718 -0.0488533 -0.0651212
+-0.081371 -0.0975981 -0.113798 -0.129966 -0.146098 -0.162189 -0.178235
+-0.194231 -0.210173 -0.226056 -0.241877 -0.25763 -0.273311 -0.288916
+-0.304441 -0.319881 -0.335232 -0.35049 -0.36565 -0.380708 -0.395661
+-0.410504 -0.425233 -0.439844 -0.454333 -0.468695 -0.482928 -0.497028
+-0.510989 -0.52481 -0.538485 -0.552012 -0.565387 -0.578606 -0.591665
+-0.604562 -0.617293 -0.629854 -0.642242 -0.654455 -0.666489 -0.678341
+-0.690009 -0.701488 -0.712777 -0.723872 -0.734772 -0.745473 -0.755973
+-0.76627 -0.776361 -0.786244 -0.795917 -0.805378 -0.814625 -0.823656
+-0.83247 -0.841064 -0.849437 -0.857589 -0.865516 -0.873219 -0.880696
+-0.887946 -0.894967 -0.901761 -0.908324 -0.914658 -0.920761 -0.926634
+-0.932276 -0.937686 -0.942865 -0.947813 -0.952531 -0.957018 -0.961275
+-0.965303 -0.969102 -0.972673 -0.976018 -0.979136 -0.982031 -0.984702
+-0.987151 -0.98938 -0.991391 -0.993186 -0.994765 -0.996132 -0.997289
+-0.998237 -0.99898 -0.999519 -0.999859 -1 -0.999946 -0.999701 -0.999267
+-0.998648 -0.997846 -0.996865 -0.995709 -0.994382 -0.992887 -0.991227
+-0.989408 -0.987432 -0.985305 -0.98303 -0.980611 -0.978053 -0.97536
+-0.972537 -0.969588 -0.966519 -0.963333 -0.960036 -0.956632 -0.953127
+-0.949524 -0.94583 -0.942049 -0.938187 -0.934248 -0.930238 -0.926161
+-0.922024 -0.917831 -0.913587 -0.909298 -0.904969 -0.900605 -0.896212
+-0.891795 -0.887358 -0.882908 -0.878449 -0.873987 -0.869527 -0.865074
+-0.860633 -0.856209 -0.851807 -0.847432 -0.843089 -0.838782 -0.834518
+-0.830299 -0.826132 -0.82202 -0.817968 -0.81398 -0.810061 -0.806214
+-0.802445 -0.798757 -0.795153 -0.791639 -0.788216 -0.78489 -0.781663
+-0.778539 -0.77552 -0.772611 -0.769814 -0.767132 -0.764567 -0.762122
+-0.7598 -0.757602 -0.755531 -0.753589 -0.751778 -0.750098 -0.748553
+-0.747143 -0.745869 -0.744732 -0.743734 -0.742874 -0.742154 -0.741574
+-0.741134 -0.740835 -0.740675 -0.740656 -0.740776 -0.741035 -0.741432
+-0.741966 -0.742637 -0.743443 -0.744383 -0.745455 -0.746658 -0.74799
+-0.749448 -0.751031 -0.752737 -0.754563 -0.756507 -0.758566 -0.760737
+-0.763018 -0.765404 -0.767894 -0.770484 -0.773171 -0.77595 -0.778819
+-0.781774 -0.784811 -0.787925 -0.791114 -0.794373 -0.797697 -0.801083
+-0.804527 -0.808023 -0.811568 -0.815157 -0.818786 -0.822449 -0.826143
+-0.829863 -0.833604 -0.837361 -0.84113 -0.844905 -0.848683 -0.852459
+-0.856227 -0.859983 -0.863722 -0.86744 -0.871132 -0.874794 -0.87842
+-0.882007 -0.885549 -0.889042 -0.892483 -0.895866 -0.899188 -0.902443
+-0.905629 -0.908741 -0.911776 -0.914728 -0.917596 -0.920374 -0.92306
+-0.92565 -0.928141 -0.930529 -0.932813 -0.934988 -0.937052 -0.939002
+-0.940837 -0.942552 -0.944147 -0.945619 -0.946967 -0.948188 -0.949281
+-0.950244 -0.951076 -0.951776 -0.952344 -0.952777 -0.953076 -0.95324
+-0.953268 -0.953161 -0.952919 -0.952541 -0.952029 -0.951382 -0.950601
+-0.949687 -0.948641 -0.947465 -0.946159 -0.944725 -0.943165 -0.94148
+-0.939672 -0.937744 -0.935698 -0.933535 -0.93126 -0.928874 -0.92638
+-0.923781 -0.92108 -0.91828 -0.915386 -0.912399 -0.909325 -0.906165
+-0.902925 -0.899608 -0.896218 -0.89276 -0.889236 -0.885652 -0.882012
+-0.87832 -0.874581 -0.870799 -0.866979 -0.863125 -0.859242 -0.855335
+-0.851409 -0.847468 -0.843517 -0.83956 -0.835603 -0.831651 -0.827708
+-0.823779 -0.819869 -0.815982 -0.812124 -0.808298 -0.804511 -0.800765
+-0.797066 -0.793419 -0.789828 -0.786296 -0.782829 -0.779431 -0.776105
+-0.772857 -0.769689 -0.766606 -0.763611 -0.760709 -0.757902 -0.755194
+-0.752588 -0.750088 -0.747697 -0.745417 -0.743251 -0.741202 -0.739273
+-0.737465 -0.735781 -0.734224 -0.732793 -0.731493 -0.730323 -0.729286
+-0.728383 -0.727615 -0.726982 -0.726486 -0.726126 -0.725904 -0.72582
+-0.725873 -0.726064 -0.726392 -0.726857 -0.727458 -0.728195 -0.729066
+-0.73007 -0.731206 -0.732473 -0.733869 -0.735391 -0.73704 -0.738811
+-0.740702 -0.742713 -0.744839 -0.747078 -0.749428 -0.751885 -0.754447
+-0.757109 -0.75987 -0.762724 -0.765669 -0.768702 -0.771817 -0.775012
+-0.778282 -0.781623 -0.785031 -0.788501 -0.792031 -0.795614 -0.799246
+-0.802924 -0.806642 -0.810395 -0.81418 -0.817991 -0.821824 -0.825673
+-0.829535 -0.833404 -0.837275 -0.841144 -0.845006 -0.848856 -0.852689
+-0.856501 -0.860287 -0.864042 -0.867762 -0.871442 -0.875078 -0.878664
+-0.882198 -0.885674 -0.889088 -0.892436 -0.895715 -0.898919 -0.902045
+-0.905091 -0.90805 -0.910922 -0.9137 -0.916384 -0.918969 -0.921452
+-0.923831 -0.926102 -0.928264 -0.930313 -0.932247 -0.934064 -0.935763
+-0.93734 -0.938796 -0.940127 -0.941332 -0.942411 -0.943363 -0.944186
+-0.944879 -0.945443 -0.945876 -0.946179 -0.946352 -0.946394 -0.946306
+-0.946089 -0.945743 -0.945269 -0.944668 -0.943941 -0.943089 -0.942114
+-0.941018 -0.939802 -0.938468 -0.937019 -0.935456 -0.933782 -0.932
+-0.930112 -0.928121 -0.92603 -0.923842 -0.92156 -0.919188 -0.916729
+-0.914187 -0.911565 -0.908866 -0.906096 -0.903257 -0.900355 -0.897392
+-0.894373 -0.891303 -0.888185 -0.885024 -0.881825 -0.878592 -0.875329
+-0.872041 -0.868733 -0.865409 -0.862073 -0.858731 -0.855387 -0.852045
+-0.848711 -0.845389 -0.842082 -0.838797 -0.835537 -0.832306 -0.82911
+-0.825953 -0.822838 -0.81977 -0.816754 -0.813793 -0.810891 -0.808053
+-0.805281 -0.802581 -0.799955 -0.797406 -0.79494 -0.792557 -0.790263
+-0.788059 -0.78595 -0.783936 -0.782022 -0.780209 -0.778501 -0.776899
+-0.775404 -0.77402 -0.772748 -0.77159 -0.770546 -0.769619 -0.768809
+-0.768117 -0.767544 -0.76709 -0.766757 -0.766543 -0.76645 -0.766478
+-0.766625 -0.766892 -0.767278 -0.767782 -0.768403 -0.769141 -0.769993
+-0.770959 -0.772037 -0.773225 -0.774522 -0.775924 -0.777431 -0.779039
+-0.780747 -0.782551 -0.784449 -0.786438 -0.788515 -0.790676 -0.792919
+-0.79524 -0.797635 -0.800101 -0.802634 -0.805231 -0.807887 -0.810598
+-0.813361 -0.816171 -0.819024 -0.821916 -0.824842 -0.827798 -0.83078
+-0.833782 -0.836802 -0.839833 -0.842871 -0.845913 -0.848952 -0.851986
+-0.855008 -0.858015 -0.861003 -0.863965 -0.866899 -0.869799 -0.872661
+-0.875482 -0.878255 -0.880978 -0.883646 -0.886255 -0.888801 -0.89128
+-0.893688 -0.896021 -0.898277 -0.900451 -0.902539 -0.904539 -0.906448
+-0.908261 -0.909978 -0.911593 -0.913106 -0.914513 -0.915813 -0.917002
+-0.918079 -0.919042 -0.919889 -0.920619 -0.92123 -0.921721 -0.922092
+-0.92234 -0.922466 -0.922468 -0.922347 -0.922102 -0.921733 -0.921241
+-0.920626 -0.919888 -0.919028 -0.918046 -0.916945 -0.915725 -0.914387
+-0.912933 -0.911366 -0.909685 -0.907895 -0.905997 -0.903993 -0.901886
+-0.899679 -0.897374 -0.894975 -0.892485 -0.889906 -0.887243 -0.884499
+-0.881677 -0.878782 -0.875817 -0.872786 -0.869694 -0.866544 -0.863342
+-0.860091 -0.856795 -0.85346 -0.85009 -0.84669 -0.843264 -0.839817
+-0.836355 -0.832881 -0.829402 -0.825921 -0.822444 -0.818976 -0.815521
+-0.812085 -0.808673 -0.805289 -0.801938 -0.798626 -0.795357 -0.792136
+-0.788968 -0.785857 -0.782808 -0.779825 -0.776913 -0.774077 -0.77132
+-0.768648 -0.766063 -0.763569 -0.761172 -0.758874 -0.756679 -0.754591
+-0.752613 -0.750747 -0.748998 -0.747368 -0.74586 -0.744476 -0.743219
+-0.742091 -0.741094 -0.740231 -0.739502 -0.738909 -0.738454 -0.738138
+-0.737962 -0.737927 -0.738033 -0.73828 -0.73867 -0.739201 -0.739875
+-0.740689 -0.741645 -0.742741 -0.743975 -0.745348 -0.746857 -0.748502
+-0.75028 -0.752189 -0.754228 -0.756394 -0.758684 -0.761096 -0.763627
+-0.766275 -0.769035 -0.771905 -0.774881 -0.77796 -0.781137 -0.784409
+-0.787771 -0.79122 -0.794751 -0.798359 -0.80204 -0.805789 -0.809602
+-0.813473 -0.817397 -0.821369 -0.825385 -0.829438 -0.833523 -0.837636
+-0.84177 -0.845919 -0.850079 -0.854244 -0.858409 -0.862566 -0.866712
+-0.87084 -0.874945 -0.87902 -0.883061 -0.887062 -0.891018 -0.894922
+-0.898769 -0.902555 -0.906273 -0.909919 -0.913488 -0.916974 -0.920372
+-0.923678 -0.926886 -0.929993 -0.932993 -0.935883 -0.938658 -0.941314
+-0.943847 -0.946253 -0.94853 -0.950672 -0.952678 -0.954543 -0.956266
+-0.957843 -0.959272 -0.960551 -0.961677 -0.962648 -0.963463 -0.964121
+-0.964619 -0.964958 -0.965135 -0.965151 -0.965006 -0.964698 -0.964228
+-0.963596 -0.962803 -0.961849 -0.960736 -0.959465 -0.958036 -0.956452
+-0.954715 -0.952826 -0.950788 -0.948603 -0.946274 -0.943805 -0.941197
+-0.938455 -0.935582 -0.932582 -0.929458 -0.926216 -0.922858 -0.91939
+-0.915817 -0.912142 -0.908372 -0.904511 -0.900565 -0.896539 -0.892438
+-0.888269 -0.884036 -0.879747 -0.875407 -0.871022 -0.866598 -0.862142
+-0.85766 -0.853159 -0.848645 -0.844124 -0.839604 -0.83509 -0.83059
+-0.82611 -0.821657 -0.817236 -0.812856 -0.808523 -0.804243 -0.800022
+-0.795867 -0.791785 -0.787782 -0.783863 -0.780037 -0.776307 -0.77268
+-0.769163 -0.76576 -0.762478 -0.759321 -0.756295 -0.753406 -0.750657
+-0.748055 -0.745603 -0.743305 -0.741166 -0.739191 -0.737382 -0.735743
+-0.734278 -0.73299 -0.731881 -0.730954 -0.730212 -0.729656 -0.729288
+-0.729111 -0.729124 -0.72933 -0.729729 -0.730322 -0.731108 -0.732088
+-0.733261 -0.734626 -0.736184 -0.737931 -0.739867 -0.74199 -0.744298
+-0.746788 -0.749458 -0.752305 -0.755325 -0.758514 -0.761869 -0.765386
+-0.769061 -0.772888 -0.776862 -0.780978 -0.785231 -0.789616 -0.794124
+-0.798752 -0.803491 -0.808336 -0.813279 -0.818312 -0.823429 -0.828622
+-0.833882 -0.839202 -0.844574 -0.849989 -0.855437 -0.860911 -0.866402
+-0.8719 -0.877397 -0.882881 -0.888346 -0.893779 -0.899173 -0.904517
+-0.909801 -0.915016 -0.920151 -0.925196 -0.930141 -0.934977 -0.939692
+-0.944278 -0.948723 -0.953018 -0.957153 -0.961118 -0.964902 -0.968497
+-0.971892 -0.975078 -0.978044 -0.980782 -0.983283 -0.985536 -0.987533
+-0.989266 -0.990724 -0.991901 -0.992787 -0.993374 -0.993655 -0.993622
+-0.993267 -0.992582 -0.991562 -0.990199 -0.988486 -0.986419 -0.983989
+-0.981193 -0.978025 -0.974479 -0.970552 -0.966238 -0.961533 -0.956435
+-0.950939 -0.945042 -0.938742 -0.932037 -0.924924 -0.917401 -0.909468
+-0.901124 -0.892368 -0.8832;
+#A 2000 -0.87362 -0.863629 -0.853227 -0.842417 -0.831199 -0.819577
+-0.807551 -0.795126 -0.782304 -0.76909 -0.755486 -0.741497 -0.727129
+-0.712386 -0.697273 -0.681796 -0.665961 -0.649776 -0.633245 -0.616378
+-0.59918 -0.58166 -0.563826 -0.545686 -0.527249 -0.508524 -0.48952
+-0.470247 -0.450713 -0.43093 -0.410908 -0.390656 -0.370186 -0.349509
+-0.328636 -0.307578 -0.286346 -0.264952 -0.243409 -0.221727 -0.19992
+-0.177999 -0.155977 -0.133866 -0.111678 -0.0894268 -0.0671246 -0.0447839
+-0.0224177 -3.87166e-05 0.0223403;
+#X coords 0 1 2051 -1 200 140 1;
+#X restore 93 1102 graph;
+#X msg 388 1108 \; square normalize 1;
+#X restore 1200 775 pd wavedef;
+#N canvas 0 22 2736 1660 voicer 0;
+#X obj 180 230 * 2;
+#X obj 50 322 *~ 1;
+#X obj 180 323 *~ 1;
+#X obj 180 277 +~;
+#X obj 224 253 *~;
+#X obj 224 231 osc~;
+#X floatatom 224 210 5 0 0 0 - - -, f 5;
+#X floatatom 265 237 5 0 0 0 - - -, f 5;
+#X obj 309 322 *~ 1;
+#X obj 309 279 +~;
+#X obj 353 260 *~;
+#X obj 353 238 osc~;
+#X floatatom 353 217 5 0 0 0 - - -, f 5;
+#X floatatom 391 244 5 0 0 0 - - -, f 5;
+#X obj 309 236 * 3;
+#X obj 458 322 *~ 1;
+#X obj 458 278 +~;
+#X obj 504 258 *~;
+#X obj 504 236 osc~;
+#X floatatom 504 215 5 0 0 0 - - -, f 5;
+#X floatatom 542 242 5 0 0 0 - - -, f 5;
+#X obj 613 322 *~ 1;
+#X obj 613 278 +~;
+#X obj 660 256 *~;
+#X obj 660 234 osc~;
+#X floatatom 660 213 5 0 0 0 - - -, f 5;
+#X floatatom 703 240 5 0 0 0 - - -, f 5;
+#X obj 458 235 * 4;
+#X obj 613 233 * 5;
+#X floatatom 50 278 5 0 0 0 - - -, f 5;
+#X obj 309 372 *~;
+#X obj 309 397 outlet~;
+#X obj 92 146 mtof;
+#X obj 92 170 * 1;
+#X obj 180 252 vline~;
+#X obj 309 258 vline~;
+#X obj 458 257 vline~;
+#X obj 613 255 vline~;
+#X obj 224 166 r shimfreq1;
+#X obj 660 171 r shimfreq4;
+#X obj 504 171 r shimfreq3;
+#X obj 353 172 r shimfreq2;
+#X obj 265 215 r shimstr1;
+#X obj 391 221 r shimstr2;
+#X obj 542 218 r shimstr3;
+#X obj 703 217 r shimstr4;
+#X obj 249 283 r funda1;
+#X obj 118 282 r funda0;
+#X obj 378 282 r funda2;
+#X obj 529 282 r funda3;
+#X obj 685 282 r funda4;
+#X obj 224 187 +;
+#X obj 353 193 +;
+#X obj 504 191 +;
+#X obj 660 190 +;
+#X obj 118 305 * 1;
+#X obj 249 306 * 1;
+#X obj 378 305 * 1;
+#X obj 529 305 * 1;
+#X obj 685 305 * 1;
+#X obj 836 29 inlet;
+#X obj 894 519 line;
+#X obj 894 601 * 1;
+#X obj 777 58 stripnote;
+#X obj 777 142 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
+#000000 #000000;
+#X obj 959 159 sel 0;
+#X obj 897 57 unpack;
+#X floatatom 959 139 5 0 0 0 - - -, f 5;
+#X floatatom 748 82 5 0 0 0 - - -, f 5;
+#X obj 959 213 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
+#000000 #000000;
+#X obj 812 157 pack 1 2 3;
+#X obj 812 179 route 1;
+#X obj 840 58 r aplusd;
+#X obj 982 201 r releasezeit;
+#X floatatom 840 80 5 0 0 0 - - -, f 5;
+#X floatatom 982 223 5 0 0 0 - - -, f 5;
+#X obj 882 140 * 10;
+#X obj 867 478 +;
+#X floatatom 894 544 10 0 0 0 - - -, f 10;
+#X obj 867 435 line;
+#X floatatom 867 456 10 0 0 0 - - -, f 10;
+#X obj 1021 255 * 10;
+#X obj 959 312 route 1;
+#X floatatom 867 499 10 0 0 0 - - -, f 10;
+#X obj 959 285 pack 1 2 3 4;
+#X msg 1036 338 \$3;
+#X floatatom 1036 358 10 0 0 0 - - -, f 10;
+#X msg 959 340 0 \, \$2 \$1;
+#X msg 959 181 0;
+#X floatatom 925 601 10 0 0 0 - - -, f 10;
+#X obj 894 573 tabread4 array3;
+#X msg 1039 456 0;
+#X obj 1039 429 del;
+#X msg 1039 400 bang;
+#X obj 1054 255 + 5;
+#X obj 1072 456 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
+#000000 #000000;
+#X msg 812 202 0 \, \$2 \$1;
+#X obj 692 597 vline~;
+#X obj 743 622 tabread4~ array3;
+#X obj 894 621 sig~;
+#X obj 743 654 *~ 1;
+#X msg 814 597 set array1;
+#X msg 743 597 set array3;
+#X text 836 415 liest den release aus von atk plus dec;
+#X text 107 373 multiplication with the envelope;
+#X text 367 134 sound synthesis;
+#X text 1017 147 trigger the release;
+#X text 748 119 attack & decay formation;
+#X text 369 597 vline~ in order to avoid noise \, better interpolation
+;
+#X text 1043 478 to avoid multiplication by 0;
+#X text 897 478 until end of release;
+#N canvas 0 22 2736 1660 wavygen 0;
+#X obj 219 302 outlet~;
+#X obj 219 102 inlet~;
+#X obj 219 126 phasor~;
+#X text 274 126 Creates a ramp from 0 to 1 at the given f;
+#X obj 219 150 *~ 2051;
+#X text 274 149 Multiplyer with the length in samples of our waveform
+;
+#X obj 219 175 tabread4~ sine;
+#X text 283 300 OUTLET to VOICER-SUBPATCH;
+#X text 267 102 INLET from VOICER-SUBPATCH;
+#X obj 57 133 r waveform-selector;
+#X text 318 197 The waveform by default is a sine;
+#X text 316 174 Play table as audio signal;
+#X text 28 111 receives chosen waveform;
+#X connect 1 0 2 0;
+#X connect 2 0 4 0;
+#X connect 4 0 6 0;
+#X connect 6 0 0 0;
+#X connect 9 0 6 0;
+#X restore 50 300 pd wavygen;
+#N canvas 0 22 2736 1660 wavygen 0;
+#X obj 219 302 outlet~;
+#X obj 219 102 inlet~;
+#X obj 219 126 phasor~;
+#X text 274 126 Creates a ramp from 0 to 1 at the given f;
+#X obj 219 150 *~ 2051;
+#X text 274 149 Multiplyer with the length in samples of our waveform
+;
+#X obj 219 175 tabread4~ sine;
+#X text 283 300 OUTLET to VOICER-SUBPATCH;
+#X text 267 102 INLET from VOICER-SUBPATCH;
+#X obj 57 133 r waveform-selector;
+#X text 318 197 The waveform by default is a sine;
+#X text 316 174 Play table as audio signal;
+#X text 28 111 receives chosen waveform;
+#X connect 1 0 2 0;
+#X connect 2 0 4 0;
+#X connect 4 0 6 0;
+#X connect 6 0 0 0;
+#X connect 9 0 6 0;
+#X restore 180 301 pd wavygen;
+#N canvas 0 22 2736 1660 wavygen 0;
+#X obj 219 302 outlet~;
+#X obj 219 102 inlet~;
+#X obj 219 126 phasor~;
+#X text 274 126 Creates a ramp from 0 to 1 at the given f;
+#X obj 219 150 *~ 2051;
+#X text 274 149 Multiplyer with the length in samples of our waveform
+;
+#X obj 219 175 tabread4~ sine;
+#X text 283 300 OUTLET to VOICER-SUBPATCH;
+#X text 267 102 INLET from VOICER-SUBPATCH;
+#X obj 57 133 r waveform-selector;
+#X text 318 197 The waveform by default is a sine;
+#X text 316 174 Play table as audio signal;
+#X text 28 111 receives chosen waveform;
+#X connect 1 0 2 0;
+#X connect 2 0 4 0;
+#X connect 4 0 6 0;
+#X connect 6 0 0 0;
+#X connect 9 0 6 0;
+#X restore 309 300 pd wavygen;
+#N canvas 0 22 2736 1660 wavygen 0;
+#X obj 219 302 outlet~;
+#X obj 219 102 inlet~;
+#X obj 219 126 phasor~;
+#X text 274 126 Creates a ramp from 0 to 1 at the given f;
+#X obj 219 150 *~ 2051;
+#X text 274 149 Multiplyer with the length in samples of our waveform
+;
+#X obj 219 175 tabread4~ sine;
+#X text 283 300 OUTLET to VOICER-SUBPATCH;
+#X text 267 102 INLET from VOICER-SUBPATCH;
+#X obj 57 133 r waveform-selector;
+#X text 318 197 The waveform by default is a sine;
+#X text 316 174 Play table as audio signal;
+#X text 28 111 receives chosen waveform;
+#X connect 1 0 2 0;
+#X connect 2 0 4 0;
+#X connect 4 0 6 0;
+#X connect 6 0 0 0;
+#X connect 9 0 6 0;
+#X restore 613 299 pd wavygen;
+#N canvas 0 22 2736 1660 wavygen 0;
+#X obj 219 302 outlet~;
+#X obj 219 102 inlet~;
+#X obj 219 126 phasor~;
+#X text 274 126 Creates a ramp from 0 to 1 at the given f;
+#X obj 219 150 *~ 2051;
+#X text 274 149 Multiplyer with the length in samples of our waveform
+;
+#X obj 219 175 tabread4~ sine;
+#X text 283 300 OUTLET to VOICER-SUBPATCH;
+#X text 267 102 INLET from VOICER-SUBPATCH;
+#X obj 57 133 r waveform-selector;
+#X text 318 197 The waveform by default is a sine;
+#X text 316 174 Play table as audio signal;
+#X text 28 111 receives chosen waveform;
+#X connect 1 0 2 0;
+#X connect 2 0 4 0;
+#X connect 4 0 6 0;
+#X connect 6 0 0 0;
+#X connect 9 0 6 0;
+#X restore 458 300 pd wavygen;
+#X connect 0 0 34 0;
+#X connect 1 0 30 0;
+#X connect 2 0 30 0;
+#X connect 3 0 112 0;
+#X connect 4 0 3 1;
+#X connect 5 0 4 0;
+#X connect 6 0 5 0;
+#X connect 7 0 4 1;
+#X connect 8 0 30 0;
+#X connect 9 0 113 0;
+#X connect 10 0 9 1;
+#X connect 11 0 10 0;
+#X connect 12 0 11 0;
+#X connect 13 0 10 1;
+#X connect 14 0 35 0;
+#X connect 15 0 30 0;
+#X connect 16 0 115 0;
+#X connect 17 0 16 1;
+#X connect 18 0 17 0;
+#X connect 19 0 18 0;
+#X connect 20 0 17 1;
+#X connect 21 0 30 0;
+#X connect 22 0 114 0;
+#X connect 23 0 22 1;
+#X connect 24 0 23 0;
+#X connect 25 0 24 0;
+#X connect 26 0 23 1;
+#X connect 27 0 36 0;
+#X connect 28 0 37 0;
+#X connect 29 0 111 0;
+#X connect 30 0 31 0;
+#X connect 32 0 33 0;
+#X connect 33 0 29 0;
+#X connect 33 0 0 0;
+#X connect 33 0 14 0;
+#X connect 33 0 27 0;
+#X connect 33 0 28 0;
+#X connect 34 0 3 0;
+#X connect 35 0 9 0;
+#X connect 36 0 16 0;
+#X connect 37 0 22 0;
+#X connect 38 0 51 0;
+#X connect 39 0 54 0;
+#X connect 40 0 53 0;
+#X connect 41 0 52 0;
+#X connect 42 0 7 0;
+#X connect 43 0 13 0;
+#X connect 44 0 20 0;
+#X connect 45 0 26 0;
+#X connect 46 0 56 0;
+#X connect 47 0 55 0;
+#X connect 48 0 57 0;
+#X connect 49 0 58 0;
+#X connect 50 0 59 0;
+#X connect 51 0 6 0;
+#X connect 52 0 12 0;
+#X connect 53 0 19 0;
+#X connect 54 0 25 0;
+#X connect 55 0 1 1;
+#X connect 56 0 2 1;
+#X connect 57 0 8 1;
+#X connect 58 0 15 1;
+#X connect 59 0 21 1;
+#X connect 60 0 63 0;
+#X connect 60 0 66 0;
+#X connect 61 0 78 0;
+#X connect 62 0 99 0;
+#X connect 63 0 64 0;
+#X connect 63 0 68 0;
+#X connect 64 0 70 0;
+#X connect 64 0 102 0;
+#X connect 65 0 88 0;
+#X connect 66 1 67 0;
+#X connect 67 0 65 0;
+#X connect 68 0 32 0;
+#X connect 69 0 84 0;
+#X connect 69 0 93 0;
+#X connect 69 0 101 0;
+#X connect 70 0 71 0;
+#X connect 71 0 96 0;
+#X connect 72 0 74 0;
+#X connect 73 0 75 0;
+#X connect 74 0 76 0;
+#X connect 74 0 70 1;
+#X connect 75 0 81 0;
+#X connect 75 0 84 1;
+#X connect 75 0 94 0;
+#X connect 76 0 70 2;
+#X connect 76 0 84 3;
+#X connect 76 0 77 1;
+#X connect 77 0 83 0;
+#X connect 78 0 90 0;
+#X connect 79 0 80 0;
+#X connect 80 0 77 0;
+#X connect 81 0 84 2;
+#X connect 82 0 87 0;
+#X connect 82 0 85 0;
+#X connect 83 0 90 0;
+#X connect 84 0 82 0;
+#X connect 85 0 86 0;
+#X connect 87 0 79 0;
+#X connect 88 0 69 0;
+#X connect 88 0 97 0;
+#X connect 90 0 62 0;
+#X connect 90 0 89 0;
+#X connect 91 0 62 0;
+#X connect 92 0 91 0;
+#X connect 92 0 95 0;
+#X connect 93 0 92 0;
+#X connect 94 0 92 1;
+#X connect 96 0 97 0;
+#X connect 97 0 98 0;
+#X connect 98 0 100 0;
+#X connect 99 0 100 0;
+#X connect 100 0 30 1;
+#X connect 101 0 98 0;
+#X connect 102 0 98 0;
+#X connect 111 0 1 0;
+#X connect 112 0 2 0;
+#X connect 113 0 8 0;
+#X connect 114 0 21 0;
+#X connect 115 0 15 0;
+#X restore 1173 303 pd voicer;
+#N canvas 0 22 2736 1660 voicer 0;
+#X obj 180 230 * 2;
+#X obj 50 322 *~ 1;
+#X obj 180 323 *~ 1;
+#X obj 180 277 +~;
+#X obj 224 253 *~;
+#X obj 224 231 osc~;
+#X floatatom 224 210 5 0 0 0 - - -, f 5;
+#X floatatom 265 237 5 0 0 0 - - -, f 5;
+#X obj 309 322 *~ 1;
+#X obj 309 279 +~;
+#X obj 353 260 *~;
+#X obj 353 238 osc~;
+#X floatatom 353 217 5 0 0 0 - - -, f 5;
+#X floatatom 391 244 5 0 0 0 - - -, f 5;
+#X obj 309 236 * 3;
+#X obj 458 322 *~ 1;
+#X obj 458 278 +~;
+#X obj 504 258 *~;
+#X obj 504 236 osc~;
+#X floatatom 504 215 5 0 0 0 - - -, f 5;
+#X floatatom 542 242 5 0 0 0 - - -, f 5;
+#X obj 613 322 *~ 1;
+#X obj 613 278 +~;
+#X obj 660 256 *~;
+#X obj 660 234 osc~;
+#X floatatom 660 213 5 0 0 0 - - -, f 5;
+#X floatatom 703 240 5 0 0 0 - - -, f 5;
+#X obj 458 235 * 4;
+#X obj 613 233 * 5;
+#X floatatom 50 278 5 0 0 0 - - -, f 5;
+#X obj 309 372 *~;
+#X obj 309 397 outlet~;
+#X obj 92 146 mtof;
+#X obj 92 170 * 1;
+#X obj 180 252 vline~;
+#X obj 309 258 vline~;
+#X obj 458 257 vline~;
+#X obj 613 255 vline~;
+#X obj 224 166 r shimfreq1;
+#X obj 660 171 r shimfreq4;
+#X obj 504 171 r shimfreq3;
+#X obj 353 172 r shimfreq2;
+#X obj 265 215 r shimstr1;
+#X obj 391 221 r shimstr2;
+#X obj 542 218 r shimstr3;
+#X obj 703 217 r shimstr4;
+#X obj 249 283 r funda1;
+#X obj 118 282 r funda0;
+#X obj 378 282 r funda2;
+#X obj 529 282 r funda3;
+#X obj 685 282 r funda4;
+#X obj 224 187 +;
+#X obj 353 193 +;
+#X obj 504 191 +;
+#X obj 660 190 +;
+#X obj 118 305 * 1;
+#X obj 249 306 * 1;
+#X obj 378 305 * 1;
+#X obj 529 305 * 1;
+#X obj 685 305 * 1;
+#X obj 836 29 inlet;
+#X obj 894 519 line;
+#X obj 894 601 * 1;
+#X obj 777 58 stripnote;
+#X obj 777 142 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
+#000000 #000000;
+#X obj 959 159 sel 0;
+#X obj 897 57 unpack;
+#X floatatom 959 139 5 0 0 0 - - -, f 5;
+#X floatatom 748 82 5 0 0 0 - - -, f 5;
+#X obj 959 213 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
+#000000 #000000;
+#X obj 812 157 pack 1 2 3;
+#X obj 812 179 route 1;
+#X obj 840 58 r aplusd;
+#X obj 982 201 r releasezeit;
+#X floatatom 840 80 5 0 0 0 - - -, f 5;
+#X floatatom 982 223 5 0 0 0 - - -, f 5;
+#X obj 882 140 * 10;
+#X obj 867 478 +;
+#X floatatom 894 544 10 0 0 0 - - -, f 10;
+#X obj 867 435 line;
+#X floatatom 867 456 10 0 0 0 - - -, f 10;
+#X obj 1021 255 * 10;
+#X obj 959 312 route 1;
+#X floatatom 867 499 10 0 0 0 - - -, f 10;
+#X obj 959 285 pack 1 2 3 4;
+#X msg 1036 338 \$3;
+#X floatatom 1036 358 10 0 0 0 - - -, f 10;
+#X msg 959 340 0 \, \$2 \$1;
+#X msg 959 181 0;
+#X floatatom 925 601 10 0 0 0 - - -, f 10;
+#X obj 894 573 tabread4 array3;
+#X msg 1039 456 0;
+#X obj 1039 429 del;
+#X msg 1039 400 bang;
+#X obj 1054 255 + 5;
+#X obj 1072 456 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
+#000000 #000000;
+#X msg 812 202 0 \, \$2 \$1;
+#X obj 692 597 vline~;
+#X obj 743 622 tabread4~ array3;
+#X obj 894 621 sig~;
+#X obj 743 654 *~ 1;
+#X msg 814 597 set array1;
+#X msg 743 597 set array3;
+#X text 836 415 liest den release aus von atk plus dec;
+#X text 107 373 multiplication with the envelope;
+#X text 367 134 sound synthesis;
+#X text 1017 147 trigger the release;
+#X text 748 119 attack & decay formation;
+#X text 369 597 vline~ in order to avoid noise \, better interpolation
+;
+#X text 1043 478 to avoid multiplication by 0;
+#X text 897 478 until end of release;
+#N canvas 0 22 2736 1660 wavygen 0;
+#X obj 219 302 outlet~;
+#X obj 219 102 inlet~;
+#X obj 219 126 phasor~;
+#X text 274 126 Creates a ramp from 0 to 1 at the given f;
+#X obj 219 150 *~ 2051;
+#X text 274 149 Multiplyer with the length in samples of our waveform
+;
+#X obj 219 175 tabread4~ sine;
+#X text 283 300 OUTLET to VOICER-SUBPATCH;
+#X text 267 102 INLET from VOICER-SUBPATCH;
+#X obj 57 133 r waveform-selector;
+#X text 318 197 The waveform by default is a sine;
+#X text 316 174 Play table as audio signal;
+#X text 28 111 receives chosen waveform;
+#X connect 1 0 2 0;
+#X connect 2 0 4 0;
+#X connect 4 0 6 0;
+#X connect 6 0 0 0;
+#X connect 9 0 6 0;
+#X restore 50 300 pd wavygen;
+#N canvas 0 22 2736 1660 wavygen 0;
+#X obj 219 302 outlet~;
+#X obj 219 102 inlet~;
+#X obj 219 126 phasor~;
+#X text 274 126 Creates a ramp from 0 to 1 at the given f;
+#X obj 219 150 *~ 2051;
+#X text 274 149 Multiplyer with the length in samples of our waveform
+;
+#X obj 219 175 tabread4~ sine;
+#X text 283 300 OUTLET to VOICER-SUBPATCH;
+#X text 267 102 INLET from VOICER-SUBPATCH;
+#X obj 57 133 r waveform-selector;
+#X text 318 197 The waveform by default is a sine;
+#X text 316 174 Play table as audio signal;
+#X text 28 111 receives chosen waveform;
+#X connect 1 0 2 0;
+#X connect 2 0 4 0;
+#X connect 4 0 6 0;
+#X connect 6 0 0 0;
+#X connect 9 0 6 0;
+#X restore 180 301 pd wavygen;
+#N canvas 0 22 2736 1660 wavygen 0;
+#X obj 219 302 outlet~;
+#X obj 219 102 inlet~;
+#X obj 219 126 phasor~;
+#X text 274 126 Creates a ramp from 0 to 1 at the given f;
+#X obj 219 150 *~ 2051;
+#X text 274 149 Multiplyer with the length in samples of our waveform
+;
+#X obj 219 175 tabread4~ sine;
+#X text 283 300 OUTLET to VOICER-SUBPATCH;
+#X text 267 102 INLET from VOICER-SUBPATCH;
+#X obj 57 133 r waveform-selector;
+#X text 318 197 The waveform by default is a sine;
+#X text 316 174 Play table as audio signal;
+#X text 28 111 receives chosen waveform;
+#X connect 1 0 2 0;
+#X connect 2 0 4 0;
+#X connect 4 0 6 0;
+#X connect 6 0 0 0;
+#X connect 9 0 6 0;
+#X restore 309 300 pd wavygen;
+#N canvas 0 22 2736 1660 wavygen 0;
+#X obj 219 302 outlet~;
+#X obj 219 102 inlet~;
+#X obj 219 126 phasor~;
+#X text 274 126 Creates a ramp from 0 to 1 at the given f;
+#X obj 219 150 *~ 2051;
+#X text 274 149 Multiplyer with the length in samples of our waveform
+;
+#X obj 219 175 tabread4~ sine;
+#X text 283 300 OUTLET to VOICER-SUBPATCH;
+#X text 267 102 INLET from VOICER-SUBPATCH;
+#X obj 57 133 r waveform-selector;
+#X text 318 197 The waveform by default is a sine;
+#X text 316 174 Play table as audio signal;
+#X text 28 111 receives chosen waveform;
+#X connect 1 0 2 0;
+#X connect 2 0 4 0;
+#X connect 4 0 6 0;
+#X connect 6 0 0 0;
+#X connect 9 0 6 0;
+#X restore 613 299 pd wavygen;
+#N canvas 0 22 2736 1660 wavygen 0;
+#X obj 219 302 outlet~;
+#X obj 219 102 inlet~;
+#X obj 219 126 phasor~;
+#X text 274 126 Creates a ramp from 0 to 1 at the given f;
+#X obj 219 150 *~ 2051;
+#X text 274 149 Multiplyer with the length in samples of our waveform
+;
+#X obj 219 175 tabread4~ sine;
+#X text 283 300 OUTLET to VOICER-SUBPATCH;
+#X text 267 102 INLET from VOICER-SUBPATCH;
+#X obj 57 133 r waveform-selector;
+#X text 318 197 The waveform by default is a sine;
+#X text 316 174 Play table as audio signal;
+#X text 28 111 receives chosen waveform;
+#X connect 1 0 2 0;
+#X connect 2 0 4 0;
+#X connect 4 0 6 0;
+#X connect 6 0 0 0;
+#X connect 9 0 6 0;
+#X restore 458 300 pd wavygen;
+#X connect 0 0 34 0;
+#X connect 1 0 30 0;
+#X connect 2 0 30 0;
+#X connect 3 0 112 0;
+#X connect 4 0 3 1;
+#X connect 5 0 4 0;
+#X connect 6 0 5 0;
+#X connect 7 0 4 1;
+#X connect 8 0 30 0;
+#X connect 9 0 113 0;
+#X connect 10 0 9 1;
+#X connect 11 0 10 0;
+#X connect 12 0 11 0;
+#X connect 13 0 10 1;
+#X connect 14 0 35 0;
+#X connect 15 0 30 0;
+#X connect 16 0 115 0;
+#X connect 17 0 16 1;
+#X connect 18 0 17 0;
+#X connect 19 0 18 0;
+#X connect 20 0 17 1;
+#X connect 21 0 30 0;
+#X connect 22 0 114 0;
+#X connect 23 0 22 1;
+#X connect 24 0 23 0;
+#X connect 25 0 24 0;
+#X connect 26 0 23 1;
+#X connect 27 0 36 0;
+#X connect 28 0 37 0;
+#X connect 29 0 111 0;
+#X connect 30 0 31 0;
+#X connect 32 0 33 0;
+#X connect 33 0 29 0;
+#X connect 33 0 0 0;
+#X connect 33 0 14 0;
+#X connect 33 0 27 0;
+#X connect 33 0 28 0;
+#X connect 34 0 3 0;
+#X connect 35 0 9 0;
+#X connect 36 0 16 0;
+#X connect 37 0 22 0;
+#X connect 38 0 51 0;
+#X connect 39 0 54 0;
+#X connect 40 0 53 0;
+#X connect 41 0 52 0;
+#X connect 42 0 7 0;
+#X connect 43 0 13 0;
+#X connect 44 0 20 0;
+#X connect 45 0 26 0;
+#X connect 46 0 56 0;
+#X connect 47 0 55 0;
+#X connect 48 0 57 0;
+#X connect 49 0 58 0;
+#X connect 50 0 59 0;
+#X connect 51 0 6 0;
+#X connect 52 0 12 0;
+#X connect 53 0 19 0;
+#X connect 54 0 25 0;
+#X connect 55 0 1 1;
+#X connect 56 0 2 1;
+#X connect 57 0 8 1;
+#X connect 58 0 15 1;
+#X connect 59 0 21 1;
+#X connect 60 0 63 0;
+#X connect 60 0 66 0;
+#X connect 61 0 78 0;
+#X connect 62 0 99 0;
+#X connect 63 0 64 0;
+#X connect 63 0 68 0;
+#X connect 64 0 70 0;
+#X connect 64 0 102 0;
+#X connect 65 0 88 0;
+#X connect 66 1 67 0;
+#X connect 67 0 65 0;
+#X connect 68 0 32 0;
+#X connect 69 0 84 0;
+#X connect 69 0 93 0;
+#X connect 69 0 101 0;
+#X connect 70 0 71 0;
+#X connect 71 0 96 0;
+#X connect 72 0 74 0;
+#X connect 73 0 75 0;
+#X connect 74 0 76 0;
+#X connect 74 0 70 1;
+#X connect 75 0 81 0;
+#X connect 75 0 84 1;
+#X connect 75 0 94 0;
+#X connect 76 0 70 2;
+#X connect 76 0 84 3;
+#X connect 76 0 77 1;
+#X connect 77 0 83 0;
+#X connect 78 0 90 0;
+#X connect 79 0 80 0;
+#X connect 80 0 77 0;
+#X connect 81 0 84 2;
+#X connect 82 0 87 0;
+#X connect 82 0 85 0;
+#X connect 83 0 90 0;
+#X connect 84 0 82 0;
+#X connect 85 0 86 0;
+#X connect 87 0 79 0;
+#X connect 88 0 69 0;
+#X connect 88 0 97 0;
+#X connect 90 0 62 0;
+#X connect 90 0 89 0;
+#X connect 91 0 62 0;
+#X connect 92 0 91 0;
+#X connect 92 0 95 0;
+#X connect 93 0 92 0;
+#X connect 94 0 92 1;
+#X connect 96 0 97 0;
+#X connect 97 0 98 0;
+#X connect 98 0 100 0;
+#X connect 99 0 100 0;
+#X connect 100 0 30 1;
+#X connect 101 0 98 0;
+#X connect 102 0 98 0;
+#X connect 111 0 1 0;
+#X connect 112 0 2 0;
+#X connect 113 0 8 0;
+#X connect 114 0 21 0;
+#X connect 115 0 15 0;
+#X restore 1350 303 pd voicer;
+#N canvas 0 22 2736 1660 voicer 0;
+#X obj 180 230 * 2;
+#X obj 50 322 *~ 1;
+#X obj 180 323 *~ 1;
+#X obj 180 277 +~;
+#X obj 224 253 *~;
+#X obj 224 231 osc~;
+#X floatatom 224 210 5 0 0 0 - - -, f 5;
+#X floatatom 265 237 5 0 0 0 - - -, f 5;
+#X obj 309 322 *~ 1;
+#X obj 309 279 +~;
+#X obj 353 260 *~;
+#X obj 353 238 osc~;
+#X floatatom 353 217 5 0 0 0 - - -, f 5;
+#X floatatom 391 244 5 0 0 0 - - -, f 5;
+#X obj 309 236 * 3;
+#X obj 458 322 *~ 1;
+#X obj 458 278 +~;
+#X obj 504 258 *~;
+#X obj 504 236 osc~;
+#X floatatom 504 215 5 0 0 0 - - -, f 5;
+#X floatatom 542 242 5 0 0 0 - - -, f 5;
+#X obj 613 322 *~ 1;
+#X obj 613 278 +~;
+#X obj 660 256 *~;
+#X obj 660 234 osc~;
+#X floatatom 660 213 5 0 0 0 - - -, f 5;
+#X floatatom 703 240 5 0 0 0 - - -, f 5;
+#X obj 458 235 * 4;
+#X obj 613 233 * 5;
+#X floatatom 50 278 5 0 0 0 - - -, f 5;
+#X obj 309 372 *~;
+#X obj 309 397 outlet~;
+#X obj 92 146 mtof;
+#X obj 92 170 * 1;
+#X obj 180 252 vline~;
+#X obj 309 258 vline~;
+#X obj 458 257 vline~;
+#X obj 613 255 vline~;
+#X obj 224 166 r shimfreq1;
+#X obj 660 171 r shimfreq4;
+#X obj 504 171 r shimfreq3;
+#X obj 353 172 r shimfreq2;
+#X obj 265 215 r shimstr1;
+#X obj 391 221 r shimstr2;
+#X obj 542 218 r shimstr3;
+#X obj 703 217 r shimstr4;
+#X obj 249 283 r funda1;
+#X obj 118 282 r funda0;
+#X obj 378 282 r funda2;
+#X obj 529 282 r funda3;
+#X obj 685 282 r funda4;
+#X obj 224 187 +;
+#X obj 353 193 +;
+#X obj 504 191 +;
+#X obj 660 190 +;
+#X obj 118 305 * 1;
+#X obj 249 306 * 1;
+#X obj 378 305 * 1;
+#X obj 529 305 * 1;
+#X obj 685 305 * 1;
+#X obj 836 29 inlet;
+#X obj 894 519 line;
+#X obj 894 601 * 1;
+#X obj 777 58 stripnote;
+#X obj 777 142 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
+#000000 #000000;
+#X obj 959 159 sel 0;
+#X obj 897 57 unpack;
+#X floatatom 959 139 5 0 0 0 - - -, f 5;
+#X floatatom 748 82 5 0 0 0 - - -, f 5;
+#X obj 959 213 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
+#000000 #000000;
+#X obj 812 157 pack 1 2 3;
+#X obj 812 179 route 1;
+#X obj 840 58 r aplusd;
+#X obj 982 201 r releasezeit;
+#X floatatom 840 80 5 0 0 0 - - -, f 5;
+#X floatatom 982 223 5 0 0 0 - - -, f 5;
+#X obj 882 140 * 10;
+#X obj 867 478 +;
+#X floatatom 894 544 10 0 0 0 - - -, f 10;
+#X obj 867 435 line;
+#X floatatom 867 456 10 0 0 0 - - -, f 10;
+#X obj 1021 255 * 10;
+#X obj 959 312 route 1;
+#X floatatom 867 499 10 0 0 0 - - -, f 10;
+#X obj 959 285 pack 1 2 3 4;
+#X msg 1036 338 \$3;
+#X floatatom 1036 358 10 0 0 0 - - -, f 10;
+#X msg 959 340 0 \, \$2 \$1;
+#X msg 959 181 0;
+#X floatatom 925 601 10 0 0 0 - - -, f 10;
+#X obj 894 573 tabread4 array3;
+#X msg 1039 456 0;
+#X obj 1039 429 del;
+#X msg 1039 400 bang;
+#X obj 1054 255 + 5;
+#X obj 1072 456 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
+#000000 #000000;
+#X msg 812 202 0 \, \$2 \$1;
+#X obj 692 597 vline~;
+#X obj 743 622 tabread4~ array3;
+#X obj 894 621 sig~;
+#X obj 743 654 *~ 1;
+#X msg 814 597 set array1;
+#X msg 743 597 set array3;
+#X text 836 415 liest den release aus von atk plus dec;
+#X text 107 373 multiplication with the envelope;
+#X text 367 134 sound synthesis;
+#X text 1017 147 trigger the release;
+#X text 748 119 attack & decay formation;
+#X text 369 597 vline~ in order to avoid noise \, better interpolation
+;
+#X text 1043 478 to avoid multiplication by 0;
+#X text 897 478 until end of release;
+#N canvas 0 22 2736 1660 wavygen 0;
+#X obj 219 302 outlet~;
+#X obj 219 102 inlet~;
+#X obj 219 126 phasor~;
+#X text 274 126 Creates a ramp from 0 to 1 at the given f;
+#X obj 219 150 *~ 2051;
+#X text 274 149 Multiplyer with the length in samples of our waveform
+;
+#X obj 219 175 tabread4~ sine;
+#X text 283 300 OUTLET to VOICER-SUBPATCH;
+#X text 267 102 INLET from VOICER-SUBPATCH;
+#X obj 57 133 r waveform-selector;
+#X text 318 197 The waveform by default is a sine;
+#X text 316 174 Play table as audio signal;
+#X text 28 111 receives chosen waveform;
+#X connect 1 0 2 0;
+#X connect 2 0 4 0;
+#X connect 4 0 6 0;
+#X connect 6 0 0 0;
+#X connect 9 0 6 0;
+#X restore 50 300 pd wavygen;
+#N canvas 0 22 2736 1660 wavygen 0;
+#X obj 219 302 outlet~;
+#X obj 219 102 inlet~;
+#X obj 219 126 phasor~;
+#X text 274 126 Creates a ramp from 0 to 1 at the given f;
+#X obj 219 150 *~ 2051;
+#X text 274 149 Multiplyer with the length in samples of our waveform
+;
+#X obj 219 175 tabread4~ sine;
+#X text 283 300 OUTLET to VOICER-SUBPATCH;
+#X text 267 102 INLET from VOICER-SUBPATCH;
+#X obj 57 133 r waveform-selector;
+#X text 318 197 The waveform by default is a sine;
+#X text 316 174 Play table as audio signal;
+#X text 28 111 receives chosen waveform;
+#X connect 1 0 2 0;
+#X connect 2 0 4 0;
+#X connect 4 0 6 0;
+#X connect 6 0 0 0;
+#X connect 9 0 6 0;
+#X restore 180 301 pd wavygen;
+#N canvas 0 22 2736 1660 wavygen 0;
+#X obj 219 302 outlet~;
+#X obj 219 102 inlet~;
+#X obj 219 126 phasor~;
+#X text 274 126 Creates a ramp from 0 to 1 at the given f;
+#X obj 219 150 *~ 2051;
+#X text 274 149 Multiplyer with the length in samples of our waveform
+;
+#X obj 219 175 tabread4~ sine;
+#X text 283 300 OUTLET to VOICER-SUBPATCH;
+#X text 267 102 INLET from VOICER-SUBPATCH;
+#X obj 57 133 r waveform-selector;
+#X text 318 197 The waveform by default is a sine;
+#X text 316 174 Play table as audio signal;
+#X text 28 111 receives chosen waveform;
+#X connect 1 0 2 0;
+#X connect 2 0 4 0;
+#X connect 4 0 6 0;
+#X connect 6 0 0 0;
+#X connect 9 0 6 0;
+#X restore 309 300 pd wavygen;
+#N canvas 0 22 2736 1660 wavygen 0;
+#X obj 219 302 outlet~;
+#X obj 219 102 inlet~;
+#X obj 219 126 phasor~;
+#X text 274 126 Creates a ramp from 0 to 1 at the given f;
+#X obj 219 150 *~ 2051;
+#X text 274 149 Multiplyer with the length in samples of our waveform
+;
+#X obj 219 175 tabread4~ sine;
+#X text 283 300 OUTLET to VOICER-SUBPATCH;
+#X text 267 102 INLET from VOICER-SUBPATCH;
+#X obj 57 133 r waveform-selector;
+#X text 318 197 The waveform by default is a sine;
+#X text 316 174 Play table as audio signal;
+#X text 28 111 receives chosen waveform;
+#X connect 1 0 2 0;
+#X connect 2 0 4 0;
+#X connect 4 0 6 0;
+#X connect 6 0 0 0;
+#X connect 9 0 6 0;
+#X restore 613 299 pd wavygen;
+#N canvas 0 22 2736 1660 wavygen 0;
+#X obj 219 302 outlet~;
+#X obj 219 102 inlet~;
+#X obj 219 126 phasor~;
+#X text 274 126 Creates a ramp from 0 to 1 at the given f;
+#X obj 219 150 *~ 2051;
+#X text 274 149 Multiplyer with the length in samples of our waveform
+;
+#X obj 219 175 tabread4~ sine;
+#X text 283 300 OUTLET to VOICER-SUBPATCH;
+#X text 267 102 INLET from VOICER-SUBPATCH;
+#X obj 57 133 r waveform-selector;
+#X text 318 197 The waveform by default is a sine;
+#X text 316 174 Play table as audio signal;
+#X text 28 111 receives chosen waveform;
+#X connect 1 0 2 0;
+#X connect 2 0 4 0;
+#X connect 4 0 6 0;
+#X connect 6 0 0 0;
+#X connect 9 0 6 0;
+#X restore 458 300 pd wavygen;
+#X connect 0 0 34 0;
+#X connect 1 0 30 0;
+#X connect 2 0 30 0;
+#X connect 3 0 112 0;
+#X connect 4 0 3 1;
+#X connect 5 0 4 0;
+#X connect 6 0 5 0;
+#X connect 7 0 4 1;
+#X connect 8 0 30 0;
+#X connect 9 0 113 0;
+#X connect 10 0 9 1;
+#X connect 11 0 10 0;
+#X connect 12 0 11 0;
+#X connect 13 0 10 1;
+#X connect 14 0 35 0;
+#X connect 15 0 30 0;
+#X connect 16 0 115 0;
+#X connect 17 0 16 1;
+#X connect 18 0 17 0;
+#X connect 19 0 18 0;
+#X connect 20 0 17 1;
+#X connect 21 0 30 0;
+#X connect 22 0 114 0;
+#X connect 23 0 22 1;
+#X connect 24 0 23 0;
+#X connect 25 0 24 0;
+#X connect 26 0 23 1;
+#X connect 27 0 36 0;
+#X connect 28 0 37 0;
+#X connect 29 0 111 0;
+#X connect 30 0 31 0;
+#X connect 32 0 33 0;
+#X connect 33 0 29 0;
+#X connect 33 0 0 0;
+#X connect 33 0 14 0;
+#X connect 33 0 27 0;
+#X connect 33 0 28 0;
+#X connect 34 0 3 0;
+#X connect 35 0 9 0;
+#X connect 36 0 16 0;
+#X connect 37 0 22 0;
+#X connect 38 0 51 0;
+#X connect 39 0 54 0;
+#X connect 40 0 53 0;
+#X connect 41 0 52 0;
+#X connect 42 0 7 0;
+#X connect 43 0 13 0;
+#X connect 44 0 20 0;
+#X connect 45 0 26 0;
+#X connect 46 0 56 0;
+#X connect 47 0 55 0;
+#X connect 48 0 57 0;
+#X connect 49 0 58 0;
+#X connect 50 0 59 0;
+#X connect 51 0 6 0;
+#X connect 52 0 12 0;
+#X connect 53 0 19 0;
+#X connect 54 0 25 0;
+#X connect 55 0 1 1;
+#X connect 56 0 2 1;
+#X connect 57 0 8 1;
+#X connect 58 0 15 1;
+#X connect 59 0 21 1;
+#X connect 60 0 63 0;
+#X connect 60 0 66 0;
+#X connect 61 0 78 0;
+#X connect 62 0 99 0;
+#X connect 63 0 64 0;
+#X connect 63 0 68 0;
+#X connect 64 0 70 0;
+#X connect 64 0 102 0;
+#X connect 65 0 88 0;
+#X connect 66 1 67 0;
+#X connect 67 0 65 0;
+#X connect 68 0 32 0;
+#X connect 69 0 84 0;
+#X connect 69 0 93 0;
+#X connect 69 0 101 0;
+#X connect 70 0 71 0;
+#X connect 71 0 96 0;
+#X connect 72 0 74 0;
+#X connect 73 0 75 0;
+#X connect 74 0 76 0;
+#X connect 74 0 70 1;
+#X connect 75 0 81 0;
+#X connect 75 0 84 1;
+#X connect 75 0 94 0;
+#X connect 76 0 70 2;
+#X connect 76 0 84 3;
+#X connect 76 0 77 1;
+#X connect 77 0 83 0;
+#X connect 78 0 90 0;
+#X connect 79 0 80 0;
+#X connect 80 0 77 0;
+#X connect 81 0 84 2;
+#X connect 82 0 87 0;
+#X connect 82 0 85 0;
+#X connect 83 0 90 0;
+#X connect 84 0 82 0;
+#X connect 85 0 86 0;
+#X connect 87 0 79 0;
+#X connect 88 0 69 0;
+#X connect 88 0 97 0;
+#X connect 90 0 62 0;
+#X connect 90 0 89 0;
+#X connect 91 0 62 0;
+#X connect 92 0 91 0;
+#X connect 92 0 95 0;
+#X connect 93 0 92 0;
+#X connect 94 0 92 1;
+#X connect 96 0 97 0;
+#X connect 97 0 98 0;
+#X connect 98 0 100 0;
+#X connect 99 0 100 0;
+#X connect 100 0 30 1;
+#X connect 101 0 98 0;
+#X connect 102 0 98 0;
+#X connect 111 0 1 0;
+#X connect 112 0 2 0;
+#X connect 113 0 8 0;
+#X connect 114 0 21 0;
+#X connect 115 0 15 0;
+#X restore 1288 303 pd voicer;
+#N canvas 0 22 2736 1660 voicer 0;
+#X obj 180 230 * 2;
+#X obj 50 322 *~ 1;
+#X obj 180 323 *~ 1;
+#X obj 180 277 +~;
+#X obj 224 253 *~;
+#X obj 224 231 osc~;
+#X floatatom 224 210 5 0 0 0 - - -, f 5;
+#X floatatom 265 237 5 0 0 0 - - -, f 5;
+#X obj 309 322 *~ 1;
+#X obj 309 279 +~;
+#X obj 353 260 *~;
+#X obj 353 238 osc~;
+#X floatatom 353 217 5 0 0 0 - - -, f 5;
+#X floatatom 391 244 5 0 0 0 - - -, f 5;
+#X obj 309 236 * 3;
+#X obj 458 322 *~ 1;
+#X obj 458 278 +~;
+#X obj 504 258 *~;
+#X obj 504 236 osc~;
+#X floatatom 504 215 5 0 0 0 - - -, f 5;
+#X floatatom 542 242 5 0 0 0 - - -, f 5;
+#X obj 613 322 *~ 1;
+#X obj 613 278 +~;
+#X obj 660 256 *~;
+#X obj 660 234 osc~;
+#X floatatom 660 213 5 0 0 0 - - -, f 5;
+#X floatatom 703 240 5 0 0 0 - - -, f 5;
+#X obj 458 235 * 4;
+#X obj 613 233 * 5;
+#X floatatom 50 278 5 0 0 0 - - -, f 5;
+#X obj 309 372 *~;
+#X obj 309 397 outlet~;
+#X obj 92 146 mtof;
+#X obj 92 170 * 1;
+#X obj 180 252 vline~;
+#X obj 309 258 vline~;
+#X obj 458 257 vline~;
+#X obj 613 255 vline~;
+#X obj 224 166 r shimfreq1;
+#X obj 660 171 r shimfreq4;
+#X obj 504 171 r shimfreq3;
+#X obj 353 172 r shimfreq2;
+#X obj 265 215 r shimstr1;
+#X obj 391 221 r shimstr2;
+#X obj 542 218 r shimstr3;
+#X obj 703 217 r shimstr4;
+#X obj 249 283 r funda1;
+#X obj 118 282 r funda0;
+#X obj 378 282 r funda2;
+#X obj 529 282 r funda3;
+#X obj 685 282 r funda4;
+#X obj 224 187 +;
+#X obj 353 193 +;
+#X obj 504 191 +;
+#X obj 660 190 +;
+#X obj 118 305 * 1;
+#X obj 249 306 * 1;
+#X obj 378 305 * 1;
+#X obj 529 305 * 1;
+#X obj 685 305 * 1;
+#X obj 836 29 inlet;
+#X obj 894 519 line;
+#X obj 894 601 * 1;
+#X obj 777 58 stripnote;
+#X obj 777 142 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
+#000000 #000000;
+#X obj 959 159 sel 0;
+#X obj 897 57 unpack;
+#X floatatom 959 139 5 0 0 0 - - -, f 5;
+#X floatatom 748 82 5 0 0 0 - - -, f 5;
+#X obj 959 213 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
+#000000 #000000;
+#X obj 812 157 pack 1 2 3;
+#X obj 812 179 route 1;
+#X obj 840 58 r aplusd;
+#X obj 982 201 r releasezeit;
+#X floatatom 840 80 5 0 0 0 - - -, f 5;
+#X floatatom 982 223 5 0 0 0 - - -, f 5;
+#X obj 882 140 * 10;
+#X obj 867 478 +;
+#X floatatom 894 544 10 0 0 0 - - -, f 10;
+#X obj 867 435 line;
+#X floatatom 867 456 10 0 0 0 - - -, f 10;
+#X obj 1021 255 * 10;
+#X obj 959 312 route 1;
+#X floatatom 867 499 10 0 0 0 - - -, f 10;
+#X obj 959 285 pack 1 2 3 4;
+#X msg 1036 338 \$3;
+#X floatatom 1036 358 10 0 0 0 - - -, f 10;
+#X msg 959 340 0 \, \$2 \$1;
+#X msg 959 181 0;
+#X floatatom 925 601 10 0 0 0 - - -, f 10;
+#X obj 894 573 tabread4 array3;
+#X msg 1039 456 0;
+#X obj 1039 429 del;
+#X msg 1039 400 bang;
+#X obj 1054 255 + 5;
+#X obj 1072 456 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
+#000000 #000000;
+#X msg 812 202 0 \, \$2 \$1;
+#X obj 692 597 vline~;
+#X obj 743 622 tabread4~ array3;
+#X obj 894 621 sig~;
+#X obj 743 654 *~ 1;
+#X msg 814 597 set array1;
+#X msg 743 597 set array3;
+#X text 836 415 liest den release aus von atk plus dec;
+#X text 107 373 multiplication with the envelope;
+#X text 367 134 sound synthesis;
+#X text 1017 147 trigger the release;
+#X text 748 119 attack & decay formation;
+#X text 369 597 vline~ in order to avoid noise \, better interpolation
+;
+#X text 1043 478 to avoid multiplication by 0;
+#X text 897 478 until end of release;
+#N canvas 0 22 2736 1660 wavygen 0;
+#X obj 219 302 outlet~;
+#X obj 219 102 inlet~;
+#X obj 219 126 phasor~;
+#X text 274 126 Creates a ramp from 0 to 1 at the given f;
+#X obj 219 150 *~ 2051;
+#X text 274 149 Multiplyer with the length in samples of our waveform
+;
+#X obj 219 175 tabread4~ sine;
+#X text 283 300 OUTLET to VOICER-SUBPATCH;
+#X text 267 102 INLET from VOICER-SUBPATCH;
+#X obj 57 133 r waveform-selector;
+#X text 318 197 The waveform by default is a sine;
+#X text 316 174 Play table as audio signal;
+#X text 28 111 receives chosen waveform;
+#X connect 1 0 2 0;
+#X connect 2 0 4 0;
+#X connect 4 0 6 0;
+#X connect 6 0 0 0;
+#X connect 9 0 6 0;
+#X restore 50 300 pd wavygen;
+#N canvas 0 22 2736 1660 wavygen 0;
+#X obj 219 302 outlet~;
+#X obj 219 102 inlet~;
+#X obj 219 126 phasor~;
+#X text 274 126 Creates a ramp from 0 to 1 at the given f;
+#X obj 219 150 *~ 2051;
+#X text 274 149 Multiplyer with the length in samples of our waveform
+;
+#X obj 219 175 tabread4~ sine;
+#X text 283 300 OUTLET to VOICER-SUBPATCH;
+#X text 267 102 INLET from VOICER-SUBPATCH;
+#X obj 57 133 r waveform-selector;
+#X text 318 197 The waveform by default is a sine;
+#X text 316 174 Play table as audio signal;
+#X text 28 111 receives chosen waveform;
+#X connect 1 0 2 0;
+#X connect 2 0 4 0;
+#X connect 4 0 6 0;
+#X connect 6 0 0 0;
+#X connect 9 0 6 0;
+#X restore 180 301 pd wavygen;
+#N canvas 0 22 2736 1660 wavygen 0;
+#X obj 219 302 outlet~;
+#X obj 219 102 inlet~;
+#X obj 219 126 phasor~;
+#X text 274 126 Creates a ramp from 0 to 1 at the given f;
+#X obj 219 150 *~ 2051;
+#X text 274 149 Multiplyer with the length in samples of our waveform
+;
+#X obj 219 175 tabread4~ sine;
+#X text 283 300 OUTLET to VOICER-SUBPATCH;
+#X text 267 102 INLET from VOICER-SUBPATCH;
+#X obj 57 133 r waveform-selector;
+#X text 318 197 The waveform by default is a sine;
+#X text 316 174 Play table as audio signal;
+#X text 28 111 receives chosen waveform;
+#X connect 1 0 2 0;
+#X connect 2 0 4 0;
+#X connect 4 0 6 0;
+#X connect 6 0 0 0;
+#X connect 9 0 6 0;
+#X restore 309 300 pd wavygen;
+#N canvas 0 22 2736 1660 wavygen 0;
+#X obj 219 302 outlet~;
+#X obj 219 102 inlet~;
+#X obj 219 126 phasor~;
+#X text 274 126 Creates a ramp from 0 to 1 at the given f;
+#X obj 219 150 *~ 2051;
+#X text 274 149 Multiplyer with the length in samples of our waveform
+;
+#X obj 219 175 tabread4~ sine;
+#X text 283 300 OUTLET to VOICER-SUBPATCH;
+#X text 267 102 INLET from VOICER-SUBPATCH;
+#X obj 57 133 r waveform-selector;
+#X text 318 197 The waveform by default is a sine;
+#X text 316 174 Play table as audio signal;
+#X text 28 111 receives chosen waveform;
+#X connect 1 0 2 0;
+#X connect 2 0 4 0;
+#X connect 4 0 6 0;
+#X connect 6 0 0 0;
+#X connect 9 0 6 0;
+#X restore 613 299 pd wavygen;
+#N canvas 0 22 2736 1660 wavygen 0;
+#X obj 219 302 outlet~;
+#X obj 219 102 inlet~;
+#X obj 219 126 phasor~;
+#X text 274 126 Creates a ramp from 0 to 1 at the given f;
+#X obj 219 150 *~ 2051;
+#X text 274 149 Multiplyer with the length in samples of our waveform
+;
+#X obj 219 175 tabread4~ sine;
+#X text 283 300 OUTLET to VOICER-SUBPATCH;
+#X text 267 102 INLET from VOICER-SUBPATCH;
+#X obj 57 133 r waveform-selector;
+#X text 318 197 The waveform by default is a sine;
+#X text 316 174 Play table as audio signal;
+#X text 28 111 receives chosen waveform;
+#X connect 1 0 2 0;
+#X connect 2 0 4 0;
+#X connect 4 0 6 0;
+#X connect 6 0 0 0;
+#X connect 9 0 6 0;
+#X restore 458 300 pd wavygen;
+#X connect 0 0 34 0;
+#X connect 1 0 30 0;
+#X connect 2 0 30 0;
+#X connect 3 0 112 0;
+#X connect 4 0 3 1;
+#X connect 5 0 4 0;
+#X connect 6 0 5 0;
+#X connect 7 0 4 1;
+#X connect 8 0 30 0;
+#X connect 9 0 113 0;
+#X connect 10 0 9 1;
+#X connect 11 0 10 0;
+#X connect 12 0 11 0;
+#X connect 13 0 10 1;
+#X connect 14 0 35 0;
+#X connect 15 0 30 0;
+#X connect 16 0 115 0;
+#X connect 17 0 16 1;
+#X connect 18 0 17 0;
+#X connect 19 0 18 0;
+#X connect 20 0 17 1;
+#X connect 21 0 30 0;
+#X connect 22 0 114 0;
+#X connect 23 0 22 1;
+#X connect 24 0 23 0;
+#X connect 25 0 24 0;
+#X connect 26 0 23 1;
+#X connect 27 0 36 0;
+#X connect 28 0 37 0;
+#X connect 29 0 111 0;
+#X connect 30 0 31 0;
+#X connect 32 0 33 0;
+#X connect 33 0 29 0;
+#X connect 33 0 0 0;
+#X connect 33 0 14 0;
+#X connect 33 0 27 0;
+#X connect 33 0 28 0;
+#X connect 34 0 3 0;
+#X connect 35 0 9 0;
+#X connect 36 0 16 0;
+#X connect 37 0 22 0;
+#X connect 38 0 51 0;
+#X connect 39 0 54 0;
+#X connect 40 0 53 0;
+#X connect 41 0 52 0;
+#X connect 42 0 7 0;
+#X connect 43 0 13 0;
+#X connect 44 0 20 0;
+#X connect 45 0 26 0;
+#X connect 46 0 56 0;
+#X connect 47 0 55 0;
+#X connect 48 0 57 0;
+#X connect 49 0 58 0;
+#X connect 50 0 59 0;
+#X connect 51 0 6 0;
+#X connect 52 0 12 0;
+#X connect 53 0 19 0;
+#X connect 54 0 25 0;
+#X connect 55 0 1 1;
+#X connect 56 0 2 1;
+#X connect 57 0 8 1;
+#X connect 58 0 15 1;
+#X connect 59 0 21 1;
+#X connect 60 0 63 0;
+#X connect 60 0 66 0;
+#X connect 61 0 78 0;
+#X connect 62 0 99 0;
+#X connect 63 0 64 0;
+#X connect 63 0 68 0;
+#X connect 64 0 70 0;
+#X connect 64 0 102 0;
+#X connect 65 0 88 0;
+#X connect 66 1 67 0;
+#X connect 67 0 65 0;
+#X connect 68 0 32 0;
+#X connect 69 0 84 0;
+#X connect 69 0 93 0;
+#X connect 69 0 101 0;
+#X connect 70 0 71 0;
+#X connect 71 0 96 0;
+#X connect 72 0 74 0;
+#X connect 73 0 75 0;
+#X connect 74 0 76 0;
+#X connect 74 0 70 1;
+#X connect 75 0 81 0;
+#X connect 75 0 84 1;
+#X connect 75 0 94 0;
+#X connect 76 0 70 2;
+#X connect 76 0 84 3;
+#X connect 76 0 77 1;
+#X connect 77 0 83 0;
+#X connect 78 0 90 0;
+#X connect 79 0 80 0;
+#X connect 80 0 77 0;
+#X connect 81 0 84 2;
+#X connect 82 0 87 0;
+#X connect 82 0 85 0;
+#X connect 83 0 90 0;
+#X connect 84 0 82 0;
+#X connect 85 0 86 0;
+#X connect 87 0 79 0;
+#X connect 88 0 69 0;
+#X connect 88 0 97 0;
+#X connect 90 0 62 0;
+#X connect 90 0 89 0;
+#X connect 91 0 62 0;
+#X connect 92 0 91 0;
+#X connect 92 0 95 0;
+#X connect 93 0 92 0;
+#X connect 94 0 92 1;
+#X connect 96 0 97 0;
+#X connect 97 0 98 0;
+#X connect 98 0 100 0;
+#X connect 99 0 100 0;
+#X connect 100 0 30 1;
+#X connect 101 0 98 0;
+#X connect 102 0 98 0;
+#X connect 111 0 1 0;
+#X connect 112 0 2 0;
+#X connect 113 0 8 0;
+#X connect 114 0 21 0;
+#X connect 115 0 15 0;
+#X restore 1103 303 pd voicer;
+#N canvas 0 22 2736 1660 voicer 0;
+#X obj 180 230 * 2;
+#X obj 50 322 *~ 1;
+#X obj 180 323 *~ 1;
+#X obj 180 277 +~;
+#X obj 224 253 *~;
+#X obj 224 231 osc~;
+#X floatatom 224 210 5 0 0 0 - - -, f 5;
+#X floatatom 265 237 5 0 0 0 - - -, f 5;
+#X obj 309 322 *~ 1;
+#X obj 309 279 +~;
+#X obj 353 260 *~;
+#X obj 353 238 osc~;
+#X floatatom 353 217 5 0 0 0 - - -, f 5;
+#X floatatom 391 244 5 0 0 0 - - -, f 5;
+#X obj 309 236 * 3;
+#X obj 458 322 *~ 1;
+#X obj 458 278 +~;
+#X obj 504 258 *~;
+#X obj 504 236 osc~;
+#X floatatom 504 215 5 0 0 0 - - -, f 5;
+#X floatatom 542 242 5 0 0 0 - - -, f 5;
+#X obj 613 322 *~ 1;
+#X obj 613 278 +~;
+#X obj 660 256 *~;
+#X obj 660 234 osc~;
+#X floatatom 660 213 5 0 0 0 - - -, f 5;
+#X floatatom 703 240 5 0 0 0 - - -, f 5;
+#X obj 458 235 * 4;
+#X obj 613 233 * 5;
+#X floatatom 50 278 5 0 0 0 - - -, f 5;
+#X obj 309 372 *~;
+#X obj 309 397 outlet~;
+#X obj 92 146 mtof;
+#X obj 92 170 * 1;
+#X obj 180 252 vline~;
+#X obj 309 258 vline~;
+#X obj 458 257 vline~;
+#X obj 613 255 vline~;
+#X obj 224 166 r shimfreq1;
+#X obj 660 171 r shimfreq4;
+#X obj 504 171 r shimfreq3;
+#X obj 353 172 r shimfreq2;
+#X obj 265 215 r shimstr1;
+#X obj 391 221 r shimstr2;
+#X obj 542 218 r shimstr3;
+#X obj 703 217 r shimstr4;
+#X obj 249 283 r funda1;
+#X obj 118 282 r funda0;
+#X obj 378 282 r funda2;
+#X obj 529 282 r funda3;
+#X obj 685 282 r funda4;
+#X obj 224 187 +;
+#X obj 353 193 +;
+#X obj 504 191 +;
+#X obj 660 190 +;
+#X obj 118 305 * 1;
+#X obj 249 306 * 1;
+#X obj 378 305 * 1;
+#X obj 529 305 * 1;
+#X obj 685 305 * 1;
+#X obj 836 29 inlet;
+#X obj 894 519 line;
+#X obj 894 601 * 1;
+#X obj 777 58 stripnote;
+#X obj 777 142 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
+#000000 #000000;
+#X obj 959 159 sel 0;
+#X obj 897 57 unpack;
+#X floatatom 959 139 5 0 0 0 - - -, f 5;
+#X floatatom 748 82 5 0 0 0 - - -, f 5;
+#X obj 959 213 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
+#000000 #000000;
+#X obj 812 157 pack 1 2 3;
+#X obj 812 179 route 1;
+#X obj 840 58 r aplusd;
+#X obj 982 201 r releasezeit;
+#X floatatom 840 80 5 0 0 0 - - -, f 5;
+#X floatatom 982 223 5 0 0 0 - - -, f 5;
+#X obj 882 140 * 10;
+#X obj 867 478 +;
+#X floatatom 894 544 10 0 0 0 - - -, f 10;
+#X obj 867 435 line;
+#X floatatom 867 456 10 0 0 0 - - -, f 10;
+#X obj 1021 255 * 10;
+#X obj 959 312 route 1;
+#X floatatom 867 499 10 0 0 0 - - -, f 10;
+#X obj 959 285 pack 1 2 3 4;
+#X msg 1036 338 \$3;
+#X floatatom 1036 358 10 0 0 0 - - -, f 10;
+#X msg 959 340 0 \, \$2 \$1;
+#X msg 959 181 0;
+#X floatatom 925 601 10 0 0 0 - - -, f 10;
+#X obj 894 573 tabread4 array3;
+#X msg 1039 456 0;
+#X obj 1039 429 del;
+#X msg 1039 400 bang;
+#X obj 1054 255 + 5;
+#X obj 1072 456 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
+#000000 #000000;
+#X msg 812 202 0 \, \$2 \$1;
+#X obj 692 597 vline~;
+#X obj 743 622 tabread4~ array3;
+#X obj 894 621 sig~;
+#X obj 743 654 *~ 1;
+#X msg 814 597 set array1;
+#X msg 743 597 set array3;
+#X text 836 415 liest den release aus von atk plus dec;
+#X text 107 373 multiplication with the envelope;
+#X text 367 134 sound synthesis;
+#X text 1017 147 trigger the release;
+#X text 748 119 attack & decay formation;
+#X text 369 597 vline~ in order to avoid noise \, better interpolation
+;
+#X text 1043 478 to avoid multiplication by 0;
+#X text 897 478 until end of release;
+#N canvas 0 22 2736 1660 wavygen 0;
+#X obj 219 302 outlet~;
+#X obj 219 102 inlet~;
+#X obj 219 126 phasor~;
+#X text 274 126 Creates a ramp from 0 to 1 at the given f;
+#X obj 219 150 *~ 2051;
+#X text 274 149 Multiplyer with the length in samples of our waveform
+;
+#X obj 219 175 tabread4~ sine;
+#X text 283 300 OUTLET to VOICER-SUBPATCH;
+#X text 267 102 INLET from VOICER-SUBPATCH;
+#X obj 57 133 r waveform-selector;
+#X text 318 197 The waveform by default is a sine;
+#X text 316 174 Play table as audio signal;
+#X text 28 111 receives chosen waveform;
+#X connect 1 0 2 0;
+#X connect 2 0 4 0;
+#X connect 4 0 6 0;
+#X connect 6 0 0 0;
+#X connect 9 0 6 0;
+#X restore 50 300 pd wavygen;
+#N canvas 0 22 2736 1660 wavygen 0;
+#X obj 219 302 outlet~;
+#X obj 219 102 inlet~;
+#X obj 219 126 phasor~;
+#X text 274 126 Creates a ramp from 0 to 1 at the given f;
+#X obj 219 150 *~ 2051;
+#X text 274 149 Multiplyer with the length in samples of our waveform
+;
+#X obj 219 175 tabread4~ sine;
+#X text 283 300 OUTLET to VOICER-SUBPATCH;
+#X text 267 102 INLET from VOICER-SUBPATCH;
+#X obj 57 133 r waveform-selector;
+#X text 318 197 The waveform by default is a sine;
+#X text 316 174 Play table as audio signal;
+#X text 28 111 receives chosen waveform;
+#X connect 1 0 2 0;
+#X connect 2 0 4 0;
+#X connect 4 0 6 0;
+#X connect 6 0 0 0;
+#X connect 9 0 6 0;
+#X restore 180 301 pd wavygen;
+#N canvas 0 22 2736 1660 wavygen 0;
+#X obj 219 302 outlet~;
+#X obj 219 102 inlet~;
+#X obj 219 126 phasor~;
+#X text 274 126 Creates a ramp from 0 to 1 at the given f;
+#X obj 219 150 *~ 2051;
+#X text 274 149 Multiplyer with the length in samples of our waveform
+;
+#X obj 219 175 tabread4~ sine;
+#X text 283 300 OUTLET to VOICER-SUBPATCH;
+#X text 267 102 INLET from VOICER-SUBPATCH;
+#X obj 57 133 r waveform-selector;
+#X text 318 197 The waveform by default is a sine;
+#X text 316 174 Play table as audio signal;
+#X text 28 111 receives chosen waveform;
+#X connect 1 0 2 0;
+#X connect 2 0 4 0;
+#X connect 4 0 6 0;
+#X connect 6 0 0 0;
+#X connect 9 0 6 0;
+#X restore 309 300 pd wavygen;
+#N canvas 0 22 2736 1660 wavygen 0;
+#X obj 219 302 outlet~;
+#X obj 219 102 inlet~;
+#X obj 219 126 phasor~;
+#X text 274 126 Creates a ramp from 0 to 1 at the given f;
+#X obj 219 150 *~ 2051;
+#X text 274 149 Multiplyer with the length in samples of our waveform
+;
+#X obj 219 175 tabread4~ sine;
+#X text 283 300 OUTLET to VOICER-SUBPATCH;
+#X text 267 102 INLET from VOICER-SUBPATCH;
+#X obj 57 133 r waveform-selector;
+#X text 318 197 The waveform by default is a sine;
+#X text 316 174 Play table as audio signal;
+#X text 28 111 receives chosen waveform;
+#X connect 1 0 2 0;
+#X connect 2 0 4 0;
+#X connect 4 0 6 0;
+#X connect 6 0 0 0;
+#X connect 9 0 6 0;
+#X restore 613 299 pd wavygen;
+#N canvas 0 22 2736 1660 wavygen 0;
+#X obj 219 302 outlet~;
+#X obj 219 102 inlet~;
+#X obj 219 126 phasor~;
+#X text 274 126 Creates a ramp from 0 to 1 at the given f;
+#X obj 219 150 *~ 2051;
+#X text 274 149 Multiplyer with the length in samples of our waveform
+;
+#X obj 219 175 tabread4~ sine;
+#X text 283 300 OUTLET to VOICER-SUBPATCH;
+#X text 267 102 INLET from VOICER-SUBPATCH;
+#X obj 57 133 r waveform-selector;
+#X text 318 197 The waveform by default is a sine;
+#X text 316 174 Play table as audio signal;
+#X text 28 111 receives chosen waveform;
+#X connect 1 0 2 0;
+#X connect 2 0 4 0;
+#X connect 4 0 6 0;
+#X connect 6 0 0 0;
+#X connect 9 0 6 0;
+#X restore 458 300 pd wavygen;
+#X connect 0 0 34 0;
+#X connect 1 0 30 0;
+#X connect 2 0 30 0;
+#X connect 3 0 112 0;
+#X connect 4 0 3 1;
+#X connect 5 0 4 0;
+#X connect 6 0 5 0;
+#X connect 7 0 4 1;
+#X connect 8 0 30 0;
+#X connect 9 0 113 0;
+#X connect 10 0 9 1;
+#X connect 11 0 10 0;
+#X connect 12 0 11 0;
+#X connect 13 0 10 1;
+#X connect 14 0 35 0;
+#X connect 15 0 30 0;
+#X connect 16 0 115 0;
+#X connect 17 0 16 1;
+#X connect 18 0 17 0;
+#X connect 19 0 18 0;
+#X connect 20 0 17 1;
+#X connect 21 0 30 0;
+#X connect 22 0 114 0;
+#X connect 23 0 22 1;
+#X connect 24 0 23 0;
+#X connect 25 0 24 0;
+#X connect 26 0 23 1;
+#X connect 27 0 36 0;
+#X connect 28 0 37 0;
+#X connect 29 0 111 0;
+#X connect 30 0 31 0;
+#X connect 32 0 33 0;
+#X connect 33 0 29 0;
+#X connect 33 0 0 0;
+#X connect 33 0 14 0;
+#X connect 33 0 27 0;
+#X connect 33 0 28 0;
+#X connect 34 0 3 0;
+#X connect 35 0 9 0;
+#X connect 36 0 16 0;
+#X connect 37 0 22 0;
+#X connect 38 0 51 0;
+#X connect 39 0 54 0;
+#X connect 40 0 53 0;
+#X connect 41 0 52 0;
+#X connect 42 0 7 0;
+#X connect 43 0 13 0;
+#X connect 44 0 20 0;
+#X connect 45 0 26 0;
+#X connect 46 0 56 0;
+#X connect 47 0 55 0;
+#X connect 48 0 57 0;
+#X connect 49 0 58 0;
+#X connect 50 0 59 0;
+#X connect 51 0 6 0;
+#X connect 52 0 12 0;
+#X connect 53 0 19 0;
+#X connect 54 0 25 0;
+#X connect 55 0 1 1;
+#X connect 56 0 2 1;
+#X connect 57 0 8 1;
+#X connect 58 0 15 1;
+#X connect 59 0 21 1;
+#X connect 60 0 63 0;
+#X connect 60 0 66 0;
+#X connect 61 0 78 0;
+#X connect 62 0 99 0;
+#X connect 63 0 64 0;
+#X connect 63 0 68 0;
+#X connect 64 0 70 0;
+#X connect 64 0 102 0;
+#X connect 65 0 88 0;
+#X connect 66 1 67 0;
+#X connect 67 0 65 0;
+#X connect 68 0 32 0;
+#X connect 69 0 84 0;
+#X connect 69 0 93 0;
+#X connect 69 0 101 0;
+#X connect 70 0 71 0;
+#X connect 71 0 96 0;
+#X connect 72 0 74 0;
+#X connect 73 0 75 0;
+#X connect 74 0 76 0;
+#X connect 74 0 70 1;
+#X connect 75 0 81 0;
+#X connect 75 0 84 1;
+#X connect 75 0 94 0;
+#X connect 76 0 70 2;
+#X connect 76 0 84 3;
+#X connect 76 0 77 1;
+#X connect 77 0 83 0;
+#X connect 78 0 90 0;
+#X connect 79 0 80 0;
+#X connect 80 0 77 0;
+#X connect 81 0 84 2;
+#X connect 82 0 87 0;
+#X connect 82 0 85 0;
+#X connect 83 0 90 0;
+#X connect 84 0 82 0;
+#X connect 85 0 86 0;
+#X connect 87 0 79 0;
+#X connect 88 0 69 0;
+#X connect 88 0 97 0;
+#X connect 90 0 62 0;
+#X connect 90 0 89 0;
+#X connect 91 0 62 0;
+#X connect 92 0 91 0;
+#X connect 92 0 95 0;
+#X connect 93 0 92 0;
+#X connect 94 0 92 1;
+#X connect 96 0 97 0;
+#X connect 97 0 98 0;
+#X connect 98 0 100 0;
+#X connect 99 0 100 0;
+#X connect 100 0 30 1;
+#X connect 101 0 98 0;
+#X connect 102 0 98 0;
+#X connect 111 0 1 0;
+#X connect 112 0 2 0;
+#X connect 113 0 8 0;
+#X connect 114 0 21 0;
+#X connect 115 0 15 0;
+#X restore 1462 304 pd voicer;
+#N canvas 0 22 2736 1660 voicer 0;
+#X obj 180 230 * 2;
+#X obj 50 322 *~ 1;
+#X obj 180 323 *~ 1;
+#X obj 180 277 +~;
+#X obj 224 253 *~;
+#X obj 224 231 osc~;
+#X floatatom 224 210 5 0 0 0 - - -, f 5;
+#X floatatom 265 237 5 0 0 0 - - -, f 5;
+#X obj 309 322 *~ 1;
+#X obj 309 279 +~;
+#X obj 353 260 *~;
+#X obj 353 238 osc~;
+#X floatatom 353 217 5 0 0 0 - - -, f 5;
+#X floatatom 391 244 5 0 0 0 - - -, f 5;
+#X obj 309 236 * 3;
+#X obj 458 322 *~ 1;
+#X obj 458 278 +~;
+#X obj 504 258 *~;
+#X obj 504 236 osc~;
+#X floatatom 504 215 5 0 0 0 - - -, f 5;
+#X floatatom 542 242 5 0 0 0 - - -, f 5;
+#X obj 613 322 *~ 1;
+#X obj 613 278 +~;
+#X obj 660 256 *~;
+#X obj 660 234 osc~;
+#X floatatom 660 213 5 0 0 0 - - -, f 5;
+#X floatatom 703 240 5 0 0 0 - - -, f 5;
+#X obj 458 235 * 4;
+#X obj 613 233 * 5;
+#X floatatom 50 278 5 0 0 0 - - -, f 5;
+#X obj 309 372 *~;
+#X obj 309 397 outlet~;
+#X obj 92 146 mtof;
+#X obj 92 170 * 1;
+#X obj 180 252 vline~;
+#X obj 309 258 vline~;
+#X obj 458 257 vline~;
+#X obj 613 255 vline~;
+#X obj 224 166 r shimfreq1;
+#X obj 660 171 r shimfreq4;
+#X obj 504 171 r shimfreq3;
+#X obj 353 172 r shimfreq2;
+#X obj 265 215 r shimstr1;
+#X obj 391 221 r shimstr2;
+#X obj 542 218 r shimstr3;
+#X obj 703 217 r shimstr4;
+#X obj 249 283 r funda1;
+#X obj 118 282 r funda0;
+#X obj 378 282 r funda2;
+#X obj 529 282 r funda3;
+#X obj 685 282 r funda4;
+#X obj 224 187 +;
+#X obj 353 193 +;
+#X obj 504 191 +;
+#X obj 660 190 +;
+#X obj 118 305 * 1;
+#X obj 249 306 * 1;
+#X obj 378 305 * 1;
+#X obj 529 305 * 1;
+#X obj 685 305 * 1;
+#X obj 836 29 inlet;
+#X obj 894 519 line;
+#X obj 894 601 * 1;
+#X obj 777 58 stripnote;
+#X obj 777 142 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
+#000000 #000000;
+#X obj 959 159 sel 0;
+#X obj 897 57 unpack;
+#X floatatom 959 139 5 0 0 0 - - -, f 5;
+#X floatatom 748 82 5 0 0 0 - - -, f 5;
+#X obj 959 213 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
+#000000 #000000;
+#X obj 812 157 pack 1 2 3;
+#X obj 812 179 route 1;
+#X obj 840 58 r aplusd;
+#X obj 982 201 r releasezeit;
+#X floatatom 840 80 5 0 0 0 - - -, f 5;
+#X floatatom 982 223 5 0 0 0 - - -, f 5;
+#X obj 882 140 * 10;
+#X obj 867 478 +;
+#X floatatom 894 544 10 0 0 0 - - -, f 10;
+#X obj 867 435 line;
+#X floatatom 867 456 10 0 0 0 - - -, f 10;
+#X obj 1021 255 * 10;
+#X obj 959 312 route 1;
+#X floatatom 867 499 10 0 0 0 - - -, f 10;
+#X obj 959 285 pack 1 2 3 4;
+#X msg 1036 338 \$3;
+#X floatatom 1036 358 10 0 0 0 - - -, f 10;
+#X msg 959 340 0 \, \$2 \$1;
+#X msg 959 181 0;
+#X floatatom 925 601 10 0 0 0 - - -, f 10;
+#X obj 894 573 tabread4 array3;
+#X msg 1039 456 0;
+#X obj 1039 429 del;
+#X msg 1039 400 bang;
+#X obj 1054 255 + 5;
+#X obj 1072 456 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
+#000000 #000000;
+#X msg 812 202 0 \, \$2 \$1;
+#X obj 692 597 vline~;
+#X obj 743 622 tabread4~ array3;
+#X obj 894 621 sig~;
+#X obj 743 654 *~ 1;
+#X msg 814 597 set array1;
+#X msg 743 597 set array3;
+#X text 836 415 liest den release aus von atk plus dec;
+#X text 107 373 multiplication with the envelope;
+#X text 367 134 sound synthesis;
+#X text 1017 147 trigger the release;
+#X text 748 119 attack & decay formation;
+#X text 369 597 vline~ in order to avoid noise \, better interpolation
+;
+#X text 1043 478 to avoid multiplication by 0;
+#X text 897 478 until end of release;
+#N canvas 0 22 2736 1660 wavygen 0;
+#X obj 219 302 outlet~;
+#X obj 219 102 inlet~;
+#X obj 219 126 phasor~;
+#X text 274 126 Creates a ramp from 0 to 1 at the given f;
+#X obj 219 150 *~ 2051;
+#X text 274 149 Multiplyer with the length in samples of our waveform
+;
+#X obj 219 175 tabread4~ sine;
+#X text 283 300 OUTLET to VOICER-SUBPATCH;
+#X text 267 102 INLET from VOICER-SUBPATCH;
+#X obj 57 133 r waveform-selector;
+#X text 318 197 The waveform by default is a sine;
+#X text 316 174 Play table as audio signal;
+#X text 28 111 receives chosen waveform;
+#X connect 1 0 2 0;
+#X connect 2 0 4 0;
+#X connect 4 0 6 0;
+#X connect 6 0 0 0;
+#X connect 9 0 6 0;
+#X restore 50 300 pd wavygen;
+#N canvas 0 22 2736 1660 wavygen 0;
+#X obj 219 302 outlet~;
+#X obj 219 102 inlet~;
+#X obj 219 126 phasor~;
+#X text 274 126 Creates a ramp from 0 to 1 at the given f;
+#X obj 219 150 *~ 2051;
+#X text 274 149 Multiplyer with the length in samples of our waveform
+;
+#X obj 219 175 tabread4~ sine;
+#X text 283 300 OUTLET to VOICER-SUBPATCH;
+#X text 267 102 INLET from VOICER-SUBPATCH;
+#X obj 57 133 r waveform-selector;
+#X text 318 197 The waveform by default is a sine;
+#X text 316 174 Play table as audio signal;
+#X text 28 111 receives chosen waveform;
+#X connect 1 0 2 0;
+#X connect 2 0 4 0;
+#X connect 4 0 6 0;
+#X connect 6 0 0 0;
+#X connect 9 0 6 0;
+#X restore 180 301 pd wavygen;
+#N canvas 0 22 2736 1660 wavygen 0;
+#X obj 219 302 outlet~;
+#X obj 219 102 inlet~;
+#X obj 219 126 phasor~;
+#X text 274 126 Creates a ramp from 0 to 1 at the given f;
+#X obj 219 150 *~ 2051;
+#X text 274 149 Multiplyer with the length in samples of our waveform
+;
+#X obj 219 175 tabread4~ sine;
+#X text 283 300 OUTLET to VOICER-SUBPATCH;
+#X text 267 102 INLET from VOICER-SUBPATCH;
+#X obj 57 133 r waveform-selector;
+#X text 318 197 The waveform by default is a sine;
+#X text 316 174 Play table as audio signal;
+#X text 28 111 receives chosen waveform;
+#X connect 1 0 2 0;
+#X connect 2 0 4 0;
+#X connect 4 0 6 0;
+#X connect 6 0 0 0;
+#X connect 9 0 6 0;
+#X restore 309 300 pd wavygen;
+#N canvas 0 22 2736 1660 wavygen 0;
+#X obj 219 302 outlet~;
+#X obj 219 102 inlet~;
+#X obj 219 126 phasor~;
+#X text 274 126 Creates a ramp from 0 to 1 at the given f;
+#X obj 219 150 *~ 2051;
+#X text 274 149 Multiplyer with the length in samples of our waveform
+;
+#X obj 219 175 tabread4~ sine;
+#X text 283 300 OUTLET to VOICER-SUBPATCH;
+#X text 267 102 INLET from VOICER-SUBPATCH;
+#X obj 57 133 r waveform-selector;
+#X text 318 197 The waveform by default is a sine;
+#X text 316 174 Play table as audio signal;
+#X text 28 111 receives chosen waveform;
+#X connect 1 0 2 0;
+#X connect 2 0 4 0;
+#X connect 4 0 6 0;
+#X connect 6 0 0 0;
+#X connect 9 0 6 0;
+#X restore 613 299 pd wavygen;
+#N canvas 0 22 2736 1660 wavygen 0;
+#X obj 219 302 outlet~;
+#X obj 219 102 inlet~;
+#X obj 219 126 phasor~;
+#X text 274 126 Creates a ramp from 0 to 1 at the given f;
+#X obj 219 150 *~ 2051;
+#X text 274 149 Multiplyer with the length in samples of our waveform
+;
+#X obj 219 175 tabread4~ sine;
+#X text 283 300 OUTLET to VOICER-SUBPATCH;
+#X text 267 102 INLET from VOICER-SUBPATCH;
+#X obj 57 133 r waveform-selector;
+#X text 318 197 The waveform by default is a sine;
+#X text 316 174 Play table as audio signal;
+#X text 28 111 receives chosen waveform;
+#X connect 1 0 2 0;
+#X connect 2 0 4 0;
+#X connect 4 0 6 0;
+#X connect 6 0 0 0;
+#X connect 9 0 6 0;
+#X restore 458 300 pd wavygen;
+#X connect 0 0 34 0;
+#X connect 1 0 30 0;
+#X connect 2 0 30 0;
+#X connect 3 0 112 0;
+#X connect 4 0 3 1;
+#X connect 5 0 4 0;
+#X connect 6 0 5 0;
+#X connect 7 0 4 1;
+#X connect 8 0 30 0;
+#X connect 9 0 113 0;
+#X connect 10 0 9 1;
+#X connect 11 0 10 0;
+#X connect 12 0 11 0;
+#X connect 13 0 10 1;
+#X connect 14 0 35 0;
+#X connect 15 0 30 0;
+#X connect 16 0 115 0;
+#X connect 17 0 16 1;
+#X connect 18 0 17 0;
+#X connect 19 0 18 0;
+#X connect 20 0 17 1;
+#X connect 21 0 30 0;
+#X connect 22 0 114 0;
+#X connect 23 0 22 1;
+#X connect 24 0 23 0;
+#X connect 25 0 24 0;
+#X connect 26 0 23 1;
+#X connect 27 0 36 0;
+#X connect 28 0 37 0;
+#X connect 29 0 111 0;
+#X connect 30 0 31 0;
+#X connect 32 0 33 0;
+#X connect 33 0 29 0;
+#X connect 33 0 0 0;
+#X connect 33 0 14 0;
+#X connect 33 0 27 0;
+#X connect 33 0 28 0;
+#X connect 34 0 3 0;
+#X connect 35 0 9 0;
+#X connect 36 0 16 0;
+#X connect 37 0 22 0;
+#X connect 38 0 51 0;
+#X connect 39 0 54 0;
+#X connect 40 0 53 0;
+#X connect 41 0 52 0;
+#X connect 42 0 7 0;
+#X connect 43 0 13 0;
+#X connect 44 0 20 0;
+#X connect 45 0 26 0;
+#X connect 46 0 56 0;
+#X connect 47 0 55 0;
+#X connect 48 0 57 0;
+#X connect 49 0 58 0;
+#X connect 50 0 59 0;
+#X connect 51 0 6 0;
+#X connect 52 0 12 0;
+#X connect 53 0 19 0;
+#X connect 54 0 25 0;
+#X connect 55 0 1 1;
+#X connect 56 0 2 1;
+#X connect 57 0 8 1;
+#X connect 58 0 15 1;
+#X connect 59 0 21 1;
+#X connect 60 0 63 0;
+#X connect 60 0 66 0;
+#X connect 61 0 78 0;
+#X connect 62 0 99 0;
+#X connect 63 0 64 0;
+#X connect 63 0 68 0;
+#X connect 64 0 70 0;
+#X connect 64 0 102 0;
+#X connect 65 0 88 0;
+#X connect 66 1 67 0;
+#X connect 67 0 65 0;
+#X connect 68 0 32 0;
+#X connect 69 0 84 0;
+#X connect 69 0 93 0;
+#X connect 69 0 101 0;
+#X connect 70 0 71 0;
+#X connect 71 0 96 0;
+#X connect 72 0 74 0;
+#X connect 73 0 75 0;
+#X connect 74 0 76 0;
+#X connect 74 0 70 1;
+#X connect 75 0 81 0;
+#X connect 75 0 84 1;
+#X connect 75 0 94 0;
+#X connect 76 0 70 2;
+#X connect 76 0 84 3;
+#X connect 76 0 77 1;
+#X connect 77 0 83 0;
+#X connect 78 0 90 0;
+#X connect 79 0 80 0;
+#X connect 80 0 77 0;
+#X connect 81 0 84 2;
+#X connect 82 0 87 0;
+#X connect 82 0 85 0;
+#X connect 83 0 90 0;
+#X connect 84 0 82 0;
+#X connect 85 0 86 0;
+#X connect 87 0 79 0;
+#X connect 88 0 69 0;
+#X connect 88 0 97 0;
+#X connect 90 0 62 0;
+#X connect 90 0 89 0;
+#X connect 91 0 62 0;
+#X connect 92 0 91 0;
+#X connect 92 0 95 0;
+#X connect 93 0 92 0;
+#X connect 94 0 92 1;
+#X connect 96 0 97 0;
+#X connect 97 0 98 0;
+#X connect 98 0 100 0;
+#X connect 99 0 100 0;
+#X connect 100 0 30 1;
+#X connect 101 0 98 0;
+#X connect 102 0 98 0;
+#X connect 111 0 1 0;
+#X connect 112 0 2 0;
+#X connect 113 0 8 0;
+#X connect 114 0 21 0;
+#X connect 115 0 15 0;
+#X restore 1638 305 pd voicer;
+#N canvas 0 22 2736 1660 voicer 0;
+#X obj 180 230 * 2;
+#X obj 50 322 *~ 1;
+#X obj 180 323 *~ 1;
+#X obj 180 277 +~;
+#X obj 224 253 *~;
+#X obj 224 231 osc~;
+#X floatatom 224 210 5 0 0 0 - - -, f 5;
+#X floatatom 265 237 5 0 0 0 - - -, f 5;
+#X obj 309 322 *~ 1;
+#X obj 309 279 +~;
+#X obj 353 260 *~;
+#X obj 353 238 osc~;
+#X floatatom 353 217 5 0 0 0 - - -, f 5;
+#X floatatom 391 244 5 0 0 0 - - -, f 5;
+#X obj 309 236 * 3;
+#X obj 458 322 *~ 1;
+#X obj 458 278 +~;
+#X obj 504 258 *~;
+#X obj 504 236 osc~;
+#X floatatom 504 215 5 0 0 0 - - -, f 5;
+#X floatatom 542 242 5 0 0 0 - - -, f 5;
+#X obj 613 322 *~ 1;
+#X obj 613 278 +~;
+#X obj 660 256 *~;
+#X obj 660 234 osc~;
+#X floatatom 660 213 5 0 0 0 - - -, f 5;
+#X floatatom 703 240 5 0 0 0 - - -, f 5;
+#X obj 458 235 * 4;
+#X obj 613 233 * 5;
+#X floatatom 50 278 5 0 0 0 - - -, f 5;
+#X obj 309 372 *~;
+#X obj 309 397 outlet~;
+#X obj 92 146 mtof;
+#X obj 92 170 * 1;
+#X obj 180 252 vline~;
+#X obj 309 258 vline~;
+#X obj 458 257 vline~;
+#X obj 613 255 vline~;
+#X obj 224 166 r shimfreq1;
+#X obj 660 171 r shimfreq4;
+#X obj 504 171 r shimfreq3;
+#X obj 353 172 r shimfreq2;
+#X obj 265 215 r shimstr1;
+#X obj 391 221 r shimstr2;
+#X obj 542 218 r shimstr3;
+#X obj 703 217 r shimstr4;
+#X obj 249 283 r funda1;
+#X obj 118 282 r funda0;
+#X obj 378 282 r funda2;
+#X obj 529 282 r funda3;
+#X obj 685 282 r funda4;
+#X obj 224 187 +;
+#X obj 353 193 +;
+#X obj 504 191 +;
+#X obj 660 190 +;
+#X obj 118 305 * 1;
+#X obj 249 306 * 1;
+#X obj 378 305 * 1;
+#X obj 529 305 * 1;
+#X obj 685 305 * 1;
+#X obj 836 29 inlet;
+#X obj 894 519 line;
+#X obj 894 601 * 1;
+#X obj 777 58 stripnote;
+#X obj 777 142 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
+#000000 #000000;
+#X obj 959 159 sel 0;
+#X obj 897 57 unpack;
+#X floatatom 959 139 5 0 0 0 - - -, f 5;
+#X floatatom 748 82 5 0 0 0 - - -, f 5;
+#X obj 959 213 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
+#000000 #000000;
+#X obj 812 157 pack 1 2 3;
+#X obj 812 179 route 1;
+#X obj 840 58 r aplusd;
+#X obj 982 201 r releasezeit;
+#X floatatom 840 80 5 0 0 0 - - -, f 5;
+#X floatatom 982 223 5 0 0 0 - - -, f 5;
+#X obj 882 140 * 10;
+#X obj 867 478 +;
+#X floatatom 894 544 10 0 0 0 - - -, f 10;
+#X obj 867 435 line;
+#X floatatom 867 456 10 0 0 0 - - -, f 10;
+#X obj 1021 255 * 10;
+#X obj 959 312 route 1;
+#X floatatom 867 499 10 0 0 0 - - -, f 10;
+#X obj 959 285 pack 1 2 3 4;
+#X msg 1036 338 \$3;
+#X floatatom 1036 358 10 0 0 0 - - -, f 10;
+#X msg 959 340 0 \, \$2 \$1;
+#X msg 959 181 0;
+#X floatatom 925 601 10 0 0 0 - - -, f 10;
+#X obj 894 573 tabread4 array3;
+#X msg 1039 456 0;
+#X obj 1039 429 del;
+#X msg 1039 400 bang;
+#X obj 1054 255 + 5;
+#X obj 1072 456 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
+#000000 #000000;
+#X msg 812 202 0 \, \$2 \$1;
+#X obj 692 597 vline~;
+#X obj 743 622 tabread4~ array3;
+#X obj 894 621 sig~;
+#X obj 743 654 *~ 1;
+#X msg 814 597 set array1;
+#X msg 743 597 set array3;
+#X text 836 415 liest den release aus von atk plus dec;
+#X text 107 373 multiplication with the envelope;
+#X text 367 134 sound synthesis;
+#X text 1017 147 trigger the release;
+#X text 748 119 attack & decay formation;
+#X text 369 597 vline~ in order to avoid noise \, better interpolation
+;
+#X text 1043 478 to avoid multiplication by 0;
+#X text 897 478 until end of release;
+#N canvas 0 22 2736 1660 wavygen 0;
+#X obj 219 302 outlet~;
+#X obj 219 102 inlet~;
+#X obj 219 126 phasor~;
+#X text 274 126 Creates a ramp from 0 to 1 at the given f;
+#X obj 219 150 *~ 2051;
+#X text 274 149 Multiplyer with the length in samples of our waveform
+;
+#X obj 219 175 tabread4~ sine;
+#X text 283 300 OUTLET to VOICER-SUBPATCH;
+#X text 267 102 INLET from VOICER-SUBPATCH;
+#X obj 57 133 r waveform-selector;
+#X text 318 197 The waveform by default is a sine;
+#X text 316 174 Play table as audio signal;
+#X text 28 111 receives chosen waveform;
+#X connect 1 0 2 0;
+#X connect 2 0 4 0;
+#X connect 4 0 6 0;
+#X connect 6 0 0 0;
+#X connect 9 0 6 0;
+#X restore 50 300 pd wavygen;
+#N canvas 0 22 2736 1660 wavygen 0;
+#X obj 219 302 outlet~;
+#X obj 219 102 inlet~;
+#X obj 219 126 phasor~;
+#X text 274 126 Creates a ramp from 0 to 1 at the given f;
+#X obj 219 150 *~ 2051;
+#X text 274 149 Multiplyer with the length in samples of our waveform
+;
+#X obj 219 175 tabread4~ sine;
+#X text 283 300 OUTLET to VOICER-SUBPATCH;
+#X text 267 102 INLET from VOICER-SUBPATCH;
+#X obj 57 133 r waveform-selector;
+#X text 318 197 The waveform by default is a sine;
+#X text 316 174 Play table as audio signal;
+#X text 28 111 receives chosen waveform;
+#X connect 1 0 2 0;
+#X connect 2 0 4 0;
+#X connect 4 0 6 0;
+#X connect 6 0 0 0;
+#X connect 9 0 6 0;
+#X restore 180 301 pd wavygen;
+#N canvas 0 22 2736 1660 wavygen 0;
+#X obj 219 302 outlet~;
+#X obj 219 102 inlet~;
+#X obj 219 126 phasor~;
+#X text 274 126 Creates a ramp from 0 to 1 at the given f;
+#X obj 219 150 *~ 2051;
+#X text 274 149 Multiplyer with the length in samples of our waveform
+;
+#X obj 219 175 tabread4~ sine;
+#X text 283 300 OUTLET to VOICER-SUBPATCH;
+#X text 267 102 INLET from VOICER-SUBPATCH;
+#X obj 57 133 r waveform-selector;
+#X text 318 197 The waveform by default is a sine;
+#X text 316 174 Play table as audio signal;
+#X text 28 111 receives chosen waveform;
+#X connect 1 0 2 0;
+#X connect 2 0 4 0;
+#X connect 4 0 6 0;
+#X connect 6 0 0 0;
+#X connect 9 0 6 0;
+#X restore 309 300 pd wavygen;
+#N canvas 0 22 2736 1660 wavygen 0;
+#X obj 219 302 outlet~;
+#X obj 219 102 inlet~;
+#X obj 219 126 phasor~;
+#X text 274 126 Creates a ramp from 0 to 1 at the given f;
+#X obj 219 150 *~ 2051;
+#X text 274 149 Multiplyer with the length in samples of our waveform
+;
+#X obj 219 175 tabread4~ sine;
+#X text 283 300 OUTLET to VOICER-SUBPATCH;
+#X text 267 102 INLET from VOICER-SUBPATCH;
+#X obj 57 133 r waveform-selector;
+#X text 318 197 The waveform by default is a sine;
+#X text 316 174 Play table as audio signal;
+#X text 28 111 receives chosen waveform;
+#X connect 1 0 2 0;
+#X connect 2 0 4 0;
+#X connect 4 0 6 0;
+#X connect 6 0 0 0;
+#X connect 9 0 6 0;
+#X restore 613 299 pd wavygen;
+#N canvas 0 22 2736 1660 wavygen 0;
+#X obj 219 302 outlet~;
+#X obj 219 102 inlet~;
+#X obj 219 126 phasor~;
+#X text 274 126 Creates a ramp from 0 to 1 at the given f;
+#X obj 219 150 *~ 2051;
+#X text 274 149 Multiplyer with the length in samples of our waveform
+;
+#X obj 219 175 tabread4~ sine;
+#X text 283 300 OUTLET to VOICER-SUBPATCH;
+#X text 267 102 INLET from VOICER-SUBPATCH;
+#X obj 57 133 r waveform-selector;
+#X text 318 197 The waveform by default is a sine;
+#X text 316 174 Play table as audio signal;
+#X text 28 111 receives chosen waveform;
+#X connect 1 0 2 0;
+#X connect 2 0 4 0;
+#X connect 4 0 6 0;
+#X connect 6 0 0 0;
+#X connect 9 0 6 0;
+#X restore 458 300 pd wavygen;
+#X connect 0 0 34 0;
+#X connect 1 0 30 0;
+#X connect 2 0 30 0;
+#X connect 3 0 112 0;
+#X connect 4 0 3 1;
+#X connect 5 0 4 0;
+#X connect 6 0 5 0;
+#X connect 7 0 4 1;
+#X connect 8 0 30 0;
+#X connect 9 0 113 0;
+#X connect 10 0 9 1;
+#X connect 11 0 10 0;
+#X connect 12 0 11 0;
+#X connect 13 0 10 1;
+#X connect 14 0 35 0;
+#X connect 15 0 30 0;
+#X connect 16 0 115 0;
+#X connect 17 0 16 1;
+#X connect 18 0 17 0;
+#X connect 19 0 18 0;
+#X connect 20 0 17 1;
+#X connect 21 0 30 0;
+#X connect 22 0 114 0;
+#X connect 23 0 22 1;
+#X connect 24 0 23 0;
+#X connect 25 0 24 0;
+#X connect 26 0 23 1;
+#X connect 27 0 36 0;
+#X connect 28 0 37 0;
+#X connect 29 0 111 0;
+#X connect 30 0 31 0;
+#X connect 32 0 33 0;
+#X connect 33 0 29 0;
+#X connect 33 0 0 0;
+#X connect 33 0 14 0;
+#X connect 33 0 27 0;
+#X connect 33 0 28 0;
+#X connect 34 0 3 0;
+#X connect 35 0 9 0;
+#X connect 36 0 16 0;
+#X connect 37 0 22 0;
+#X connect 38 0 51 0;
+#X connect 39 0 54 0;
+#X connect 40 0 53 0;
+#X connect 41 0 52 0;
+#X connect 42 0 7 0;
+#X connect 43 0 13 0;
+#X connect 44 0 20 0;
+#X connect 45 0 26 0;
+#X connect 46 0 56 0;
+#X connect 47 0 55 0;
+#X connect 48 0 57 0;
+#X connect 49 0 58 0;
+#X connect 50 0 59 0;
+#X connect 51 0 6 0;
+#X connect 52 0 12 0;
+#X connect 53 0 19 0;
+#X connect 54 0 25 0;
+#X connect 55 0 1 1;
+#X connect 56 0 2 1;
+#X connect 57 0 8 1;
+#X connect 58 0 15 1;
+#X connect 59 0 21 1;
+#X connect 60 0 63 0;
+#X connect 60 0 66 0;
+#X connect 61 0 78 0;
+#X connect 62 0 99 0;
+#X connect 63 0 64 0;
+#X connect 63 0 68 0;
+#X connect 64 0 70 0;
+#X connect 64 0 102 0;
+#X connect 65 0 88 0;
+#X connect 66 1 67 0;
+#X connect 67 0 65 0;
+#X connect 68 0 32 0;
+#X connect 69 0 84 0;
+#X connect 69 0 93 0;
+#X connect 69 0 101 0;
+#X connect 70 0 71 0;
+#X connect 71 0 96 0;
+#X connect 72 0 74 0;
+#X connect 73 0 75 0;
+#X connect 74 0 76 0;
+#X connect 74 0 70 1;
+#X connect 75 0 81 0;
+#X connect 75 0 84 1;
+#X connect 75 0 94 0;
+#X connect 76 0 70 2;
+#X connect 76 0 84 3;
+#X connect 76 0 77 1;
+#X connect 77 0 83 0;
+#X connect 78 0 90 0;
+#X connect 79 0 80 0;
+#X connect 80 0 77 0;
+#X connect 81 0 84 2;
+#X connect 82 0 87 0;
+#X connect 82 0 85 0;
+#X connect 83 0 90 0;
+#X connect 84 0 82 0;
+#X connect 85 0 86 0;
+#X connect 87 0 79 0;
+#X connect 88 0 69 0;
+#X connect 88 0 97 0;
+#X connect 90 0 62 0;
+#X connect 90 0 89 0;
+#X connect 91 0 62 0;
+#X connect 92 0 91 0;
+#X connect 92 0 95 0;
+#X connect 93 0 92 0;
+#X connect 94 0 92 1;
+#X connect 96 0 97 0;
+#X connect 97 0 98 0;
+#X connect 98 0 100 0;
+#X connect 99 0 100 0;
+#X connect 100 0 30 1;
+#X connect 101 0 98 0;
+#X connect 102 0 98 0;
+#X connect 111 0 1 0;
+#X connect 112 0 2 0;
+#X connect 113 0 8 0;
+#X connect 114 0 21 0;
+#X connect 115 0 15 0;
+#X restore 1525 304 pd voicer;
+#X obj 47 161 r slider_fund1;
+#X obj 47 243 r slider_fund2;
+#X obj 52 309 r slider_fund3;
+#X obj 57 382 r slider_fund4;
+#X obj 53 454 r slider_fund5;
+#X obj 605 79 r slider_shimStrg1;
+#X obj 484 117 r slider_shimFreq1;
+#X obj 605 99 * 10;
+#X obj 484 137 * 20;
+#X obj 607 249 * 10;
+#X obj 486 287 * 20;
+#X obj 486 267 r slider_shimFreq2;
+#X obj 607 229 r slider_shimStrg2;
+#X obj 617 389 * 10;
+#X obj 496 427 * 20;
+#X obj 496 407 r slider_shimFreq3;
+#X obj 617 369 r slider_shimStrg3;
+#X obj 625 535 * 10;
+#X obj 504 573 * 20;
+#X obj 504 553 r slider_shimFreq4;
+#X obj 625 515 r slider_shimStrg4;
+#X obj 883 537 r button_sine;
+#X obj 969 544 r button_sawtooth;
+#X obj 1078 545 r button_triangle;
+#X obj 924 62 r slider_gain;
+#X obj 868 813 r slider_spacer;
+#X obj 79 616 r slider_attack;
+#X obj 101 632 r slider_decay;
+#X obj 123 650 r slider_sustain;
+#X obj 145 666 r slider_release;
+#X obj 174 682 r slider_exp;
+#X obj 48 687 * 500;
+#X obj 79 706 * 500;
+#X obj 134 706 * 3000;
+#X obj 1188 521 r button_square;
+#X connect 0 0 52 0;
+#X connect 3 0 109 0;
+#X connect 3 1 110 0;
+#X connect 4 0 46 0;
+#X connect 5 0 57 0;
+#X connect 5 0 60 0;
+#X connect 6 0 74 0;
+#X connect 6 0 75 0;
+#X connect 7 0 67 0;
+#X connect 8 0 78 0;
+#X connect 8 0 79 0;
+#X connect 9 0 96 0;
+#X connect 10 0 96 0;
+#X connect 11 0 96 0;
+#X connect 12 0 18 0;
+#X connect 13 0 19 0;
+#X connect 14 0 16 0;
+#X connect 15 0 17 0;
+#X connect 25 0 20 0;
+#X connect 26 0 21 0;
+#X connect 27 0 22 0;
+#X connect 28 0 23 0;
+#X connect 29 0 24 0;
+#X connect 34 0 30 0;
+#X connect 35 0 31 0;
+#X connect 36 0 32 0;
+#X connect 37 0 33 0;
+#X connect 38 0 42 0;
+#X connect 39 0 43 0;
+#X connect 40 0 44 0;
+#X connect 41 0 45 0;
+#X connect 46 0 116 0;
+#X connect 46 1 169 0;
+#X connect 46 2 166 0;
+#X connect 46 3 168 0;
+#X connect 46 4 167 0;
+#X connect 46 5 170 0;
+#X connect 46 6 172 0;
+#X connect 46 7 171 0;
+#X connect 47 0 70 0;
+#X connect 47 0 71 0;
+#X connect 48 0 67 0;
+#X connect 49 0 82 0;
+#X connect 49 0 83 0;
+#X connect 50 0 61 0;
+#X connect 50 0 58 0;
+#X connect 53 0 5 1;
+#X connect 53 0 47 1;
+#X connect 54 0 6 1;
+#X connect 54 0 48 1;
+#X connect 55 0 7 1;
+#X connect 55 0 49 1;
+#X connect 56 0 8 1;
+#X connect 56 0 50 1;
+#X connect 57 0 51 0;
+#X connect 58 0 51 0;
+#X connect 60 0 51 1;
+#X connect 61 0 51 1;
+#X connect 62 0 57 1;
+#X connect 63 0 60 1;
+#X connect 65 0 61 1;
+#X connect 66 0 58 1;
+#X connect 67 0 51 0;
+#X connect 67 0 51 1;
+#X connect 70 0 51 0;
+#X connect 71 0 51 1;
+#X connect 72 0 70 1;
+#X connect 73 0 71 1;
+#X connect 74 0 51 0;
+#X connect 75 0 51 1;
+#X connect 76 0 74 1;
+#X connect 77 0 75 1;
+#X connect 78 0 51 0;
+#X connect 79 0 51 1;
+#X connect 80 0 78 1;
+#X connect 81 0 79 1;
+#X connect 82 0 51 0;
+#X connect 83 0 51 1;
+#X connect 84 0 82 1;
+#X connect 85 0 83 1;
+#X connect 86 0 59 0;
+#X connect 87 0 86 0;
+#X connect 88 0 89 0;
+#X connect 89 0 64 0;
+#X connect 90 0 91 0;
+#X connect 91 0 69 0;
+#X connect 92 0 87 0;
+#X connect 92 0 88 0;
+#X connect 92 0 90 0;
+#X connect 93 0 96 0;
+#X connect 94 0 96 0;
+#X connect 96 0 4 0;
+#X connect 96 1 4 1;
+#X connect 96 2 4 2;
+#X connect 97 1 98 0;
+#X connect 100 0 99 0;
+#X connect 101 0 99 0;
+#X connect 102 0 99 0;
+#X connect 103 0 99 0;
+#X connect 104 0 100 0;
+#X connect 105 0 103 0;
+#X connect 106 0 102 0;
+#X connect 107 0 101 0;
+#X connect 109 0 96 0;
+#X connect 110 0 96 1;
+#X connect 113 0 131 0;
+#X connect 115 0 96 0;
+#X connect 116 0 5 0;
+#X connect 118 0 13 0;
+#X connect 119 0 123 0;
+#X connect 119 0 120 0;
+#X connect 119 0 121 0;
+#X connect 119 0 124 0;
+#X connect 119 0 122 0;
+#X connect 120 0 15 0;
+#X connect 121 0 12 0;
+#X connect 122 0 113 0;
+#X connect 123 0 14 0;
+#X connect 124 0 13 0;
+#X connect 166 0 6 0;
+#X connect 167 0 7 0;
+#X connect 168 0 48 0;
+#X connect 169 0 47 0;
+#X connect 170 0 49 0;
+#X connect 171 0 50 0;
+#X connect 172 0 8 0;
+#X connect 173 0 25 0;
+#X connect 174 0 26 0;
+#X connect 175 0 27 0;
+#X connect 176 0 28 0;
+#X connect 177 0 29 0;
+#X connect 178 0 180 0;
+#X connect 179 0 181 0;
+#X connect 180 0 35 0;
+#X connect 181 0 34 0;
+#X connect 182 0 37 0;
+#X connect 183 0 36 0;
+#X connect 184 0 183 0;
+#X connect 185 0 182 0;
+#X connect 186 0 39 0;
+#X connect 187 0 38 0;
+#X connect 188 0 187 0;
+#X connect 189 0 186 0;
+#X connect 190 0 41 0;
+#X connect 191 0 40 0;
+#X connect 192 0 191 0;
+#X connect 193 0 190 0;
+#X connect 194 0 104 0;
+#X connect 195 0 107 0;
+#X connect 196 0 106 0;
+#X connect 197 0 0 0;
+#X connect 198 0 92 0;
+#X connect 199 0 204 0;
+#X connect 200 0 205 0;
+#X connect 201 0 12 0;
+#X connect 202 0 206 0;
+#X connect 203 0 113 0;
+#X connect 204 0 14 0;
+#X connect 205 0 15 0;
+#X connect 206 0 13 0;
+#X connect 207 0 105 0;
+#X coords 0 0 1 1 85 60 0;
