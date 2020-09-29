@@ -54,11 +54,11 @@ typedef struct _envelope1 { //data space definition
     t_symbol *x_arrayname;      /**< save array name*/
     //t_word *x_vec;              /**< vector*/
     
-    t_inlet *x_in1;     /**< XXXXXX */
-    t_inlet *x_in2;     /**< XXXXXX */
-    t_inlet *x_in3;     /**< XXXXXX */
-    t_inlet *x_in4;     /**< XXXXXX */
-    t_inlet *x_in5;     /**< XXXXXX */
+    t_inlet *x_in1;     /**< pointer for the inlet 1 (attack) */
+    t_inlet *x_in2;     /**< pointer for the inlet 2 (decay) */
+    t_inlet *x_in3;     /**< pointer for the inlet 3 (sustain) */
+    t_inlet *x_in4;     /**< pointer for the inlet 4 (release) */
+    t_inlet *x_in5;     /**< pointer for the inlet 5 (exp_setting) */
     
     //t_outlet *f_out, *b_out;    /**< XXXXXX f_out comment is missing*/
     
