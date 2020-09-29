@@ -1,6 +1,6 @@
-#N canvas 0 23 1440 855 10;
-#X obj 937 97 vsl 15 130 0 1 0 0 empty empty empty 0 -9 0 10 -68287
--1 -1 6900 1;
+#N canvas 73 170 1440 880 10;
+#X obj 937 97 vsl 15 130 0 1 0 0 empty empty empty 0 -9 0 10 #40a8f8
+#000000 #000000 0 1;
 #X msg 1192 51 \; pd dsp 0;
 #X msg 1192 86 \; pd dsp 1;
 #X obj 1317 89 notein;
@@ -12,14 +12,14 @@
 #X msg 1484 162 stop;
 #X msg 1393 121 60 100;
 #X msg 1393 163 60 0;
-#X obj 125 743 vsl 15 128 0 1 0 0 empty empty empty 0 -9 0 10 -262111
--1 -1 2350 1;
-#X obj 150 743 vsl 15 128 0 1000 0 0 empty empty empty 0 -9 0 10 -221087
--1 -1 5742 1;
-#X obj 80 743 vsl 15 128 0 500 0 0 empty empty empty 0 -9 0 10 -260063
--1 -1 1854 1;
-#X obj 103 743 vsl 15 128 0 500 0 0 empty empty empty 0 -9 0 10 -261471
--1 -1 2400 1;
+#X obj 125 743 vsl 15 128 0 1 0 0 empty empty empty 0 -9 0 10 #fcfc78
+#000000 #000000 0 1;
+#X obj 150 743 vsl 15 128 0 1000 0 0 empty empty empty 0 -9 0 10 #d4f878
+#000000 #000000 0 1;
+#X obj 80 743 vsl 15 128 0 500 0 0 empty empty empty 0 -9 0 10 #fc7c78
+#000000 #000000 0 1;
+#X obj 103 743 vsl 15 128 0 500 0 0 empty empty empty 0 -9 0 10 #fcd478
+#000000 #000000 0 1;
 #X obj 16 876 s attack;
 #X obj 17 899 s decay;
 #X obj 85 889 s sustain;
@@ -29,36 +29,36 @@
 #X obj 87 360 s funda2;
 #X obj 86 432 s funda3;
 #X obj 84 503 s funda4;
-#X obj 86 195 hsl 128 15 0 1 0 0 empty empty empty -2 -8 0 10 -262144
--1 -1 9200 1;
-#X obj 86 268 hsl 128 15 0 1 0 0 empty empty empty -2 -8 0 10 -4032
--1 -1 5100 1;
-#X obj 87 338 hsl 128 15 0 1 0 0 empty empty empty -2 -8 0 10 -257985
--1 -1 5600 1;
-#X obj 86 413 hsl 128 15 0 1 0 0 empty empty empty -2 -8 0 10 -4034
--1 -1 0 1;
-#X obj 84 482 hsl 128 15 0 1 0 0 empty empty empty -2 -8 0 10 -258113
--1 -1 0 1;
+#X obj 86 195 hsl 128 15 0 1 0 0 empty empty empty -2 -8 0 10 #fcfcfc
+#000000 #000000 0 1;
+#X obj 86 268 hsl 128 15 0 1 0 0 empty empty empty -2 -8 0 10 #00f8fc
+#000000 #000000 0 1;
+#X obj 87 338 hsl 128 15 0 1 0 0 empty empty empty -2 -8 0 10 #f8fc00
+#000000 #000000 0 1;
+#X obj 86 413 hsl 128 15 0 1 0 0 empty empty empty -2 -8 0 10 #00fc04
+#000000 #000000 0 1;
+#X obj 84 482 hsl 128 15 0 1 0 0 empty empty empty -2 -8 0 10 #fc0400
+#000000 #000000 0 1;
 #X obj 496 184 s shimfreq1;
 #X obj 613 136 s shimstr1;
 #X obj 500 338 s shimfreq2;
 #X obj 613 288 s shimstr2;
-#X obj 496 164 hsl 256 15 0 20 0 0 empty empty empty -2 -8 0 10 -4032
--1 -1 7600 1;
-#X obj 613 118 hsl 128 15 0 10 0 0 empty empty empty -2 -8 0 10 -4032
--1 -1 2600 1;
-#X obj 500 317 hsl 256 15 0 20 0 0 empty empty empty -2 -8 0 10 -257985
--1 -1 1900 1;
-#X obj 614 268 hsl 128 15 0 10 0 0 empty empty empty -2 -8 0 10 -257985
--1 -1 6200 1;
-#X obj 505 466 hsl 256 15 0 20 0 0 empty empty empty -2 -8 0 10 -4034
--1 -1 0 1;
-#X obj 620 424 hsl 128 15 0 10 0 0 empty empty empty -2 -8 0 10 -4034
--1 -1 0 1;
-#X obj 508 618 hsl 256 15 0 20 0 0 empty empty empty -2 -8 0 10 -258113
--1 -1 0 1;
-#X obj 624 573 hsl 128 15 0 10 0 0 empty empty empty -2 -8 0 10 -258625
--1 -1 0 1;
+#X obj 496 164 hsl 256 15 0 20 0 0 empty empty empty -2 -8 0 10 #00f8fc
+#000000 #000000 0 1;
+#X obj 613 118 hsl 128 15 0 10 0 0 empty empty empty -2 -8 0 10 #00f8fc
+#000000 #000000 0 1;
+#X obj 500 317 hsl 256 15 0 20 0 0 empty empty empty -2 -8 0 10 #f8fc00
+#000000 #000000 0 1;
+#X obj 614 268 hsl 128 15 0 10 0 0 empty empty empty -2 -8 0 10 #f8fc00
+#000000 #000000 0 1;
+#X obj 505 466 hsl 256 15 0 20 0 0 empty empty empty -2 -8 0 10 #00fc04
+#000000 #000000 0 1;
+#X obj 620 424 hsl 128 15 0 10 0 0 empty empty empty -2 -8 0 10 #00fc04
+#000000 #000000 0 1;
+#X obj 508 618 hsl 256 15 0 20 0 0 empty empty empty -2 -8 0 10 #fc0400
+#000000 #000000 0 1;
+#X obj 624 573 hsl 128 15 0 10 0 0 empty empty empty -2 -8 0 10 #fc2400
+#000000 #000000 0 1;
 #X obj 505 485 s shimfreq3;
 #X obj 620 442 s shimstr3;
 #X obj 508 636 s shimfreq4;
@@ -87,26 +87,26 @@
 #X obj 1302 424 *~ 0.5;
 #N canvas 0 23 464 315 spacexplorer 0;
 #X obj 37 19 r spac;
-#X floatatom 37 42 5 0 0 0 - - -;
+#X floatatom 37 42 5 0 0 0 - - -, f 5;
 #X obj 72 103 - 1;
-#X floatatom 23 124 5 0 0 0 - - -;
+#X floatatom 23 124 5 0 0 0 - - -, f 5;
 #X obj 23 146 * -1;
-#X floatatom 81 168 5 0 0 0 - - -;
+#X floatatom 81 168 5 0 0 0 - - -, f 5;
 #X obj 37 64 s live;
 #X obj 23 169 s kill;
-#X floatatom 156 50 5 0 0 0 - - -;
+#X floatatom 156 50 5 0 0 0 - - -, f 5;
 #X obj 191 111 - 1;
-#X floatatom 142 132 5 0 0 0 - - -;
+#X floatatom 142 132 5 0 0 0 - - -, f 5;
 #X obj 142 154 * -1;
-#X floatatom 200 176 5 0 0 0 - - -;
+#X floatatom 200 176 5 0 0 0 - - -, f 5;
 #X obj 156 27 r spac2;
 #X obj 156 72 s live2;
 #X obj 142 177 s kill2;
-#X floatatom 246 54 5 0 0 0 - - -;
+#X floatatom 246 54 5 0 0 0 - - -, f 5;
 #X obj 281 115 - 1;
-#X floatatom 232 136 5 0 0 0 - - -;
+#X floatatom 232 136 5 0 0 0 - - -, f 5;
 #X obj 232 158 * -1;
-#X floatatom 290 180 5 0 0 0 - - -;
+#X floatatom 290 180 5 0 0 0 - - -, f 5;
 #X obj 246 31 r spac3;
 #X obj 232 181 s kill3;
 #X obj 246 76 s live3;
@@ -155,36 +155,36 @@
 #X obj 920 894 + 0.5;
 #X obj 976 871 * 0.1;
 #X obj 976 892 + 0.5;
-#X obj 870 844 hsl 128 15 0 1 0 0 empty empty empty -2 -8 0 10 -152448
--1 -1 0 1;
+#X obj 870 844 hsl 128 15 0 1 0 0 empty empty empty -2 -8 0 10 #9434fc
+#000000 #000000 0 1;
 #X msg 1444 121 30 100;
 #X msg 1444 162 30 0;
 #X text 1317 69 midi keyboard in;
 #X obj 1317 197 poly 8 1;
 #X obj 1409 47 ctlin;
-#X floatatom 1423 68 4 0 0 0 - - -;
+#X floatatom 1423 68 4 0 0 0 - - -, f 4;
 #X obj 1094 650 s waveform-selector;
 #X msg 883 619 set sine;
 #X msg 969 618 set sawtooth;
 #X msg 1078 618 set triangle;
 #X msg 1188 618 set square;
-#X obj 883 565 bng 50 250 50 0 empty empty empty 17 7 0 10 -204786
--1 -1;
-#X obj 1188 565 bng 50 250 50 0 empty empty empty 17 7 0 10 -232576
--1 -1;
-#X obj 1078 565 bng 50 250 50 0 empty empty empty 17 7 0 10 -203904
--1 -1;
-#X obj 969 565 bng 50 250 50 0 empty empty empty 17 7 0 10 -204800
--1 -1;
+#X obj 883 565 bng 50 250 50 0 empty empty empty 17 7 0 10 #c4fcc4
+#000000 #000000;
+#X obj 1188 565 bng 50 250 50 0 empty empty empty 17 7 0 10 #e0c4fc
+#000000 #000000;
+#X obj 1078 565 bng 50 250 50 0 empty empty empty 17 7 0 10 #c4c4fc
+#000000 #000000;
+#X obj 969 565 bng 50 250 50 0 empty empty empty 17 7 0 10 #c4fcfc
+#000000 #000000;
 #X text 882 498 WAVEFORM SELECTOR;
-#X floatatom 1317 111 4 0 0 0 - - -;
-#X floatatom 1346 111 4 0 0 0 - - -;
+#X floatatom 1317 111 4 0 0 0 - - -, f 4;
+#X floatatom 1346 111 4 0 0 0 - - -, f 4;
 #X text 1104 38 DSP on/off;
 #X text 1411 26 Check MIDI controller;
-#X obj 175 742 vsl 15 128 0 127 0 0 empty empty empty 0 -9 0 10 -118687
--1 -1 5800 1;
+#X obj 175 742 vsl 15 128 0 127 0 0 empty empty empty 0 -9 0 10 #70f878
+#000000 #000000 0 1;
 #N canvas 0 22 450 278 (subpatch) 0;
-#X array array3 15560 float 3;
+#X array array3 15560 float 3 black black;
 #A 0 0 1.15087e-05 2.31286e-05 3.48608e-05 4.67065e-05 5.86667e-05
 7.07425e-05 8.2935e-05 9.52455e-05 0.000107675 0.000120224 0.000132895
 0.000145689 0.000158606 0.000171648 0.000184816 0.000198111 0.000211535
@@ -2244,147 +2244,147 @@
 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0;
 #X coords 0 1 15560 -1 200 140 1;
 #X restore 526 774 graph;
-#N canvas 0 23 1440 855 keyboard 0;
-#X floatatom 125 186 4 0 0 0 - - -;
+#N canvas 176 23 1440 880 keyboard 1;
+#X floatatom 125 186 4 0 0 0 - - -, f 4;
 #X obj 125 209 select 0;
 #X msg 125 257 \$1 0;
 #X msg 171 258 \$1 80;
 #X msg 125 233 0;
 #X obj 125 281 +;
 #X obj 976 516 outlet;
-#X floatatom 246 186 4 0 0 0 - - -;
+#X floatatom 246 186 4 0 0 0 - - -, f 4;
 #X obj 246 209 select 0;
 #X msg 246 257 \$1 0;
 #X msg 291 258 \$1 80;
 #X msg 246 233 0;
 #X obj 246 281 +;
-#X floatatom 366 188 4 0 0 0 - - -;
+#X floatatom 366 188 4 0 0 0 - - -, f 4;
 #X obj 366 209 select 0;
 #X msg 365 281 \$1 0;
 #X msg 411 260 \$1 80;
 #X msg 365 233 0;
 #X obj 365 258 +;
-#X floatatom 485 188 4 0 0 0 - - -;
+#X floatatom 485 188 4 0 0 0 - - -, f 4;
 #X obj 485 209 select 0;
 #X msg 484 281 \$1 0;
 #X msg 530 260 \$1 80;
 #X msg 484 233 0;
 #X obj 484 258 +;
-#X floatatom 605 188 4 0 0 0 - - -;
+#X floatatom 605 188 4 0 0 0 - - -, f 4;
 #X obj 605 209 select 0;
 #X msg 604 281 \$1 0;
 #X msg 650 260 \$1 80;
 #X msg 604 233 0;
 #X obj 604 258 +;
-#X floatatom 725 188 4 0 0 0 - - -;
+#X floatatom 725 188 4 0 0 0 - - -, f 4;
 #X obj 725 209 select 0;
 #X msg 724 281 \$1 0;
 #X msg 770 260 \$1 80;
 #X msg 724 233 0;
 #X obj 724 258 +;
-#X floatatom 840 188 4 0 0 0 - - -;
+#X floatatom 840 188 4 0 0 0 - - -, f 4;
 #X obj 840 209 select 0;
 #X msg 839 281 \$1 0;
 #X msg 885 260 \$1 80;
 #X msg 839 233 0;
 #X obj 839 258 +;
-#X floatatom 960 188 4 0 0 0 - - -;
+#X floatatom 960 188 4 0 0 0 - - -, f 4;
 #X obj 960 209 select 0;
 #X msg 959 281 \$1 0;
 #X msg 1005 260 \$1 80;
 #X msg 959 233 0;
 #X obj 959 258 +;
-#X floatatom 1080 188 4 0 0 0 - - -;
+#X floatatom 1080 188 4 0 0 0 - - -, f 4;
 #X obj 1080 209 select 0;
 #X msg 1079 281 \$1 0;
 #X msg 1125 260 \$1 80;
 #X msg 1079 233 0;
 #X obj 1079 258 +;
-#X floatatom 1199 188 4 0 0 0 - - -;
+#X floatatom 1199 188 4 0 0 0 - - -, f 4;
 #X obj 1199 209 select 0;
 #X msg 1198 281 \$1 0;
 #X msg 1244 260 \$1 80;
 #X msg 1198 233 0;
 #X obj 1198 258 +;
-#X floatatom 1319 188 4 0 0 0 - - -;
+#X floatatom 1319 188 4 0 0 0 - - -, f 4;
 #X obj 1319 209 select 0;
 #X msg 1318 281 \$1 0;
 #X msg 1364 260 \$1 80;
 #X msg 1318 233 0;
 #X obj 1318 258 +;
-#X floatatom 1439 188 4 0 0 0 - - -;
+#X floatatom 1439 188 4 0 0 0 - - -, f 4;
 #X obj 1439 209 select 0;
 #X msg 1438 281 \$1 0;
 #X msg 1484 260 \$1 80;
 #X msg 1438 233 0;
 #X obj 1438 258 +;
-#X floatatom 116 728 4 0 0 0 - - -;
+#X floatatom 116 728 4 0 0 0 - - -, f 4;
 #X obj 116 749 select 0;
 #X msg 115 821 \$1 0;
 #X msg 161 800 \$1 80;
 #X msg 115 773 0;
 #X obj 115 798 +;
-#X floatatom 236 728 4 0 0 0 - - -;
+#X floatatom 236 728 4 0 0 0 - - -, f 4;
 #X obj 236 749 select 0;
 #X msg 235 821 \$1 0;
 #X msg 281 800 \$1 80;
 #X msg 235 773 0;
 #X obj 235 798 +;
-#X floatatom 356 728 4 0 0 0 - - -;
+#X floatatom 356 728 4 0 0 0 - - -, f 4;
 #X obj 356 749 select 0;
 #X msg 355 821 \$1 0;
 #X msg 401 800 \$1 80;
 #X msg 355 773 0;
 #X obj 355 798 +;
-#X floatatom 475 728 4 0 0 0 - - -;
+#X floatatom 475 728 4 0 0 0 - - -, f 4;
 #X obj 475 749 select 0;
 #X msg 474 821 \$1 0;
 #X msg 520 800 \$1 80;
 #X msg 474 773 0;
 #X obj 474 798 +;
-#X floatatom 595 728 4 0 0 0 - - -;
+#X floatatom 595 728 4 0 0 0 - - -, f 4;
 #X obj 595 749 select 0;
 #X msg 594 821 \$1 0;
 #X msg 640 800 \$1 80;
 #X msg 594 773 0;
 #X obj 594 798 +;
-#X floatatom 715 728 4 0 0 0 - - -;
+#X floatatom 715 728 4 0 0 0 - - -, f 4;
 #X obj 715 749 select 0;
 #X msg 714 821 \$1 0;
 #X msg 760 800 \$1 80;
 #X msg 714 773 0;
 #X obj 714 798 +;
-#X floatatom 830 728 4 0 0 0 - - -;
+#X floatatom 830 728 4 0 0 0 - - -, f 4;
 #X obj 830 749 select 0;
 #X msg 829 821 \$1 0;
 #X msg 875 800 \$1 80;
 #X msg 829 773 0;
 #X obj 829 798 +;
-#X floatatom 950 728 4 0 0 0 - - -;
+#X floatatom 950 728 4 0 0 0 - - -, f 4;
 #X obj 950 749 select 0;
 #X msg 949 821 \$1 0;
 #X msg 995 800 \$1 80;
 #X msg 949 773 0;
 #X obj 949 798 +;
-#X floatatom 1070 728 4 0 0 0 - - -;
+#X floatatom 1070 728 4 0 0 0 - - -, f 4;
 #X obj 1070 749 select 0;
 #X msg 1069 821 \$1 0;
 #X msg 1115 800 \$1 80;
 #X msg 1069 773 0;
 #X obj 1069 798 +;
-#X floatatom 1189 728 4 0 0 0 - - -;
+#X floatatom 1189 728 4 0 0 0 - - -, f 4;
 #X obj 1189 749 select 0;
 #X msg 1188 821 \$1 0;
 #X msg 1234 800 \$1 80;
 #X msg 1188 773 0;
 #X obj 1188 798 +;
-#X floatatom 1309 728 4 0 0 0 - - -;
+#X floatatom 1309 728 4 0 0 0 - - -, f 4;
 #X obj 1309 749 select 0;
 #X msg 1308 821 \$1 0;
 #X msg 1354 800 \$1 80;
 #X msg 1308 773 0;
 #X obj 1308 798 +;
-#X floatatom 1429 728 4 0 0 0 - - -;
+#X floatatom 1429 728 4 0 0 0 - - -, f 4;
 #X obj 1429 749 select 0;
 #X msg 1428 821 \$1 0;
 #X msg 1474 800 \$1 80;
@@ -2412,16 +2412,16 @@
 #X obj 833 700 r button_note19;
 #X obj 955 698 r button_note20;
 #X obj 1065 698 r button_note21;
-#X obj 1186 698 r button_note21;
 #X obj 1305 698 r button_note23;
 #X obj 1427 696 r button_note24;
-#X floatatom 1417 565 4 0 0 0 - - -;
+#X floatatom 1417 565 4 0 0 0 - - -, f 4;
 #X obj 1417 586 select 0;
 #X msg 1416 658 \$1 0;
 #X msg 1462 637 \$1 80;
 #X msg 1416 610 0;
 #X obj 1416 635 +;
 #X obj 1415 533 r button_note25;
+#X obj 1186 698 r button_note22;
 #X connect 0 0 1 0;
 #X connect 1 0 4 0;
 #X connect 1 1 3 0;
@@ -2635,50 +2635,50 @@
 #X connect 164 0 109 0;
 #X connect 165 0 115 0;
 #X connect 166 0 121 0;
-#X connect 167 0 127 0;
-#X connect 168 0 133 0;
-#X connect 169 0 139 0;
-#X connect 170 0 171 0;
-#X connect 171 0 174 0;
-#X connect 171 1 173 0;
-#X connect 171 1 175 1;
+#X connect 167 0 133 0;
+#X connect 168 0 139 0;
+#X connect 169 0 170 0;
+#X connect 170 0 173 0;
+#X connect 170 1 172 0;
+#X connect 170 1 174 1;
+#X connect 171 0 6 0;
 #X connect 172 0 6 0;
-#X connect 173 0 6 0;
-#X connect 174 0 175 0;
-#X connect 175 0 172 0;
-#X connect 176 0 170 0;
+#X connect 173 0 174 0;
+#X connect 174 0 171 0;
+#X connect 175 0 169 0;
+#X connect 176 0 127 0;
 #X restore 1247 163 pd keyboard;
-#N canvas -13 -13 2736 1660 voicer 0;
+#N canvas 0 22 2736 1660 voicer 0;
 #X obj 180 230 * 2;
 #X obj 50 322 *~ 1;
 #X obj 180 323 *~ 1;
 #X obj 180 277 +~;
 #X obj 224 253 *~;
 #X obj 224 231 osc~;
-#X floatatom 224 210 5 0 0 0 - - -;
-#X floatatom 265 237 5 0 0 0 - - -;
+#X floatatom 224 210 5 0 0 0 - - -, f 5;
+#X floatatom 265 237 5 0 0 0 - - -, f 5;
 #X obj 309 322 *~ 1;
 #X obj 309 279 +~;
 #X obj 353 260 *~;
 #X obj 353 238 osc~;
-#X floatatom 353 217 5 0 0 0 - - -;
-#X floatatom 391 244 5 0 0 0 - - -;
+#X floatatom 353 217 5 0 0 0 - - -, f 5;
+#X floatatom 391 244 5 0 0 0 - - -, f 5;
 #X obj 309 236 * 3;
 #X obj 458 322 *~ 1;
 #X obj 458 278 +~;
 #X obj 504 258 *~;
 #X obj 504 236 osc~;
-#X floatatom 504 215 5 0 0 0 - - -;
-#X floatatom 542 242 5 0 0 0 - - -;
+#X floatatom 504 215 5 0 0 0 - - -, f 5;
+#X floatatom 542 242 5 0 0 0 - - -, f 5;
 #X obj 613 322 *~ 1;
 #X obj 613 278 +~;
 #X obj 660 256 *~;
 #X obj 660 234 osc~;
-#X floatatom 660 213 5 0 0 0 - - -;
-#X floatatom 703 240 5 0 0 0 - - -;
+#X floatatom 660 213 5 0 0 0 - - -, f 5;
+#X floatatom 703 240 5 0 0 0 - - -, f 5;
 #X obj 458 235 * 4;
 #X obj 613 233 * 5;
-#X floatatom 50 278 5 0 0 0 - - -;
+#X floatatom 50 278 5 0 0 0 - - -, f 5;
 #X obj 309 372 *~;
 #X obj 309 397 outlet~;
 #X obj 92 146 mtof;
@@ -2713,41 +2713,41 @@
 #X obj 894 519 line;
 #X obj 894 601 * 1;
 #X obj 777 58 stripnote;
-#X obj 777 142 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
--1 -1;
+#X obj 777 142 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
+#000000 #000000;
 #X obj 959 159 sel 0;
 #X obj 897 57 unpack;
-#X floatatom 959 139 5 0 0 0 - - -;
-#X floatatom 748 82 5 0 0 0 - - -;
-#X obj 959 213 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
--1 -1;
+#X floatatom 959 139 5 0 0 0 - - -, f 5;
+#X floatatom 748 82 5 0 0 0 - - -, f 5;
+#X obj 959 213 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
+#000000 #000000;
 #X obj 812 157 pack 1 2 3;
 #X obj 812 179 route 1;
 #X obj 840 58 r aplusd;
 #X obj 982 201 r releasezeit;
-#X floatatom 840 80 5 0 0 0 - - -;
-#X floatatom 982 223 5 0 0 0 - - -;
+#X floatatom 840 80 5 0 0 0 - - -, f 5;
+#X floatatom 982 223 5 0 0 0 - - -, f 5;
 #X obj 882 140 * 10;
 #X obj 867 478 +;
-#X floatatom 894 544 10 0 0 0 - - -;
+#X floatatom 894 544 10 0 0 0 - - -, f 10;
 #X obj 867 435 line;
-#X floatatom 867 456 10 0 0 0 - - -;
+#X floatatom 867 456 10 0 0 0 - - -, f 10;
 #X obj 1021 255 * 10;
 #X obj 959 312 route 1;
-#X floatatom 867 499 10 0 0 0 - - -;
+#X floatatom 867 499 10 0 0 0 - - -, f 10;
 #X obj 959 285 pack 1 2 3 4;
 #X msg 1036 338 \$3;
-#X floatatom 1036 358 10 0 0 0 - - -;
+#X floatatom 1036 358 10 0 0 0 - - -, f 10;
 #X msg 959 340 0 \, \$2 \$1;
 #X msg 959 181 0;
-#X floatatom 925 601 10 0 0 0 - - -;
+#X floatatom 925 601 10 0 0 0 - - -, f 10;
 #X obj 894 573 tabread4 array3;
 #X msg 1039 456 0;
 #X obj 1039 429 del;
 #X msg 1039 400 bang;
 #X obj 1054 255 + 5;
-#X obj 1072 456 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
--1 -1;
+#X obj 1072 456 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
+#000000 #000000;
 #X msg 812 202 0 \, \$2 \$1;
 #X obj 692 597 vline~;
 #X obj 743 622 tabread4~ array3;
@@ -2764,7 +2764,7 @@
 ;
 #X text 1043 478 to avoid multiplication by 0;
 #X text 897 478 until end of release;
-#N canvas -13 -13 2736 1660 wavygen 0;
+#N canvas 0 22 2736 1660 wavygen 0;
 #X obj 219 302 outlet~;
 #X obj 219 102 inlet~;
 #X obj 219 126 phasor~;
@@ -2785,7 +2785,7 @@
 #X connect 6 0 0 0;
 #X connect 9 0 6 0;
 #X restore 50 300 pd wavygen;
-#N canvas -13 -13 2736 1660 wavygen 0;
+#N canvas 0 22 2736 1660 wavygen 0;
 #X obj 219 302 outlet~;
 #X obj 219 102 inlet~;
 #X obj 219 126 phasor~;
@@ -2806,7 +2806,7 @@
 #X connect 6 0 0 0;
 #X connect 9 0 6 0;
 #X restore 180 301 pd wavygen;
-#N canvas -13 -13 2736 1660 wavygen 0;
+#N canvas 0 22 2736 1660 wavygen 0;
 #X obj 219 302 outlet~;
 #X obj 219 102 inlet~;
 #X obj 219 126 phasor~;
@@ -2827,7 +2827,7 @@
 #X connect 6 0 0 0;
 #X connect 9 0 6 0;
 #X restore 309 300 pd wavygen;
-#N canvas -13 -13 2736 1660 wavygen 0;
+#N canvas 0 22 2736 1660 wavygen 0;
 #X obj 219 302 outlet~;
 #X obj 219 102 inlet~;
 #X obj 219 126 phasor~;
@@ -2848,7 +2848,7 @@
 #X connect 6 0 0 0;
 #X connect 9 0 6 0;
 #X restore 613 299 pd wavygen;
-#N canvas -13 -13 2736 1660 wavygen 0;
+#N canvas 0 22 2736 1660 wavygen 0;
 #X obj 219 302 outlet~;
 #X obj 219 102 inlet~;
 #X obj 219 126 phasor~;
@@ -2993,8 +2993,8 @@
 #X connect 115 0 15 0;
 #X restore 991 303 pd voicer;
 #X msg 418 744 200;
-#X obj 388 699 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
--1 -1;
+#X obj 388 699 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
+#000000 #000000;
 #X msg 357 722 30;
 #X msg 388 722 0.5;
 #X msg 449 722 5;
@@ -3042,7 +3042,7 @@
 #X text 1146 753 Waveform definition;
 #N canvas 0 22 2736 1660 wavedef 0;
 #N canvas 0 50 450 212 (subpatch) 0;
-#X array sine 2051 float 3;
+#X array sine 2051 float 3 black black;
 #A 0 -0.00306795 0 0.00306795 0.00613588 0.00920375 0.0122715 0.0153392
 0.0184067 0.0214741 0.0245412 0.0276081 0.0306748 0.0337411 0.0368072
 0.0398729 0.0429382 0.0460031 0.0490676 0.0521317 0.0551952 0.0582582
@@ -3323,7 +3323,7 @@
 #X coords 0 1 2051 -1 200 140 1;
 #X restore 90 170 graph;
 #N canvas 0 50 450 250 (subpatch) 0;
-#X array sawtooth 2051 float 3;
+#X array sawtooth 2051 float 3 black black;
 #A 0 -0.0229404 0 0.0229404 0.0458672 0.0687669 0.0916258 0.11443 0.137167
 0.159823 0.182384 0.204838 0.227171 0.24937 0.271423 0.293316 0.315038
 0.336576 0.357917 0.37905 0.399962 0.420644 0.441082 0.461267 0.481187
@@ -3606,7 +3606,7 @@
 #X coords 0 1 2051 -1 200 140 1;
 #X restore 89 451 graph;
 #N canvas 0 50 450 250 (subpatch) 0;
-#X array triangle 2051 float 3;
+#X array triangle 2051 float 3 black black;
 #A 0 -0.00191475 0 0.00191475 0.00382964 0.00574482 0.00766044 0.00957663
 0.0114936 0.0134113 0.0153301 0.0172501 0.0191713 0.0210939 0.0230181
 0.024944 0.0268717 0.0288014 0.0307331 0.032667 0.0346033 0.0365419
@@ -3897,7 +3897,7 @@
 #X msg 99 974 \; square sinesum 2051 1 0 0.333333 0 0.2 0 0.123857
 0 0.111111 0 0.090909 0.076923;
 #N canvas 0 50 450 250 (subpatch) 0;
-#X array square 2051 float 3;
+#X array square 2051 float 3 black black;
 #A 0 -0.022379 0 0.022379 0.0447453 0.0670859 0.0893883 0.11164 0.133827
 0.155938 0.177961 0.199882 0.22169 0.243371 0.264915 0.286309 0.307541
 0.3286 0.349473 0.370151 0.390621 0.410873 0.430896 0.450679 0.470213
@@ -4178,37 +4178,37 @@
 #X restore 93 1102 graph;
 #X msg 388 1108 \; square normalize 1;
 #X restore 1200 775 pd wavedef;
-#N canvas -13 -13 2736 1660 voicer 0;
+#N canvas 0 22 2736 1660 voicer 0;
 #X obj 180 230 * 2;
 #X obj 50 322 *~ 1;
 #X obj 180 323 *~ 1;
 #X obj 180 277 +~;
 #X obj 224 253 *~;
 #X obj 224 231 osc~;
-#X floatatom 224 210 5 0 0 0 - - -;
-#X floatatom 265 237 5 0 0 0 - - -;
+#X floatatom 224 210 5 0 0 0 - - -, f 5;
+#X floatatom 265 237 5 0 0 0 - - -, f 5;
 #X obj 309 322 *~ 1;
 #X obj 309 279 +~;
 #X obj 353 260 *~;
 #X obj 353 238 osc~;
-#X floatatom 353 217 5 0 0 0 - - -;
-#X floatatom 391 244 5 0 0 0 - - -;
+#X floatatom 353 217 5 0 0 0 - - -, f 5;
+#X floatatom 391 244 5 0 0 0 - - -, f 5;
 #X obj 309 236 * 3;
 #X obj 458 322 *~ 1;
 #X obj 458 278 +~;
 #X obj 504 258 *~;
 #X obj 504 236 osc~;
-#X floatatom 504 215 5 0 0 0 - - -;
-#X floatatom 542 242 5 0 0 0 - - -;
+#X floatatom 504 215 5 0 0 0 - - -, f 5;
+#X floatatom 542 242 5 0 0 0 - - -, f 5;
 #X obj 613 322 *~ 1;
 #X obj 613 278 +~;
 #X obj 660 256 *~;
 #X obj 660 234 osc~;
-#X floatatom 660 213 5 0 0 0 - - -;
-#X floatatom 703 240 5 0 0 0 - - -;
+#X floatatom 660 213 5 0 0 0 - - -, f 5;
+#X floatatom 703 240 5 0 0 0 - - -, f 5;
 #X obj 458 235 * 4;
 #X obj 613 233 * 5;
-#X floatatom 50 278 5 0 0 0 - - -;
+#X floatatom 50 278 5 0 0 0 - - -, f 5;
 #X obj 309 372 *~;
 #X obj 309 397 outlet~;
 #X obj 92 146 mtof;
@@ -4243,41 +4243,41 @@
 #X obj 894 519 line;
 #X obj 894 601 * 1;
 #X obj 777 58 stripnote;
-#X obj 777 142 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
--1 -1;
+#X obj 777 142 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
+#000000 #000000;
 #X obj 959 159 sel 0;
 #X obj 897 57 unpack;
-#X floatatom 959 139 5 0 0 0 - - -;
-#X floatatom 748 82 5 0 0 0 - - -;
-#X obj 959 213 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
--1 -1;
+#X floatatom 959 139 5 0 0 0 - - -, f 5;
+#X floatatom 748 82 5 0 0 0 - - -, f 5;
+#X obj 959 213 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
+#000000 #000000;
 #X obj 812 157 pack 1 2 3;
 #X obj 812 179 route 1;
 #X obj 840 58 r aplusd;
 #X obj 982 201 r releasezeit;
-#X floatatom 840 80 5 0 0 0 - - -;
-#X floatatom 982 223 5 0 0 0 - - -;
+#X floatatom 840 80 5 0 0 0 - - -, f 5;
+#X floatatom 982 223 5 0 0 0 - - -, f 5;
 #X obj 882 140 * 10;
 #X obj 867 478 +;
-#X floatatom 894 544 10 0 0 0 - - -;
+#X floatatom 894 544 10 0 0 0 - - -, f 10;
 #X obj 867 435 line;
-#X floatatom 867 456 10 0 0 0 - - -;
+#X floatatom 867 456 10 0 0 0 - - -, f 10;
 #X obj 1021 255 * 10;
 #X obj 959 312 route 1;
-#X floatatom 867 499 10 0 0 0 - - -;
+#X floatatom 867 499 10 0 0 0 - - -, f 10;
 #X obj 959 285 pack 1 2 3 4;
 #X msg 1036 338 \$3;
-#X floatatom 1036 358 10 0 0 0 - - -;
+#X floatatom 1036 358 10 0 0 0 - - -, f 10;
 #X msg 959 340 0 \, \$2 \$1;
 #X msg 959 181 0;
-#X floatatom 925 601 10 0 0 0 - - -;
+#X floatatom 925 601 10 0 0 0 - - -, f 10;
 #X obj 894 573 tabread4 array3;
 #X msg 1039 456 0;
 #X obj 1039 429 del;
 #X msg 1039 400 bang;
 #X obj 1054 255 + 5;
-#X obj 1072 456 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
--1 -1;
+#X obj 1072 456 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
+#000000 #000000;
 #X msg 812 202 0 \, \$2 \$1;
 #X obj 692 597 vline~;
 #X obj 743 622 tabread4~ array3;
@@ -4294,7 +4294,7 @@
 ;
 #X text 1043 478 to avoid multiplication by 0;
 #X text 897 478 until end of release;
-#N canvas -13 -13 2736 1660 wavygen 0;
+#N canvas 0 22 2736 1660 wavygen 0;
 #X obj 219 302 outlet~;
 #X obj 219 102 inlet~;
 #X obj 219 126 phasor~;
@@ -4315,7 +4315,7 @@
 #X connect 6 0 0 0;
 #X connect 9 0 6 0;
 #X restore 50 300 pd wavygen;
-#N canvas -13 -13 2736 1660 wavygen 0;
+#N canvas 0 22 2736 1660 wavygen 0;
 #X obj 219 302 outlet~;
 #X obj 219 102 inlet~;
 #X obj 219 126 phasor~;
@@ -4336,7 +4336,7 @@
 #X connect 6 0 0 0;
 #X connect 9 0 6 0;
 #X restore 180 301 pd wavygen;
-#N canvas -13 -13 2736 1660 wavygen 0;
+#N canvas 0 22 2736 1660 wavygen 0;
 #X obj 219 302 outlet~;
 #X obj 219 102 inlet~;
 #X obj 219 126 phasor~;
@@ -4357,7 +4357,7 @@
 #X connect 6 0 0 0;
 #X connect 9 0 6 0;
 #X restore 309 300 pd wavygen;
-#N canvas -13 -13 2736 1660 wavygen 0;
+#N canvas 0 22 2736 1660 wavygen 0;
 #X obj 219 302 outlet~;
 #X obj 219 102 inlet~;
 #X obj 219 126 phasor~;
@@ -4378,7 +4378,7 @@
 #X connect 6 0 0 0;
 #X connect 9 0 6 0;
 #X restore 613 299 pd wavygen;
-#N canvas -13 -13 2736 1660 wavygen 0;
+#N canvas 0 22 2736 1660 wavygen 0;
 #X obj 219 302 outlet~;
 #X obj 219 102 inlet~;
 #X obj 219 126 phasor~;
@@ -4522,37 +4522,37 @@
 #X connect 114 0 21 0;
 #X connect 115 0 15 0;
 #X restore 1173 303 pd voicer;
-#N canvas -13 -13 2736 1660 voicer 0;
+#N canvas 0 22 2736 1660 voicer 0;
 #X obj 180 230 * 2;
 #X obj 50 322 *~ 1;
 #X obj 180 323 *~ 1;
 #X obj 180 277 +~;
 #X obj 224 253 *~;
 #X obj 224 231 osc~;
-#X floatatom 224 210 5 0 0 0 - - -;
-#X floatatom 265 237 5 0 0 0 - - -;
+#X floatatom 224 210 5 0 0 0 - - -, f 5;
+#X floatatom 265 237 5 0 0 0 - - -, f 5;
 #X obj 309 322 *~ 1;
 #X obj 309 279 +~;
 #X obj 353 260 *~;
 #X obj 353 238 osc~;
-#X floatatom 353 217 5 0 0 0 - - -;
-#X floatatom 391 244 5 0 0 0 - - -;
+#X floatatom 353 217 5 0 0 0 - - -, f 5;
+#X floatatom 391 244 5 0 0 0 - - -, f 5;
 #X obj 309 236 * 3;
 #X obj 458 322 *~ 1;
 #X obj 458 278 +~;
 #X obj 504 258 *~;
 #X obj 504 236 osc~;
-#X floatatom 504 215 5 0 0 0 - - -;
-#X floatatom 542 242 5 0 0 0 - - -;
+#X floatatom 504 215 5 0 0 0 - - -, f 5;
+#X floatatom 542 242 5 0 0 0 - - -, f 5;
 #X obj 613 322 *~ 1;
 #X obj 613 278 +~;
 #X obj 660 256 *~;
 #X obj 660 234 osc~;
-#X floatatom 660 213 5 0 0 0 - - -;
-#X floatatom 703 240 5 0 0 0 - - -;
+#X floatatom 660 213 5 0 0 0 - - -, f 5;
+#X floatatom 703 240 5 0 0 0 - - -, f 5;
 #X obj 458 235 * 4;
 #X obj 613 233 * 5;
-#X floatatom 50 278 5 0 0 0 - - -;
+#X floatatom 50 278 5 0 0 0 - - -, f 5;
 #X obj 309 372 *~;
 #X obj 309 397 outlet~;
 #X obj 92 146 mtof;
@@ -4587,41 +4587,41 @@
 #X obj 894 519 line;
 #X obj 894 601 * 1;
 #X obj 777 58 stripnote;
-#X obj 777 142 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
--1 -1;
+#X obj 777 142 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
+#000000 #000000;
 #X obj 959 159 sel 0;
 #X obj 897 57 unpack;
-#X floatatom 959 139 5 0 0 0 - - -;
-#X floatatom 748 82 5 0 0 0 - - -;
-#X obj 959 213 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
--1 -1;
+#X floatatom 959 139 5 0 0 0 - - -, f 5;
+#X floatatom 748 82 5 0 0 0 - - -, f 5;
+#X obj 959 213 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
+#000000 #000000;
 #X obj 812 157 pack 1 2 3;
 #X obj 812 179 route 1;
 #X obj 840 58 r aplusd;
 #X obj 982 201 r releasezeit;
-#X floatatom 840 80 5 0 0 0 - - -;
-#X floatatom 982 223 5 0 0 0 - - -;
+#X floatatom 840 80 5 0 0 0 - - -, f 5;
+#X floatatom 982 223 5 0 0 0 - - -, f 5;
 #X obj 882 140 * 10;
 #X obj 867 478 +;
-#X floatatom 894 544 10 0 0 0 - - -;
+#X floatatom 894 544 10 0 0 0 - - -, f 10;
 #X obj 867 435 line;
-#X floatatom 867 456 10 0 0 0 - - -;
+#X floatatom 867 456 10 0 0 0 - - -, f 10;
 #X obj 1021 255 * 10;
 #X obj 959 312 route 1;
-#X floatatom 867 499 10 0 0 0 - - -;
+#X floatatom 867 499 10 0 0 0 - - -, f 10;
 #X obj 959 285 pack 1 2 3 4;
 #X msg 1036 338 \$3;
-#X floatatom 1036 358 10 0 0 0 - - -;
+#X floatatom 1036 358 10 0 0 0 - - -, f 10;
 #X msg 959 340 0 \, \$2 \$1;
 #X msg 959 181 0;
-#X floatatom 925 601 10 0 0 0 - - -;
+#X floatatom 925 601 10 0 0 0 - - -, f 10;
 #X obj 894 573 tabread4 array3;
 #X msg 1039 456 0;
 #X obj 1039 429 del;
 #X msg 1039 400 bang;
 #X obj 1054 255 + 5;
-#X obj 1072 456 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
--1 -1;
+#X obj 1072 456 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
+#000000 #000000;
 #X msg 812 202 0 \, \$2 \$1;
 #X obj 692 597 vline~;
 #X obj 743 622 tabread4~ array3;
@@ -4638,7 +4638,7 @@
 ;
 #X text 1043 478 to avoid multiplication by 0;
 #X text 897 478 until end of release;
-#N canvas -13 -13 2736 1660 wavygen 0;
+#N canvas 0 22 2736 1660 wavygen 0;
 #X obj 219 302 outlet~;
 #X obj 219 102 inlet~;
 #X obj 219 126 phasor~;
@@ -4659,7 +4659,7 @@
 #X connect 6 0 0 0;
 #X connect 9 0 6 0;
 #X restore 50 300 pd wavygen;
-#N canvas -13 -13 2736 1660 wavygen 0;
+#N canvas 0 22 2736 1660 wavygen 0;
 #X obj 219 302 outlet~;
 #X obj 219 102 inlet~;
 #X obj 219 126 phasor~;
@@ -4680,7 +4680,7 @@
 #X connect 6 0 0 0;
 #X connect 9 0 6 0;
 #X restore 180 301 pd wavygen;
-#N canvas -13 -13 2736 1660 wavygen 0;
+#N canvas 0 22 2736 1660 wavygen 0;
 #X obj 219 302 outlet~;
 #X obj 219 102 inlet~;
 #X obj 219 126 phasor~;
@@ -4701,7 +4701,7 @@
 #X connect 6 0 0 0;
 #X connect 9 0 6 0;
 #X restore 309 300 pd wavygen;
-#N canvas -13 -13 2736 1660 wavygen 0;
+#N canvas 0 22 2736 1660 wavygen 0;
 #X obj 219 302 outlet~;
 #X obj 219 102 inlet~;
 #X obj 219 126 phasor~;
@@ -4722,7 +4722,7 @@
 #X connect 6 0 0 0;
 #X connect 9 0 6 0;
 #X restore 613 299 pd wavygen;
-#N canvas -13 -13 2736 1660 wavygen 0;
+#N canvas 0 22 2736 1660 wavygen 0;
 #X obj 219 302 outlet~;
 #X obj 219 102 inlet~;
 #X obj 219 126 phasor~;
@@ -4866,37 +4866,37 @@
 #X connect 114 0 21 0;
 #X connect 115 0 15 0;
 #X restore 1350 303 pd voicer;
-#N canvas -13 -13 2736 1660 voicer 0;
+#N canvas 0 22 2736 1660 voicer 0;
 #X obj 180 230 * 2;
 #X obj 50 322 *~ 1;
 #X obj 180 323 *~ 1;
 #X obj 180 277 +~;
 #X obj 224 253 *~;
 #X obj 224 231 osc~;
-#X floatatom 224 210 5 0 0 0 - - -;
-#X floatatom 265 237 5 0 0 0 - - -;
+#X floatatom 224 210 5 0 0 0 - - -, f 5;
+#X floatatom 265 237 5 0 0 0 - - -, f 5;
 #X obj 309 322 *~ 1;
 #X obj 309 279 +~;
 #X obj 353 260 *~;
 #X obj 353 238 osc~;
-#X floatatom 353 217 5 0 0 0 - - -;
-#X floatatom 391 244 5 0 0 0 - - -;
+#X floatatom 353 217 5 0 0 0 - - -, f 5;
+#X floatatom 391 244 5 0 0 0 - - -, f 5;
 #X obj 309 236 * 3;
 #X obj 458 322 *~ 1;
 #X obj 458 278 +~;
 #X obj 504 258 *~;
 #X obj 504 236 osc~;
-#X floatatom 504 215 5 0 0 0 - - -;
-#X floatatom 542 242 5 0 0 0 - - -;
+#X floatatom 504 215 5 0 0 0 - - -, f 5;
+#X floatatom 542 242 5 0 0 0 - - -, f 5;
 #X obj 613 322 *~ 1;
 #X obj 613 278 +~;
 #X obj 660 256 *~;
 #X obj 660 234 osc~;
-#X floatatom 660 213 5 0 0 0 - - -;
-#X floatatom 703 240 5 0 0 0 - - -;
+#X floatatom 660 213 5 0 0 0 - - -, f 5;
+#X floatatom 703 240 5 0 0 0 - - -, f 5;
 #X obj 458 235 * 4;
 #X obj 613 233 * 5;
-#X floatatom 50 278 5 0 0 0 - - -;
+#X floatatom 50 278 5 0 0 0 - - -, f 5;
 #X obj 309 372 *~;
 #X obj 309 397 outlet~;
 #X obj 92 146 mtof;
@@ -4931,41 +4931,41 @@
 #X obj 894 519 line;
 #X obj 894 601 * 1;
 #X obj 777 58 stripnote;
-#X obj 777 142 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
--1 -1;
+#X obj 777 142 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
+#000000 #000000;
 #X obj 959 159 sel 0;
 #X obj 897 57 unpack;
-#X floatatom 959 139 5 0 0 0 - - -;
-#X floatatom 748 82 5 0 0 0 - - -;
-#X obj 959 213 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
--1 -1;
+#X floatatom 959 139 5 0 0 0 - - -, f 5;
+#X floatatom 748 82 5 0 0 0 - - -, f 5;
+#X obj 959 213 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
+#000000 #000000;
 #X obj 812 157 pack 1 2 3;
 #X obj 812 179 route 1;
 #X obj 840 58 r aplusd;
 #X obj 982 201 r releasezeit;
-#X floatatom 840 80 5 0 0 0 - - -;
-#X floatatom 982 223 5 0 0 0 - - -;
+#X floatatom 840 80 5 0 0 0 - - -, f 5;
+#X floatatom 982 223 5 0 0 0 - - -, f 5;
 #X obj 882 140 * 10;
 #X obj 867 478 +;
-#X floatatom 894 544 10 0 0 0 - - -;
+#X floatatom 894 544 10 0 0 0 - - -, f 10;
 #X obj 867 435 line;
-#X floatatom 867 456 10 0 0 0 - - -;
+#X floatatom 867 456 10 0 0 0 - - -, f 10;
 #X obj 1021 255 * 10;
 #X obj 959 312 route 1;
-#X floatatom 867 499 10 0 0 0 - - -;
+#X floatatom 867 499 10 0 0 0 - - -, f 10;
 #X obj 959 285 pack 1 2 3 4;
 #X msg 1036 338 \$3;
-#X floatatom 1036 358 10 0 0 0 - - -;
+#X floatatom 1036 358 10 0 0 0 - - -, f 10;
 #X msg 959 340 0 \, \$2 \$1;
 #X msg 959 181 0;
-#X floatatom 925 601 10 0 0 0 - - -;
+#X floatatom 925 601 10 0 0 0 - - -, f 10;
 #X obj 894 573 tabread4 array3;
 #X msg 1039 456 0;
 #X obj 1039 429 del;
 #X msg 1039 400 bang;
 #X obj 1054 255 + 5;
-#X obj 1072 456 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
--1 -1;
+#X obj 1072 456 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
+#000000 #000000;
 #X msg 812 202 0 \, \$2 \$1;
 #X obj 692 597 vline~;
 #X obj 743 622 tabread4~ array3;
@@ -4982,7 +4982,7 @@
 ;
 #X text 1043 478 to avoid multiplication by 0;
 #X text 897 478 until end of release;
-#N canvas -13 -13 2736 1660 wavygen 0;
+#N canvas 0 22 2736 1660 wavygen 0;
 #X obj 219 302 outlet~;
 #X obj 219 102 inlet~;
 #X obj 219 126 phasor~;
@@ -5003,7 +5003,7 @@
 #X connect 6 0 0 0;
 #X connect 9 0 6 0;
 #X restore 50 300 pd wavygen;
-#N canvas -13 -13 2736 1660 wavygen 0;
+#N canvas 0 22 2736 1660 wavygen 0;
 #X obj 219 302 outlet~;
 #X obj 219 102 inlet~;
 #X obj 219 126 phasor~;
@@ -5024,7 +5024,7 @@
 #X connect 6 0 0 0;
 #X connect 9 0 6 0;
 #X restore 180 301 pd wavygen;
-#N canvas -13 -13 2736 1660 wavygen 0;
+#N canvas 0 22 2736 1660 wavygen 0;
 #X obj 219 302 outlet~;
 #X obj 219 102 inlet~;
 #X obj 219 126 phasor~;
@@ -5045,7 +5045,7 @@
 #X connect 6 0 0 0;
 #X connect 9 0 6 0;
 #X restore 309 300 pd wavygen;
-#N canvas -13 -13 2736 1660 wavygen 0;
+#N canvas 0 22 2736 1660 wavygen 0;
 #X obj 219 302 outlet~;
 #X obj 219 102 inlet~;
 #X obj 219 126 phasor~;
@@ -5066,7 +5066,7 @@
 #X connect 6 0 0 0;
 #X connect 9 0 6 0;
 #X restore 613 299 pd wavygen;
-#N canvas -13 -13 2736 1660 wavygen 0;
+#N canvas 0 22 2736 1660 wavygen 0;
 #X obj 219 302 outlet~;
 #X obj 219 102 inlet~;
 #X obj 219 126 phasor~;
@@ -5210,37 +5210,37 @@
 #X connect 114 0 21 0;
 #X connect 115 0 15 0;
 #X restore 1288 303 pd voicer;
-#N canvas -13 -13 2736 1660 voicer 0;
+#N canvas 0 22 2736 1660 voicer 0;
 #X obj 180 230 * 2;
 #X obj 50 322 *~ 1;
 #X obj 180 323 *~ 1;
 #X obj 180 277 +~;
 #X obj 224 253 *~;
 #X obj 224 231 osc~;
-#X floatatom 224 210 5 0 0 0 - - -;
-#X floatatom 265 237 5 0 0 0 - - -;
+#X floatatom 224 210 5 0 0 0 - - -, f 5;
+#X floatatom 265 237 5 0 0 0 - - -, f 5;
 #X obj 309 322 *~ 1;
 #X obj 309 279 +~;
 #X obj 353 260 *~;
 #X obj 353 238 osc~;
-#X floatatom 353 217 5 0 0 0 - - -;
-#X floatatom 391 244 5 0 0 0 - - -;
+#X floatatom 353 217 5 0 0 0 - - -, f 5;
+#X floatatom 391 244 5 0 0 0 - - -, f 5;
 #X obj 309 236 * 3;
 #X obj 458 322 *~ 1;
 #X obj 458 278 +~;
 #X obj 504 258 *~;
 #X obj 504 236 osc~;
-#X floatatom 504 215 5 0 0 0 - - -;
-#X floatatom 542 242 5 0 0 0 - - -;
+#X floatatom 504 215 5 0 0 0 - - -, f 5;
+#X floatatom 542 242 5 0 0 0 - - -, f 5;
 #X obj 613 322 *~ 1;
 #X obj 613 278 +~;
 #X obj 660 256 *~;
 #X obj 660 234 osc~;
-#X floatatom 660 213 5 0 0 0 - - -;
-#X floatatom 703 240 5 0 0 0 - - -;
+#X floatatom 660 213 5 0 0 0 - - -, f 5;
+#X floatatom 703 240 5 0 0 0 - - -, f 5;
 #X obj 458 235 * 4;
 #X obj 613 233 * 5;
-#X floatatom 50 278 5 0 0 0 - - -;
+#X floatatom 50 278 5 0 0 0 - - -, f 5;
 #X obj 309 372 *~;
 #X obj 309 397 outlet~;
 #X obj 92 146 mtof;
@@ -5275,41 +5275,41 @@
 #X obj 894 519 line;
 #X obj 894 601 * 1;
 #X obj 777 58 stripnote;
-#X obj 777 142 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
--1 -1;
+#X obj 777 142 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
+#000000 #000000;
 #X obj 959 159 sel 0;
 #X obj 897 57 unpack;
-#X floatatom 959 139 5 0 0 0 - - -;
-#X floatatom 748 82 5 0 0 0 - - -;
-#X obj 959 213 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
--1 -1;
+#X floatatom 959 139 5 0 0 0 - - -, f 5;
+#X floatatom 748 82 5 0 0 0 - - -, f 5;
+#X obj 959 213 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
+#000000 #000000;
 #X obj 812 157 pack 1 2 3;
 #X obj 812 179 route 1;
 #X obj 840 58 r aplusd;
 #X obj 982 201 r releasezeit;
-#X floatatom 840 80 5 0 0 0 - - -;
-#X floatatom 982 223 5 0 0 0 - - -;
+#X floatatom 840 80 5 0 0 0 - - -, f 5;
+#X floatatom 982 223 5 0 0 0 - - -, f 5;
 #X obj 882 140 * 10;
 #X obj 867 478 +;
-#X floatatom 894 544 10 0 0 0 - - -;
+#X floatatom 894 544 10 0 0 0 - - -, f 10;
 #X obj 867 435 line;
-#X floatatom 867 456 10 0 0 0 - - -;
+#X floatatom 867 456 10 0 0 0 - - -, f 10;
 #X obj 1021 255 * 10;
 #X obj 959 312 route 1;
-#X floatatom 867 499 10 0 0 0 - - -;
+#X floatatom 867 499 10 0 0 0 - - -, f 10;
 #X obj 959 285 pack 1 2 3 4;
 #X msg 1036 338 \$3;
-#X floatatom 1036 358 10 0 0 0 - - -;
+#X floatatom 1036 358 10 0 0 0 - - -, f 10;
 #X msg 959 340 0 \, \$2 \$1;
 #X msg 959 181 0;
-#X floatatom 925 601 10 0 0 0 - - -;
+#X floatatom 925 601 10 0 0 0 - - -, f 10;
 #X obj 894 573 tabread4 array3;
 #X msg 1039 456 0;
 #X obj 1039 429 del;
 #X msg 1039 400 bang;
 #X obj 1054 255 + 5;
-#X obj 1072 456 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
--1 -1;
+#X obj 1072 456 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
+#000000 #000000;
 #X msg 812 202 0 \, \$2 \$1;
 #X obj 692 597 vline~;
 #X obj 743 622 tabread4~ array3;
@@ -5326,7 +5326,7 @@
 ;
 #X text 1043 478 to avoid multiplication by 0;
 #X text 897 478 until end of release;
-#N canvas -13 -13 2736 1660 wavygen 0;
+#N canvas 0 22 2736 1660 wavygen 0;
 #X obj 219 302 outlet~;
 #X obj 219 102 inlet~;
 #X obj 219 126 phasor~;
@@ -5347,7 +5347,7 @@
 #X connect 6 0 0 0;
 #X connect 9 0 6 0;
 #X restore 50 300 pd wavygen;
-#N canvas -13 -13 2736 1660 wavygen 0;
+#N canvas 0 22 2736 1660 wavygen 0;
 #X obj 219 302 outlet~;
 #X obj 219 102 inlet~;
 #X obj 219 126 phasor~;
@@ -5368,7 +5368,7 @@
 #X connect 6 0 0 0;
 #X connect 9 0 6 0;
 #X restore 180 301 pd wavygen;
-#N canvas -13 -13 2736 1660 wavygen 0;
+#N canvas 0 22 2736 1660 wavygen 0;
 #X obj 219 302 outlet~;
 #X obj 219 102 inlet~;
 #X obj 219 126 phasor~;
@@ -5389,7 +5389,7 @@
 #X connect 6 0 0 0;
 #X connect 9 0 6 0;
 #X restore 309 300 pd wavygen;
-#N canvas -13 -13 2736 1660 wavygen 0;
+#N canvas 0 22 2736 1660 wavygen 0;
 #X obj 219 302 outlet~;
 #X obj 219 102 inlet~;
 #X obj 219 126 phasor~;
@@ -5410,7 +5410,7 @@
 #X connect 6 0 0 0;
 #X connect 9 0 6 0;
 #X restore 613 299 pd wavygen;
-#N canvas -13 -13 2736 1660 wavygen 0;
+#N canvas 0 22 2736 1660 wavygen 0;
 #X obj 219 302 outlet~;
 #X obj 219 102 inlet~;
 #X obj 219 126 phasor~;
@@ -5554,37 +5554,37 @@
 #X connect 114 0 21 0;
 #X connect 115 0 15 0;
 #X restore 1103 303 pd voicer;
-#N canvas -13 -13 2736 1660 voicer 0;
+#N canvas 0 22 2736 1660 voicer 0;
 #X obj 180 230 * 2;
 #X obj 50 322 *~ 1;
 #X obj 180 323 *~ 1;
 #X obj 180 277 +~;
 #X obj 224 253 *~;
 #X obj 224 231 osc~;
-#X floatatom 224 210 5 0 0 0 - - -;
-#X floatatom 265 237 5 0 0 0 - - -;
+#X floatatom 224 210 5 0 0 0 - - -, f 5;
+#X floatatom 265 237 5 0 0 0 - - -, f 5;
 #X obj 309 322 *~ 1;
 #X obj 309 279 +~;
 #X obj 353 260 *~;
 #X obj 353 238 osc~;
-#X floatatom 353 217 5 0 0 0 - - -;
-#X floatatom 391 244 5 0 0 0 - - -;
+#X floatatom 353 217 5 0 0 0 - - -, f 5;
+#X floatatom 391 244 5 0 0 0 - - -, f 5;
 #X obj 309 236 * 3;
 #X obj 458 322 *~ 1;
 #X obj 458 278 +~;
 #X obj 504 258 *~;
 #X obj 504 236 osc~;
-#X floatatom 504 215 5 0 0 0 - - -;
-#X floatatom 542 242 5 0 0 0 - - -;
+#X floatatom 504 215 5 0 0 0 - - -, f 5;
+#X floatatom 542 242 5 0 0 0 - - -, f 5;
 #X obj 613 322 *~ 1;
 #X obj 613 278 +~;
 #X obj 660 256 *~;
 #X obj 660 234 osc~;
-#X floatatom 660 213 5 0 0 0 - - -;
-#X floatatom 703 240 5 0 0 0 - - -;
+#X floatatom 660 213 5 0 0 0 - - -, f 5;
+#X floatatom 703 240 5 0 0 0 - - -, f 5;
 #X obj 458 235 * 4;
 #X obj 613 233 * 5;
-#X floatatom 50 278 5 0 0 0 - - -;
+#X floatatom 50 278 5 0 0 0 - - -, f 5;
 #X obj 309 372 *~;
 #X obj 309 397 outlet~;
 #X obj 92 146 mtof;
@@ -5619,41 +5619,41 @@
 #X obj 894 519 line;
 #X obj 894 601 * 1;
 #X obj 777 58 stripnote;
-#X obj 777 142 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
--1 -1;
+#X obj 777 142 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
+#000000 #000000;
 #X obj 959 159 sel 0;
 #X obj 897 57 unpack;
-#X floatatom 959 139 5 0 0 0 - - -;
-#X floatatom 748 82 5 0 0 0 - - -;
-#X obj 959 213 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
--1 -1;
+#X floatatom 959 139 5 0 0 0 - - -, f 5;
+#X floatatom 748 82 5 0 0 0 - - -, f 5;
+#X obj 959 213 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
+#000000 #000000;
 #X obj 812 157 pack 1 2 3;
 #X obj 812 179 route 1;
 #X obj 840 58 r aplusd;
 #X obj 982 201 r releasezeit;
-#X floatatom 840 80 5 0 0 0 - - -;
-#X floatatom 982 223 5 0 0 0 - - -;
+#X floatatom 840 80 5 0 0 0 - - -, f 5;
+#X floatatom 982 223 5 0 0 0 - - -, f 5;
 #X obj 882 140 * 10;
 #X obj 867 478 +;
-#X floatatom 894 544 10 0 0 0 - - -;
+#X floatatom 894 544 10 0 0 0 - - -, f 10;
 #X obj 867 435 line;
-#X floatatom 867 456 10 0 0 0 - - -;
+#X floatatom 867 456 10 0 0 0 - - -, f 10;
 #X obj 1021 255 * 10;
 #X obj 959 312 route 1;
-#X floatatom 867 499 10 0 0 0 - - -;
+#X floatatom 867 499 10 0 0 0 - - -, f 10;
 #X obj 959 285 pack 1 2 3 4;
 #X msg 1036 338 \$3;
-#X floatatom 1036 358 10 0 0 0 - - -;
+#X floatatom 1036 358 10 0 0 0 - - -, f 10;
 #X msg 959 340 0 \, \$2 \$1;
 #X msg 959 181 0;
-#X floatatom 925 601 10 0 0 0 - - -;
+#X floatatom 925 601 10 0 0 0 - - -, f 10;
 #X obj 894 573 tabread4 array3;
 #X msg 1039 456 0;
 #X obj 1039 429 del;
 #X msg 1039 400 bang;
 #X obj 1054 255 + 5;
-#X obj 1072 456 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
--1 -1;
+#X obj 1072 456 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
+#000000 #000000;
 #X msg 812 202 0 \, \$2 \$1;
 #X obj 692 597 vline~;
 #X obj 743 622 tabread4~ array3;
@@ -5670,7 +5670,7 @@
 ;
 #X text 1043 478 to avoid multiplication by 0;
 #X text 897 478 until end of release;
-#N canvas -13 -13 2736 1660 wavygen 0;
+#N canvas 0 22 2736 1660 wavygen 0;
 #X obj 219 302 outlet~;
 #X obj 219 102 inlet~;
 #X obj 219 126 phasor~;
@@ -5691,7 +5691,7 @@
 #X connect 6 0 0 0;
 #X connect 9 0 6 0;
 #X restore 50 300 pd wavygen;
-#N canvas -13 -13 2736 1660 wavygen 0;
+#N canvas 0 22 2736 1660 wavygen 0;
 #X obj 219 302 outlet~;
 #X obj 219 102 inlet~;
 #X obj 219 126 phasor~;
@@ -5712,7 +5712,7 @@
 #X connect 6 0 0 0;
 #X connect 9 0 6 0;
 #X restore 180 301 pd wavygen;
-#N canvas -13 -13 2736 1660 wavygen 0;
+#N canvas 0 22 2736 1660 wavygen 0;
 #X obj 219 302 outlet~;
 #X obj 219 102 inlet~;
 #X obj 219 126 phasor~;
@@ -5733,7 +5733,7 @@
 #X connect 6 0 0 0;
 #X connect 9 0 6 0;
 #X restore 309 300 pd wavygen;
-#N canvas -13 -13 2736 1660 wavygen 0;
+#N canvas 0 22 2736 1660 wavygen 0;
 #X obj 219 302 outlet~;
 #X obj 219 102 inlet~;
 #X obj 219 126 phasor~;
@@ -5754,7 +5754,7 @@
 #X connect 6 0 0 0;
 #X connect 9 0 6 0;
 #X restore 613 299 pd wavygen;
-#N canvas -13 -13 2736 1660 wavygen 0;
+#N canvas 0 22 2736 1660 wavygen 0;
 #X obj 219 302 outlet~;
 #X obj 219 102 inlet~;
 #X obj 219 126 phasor~;
@@ -5898,37 +5898,37 @@
 #X connect 114 0 21 0;
 #X connect 115 0 15 0;
 #X restore 1462 304 pd voicer;
-#N canvas -13 -13 2736 1660 voicer 0;
+#N canvas 0 22 2736 1660 voicer 0;
 #X obj 180 230 * 2;
 #X obj 50 322 *~ 1;
 #X obj 180 323 *~ 1;
 #X obj 180 277 +~;
 #X obj 224 253 *~;
 #X obj 224 231 osc~;
-#X floatatom 224 210 5 0 0 0 - - -;
-#X floatatom 265 237 5 0 0 0 - - -;
+#X floatatom 224 210 5 0 0 0 - - -, f 5;
+#X floatatom 265 237 5 0 0 0 - - -, f 5;
 #X obj 309 322 *~ 1;
 #X obj 309 279 +~;
 #X obj 353 260 *~;
 #X obj 353 238 osc~;
-#X floatatom 353 217 5 0 0 0 - - -;
-#X floatatom 391 244 5 0 0 0 - - -;
+#X floatatom 353 217 5 0 0 0 - - -, f 5;
+#X floatatom 391 244 5 0 0 0 - - -, f 5;
 #X obj 309 236 * 3;
 #X obj 458 322 *~ 1;
 #X obj 458 278 +~;
 #X obj 504 258 *~;
 #X obj 504 236 osc~;
-#X floatatom 504 215 5 0 0 0 - - -;
-#X floatatom 542 242 5 0 0 0 - - -;
+#X floatatom 504 215 5 0 0 0 - - -, f 5;
+#X floatatom 542 242 5 0 0 0 - - -, f 5;
 #X obj 613 322 *~ 1;
 #X obj 613 278 +~;
 #X obj 660 256 *~;
 #X obj 660 234 osc~;
-#X floatatom 660 213 5 0 0 0 - - -;
-#X floatatom 703 240 5 0 0 0 - - -;
+#X floatatom 660 213 5 0 0 0 - - -, f 5;
+#X floatatom 703 240 5 0 0 0 - - -, f 5;
 #X obj 458 235 * 4;
 #X obj 613 233 * 5;
-#X floatatom 50 278 5 0 0 0 - - -;
+#X floatatom 50 278 5 0 0 0 - - -, f 5;
 #X obj 309 372 *~;
 #X obj 309 397 outlet~;
 #X obj 92 146 mtof;
@@ -5963,41 +5963,41 @@
 #X obj 894 519 line;
 #X obj 894 601 * 1;
 #X obj 777 58 stripnote;
-#X obj 777 142 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
--1 -1;
+#X obj 777 142 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
+#000000 #000000;
 #X obj 959 159 sel 0;
 #X obj 897 57 unpack;
-#X floatatom 959 139 5 0 0 0 - - -;
-#X floatatom 748 82 5 0 0 0 - - -;
-#X obj 959 213 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
--1 -1;
+#X floatatom 959 139 5 0 0 0 - - -, f 5;
+#X floatatom 748 82 5 0 0 0 - - -, f 5;
+#X obj 959 213 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
+#000000 #000000;
 #X obj 812 157 pack 1 2 3;
 #X obj 812 179 route 1;
 #X obj 840 58 r aplusd;
 #X obj 982 201 r releasezeit;
-#X floatatom 840 80 5 0 0 0 - - -;
-#X floatatom 982 223 5 0 0 0 - - -;
+#X floatatom 840 80 5 0 0 0 - - -, f 5;
+#X floatatom 982 223 5 0 0 0 - - -, f 5;
 #X obj 882 140 * 10;
 #X obj 867 478 +;
-#X floatatom 894 544 10 0 0 0 - - -;
+#X floatatom 894 544 10 0 0 0 - - -, f 10;
 #X obj 867 435 line;
-#X floatatom 867 456 10 0 0 0 - - -;
+#X floatatom 867 456 10 0 0 0 - - -, f 10;
 #X obj 1021 255 * 10;
 #X obj 959 312 route 1;
-#X floatatom 867 499 10 0 0 0 - - -;
+#X floatatom 867 499 10 0 0 0 - - -, f 10;
 #X obj 959 285 pack 1 2 3 4;
 #X msg 1036 338 \$3;
-#X floatatom 1036 358 10 0 0 0 - - -;
+#X floatatom 1036 358 10 0 0 0 - - -, f 10;
 #X msg 959 340 0 \, \$2 \$1;
 #X msg 959 181 0;
-#X floatatom 925 601 10 0 0 0 - - -;
+#X floatatom 925 601 10 0 0 0 - - -, f 10;
 #X obj 894 573 tabread4 array3;
 #X msg 1039 456 0;
 #X obj 1039 429 del;
 #X msg 1039 400 bang;
 #X obj 1054 255 + 5;
-#X obj 1072 456 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
--1 -1;
+#X obj 1072 456 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
+#000000 #000000;
 #X msg 812 202 0 \, \$2 \$1;
 #X obj 692 597 vline~;
 #X obj 743 622 tabread4~ array3;
@@ -6014,7 +6014,7 @@
 ;
 #X text 1043 478 to avoid multiplication by 0;
 #X text 897 478 until end of release;
-#N canvas -13 -13 2736 1660 wavygen 0;
+#N canvas 0 22 2736 1660 wavygen 0;
 #X obj 219 302 outlet~;
 #X obj 219 102 inlet~;
 #X obj 219 126 phasor~;
@@ -6035,7 +6035,7 @@
 #X connect 6 0 0 0;
 #X connect 9 0 6 0;
 #X restore 50 300 pd wavygen;
-#N canvas -13 -13 2736 1660 wavygen 0;
+#N canvas 0 22 2736 1660 wavygen 0;
 #X obj 219 302 outlet~;
 #X obj 219 102 inlet~;
 #X obj 219 126 phasor~;
@@ -6056,7 +6056,7 @@
 #X connect 6 0 0 0;
 #X connect 9 0 6 0;
 #X restore 180 301 pd wavygen;
-#N canvas -13 -13 2736 1660 wavygen 0;
+#N canvas 0 22 2736 1660 wavygen 0;
 #X obj 219 302 outlet~;
 #X obj 219 102 inlet~;
 #X obj 219 126 phasor~;
@@ -6077,7 +6077,7 @@
 #X connect 6 0 0 0;
 #X connect 9 0 6 0;
 #X restore 309 300 pd wavygen;
-#N canvas -13 -13 2736 1660 wavygen 0;
+#N canvas 0 22 2736 1660 wavygen 0;
 #X obj 219 302 outlet~;
 #X obj 219 102 inlet~;
 #X obj 219 126 phasor~;
@@ -6098,7 +6098,7 @@
 #X connect 6 0 0 0;
 #X connect 9 0 6 0;
 #X restore 613 299 pd wavygen;
-#N canvas -13 -13 2736 1660 wavygen 0;
+#N canvas 0 22 2736 1660 wavygen 0;
 #X obj 219 302 outlet~;
 #X obj 219 102 inlet~;
 #X obj 219 126 phasor~;
@@ -6242,37 +6242,37 @@
 #X connect 114 0 21 0;
 #X connect 115 0 15 0;
 #X restore 1638 305 pd voicer;
-#N canvas -13 -13 2736 1660 voicer 0;
+#N canvas 0 22 2736 1660 voicer 0;
 #X obj 180 230 * 2;
 #X obj 50 322 *~ 1;
 #X obj 180 323 *~ 1;
 #X obj 180 277 +~;
 #X obj 224 253 *~;
 #X obj 224 231 osc~;
-#X floatatom 224 210 5 0 0 0 - - -;
-#X floatatom 265 237 5 0 0 0 - - -;
+#X floatatom 224 210 5 0 0 0 - - -, f 5;
+#X floatatom 265 237 5 0 0 0 - - -, f 5;
 #X obj 309 322 *~ 1;
 #X obj 309 279 +~;
 #X obj 353 260 *~;
 #X obj 353 238 osc~;
-#X floatatom 353 217 5 0 0 0 - - -;
-#X floatatom 391 244 5 0 0 0 - - -;
+#X floatatom 353 217 5 0 0 0 - - -, f 5;
+#X floatatom 391 244 5 0 0 0 - - -, f 5;
 #X obj 309 236 * 3;
 #X obj 458 322 *~ 1;
 #X obj 458 278 +~;
 #X obj 504 258 *~;
 #X obj 504 236 osc~;
-#X floatatom 504 215 5 0 0 0 - - -;
-#X floatatom 542 242 5 0 0 0 - - -;
+#X floatatom 504 215 5 0 0 0 - - -, f 5;
+#X floatatom 542 242 5 0 0 0 - - -, f 5;
 #X obj 613 322 *~ 1;
 #X obj 613 278 +~;
 #X obj 660 256 *~;
 #X obj 660 234 osc~;
-#X floatatom 660 213 5 0 0 0 - - -;
-#X floatatom 703 240 5 0 0 0 - - -;
+#X floatatom 660 213 5 0 0 0 - - -, f 5;
+#X floatatom 703 240 5 0 0 0 - - -, f 5;
 #X obj 458 235 * 4;
 #X obj 613 233 * 5;
-#X floatatom 50 278 5 0 0 0 - - -;
+#X floatatom 50 278 5 0 0 0 - - -, f 5;
 #X obj 309 372 *~;
 #X obj 309 397 outlet~;
 #X obj 92 146 mtof;
@@ -6307,41 +6307,41 @@
 #X obj 894 519 line;
 #X obj 894 601 * 1;
 #X obj 777 58 stripnote;
-#X obj 777 142 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
--1 -1;
+#X obj 777 142 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
+#000000 #000000;
 #X obj 959 159 sel 0;
 #X obj 897 57 unpack;
-#X floatatom 959 139 5 0 0 0 - - -;
-#X floatatom 748 82 5 0 0 0 - - -;
-#X obj 959 213 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
--1 -1;
+#X floatatom 959 139 5 0 0 0 - - -, f 5;
+#X floatatom 748 82 5 0 0 0 - - -, f 5;
+#X obj 959 213 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
+#000000 #000000;
 #X obj 812 157 pack 1 2 3;
 #X obj 812 179 route 1;
 #X obj 840 58 r aplusd;
 #X obj 982 201 r releasezeit;
-#X floatatom 840 80 5 0 0 0 - - -;
-#X floatatom 982 223 5 0 0 0 - - -;
+#X floatatom 840 80 5 0 0 0 - - -, f 5;
+#X floatatom 982 223 5 0 0 0 - - -, f 5;
 #X obj 882 140 * 10;
 #X obj 867 478 +;
-#X floatatom 894 544 10 0 0 0 - - -;
+#X floatatom 894 544 10 0 0 0 - - -, f 10;
 #X obj 867 435 line;
-#X floatatom 867 456 10 0 0 0 - - -;
+#X floatatom 867 456 10 0 0 0 - - -, f 10;
 #X obj 1021 255 * 10;
 #X obj 959 312 route 1;
-#X floatatom 867 499 10 0 0 0 - - -;
+#X floatatom 867 499 10 0 0 0 - - -, f 10;
 #X obj 959 285 pack 1 2 3 4;
 #X msg 1036 338 \$3;
-#X floatatom 1036 358 10 0 0 0 - - -;
+#X floatatom 1036 358 10 0 0 0 - - -, f 10;
 #X msg 959 340 0 \, \$2 \$1;
 #X msg 959 181 0;
-#X floatatom 925 601 10 0 0 0 - - -;
+#X floatatom 925 601 10 0 0 0 - - -, f 10;
 #X obj 894 573 tabread4 array3;
 #X msg 1039 456 0;
 #X obj 1039 429 del;
 #X msg 1039 400 bang;
 #X obj 1054 255 + 5;
-#X obj 1072 456 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
--1 -1;
+#X obj 1072 456 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
+#000000 #000000;
 #X msg 812 202 0 \, \$2 \$1;
 #X obj 692 597 vline~;
 #X obj 743 622 tabread4~ array3;
@@ -6358,7 +6358,7 @@
 ;
 #X text 1043 478 to avoid multiplication by 0;
 #X text 897 478 until end of release;
-#N canvas -13 -13 2736 1660 wavygen 0;
+#N canvas 0 22 2736 1660 wavygen 0;
 #X obj 219 302 outlet~;
 #X obj 219 102 inlet~;
 #X obj 219 126 phasor~;
@@ -6379,7 +6379,7 @@
 #X connect 6 0 0 0;
 #X connect 9 0 6 0;
 #X restore 50 300 pd wavygen;
-#N canvas -13 -13 2736 1660 wavygen 0;
+#N canvas 0 22 2736 1660 wavygen 0;
 #X obj 219 302 outlet~;
 #X obj 219 102 inlet~;
 #X obj 219 126 phasor~;
@@ -6400,7 +6400,7 @@
 #X connect 6 0 0 0;
 #X connect 9 0 6 0;
 #X restore 180 301 pd wavygen;
-#N canvas -13 -13 2736 1660 wavygen 0;
+#N canvas 0 22 2736 1660 wavygen 0;
 #X obj 219 302 outlet~;
 #X obj 219 102 inlet~;
 #X obj 219 126 phasor~;
@@ -6421,7 +6421,7 @@
 #X connect 6 0 0 0;
 #X connect 9 0 6 0;
 #X restore 309 300 pd wavygen;
-#N canvas -13 -13 2736 1660 wavygen 0;
+#N canvas 0 22 2736 1660 wavygen 0;
 #X obj 219 302 outlet~;
 #X obj 219 102 inlet~;
 #X obj 219 126 phasor~;
@@ -6442,7 +6442,7 @@
 #X connect 6 0 0 0;
 #X connect 9 0 6 0;
 #X restore 613 299 pd wavygen;
-#N canvas -13 -13 2736 1660 wavygen 0;
+#N canvas 0 22 2736 1660 wavygen 0;
 #X obj 219 302 outlet~;
 #X obj 219 102 inlet~;
 #X obj 219 126 phasor~;
@@ -6621,17 +6621,17 @@
 #X obj 79 706 * 500;
 #X obj 1188 521 r button_square;
 #N canvas 441 23 739 566 envelope 0;
-#X floatatom 88 110 5 0 0 0 - - -;
-#X floatatom 144 109 5 0 0 0 - - -;
-#X floatatom 194 90 5 0 127 0 - - -;
-#X floatatom 256 111 5 0 0 0 - - -;
-#X floatatom 317 111 5 0 0 0 - - -;
+#X floatatom 88 110 5 0 0 0 - - -, f 5;
+#X floatatom 144 109 5 0 0 0 - - -, f 5;
+#X floatatom 194 90 5 0 127 0 - - -, f 5;
+#X floatatom 256 111 5 0 0 0 - - -, f 5;
+#X floatatom 317 111 5 0 0 0 - - -, f 5;
 #X obj 194 68 * 1;
 #X obj 317 69 / 2;
-#X obj 88 197 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
--1;
+#X obj 88 197 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc #000000
+#000000;
 #X obj 378 232 s length;
-#X floatatom 443 241 5 0 0 0 - - -;
+#X floatatom 443 241 5 0 0 0 - - -, f 5;
 #X obj 88 45 r attack;
 #X obj 144 45 r decay;
 #X obj 194 45 r sustain;
@@ -6640,8 +6640,8 @@
 #X obj 83 451 envelope1 array3, f 35;
 #X obj 378 140 s releasezeit;
 #X obj 325 296 expr $f1 + $f2;
-#X obj 325 273 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
--1 -1;
+#X obj 325 273 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
+#000000 #000000;
 #X obj 325 323 s aplusd;
 #X obj 88 88 div;
 #X obj 144 87 div;
@@ -6649,7 +6649,7 @@
 #X obj 317 89 div;
 #X text 345 87 div \, weil kommazahlen das external überfordern;
 #N canvas 0 22 450 278 (subpatch) 0;
-#X array array1 100 float 3;
+#X array array1 100 float 3 black black;
 #A 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
@@ -6666,8 +6666,8 @@
 #X obj 378 201 expr $f1 + $f2 + $f3 + $f4;
 #X msg 323 197 0;
 #X obj 38 339 t bang anything;
-#X obj 23 273 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
--1;
+#X obj 23 273 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc #000000
+#000000;
 #X obj 504 263 + 500;
 #X obj 38 359 del 10;
 #X connect 0 0 7 0;
