@@ -209,9 +209,9 @@
     float no21 = (float)note21;
     [PdBase sendFloat:no21 toReceiver:@"button_note21"];
 }
--(void)button_note22:(float)notee22{
-    float noe22 = (float)notee22;
-    [PdBase sendFloat:noe22 toReceiver:@"button_notee22"];
+-(void)button_note22:(float)note22{
+    float no22 = (float)note22;
+    [PdBase sendFloat:no22 toReceiver:@"button_note22"];
 }
 -(void)button_note23:(float)note23{
     float no23 = (float)note23;
