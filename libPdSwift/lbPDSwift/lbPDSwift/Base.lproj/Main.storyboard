@@ -281,8 +281,8 @@
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <action selector="buttonDowNote1WithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gsT-Ys-LfQ"/>
-                                    <action selector="buttonUpNote1WithSender:" destination="BYZ-38-t0r" eventType="touchDown" id="ENX-Hx-OeZ"/>
+                                    <action selector="buttonDowNote1WithSender:" destination="BYZ-38-t0r" eventType="touchDown" id="dIt-u0-ZdU"/>
+                                    <action selector="buttonUpNote1WithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="23T-ti-Cdy"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NTE-XT-WMp">
@@ -293,8 +293,8 @@
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <action selector="buttonDowNote3WithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8ls-fR-Dl6"/>
-                                    <action selector="buttonUpNote3WithSender:" destination="BYZ-38-t0r" eventType="touchDown" id="wkK-iU-g0y"/>
+                                    <action selector="buttonDowNote3WithSender:" destination="BYZ-38-t0r" eventType="touchDown" id="sCE-PW-CCm"/>
+                                    <action selector="buttonUpNote3WithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="D5x-sD-WY7"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rUL-77-MnL">
@@ -305,8 +305,8 @@
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <action selector="buttonDowNote5WithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pi7-Rk-CT2"/>
-                                    <action selector="buttonUpNote5WithSender:" destination="BYZ-38-t0r" eventType="touchDown" id="UNH-33-rVV"/>
+                                    <action selector="buttonDowNote5WithSender:" destination="BYZ-38-t0r" eventType="touchDown" id="ahy-NK-CaI"/>
+                                    <action selector="buttonUpNote5WithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="EDb-GH-O4g"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T5Y-uC-N6s">
@@ -317,8 +317,8 @@
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <action selector="buttonDowNote6WithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xbn-qX-6xM"/>
-                                    <action selector="buttonUpNote6WithSender:" destination="BYZ-38-t0r" eventType="touchDown" id="sZw-dG-dGl"/>
+                                    <action selector="buttonDowNote6WithSender:" destination="BYZ-38-t0r" eventType="touchDown" id="eM1-hg-RBN"/>
+                                    <action selector="buttonUpNote6WithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lpG-bc-FiW"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CCf-lu-tWF">
@@ -329,8 +329,8 @@
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <action selector="buttonDowNote8WithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Gy9-6R-mao"/>
-                                    <action selector="buttonUpNote8WithSender:" destination="BYZ-38-t0r" eventType="touchDown" id="8iP-ny-djb"/>
+                                    <action selector="buttonDowNote8WithSender:" destination="BYZ-38-t0r" eventType="touchDown" id="oab-Tt-TGS"/>
+                                    <action selector="buttonUpNote8WithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yV2-Jb-qGr"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wkv-gu-uqs">
@@ -341,8 +341,8 @@
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <action selector="buttonDowNote10WithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="QT2-9d-pmk"/>
-                                    <action selector="buttonUpNote10WithSender:" destination="BYZ-38-t0r" eventType="touchDown" id="u4x-Xs-Vl7"/>
+                                    <action selector="buttonDowNote10WithSender:" destination="BYZ-38-t0r" eventType="touchDown" id="SPs-cE-FrG"/>
+                                    <action selector="buttonUpNote10WithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tlX-Xl-dj8"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Wm-GL-FdY">
@@ -353,8 +353,8 @@
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <action selector="buttonDowNote12WithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="IHd-y4-zeD"/>
-                                    <action selector="buttonUpNote12WithSender:" destination="BYZ-38-t0r" eventType="touchDown" id="2rt-HT-WR3"/>
+                                    <action selector="buttonDowNote12WithSender:" destination="BYZ-38-t0r" eventType="touchDown" id="iOA-kS-SGH"/>
+                                    <action selector="buttonUpNote12WithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qzO-1b-TFY"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ii2-Oq-fOD">
@@ -365,8 +365,8 @@
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <action selector="buttonDowNote2WithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="GJm-hG-CUq"/>
-                                    <action selector="buttonUpNote2WithSender:" destination="BYZ-38-t0r" eventType="touchDown" id="QlG-n0-7co"/>
+                                    <action selector="buttonDowNote2WithSender:" destination="BYZ-38-t0r" eventType="touchDown" id="VxW-ZY-6nl"/>
+                                    <action selector="buttonUpNote2WithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ewS-4i-CSl"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fdo-26-Rtg">
@@ -377,8 +377,8 @@
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <action selector="buttonDowNote4WithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="WO0-LG-PMq"/>
-                                    <action selector="buttonUpNote4WithSender:" destination="BYZ-38-t0r" eventType="touchDown" id="Nv6-Bt-rXb"/>
+                                    <action selector="buttonDowNote4WithSender:" destination="BYZ-38-t0r" eventType="touchDown" id="Xux-hw-5pd"/>
+                                    <action selector="buttonUpNote4WithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XaF-Zv-bVL"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HdF-Pi-Mt9">
@@ -389,8 +389,8 @@
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <action selector="buttonDowNote7WithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="FGv-Uy-iXy"/>
-                                    <action selector="buttonUpNote7WithSender:" destination="BYZ-38-t0r" eventType="touchDown" id="Jn8-Uu-7xS"/>
+                                    <action selector="buttonDowNote7WithSender:" destination="BYZ-38-t0r" eventType="touchDown" id="mPr-0u-rGz"/>
+                                    <action selector="buttonUpNote7WithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="KXm-iZ-EJM"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lXZ-Y5-0Ci">
@@ -401,8 +401,8 @@
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <action selector="buttonDowNote9WithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="b8S-rP-evA"/>
-                                    <action selector="buttonUpNote9WithSender:" destination="BYZ-38-t0r" eventType="touchDown" id="3Rf-Rn-w0R"/>
+                                    <action selector="buttonDowNote9WithSender:" destination="BYZ-38-t0r" eventType="touchDown" id="wBK-tm-bDC"/>
+                                    <action selector="buttonUpNote9WithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="aD7-jf-aFo"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w53-RI-Ken">
@@ -413,8 +413,8 @@
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <action selector="buttonDowNote11WithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="NJi-zV-wdn"/>
-                                    <action selector="buttonUpNote11WithSender:" destination="BYZ-38-t0r" eventType="touchDown" id="IKo-kM-SiS"/>
+                                    <action selector="buttonDowNote11WithSender:" destination="BYZ-38-t0r" eventType="touchDown" id="6lH-4W-310"/>
+                                    <action selector="buttonUpNote11WithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="IbD-XS-xNv"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WLZ-Er-zDe">
@@ -425,8 +425,8 @@
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <action selector="buttonDowNote13WithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="LE6-Rr-7CR"/>
-                                    <action selector="buttonUpNote13WithSender:" destination="BYZ-38-t0r" eventType="touchDown" id="aBo-nb-b17"/>
+                                    <action selector="buttonDowNote13WithSender:" destination="BYZ-38-t0r" eventType="touchDown" id="rZ5-Fz-mnl"/>
+                                    <action selector="buttonUpNote13WithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="SEw-SL-jCj"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5L0-49-pVO">
@@ -437,8 +437,8 @@
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <action selector="buttonDowNote15WithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pbx-AH-I8H"/>
-                                    <action selector="buttonUpNote15WithSender:" destination="BYZ-38-t0r" eventType="touchDown" id="Di8-qs-rXK"/>
+                                    <action selector="buttonDowNote15WithSender:" destination="BYZ-38-t0r" eventType="touchDown" id="ruG-2i-6U3"/>
+                                    <action selector="buttonUpNote15WithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Rey-q5-n2d"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eei-OW-dCX">
@@ -449,8 +449,8 @@
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <action selector="buttonDowNote17WithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3hH-Bt-BLU"/>
-                                    <action selector="buttonUpNote17WithSender:" destination="BYZ-38-t0r" eventType="touchDown" id="OCJ-ok-P9d"/>
+                                    <action selector="buttonDowNote17WithSender:" destination="BYZ-38-t0r" eventType="touchDown" id="GQG-FC-TAl"/>
+                                    <action selector="buttonUpNote17WithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kbe-2L-XoJ"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qs1-at-RXy">
@@ -461,8 +461,8 @@
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <action selector="buttonDowNote18WithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4JL-gV-HnE"/>
-                                    <action selector="buttonUpNote18WithSender:" destination="BYZ-38-t0r" eventType="touchDown" id="njl-Vt-UG5"/>
+                                    <action selector="buttonDowNote18WithSender:" destination="BYZ-38-t0r" eventType="touchDown" id="4OQ-KZ-O7M"/>
+                                    <action selector="buttonUpNote18WithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="PwW-1v-Trj"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Rv-ML-6Ml">
@@ -473,8 +473,8 @@
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <action selector="buttonDowNote20WithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="NLZ-YB-d36"/>
-                                    <action selector="buttonUpNote20WithSender:" destination="BYZ-38-t0r" eventType="touchDown" id="DXL-3B-Par"/>
+                                    <action selector="buttonDowNote20WithSender:" destination="BYZ-38-t0r" eventType="touchDown" id="Lbj-b0-yaQ"/>
+                                    <action selector="buttonUpNote20WithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fhz-JE-0bm"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MId-qy-wLB">
@@ -485,8 +485,8 @@
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <action selector="buttonDowNote22WithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rWP-BP-aGm"/>
-                                    <action selector="buttonUpNote22WithSender:" destination="BYZ-38-t0r" eventType="touchDown" id="ja8-iK-HkR"/>
+                                    <action selector="buttonDowNote22WithSender:" destination="BYZ-38-t0r" eventType="touchDown" id="oHX-Bq-IV6"/>
+                                    <action selector="buttonUpNote22WithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hcd-W1-Qmj"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ttn-Xf-tcz">
@@ -497,8 +497,8 @@
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <action selector="buttonDowNote24WithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="z5u-Pe-o47"/>
-                                    <action selector="buttonUpNote24WithSender:" destination="BYZ-38-t0r" eventType="touchDown" id="a4T-Ey-LFI"/>
+                                    <action selector="buttonDowNote24WithSender:" destination="BYZ-38-t0r" eventType="touchDown" id="tat-bC-z9S"/>
+                                    <action selector="buttonUpNote24WithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="onR-an-6Dg"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Sm-4r-lCy">
@@ -509,8 +509,8 @@
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <action selector="buttonDowNote25WithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="NoJ-HX-F0q"/>
-                                    <action selector="buttonUpNote25WithSender:" destination="BYZ-38-t0r" eventType="touchDown" id="af9-k6-mVL"/>
+                                    <action selector="buttonDowNote25WithSender:" destination="BYZ-38-t0r" eventType="touchDown" id="Byv-mT-9CX"/>
+                                    <action selector="buttonUpNote25WithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Lpu-6Q-Ipr"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KQN-cB-Fj1">
@@ -521,8 +521,8 @@
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <action selector="buttonDowNote14WithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ayw-jb-OWv"/>
-                                    <action selector="buttonUpNote14WithSender:" destination="BYZ-38-t0r" eventType="touchDown" id="fNH-Xq-4ZR"/>
+                                    <action selector="buttonDowNote14WithSender:" destination="BYZ-38-t0r" eventType="touchDown" id="3IG-wZ-ri3"/>
+                                    <action selector="buttonUpNote14WithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Q3D-8s-IdA"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fJI-KJ-Fhc">
@@ -533,8 +533,8 @@
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <action selector="buttonDowNote16WithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="R3S-uL-wpN"/>
-                                    <action selector="buttonUpNote16WithSender:" destination="BYZ-38-t0r" eventType="touchDown" id="8cE-SS-R4F"/>
+                                    <action selector="buttonDowNote16WithSender:" destination="BYZ-38-t0r" eventType="touchDown" id="gK5-eH-NkT"/>
+                                    <action selector="buttonUpNote16WithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="FpF-DC-y9v"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ruB-4l-M9B">
@@ -545,8 +545,8 @@
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <action selector="buttonDowNote19WithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="PJh-Hg-GqJ"/>
-                                    <action selector="buttonUpNote19WithSender:" destination="BYZ-38-t0r" eventType="touchDown" id="Wqv-NR-mqQ"/>
+                                    <action selector="buttonDowNote19WithSender:" destination="BYZ-38-t0r" eventType="touchDown" id="T1V-i1-GFq"/>
+                                    <action selector="buttonUpNote19WithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="SCK-he-TiM"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kaD-R8-dZj">
@@ -557,8 +557,8 @@
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <action selector="buttonDowNote21WithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0gd-VQ-hrd"/>
-                                    <action selector="buttonUpNote21WithSender:" destination="BYZ-38-t0r" eventType="touchDown" id="SXA-wW-kYD"/>
+                                    <action selector="buttonDowNote21WithSender:" destination="BYZ-38-t0r" eventType="touchDown" id="p4u-Zv-GhZ"/>
+                                    <action selector="buttonUpNote21WithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="KDr-tj-iao"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zu4-yG-Eeg">
@@ -569,8 +569,8 @@
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <action selector="buttonDowNote23WithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rCj-fH-UH9"/>
-                                    <action selector="buttonUpNote23WithSender:" destination="BYZ-38-t0r" eventType="touchDown" id="kB9-Ju-ohi"/>
+                                    <action selector="buttonDowNote23WithSender:" destination="BYZ-38-t0r" eventType="touchDown" id="uOd-WI-hQl"/>
+                                    <action selector="buttonUpNote23WithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lAm-gZ-AUt"/>
                                 </connections>
                             </button>
                         </subviews>

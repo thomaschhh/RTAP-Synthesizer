@@ -3,33 +3,13 @@ import UIKit
 class ViewController: UIViewController {
     
     var patch:PDPatch?
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         patch = PDPatch(file: "synth_swift.pd")
         // Do any additional setup after loading the view.
     }
-    
-    /*--- Switch Section ---*/
-    /* Example Code */
-    //@IBAction func onOffSwitchToggled(sender: UISwitch)
-       //{   //var sender_is_bool: Bool = sender.isOn
-           //var test: Bool = true
-           //var sender_is_float: Float = Float(NSNumber(value:test))
-           //PdBase.send( Float(truncating: NSNumber(value:sender.isOn)), toReceiver: "onOff")   //works!
-           //PdBase.sendFloat( Float(sender.on), toReceiver: "onOff" )             // original
-        //let onOffSwitch = sender
-        //patch?.onOff1(onOffSwitch.isOn)  // Pd onOff1
-           /*func boolean2Double(_ booleanValue: Bool) -> Double
-           {
-               if(booleanValue) {
-                   return 1.0 }
-               else {
-                   return 0.0 }
-           }*/
-           //PdBase.send(Float(boolean2Double(sender.isOn)), toReceiver: "onOff") //Works too!
-       //}
     
     /*--- Slider Section ---*/
     /* Fundamentals */

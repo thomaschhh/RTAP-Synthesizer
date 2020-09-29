@@ -2,12 +2,6 @@
 
 @implementation PDPatch
 
-/*--- Switch Section ---*/
--(void)onOff1:(BOOL)yesNo{
-    float yn = (float)yesNo;
-    [PdBase sendFloat:yn toReceiver:@"onOff1"];  // Pd onOff1
-}
-
 /*--- Slider Section ---*/
 /* Fundamentals */
 -(void)slider_fund1:(float)fund1{
@@ -97,12 +91,6 @@
 -(void)slider_gain:(float)gain{
     float gai = (float)gain;
     [PdBase sendFloat:gai toReceiver:@"slider_gain"];
-}
-
-/* Example Code */
--(void)slider1:(float)test1{
-    float t1 = (float)test1;
-    [PdBase sendFloat:t1 toReceiver:@"slider1"];  // Pd slider1
 }
 
 /*--- Button Section ---*/
@@ -226,16 +214,14 @@
     [PdBase sendFloat:no25 toReceiver:@"button_note25"];
 }
 
-/* Example Code */
--(void)taste1:(float)druck1{
-    float d1 = (float)druck1;
-    [PdBase sendFloat:d1 toReceiver:@"taste1"]; // PD taste1
-}
+
+void envelope1_setup();
 
 -(instancetype)initWithFile:(NSString *)pdFile{
     void *patch;
     self = [super init];
     if(self){
+        envelope1_setup();
         patch = [PdBase openFile:pdFile path:[[NSBundle mainBundle]resourcePath]];
         if(!patch){
             UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"Uh-oh" message:@"Pd Patch not found" delegate:self cancelButtonTitle:@"Crap" otherButtonTitles:nil, nil];

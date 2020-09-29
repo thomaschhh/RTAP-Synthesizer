@@ -71,12 +71,6 @@ NS_ASSUME_NONNULL_BEGIN
 -(void)button_note24:(float)note24;
 -(void)button_note25:(float)note25;
 
-/*--- Example---*/
-
--(void)onOff1:(BOOL)yesNo;
--(void)slider1:(float)test1;
--(void)taste1:(float)druck1;
-
 -(instancetype)initWithFile:(NSString *)pdFile;
 
 @end
