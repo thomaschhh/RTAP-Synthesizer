@@ -5,7 +5,8 @@ This synthesizer was created in the 2nd semester of 2020 as a final project in t
 After we had decided to develop a synthesizer and create an app for the iPad, we found the option to use [TouchOSC](https://hexler.net/docs/touchosc-getting-started). 
 We implemented our own Pd patch [synth_osc.pd](https://github.com/thomaschhh/RTAP-Synthesizer/blob/master/PureData/synth_osc.pd) into the already existing [basic.pd](https://hexler.net/pub/touchosc/basic.pd) patch and found out that we had to work with [purr-data](https://agraef.github.io/purr-data/) instead of [Pd Vanilla](http://puredata.info/downloads/pure-data). The reason for this was the fact that we actually needed [Pd-Extended](http://puredata.info/downloads/pd-extended) for OSC to work which is no longer supported.
 
-For the iPad app we adjusted the [patch]((https://github.com/thomaschhh/RTAP-Synthesizer/blob/master/PureData/synth_swift.pd)) a little bit for it to work with Swift.
+For the iPad app we adjusted the [patch](https://github.com/thomaschhh/RTAP-Synthesizer/blob/master/PureData/synth_swift.pd) a little bit for it to work with Swift.
+As of today, the xy-pad that's implemented in the TouchOSC patch is not yet implemented in the iPad app.
 
 ***
 
