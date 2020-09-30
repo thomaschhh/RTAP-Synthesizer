@@ -17,6 +17,7 @@ class ViewController: UIViewController {
             let Fund1 = sender
             patch?.slider_fund1(Fund1.value)
     }
+     
     @IBAction func slider_fund2(sender: UISlider){
             let Fund2 = sender
             patch?.slider_fund2(Fund2.value)

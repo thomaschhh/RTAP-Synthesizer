@@ -7,7 +7,25 @@
 		<key>lbPDSwift.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>4</integer>
+			<integer>1</integer>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>F28402BB252242E400458C7E</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>F28402D1252242ED00458C7E</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>F28402DC252242ED00458C7E</key>
+		<dict>
+			<key>primary</key>
+			<true/>
 		</dict>
 	</dict>
 </dict>
