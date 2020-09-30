@@ -3,13 +3,15 @@
 This synthesizer was created in the 2nd semester of 2020 as a final project in the class [Real-time Audio Programming in C](https://github.com/audio-communication-group/real-time-audio-programming-in-C_SoSe2020.git). The task consisted of creating a Pure Data patch and writing an external for it in C. 
 
 After we had decided to develop a synthesizer and create an app for the iPad, we found the option to use [TouchOSC](https://hexler.net/docs/touchosc-getting-started). 
-We implemented our own Pd patch into the already existing [basic.pd](https://hexler.net/pub/touchosc/basic.pd) patch and found out that we had to work with [purr-data](https://agraef.github.io/purr-data/) instead of [Pd Vanilla](http://puredata.info/downloads/pure-data). The reason for this was the fact that we actually needed [Pd-Extended](http://puredata.info/downloads/pd-extended) for OSC to work which is no longer supported.
+We implemented our own Pd patch [synth_osc.pd](https://github.com/thomaschhh/RTAP-Synthesizer/blob/master/PureData/synth_osc.pd) into the already existing [basic.pd](https://hexler.net/pub/touchosc/basic.pd) patch and found out that we had to work with [purr-data](https://agraef.github.io/purr-data/) instead of [Pd Vanilla](http://puredata.info/downloads/pure-data). The reason for this was the fact that we actually needed [Pd-Extended](http://puredata.info/downloads/pd-extended) for OSC to work which is no longer supported.
+
+For the iPad app we adjusted the [patch]((https://github.com/thomaschhh/RTAP-Synthesizer/blob/master/PureData/synth_swift.pd)) a little bit for it to work with Swift.
 
 ***
 
 ### Steps to Get The Synth Running
 
-- Start **purr-data** and open the file [synth.pd](https://github.com/thomaschhh/RTAP-Synthesizer/blob/master/PureData/Synth.pd).
+- Start **purr-data** and open the file [synth.pd](https://github.com/thomaschhh/RTAP-Synthesizer/blob/master/PureData/synth_osc.pd).
 
 ![Entire Pd Patch](https://github.com/thomaschhh/RTAP-Synthesizer/blob/master/Images/pd_patch.png?raw=true)
 
@@ -26,11 +28,13 @@ We implemented our own Pd patch into the already existing [basic.pd](https://hex
     - Click the *connect* message box in order to connect to the iPad.
     - Adjust the attack, decay, sustain, release sliders to your liking (**2**).
     - Do the same thing with the Fundamentals (**3**) as well as its Shimmer Strength / Shimmer Frequency (**4**).
-    - Select the desired waveform (**5**), adjust the volume (**6**) and turn on the dsp (**7**). 
+    - Select the desired waveform (**5**), determine to what extend the notes should be played between left and right (**6**) adjust the volume (**7**) and turn on the dsp (**8**). 
     - Now you're ready to play. 
     
+![Entire Pd Patch](https://github.com/thomaschhh/RTAP-Synthesizer/blob/master/Images/ipad.png?raw=true)
+
 ***
     
 ### Bugs
 
-- The Pd patch randomly chrashes when adjusting the envelope.
+- The Pd patch sometimes chrashes when adjusting the envelope.
