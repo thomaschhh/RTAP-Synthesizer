@@ -7,12 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		E985A2C82523AC1F00A1441D /* synth_swift.pd in Resources */ = {isa = PBXBuildFile; fileRef = E985A2C72523AC1F00A1441D /* synth_swift.pd */; };
-		E985A2C92523AC1F00A1441D /* synth_swift.pd in Resources */ = {isa = PBXBuildFile; fileRef = E985A2C72523AC1F00A1441D /* synth_swift.pd */; };
-		E985A2CA2523AC1F00A1441D /* synth_swift.pd in Resources */ = {isa = PBXBuildFile; fileRef = E985A2C72523AC1F00A1441D /* synth_swift.pd */; };
+		E9B32B112545C7220055398C /* synth_swift.pd in Resources */ = {isa = PBXBuildFile; fileRef = E9B32B102545C7220055398C /* synth_swift.pd */; };
+		E9B32B122545C7220055398C /* synth_swift.pd in Resources */ = {isa = PBXBuildFile; fileRef = E9B32B102545C7220055398C /* synth_swift.pd */; };
+		E9B32B132545C7220055398C /* synth_swift.pd in Resources */ = {isa = PBXBuildFile; fileRef = E9B32B102545C7220055398C /* synth_swift.pd */; };
 		E9C4B33D2523C17A00DEA99B /* envelope1.c in Sources */ = {isa = PBXBuildFile; fileRef = E9C4B33C2523C17A00DEA99B /* envelope1.c */; };
 		E9C4B33E2523C17A00DEA99B /* envelope1.c in Sources */ = {isa = PBXBuildFile; fileRef = E9C4B33C2523C17A00DEA99B /* envelope1.c */; };
 		E9C4B33F2523C17A00DEA99B /* envelope1.c in Sources */ = {isa = PBXBuildFile; fileRef = E9C4B33C2523C17A00DEA99B /* envelope1.c */; };
+		E9DBBAE72545A32600566953 /* gothom_tilde.c in Sources */ = {isa = PBXBuildFile; fileRef = E9DBBAE62545A32600566953 /* gothom_tilde.c */; };
+		E9DBBAE82545A32600566953 /* gothom_tilde.c in Sources */ = {isa = PBXBuildFile; fileRef = E9DBBAE62545A32600566953 /* gothom_tilde.c */; };
+		E9DBBAE92545A32600566953 /* gothom_tilde.c in Sources */ = {isa = PBXBuildFile; fileRef = E9DBBAE62545A32600566953 /* gothom_tilde.c */; };
 		F28402C0252242E400458C7E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F28402BF252242E400458C7E /* AppDelegate.swift */; };
 		F28402C2252242E400458C7E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F28402C1252242E400458C7E /* SceneDelegate.swift */; };
 		F28402C4252242E400458C7E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F28402C3252242E400458C7E /* ViewController.swift */; };
@@ -82,8 +85,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		E985A2C72523AC1F00A1441D /* synth_swift.pd */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = synth_swift.pd; path = ../../patches/synth_swift.pd; sourceTree = "<group>"; };
+		E9B32B102545C7220055398C /* synth_swift.pd */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = synth_swift.pd; path = ../../patches/synth_swift.pd; sourceTree = "<group>"; };
 		E9C4B33C2523C17A00DEA99B /* envelope1.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = envelope1.c; path = ../../../C_Code/envelope1/envelope1.c; sourceTree = "<group>"; };
+		E9DBBAE62545A32600566953 /* gothom_tilde.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = gothom_tilde.c; sourceTree = "<group>"; };
 		F28402BC252242E400458C7E /* lbPDSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = lbPDSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F28402BF252242E400458C7E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F28402C1252242E400458C7E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -159,9 +163,10 @@
 		F28402BE252242E400458C7E /* lbPDSwift */ = {
 			isa = PBXGroup;
 			children = (
+				E9B32B102545C7220055398C /* synth_swift.pd */,
 				E9C4B33C2523C17A00DEA99B /* envelope1.c */,
+				E9DBBAE62545A32600566953 /* gothom_tilde.c */,
 				F28403062522449C00458C7E /* lbPDSwift-Bridging-Header.h */,
-				E985A2C72523AC1F00A1441D /* synth_swift.pd */,
 				F28402BF252242E400458C7E /* AppDelegate.swift */,
 				F28403492522495500458C7E /* PDPatch.h */,
 				F28403482522495500458C7E /* PDPatch.m */,
@@ -360,8 +365,8 @@
 			files = (
 				F28402CC252242EC00458C7E /* LaunchScreen.storyboard in Resources */,
 				F28402C9252242EC00458C7E /* Assets.xcassets in Resources */,
+				E9B32B112545C7220055398C /* synth_swift.pd in Resources */,
 				F28402C7252242E400458C7E /* Main.storyboard in Resources */,
-				E985A2C82523AC1F00A1441D /* synth_swift.pd in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -369,7 +374,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E985A2C92523AC1F00A1441D /* synth_swift.pd in Resources */,
+				E9B32B122545C7220055398C /* synth_swift.pd in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -377,7 +382,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E985A2CA2523AC1F00A1441D /* synth_swift.pd in Resources */,
+				E9B32B132545C7220055398C /* synth_swift.pd in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -392,6 +397,7 @@
 				F28402C4252242E400458C7E /* ViewController.swift in Sources */,
 				F28402C0252242E400458C7E /* AppDelegate.swift in Sources */,
 				E9C4B33D2523C17A00DEA99B /* envelope1.c in Sources */,
+				E9DBBAE72545A32600566953 /* gothom_tilde.c in Sources */,
 				F28402C2252242E400458C7E /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -402,6 +408,7 @@
 			files = (
 				E9C4B33E2523C17A00DEA99B /* envelope1.c in Sources */,
 				F284034B2522495500458C7E /* PDPatch.m in Sources */,
+				E9DBBAE82545A32600566953 /* gothom_tilde.c in Sources */,
 				F28402D7252242ED00458C7E /* lbPDSwiftTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -412,6 +419,7 @@
 			files = (
 				E9C4B33F2523C17A00DEA99B /* envelope1.c in Sources */,
 				F284034C2522495500458C7E /* PDPatch.m in Sources */,
+				E9DBBAE92545A32600566953 /* gothom_tilde.c in Sources */,
 				F28402E2252242ED00458C7E /* lbPDSwiftUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -506,7 +514,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -563,7 +571,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				OTHER_CFLAGS = "-DPD";

@@ -17,7 +17,6 @@ class ViewController: UIViewController {
             let Fund1 = sender
             patch?.slider_fund1(Fund1.value)
     }
-     
     @IBAction func slider_fund2(sender: UISlider){
             let Fund2 = sender
             patch?.slider_fund2(Fund2.value)
@@ -69,6 +68,32 @@ class ViewController: UIViewController {
     @IBAction func slider_ShimS41(sender: UISlider){
         let ShimS4 = sender
         patch?.slider_shimStrg4(ShimS4.value)
+    }
+    
+    /* Reverb */
+    @IBAction func slider_cbF_cof0(sender: UISlider){
+        let cbF_cof0 = sender
+        patch?.slider_cbF_cof0(cbF_cof0.value)
+    }
+    @IBAction func slider_cbF_cof1(sender: UISlider){
+        let cbF_cof1 = sender
+        patch?.slider_cbF_cof1(cbF_cof1.value)
+    }
+    @IBAction func slider_cbF_cof2(sender: UISlider){
+        let cbF_cof2 = sender
+        patch?.slider_cbF_cof2(cbF_cof2.value)
+    }
+    @IBAction func slider_cbF_cof3(sender: UISlider){
+        let cbF_cof3 = sender
+        patch?.slider_cbF_cof3(cbF_cof3.value)
+    }
+    @IBAction func slider_apF_cof(sender: UISlider){
+        let apF_cof = sender
+        patch?.slider_apF_cof(apF_cof.value)
+    }
+    @IBAction func slider_wet_dry(sender: UISlider){
+        let wet_dry = sender
+        patch?.slider_wet_dry(wet_dry.value)
     }
             
     /* Envelope */

@@ -26,6 +26,14 @@ NS_ASSUME_NONNULL_BEGIN
 -(void)slider_shimStrg3:(float)shimStrg3;
 -(void)slider_shimStrg4:(float)shimStrg4;
 
+/* Reverb */
+-(void)slider_cbF_cof0:(float)cbF_cof0;
+-(void)slider_cbF_cof1:(float)cbF_cof1;
+-(void)slider_cbF_cof2:(float)cbF_cof2;
+-(void)slider_cbF_cof3:(float)cbF_cof3;
+-(void)slider_apF_cof:(float)apF_cof;
+-(void)slider_wet_dry:(float)wet_dry;
+
 /* Envelope */
 -(void)slider_attack:(float)attack;
 -(void)slider_decay:(float)decay;

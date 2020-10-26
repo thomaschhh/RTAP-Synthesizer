@@ -43,7 +43,7 @@
     [PdBase sendFloat:shimF4 toReceiver:@"slider_shimFreq4"];
 }
 
-/* Modulation Strength*/
+/* Modulation Strength */
 -(void)slider_shimStrg1:(float)shimStrg1{
     float shimS1 = (float)shimStrg1;
     [PdBase sendFloat:shimS1 toReceiver:@"slider_shimStrg1"];
@@ -59,6 +59,32 @@
 -(void)slider_shimStrg4:(float)shimStrg4{
     float shimS4 = (float)shimStrg4;
     [PdBase sendFloat:shimS4 toReceiver:@"slider_shimStrg4"];
+}
+
+/* Reverb */
+-(void)slider_cbF_cof0:(float)cbF_cof0{
+    float cbF0 = (float)cbF_cof0;
+    [PdBase sendFloat:cbF0 toReceiver:@"slider_cbF_cof0"];
+}
+-(void)slider_cbF_cof1:(float)cbF_cof1{
+    float cbF1 = (float)cbF_cof1;
+    [PdBase sendFloat:cbF1 toReceiver:@"slider_cbF_cof1"];
+}
+-(void)slider_cbF_cof2:(float)cbF_cof2{
+    float cbF2 = (float)cbF_cof2;
+    [PdBase sendFloat:cbF2 toReceiver:@"slider_cbF_cof2"];
+}
+-(void)slider_cbF_cof3:(float)cbF_cof3{
+    float cbF3 = (float)cbF_cof3;
+    [PdBase sendFloat:cbF3 toReceiver:@"slider_cbF_cof3"];
+}
+-(void)slider_apF_cof:(float)apF_cof{
+    float apF = (float)apF_cof;
+    [PdBase sendFloat:apF toReceiver:@"slider_apF_cof"];
+}
+-(void)slider_wet_dry:(float)wet_dry{
+    float wetDry = (float)wet_dry;
+    [PdBase sendFloat:wetDry toReceiver:@"slider_wet_dry"];
 }
 
 /* Envelope */
@@ -214,14 +240,15 @@
     [PdBase sendFloat:no25 toReceiver:@"button_note25"];
 }
 
-
-void envelope1_setup();
+void envelope1_setup(void);
+void gothom_tilde_setup(void);
 
 -(instancetype)initWithFile:(NSString *)pdFile{
     void *patch;
     self = [super init];
     if(self){
         envelope1_setup();
+        gothom_tilde_setup();
         patch = [PdBase openFile:pdFile path:[[NSBundle mainBundle]resourcePath]];
         if(!patch){
             UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"Uh-oh" message:@"Pd Patch not found" delegate:self cancelButtonTitle:@"Crap" otherButtonTitles:nil, nil];
