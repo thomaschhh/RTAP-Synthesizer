@@ -5,18 +5,14 @@
 #include "m_pd.h"
 #include "string.h"
 
-//asdf asd
-
-
 /**
- * define a new "class" 
+ * define a new class
  */
 static t_class *delayerr_tilde_class;
 
-
 /**
  * this is the dataspace of our new object
- * the first element is the mandatory "t_object"
+ * the first element is the mandatory t_object
  * f_delay is the delay time [ms]
  * f_decay is the decay factor
  * f_position will be used to cycle through the buffer
@@ -25,9 +21,9 @@ static t_class *delayerr_tilde_class;
  */
 typedef struct _delayerr_tilde {
   t_object  x_obj;
-  int f_delay;
+  t_float f_delay;
   t_float f_decay;
-  int f_position;     
+  t_float f_position;     
   t_sample *f_vec;
   t_sample f;
 
@@ -36,10 +32,13 @@ typedef struct _delayerr_tilde {
   t_outlet*x_out;
 } t_delayerr_tilde;
 
+/* define sample rate and maximal delay time*/
 #define SR 44.1
+#define MAX_DELAY 2000
+
 
 /**
- * this is the perform-routine
+ * this is the perform routine
  */
 t_int *delayerr_tilde_perform(t_int *w)
 {
@@ -52,9 +51,8 @@ t_int *delayerr_tilde_perform(t_int *w)
   /* the in and out arrays a have the same length */
   int          n =           (int)(w[4]);
 
- /* get (and clip) the delay time */  
-  int f_delay = x->f_delay;
-  if (f_delay<0) f_delay = 0;
+ /* get (and clip) the delay time */ 
+  t_float f_delay = (x->f_delay < 0) ? 0 : (x->f_delay > MAX_DELAY) ? MAX_DELAY : x->f_delay;
   
   /* get (and clip) the decay factor */
   t_float f_decay = (x->f_decay<0)?0.0:(x->f_decay>1)?1.0:x->f_decay;
@@ -69,13 +67,13 @@ t_int *delayerr_tilde_perform(t_int *w)
   for(i=0; i<n; i++)
     {
       // STORE-TO-PLAY: Mix sample with the one stored in the buffer at f_position
-      out[i]=in[i] + f_decay*mybuffer[x->f_position];
+      out[i]=in[i] + f_decay*mybuffer[(int) x->f_position];
       // STORE-TO-BUFFER: Record this new value in the buffer at f_position
-      mybuffer[x->f_position] = out[i];
+      mybuffer[(int) x->f_position] = out[i];
       // Increment buffer position wrapping around
       x->f_position = x->f_position + 1;
       // If f_position reaches the top of the buffer, we set it back to 0 again
-      if(x->f_position >= (x->f_delay * SR)) x->f_position = 0;
+      if(x->f_position >= (f_delay * SR)) x->f_position = 0;
     }
 
   /* return a pointer to the dataspace for the next dsp-object */
@@ -105,9 +103,9 @@ void delayerr_tilde_free(t_delayerr_tilde *x)
   /* free any ressources associated with the given outlet */
   outlet_free(x->x_out);
 
-  /* free the */
+  /* free the allocated memory for the buffer*/
   freebytes(x->f_vec,
-        (x->f_delay * SR) * sizeof(t_sample));
+        (MAX_DELAY * SR) * sizeof(t_sample));
 }
 
 /**
@@ -118,16 +116,16 @@ void *delayerr_tilde_new(t_floatarg i_delay, t_floatarg i_decay)
   t_delayerr_tilde *x = (t_delayerr_tilde *)pd_new(delayerr_tilde_class);
 
   /* save the delay and decay in our dataspace */
-  x->f_delay = (int) i_delay;
+  x->f_delay = i_delay;
   x->f_decay = i_decay;
 
   /* initialize f_position */
   x->f_position = 0;
 
   /* reserve memory for the buffer */
-  x->f_vec = getbytes((x->f_delay * SR) * sizeof(t_sample));  // f_delay [ms] has to be converted to samples
+  x->f_vec = getbytes((MAX_DELAY * SR) * sizeof(t_sample));  // the delay time [ms] has to be converted to samples
     /* set every sample to 0 */
-  memset(x->f_vec, 0, (x->f_delay * SR) * sizeof(t_sample));  
+  memset(x->f_vec, 0, (MAX_DELAY * SR) * sizeof(t_sample));  
 
   /* create a new passive inlet for the delay time */
   x->x_in2 = floatinlet_new (&x->x_obj, &x->f_delay);
