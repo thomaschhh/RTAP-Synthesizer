@@ -175,6 +175,10 @@
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = (
+					"-undefined",
+					dynamic_lookup,
+				);
 				SDKROOT = macosx;
 			};
 			name = Debug;
@@ -229,6 +233,10 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = (
+					"-undefined",
+					dynamic_lookup,
+				);
 				SDKROOT = macosx;
 			};
 			name = Release;
@@ -241,10 +249,6 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				EXECUTABLE_EXTENSION = pd_darwin;
-				OTHER_LDFLAGS = (
-					"-undefined",
-					dynamic_lookup,
-				);
 				PRODUCT_NAME = "delayerr~";
 				SKIP_INSTALL = YES;
 			};
@@ -258,10 +262,6 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				EXECUTABLE_EXTENSION = pd_darwin;
-				OTHER_LDFLAGS = (
-					"-undefined",
-					dynamic_lookup,
-				);
 				PRODUCT_NAME = "delayerr~";
 				SKIP_INSTALL = YES;
 			};
