@@ -34,6 +34,12 @@ NS_ASSUME_NONNULL_BEGIN
 -(void)slider_apF_cof:(float)apF_cof;
 -(void)slider_wet_dry:(float)wet_dry;
 
+/* Delay */
+-(void)slider_delayT1:(float)delayT1;
+-(void)slider_decay1:(float)decay1;
+-(void)slider_delayT2:(float)delayT2;
+-(void)slider_decay2:(float)decay2;
+
 /* Envelope */
 -(void)slider_attack:(float)attack;
 -(void)slider_decay:(float)decay;

@@ -53,19 +53,19 @@ class ViewController: UIViewController {
     }
     
     /* Modulation Strength */
-    @IBAction func slider_ShimS1(sender: UISlider){
+    @IBAction func slider_shimStrg1(sender: UISlider){
         let ShimS1 = sender
         patch?.slider_shimStrg1(ShimS1.value)
     }
-    @IBAction func slider_ShimS2(sender: UISlider){
+    @IBAction func slider_shimStrg2(sender: UISlider){
         let ShimS2 = sender
         patch?.slider_shimStrg2(ShimS2.value)
     }
-    @IBAction func slider_ShimS3(sender: UISlider){
+    @IBAction func slider_shimStrg3(sender: UISlider){
         let ShimS3 = sender
         patch?.slider_shimStrg3(ShimS3.value)
     }
-    @IBAction func slider_ShimS41(sender: UISlider){
+    @IBAction func slider_shimStrg4(sender: UISlider){
         let ShimS4 = sender
         patch?.slider_shimStrg4(ShimS4.value)
     }
@@ -96,6 +96,24 @@ class ViewController: UIViewController {
         patch?.slider_wet_dry(wet_dry.value)
     }
             
+    /* Delay */
+    @IBAction func slider_delayT1(sender: UISlider){
+        let delT1 = sender
+        patch?.slider_delayT1(delT1.value)
+    }
+    @IBAction func slider_decay1(sender: UISlider){
+        let dec1 = sender
+        patch?.slider_decay1(dec1.value)
+    }
+    @IBAction func slider_delayT2(sender: UISlider){
+        let delT2 = sender
+        patch?.slider_delayT2(delT2.value)
+    }
+    @IBAction func slider_decay2(sender: UISlider){
+        let dec2 = sender
+        patch?.slider_decay2(dec2.value)
+    }
+    
     /* Envelope */
     @IBAction func slider_attack(sender: UISlider){
         let attack = sender

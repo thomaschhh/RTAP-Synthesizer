@@ -68,7 +68,7 @@
 #X obj 1297 328 *~ 1;
 #X obj 1469 326 *~ 1;
 #X obj 1644 330 *~ 1;
-#X obj 1309 653 dac~;
+#X obj 1239 686 dac~;
 #X obj 937 239 s gain;
 #X obj 1054 303 r gain;
 #X obj 1243 302 r gain;
@@ -4735,17 +4735,17 @@
 #X obj 1195 497 r slider_cbF_cof3;
 #X obj 1220 521 r slider_apF_cof;
 #X obj 1242 543 r slider_wet_dry;
-#X obj 984 501 hsl 35 15 0 1 0 0 empty empty empty -2 -8 0 10 #ff40ff
+#X obj 984 501 hsl 35 15 0 1 0 0 empty empty empty -2 -8 0 10 #fc40fc
 #000000 #000000 0 1;
-#X obj 1046 522 hsl 35 15 0 1 0 0 empty empty empty -2 -8 0 10 #ff40ff
+#X obj 1046 522 hsl 35 15 0 1 0 0 empty empty empty -2 -8 0 10 #fc40fc
 #000000 #000000 0 1;
-#X obj 1095 523 hsl 35 15 0 1 0 0 empty empty empty -2 -8 0 10 #ff40ff
+#X obj 1095 523 hsl 35 15 0 1 0 0 empty empty empty -2 -8 0 10 #fc40fc
 #000000 #000000 0 1;
-#X obj 1140 522 hsl 35 15 0 1 0 0 empty empty empty -2 -8 0 10 #ff40ff
+#X obj 1140 522 hsl 35 15 0 1 0 0 empty empty empty -2 -8 0 10 #fc40fc
 #000000 #000000 0 1;
-#X obj 1150 541 hsl 35 15 0 1 0 0 empty empty empty -2 -8 0 10 #ff40ff
+#X obj 1150 541 hsl 35 15 0 1 0 0 empty empty empty -2 -8 0 10 #fc40fc
 #000000 #000000 0 1;
-#X obj 1180 558 hsl 35 15 0 1 0 0 empty empty empty -2 -8 0 10 #ff40ff
+#X obj 1180 558 hsl 35 15 0 1 0 0 empty empty empty -2 -8 0 10 #fc40fc
 #000000 #000000 0 1;
 #X obj 1424 563 gothom~, f 30;
 #X obj 1434 476 r slider_cbF_cof0;
@@ -4754,18 +4754,34 @@
 #X obj 1645 497 r slider_cbF_cof3;
 #X obj 1670 521 r slider_apF_cof;
 #X obj 1692 543 r slider_wet_dry;
-#X obj 1434 501 hsl 35 15 0 1 0 0 empty empty empty -2 -8 0 10 #ff40ff
+#X obj 1434 501 hsl 35 15 0 1 0 0 empty empty empty -2 -8 0 10 #fc40fc
 #000000 #000000 0 1;
-#X obj 1496 522 hsl 35 15 0 1 0 0 empty empty empty -2 -8 0 10 #ff40ff
+#X obj 1496 522 hsl 35 15 0 1 0 0 empty empty empty -2 -8 0 10 #fc40fc
 #000000 #000000 0 1;
-#X obj 1545 523 hsl 35 15 0 1 0 0 empty empty empty -2 -8 0 10 #ff40ff
+#X obj 1545 523 hsl 35 15 0 1 0 0 empty empty empty -2 -8 0 10 #fc40fc
 #000000 #000000 0 1;
-#X obj 1590 522 hsl 35 15 0 1 0 0 empty empty empty -2 -8 0 10 #ff40ff
+#X obj 1590 522 hsl 35 15 0 1 0 0 empty empty empty -2 -8 0 10 #fc40fc
 #000000 #000000 0 1;
-#X obj 1600 541 hsl 35 15 0 1 0 0 empty empty empty -2 -8 0 10 #ff40ff
+#X obj 1600 541 hsl 35 15 0 1 0 0 empty empty empty -2 -8 0 10 #fc40fc
 #000000 #000000 0 1;
-#X obj 1630 558 hsl 35 15 0 1 0 0 empty empty empty -2 -8 0 10 #ff40ff
+#X obj 1630 558 hsl 35 15 0 1 0 0 empty empty empty -2 -8 0 10 #fc40fc
 #000000 #000000 0 1;
+#X obj 1104 641 delayerr~ 0 0.6;
+#X obj 1242 589 hsl 128 15 0 1000 0 0 empty empty Delay_time -2 -8
+0 10 #fcfcfc #000000 #000000 0 1;
+#X obj 1257 621 hsl 128 15 0 1 0 0 empty empty Decay -2 -8 0 10 #fcfcfc
+#000000 #000000 0 1;
+#X text 1033 638 Delay FX;
+#X obj 1372 651 delayerr~ 0 0.6;
+#X obj 1510 599 hsl 128 15 0 1000 0 0 empty empty Delay_time -2 -8
+0 10 #fcfcfc #000000 #000000 0 1;
+#X obj 1525 631 hsl 128 15 0 1 0 0 empty empty Decay -2 -8 0 10 #fcfcfc
+#000000 #000000 0 1;
+#X text 1301 648 Delay FX;
+#X obj 1385 587 r slider_delayT1;
+#X obj 1653 597 r slider_delayT2;
+#X obj 1397 620 r slider_decay1;
+#X obj 1665 629 r slider_decay2;
 #X connect 0 0 52 0;
 #X connect 3 0 109 0;
 #X connect 3 1 110 0;
@@ -4930,7 +4946,7 @@
 #X connect 208 0 118 0;
 #X connect 209 0 211 0;
 #X connect 210 0 224 0;
-#X connect 211 0 51 0;
+#X connect 211 0 237 0;
 #X connect 212 0 218 0;
 #X connect 213 0 219 0;
 #X connect 214 0 220 0;
@@ -4943,7 +4959,7 @@
 #X connect 221 0 211 4;
 #X connect 222 0 211 5;
 #X connect 223 0 211 6;
-#X connect 224 0 51 1;
+#X connect 224 0 241 0;
 #X connect 225 0 231 0;
 #X connect 226 0 232 0;
 #X connect 227 0 233 0;
@@ -4956,4 +4972,14 @@
 #X connect 234 0 224 4;
 #X connect 235 0 224 5;
 #X connect 236 0 224 6;
+#X connect 237 0 51 0;
+#X connect 238 0 237 1;
+#X connect 239 0 237 2;
+#X connect 241 0 51 1;
+#X connect 242 0 241 1;
+#X connect 243 0 241 2;
+#X connect 245 0 238 0;
+#X connect 246 0 242 0;
+#X connect 247 0 239 0;
+#X connect 248 0 243 0;
 #X coords 0 0 1 1 85 60 0;

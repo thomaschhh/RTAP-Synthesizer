@@ -87,6 +87,24 @@
     [PdBase sendFloat:wetDry toReceiver:@"slider_wet_dry"];
 }
 
+/* decay */
+-(void)slider_delayT1:(float)delayT1{
+    float delT1 = (float)delayT1;
+    [PdBase sendFloat:delT1 toReceiver:@"slider_delayT1"];
+}
+-(void)slider_decay1:(float)decay1{
+    float dec1 = (float)decay1;
+    [PdBase sendFloat:dec1 toReceiver:@"slider_dec1"];
+}
+-(void)slider_delayT2:(float)delayT2{
+    float delT2 = (float)delayT2;
+    [PdBase sendFloat:delT2 toReceiver:@"slider_delayT2"];
+}
+-(void)slider_decay2:(float)decay2{
+    float dec2 = (float)decay2;
+    [PdBase sendFloat:dec2 toReceiver:@"slider_dec2"];
+}
+
 /* Envelope */
 -(void)slider_attack:(float)attack{
     float att = (float)attack;
@@ -242,6 +260,7 @@
 
 void envelope1_setup(void);
 void gothom_tilde_setup(void);
+void delayerr_tilde_setup(void);
 
 -(instancetype)initWithFile:(NSString *)pdFile{
     void *patch;
@@ -249,6 +268,8 @@ void gothom_tilde_setup(void);
     if(self){
         envelope1_setup();
         gothom_tilde_setup();
+        delayerr_tilde_setup();
+        
         patch = [PdBase openFile:pdFile path:[[NSBundle mainBundle]resourcePath]];
         if(!patch){
             UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"Uh-oh" message:@"Pd Patch not found" delegate:self cancelButtonTitle:@"Crap" otherButtonTitles:nil, nil];

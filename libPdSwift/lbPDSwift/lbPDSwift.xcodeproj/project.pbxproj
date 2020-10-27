@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E993814D25489A9C005541D6 /* delayerr~.c in Sources */ = {isa = PBXBuildFile; fileRef = E993814925489A9C005541D6 /* delayerr~.c */; };
+		E993814E25489A9C005541D6 /* delayerr~.c in Sources */ = {isa = PBXBuildFile; fileRef = E993814925489A9C005541D6 /* delayerr~.c */; };
+		E993814F25489A9C005541D6 /* delayerr~.c in Sources */ = {isa = PBXBuildFile; fileRef = E993814925489A9C005541D6 /* delayerr~.c */; };
 		E9B32B112545C7220055398C /* synth_swift.pd in Resources */ = {isa = PBXBuildFile; fileRef = E9B32B102545C7220055398C /* synth_swift.pd */; };
 		E9B32B122545C7220055398C /* synth_swift.pd in Resources */ = {isa = PBXBuildFile; fileRef = E9B32B102545C7220055398C /* synth_swift.pd */; };
 		E9B32B132545C7220055398C /* synth_swift.pd in Resources */ = {isa = PBXBuildFile; fileRef = E9B32B102545C7220055398C /* synth_swift.pd */; };
@@ -85,6 +88,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E993814925489A9C005541D6 /* delayerr~.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = "delayerr~.c"; path = "../../../C_Code/external-delayerr~/delayerr~.c"; sourceTree = "<group>"; };
 		E9B32B102545C7220055398C /* synth_swift.pd */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = synth_swift.pd; path = ../../patches/synth_swift.pd; sourceTree = "<group>"; };
 		E9C4B33C2523C17A00DEA99B /* envelope1.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = envelope1.c; path = ../../../C_Code/envelope1/envelope1.c; sourceTree = "<group>"; };
 		E9DBBAE62545A32600566953 /* gothom_tilde.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = gothom_tilde.c; sourceTree = "<group>"; };
@@ -166,6 +170,7 @@
 				E9B32B102545C7220055398C /* synth_swift.pd */,
 				E9C4B33C2523C17A00DEA99B /* envelope1.c */,
 				E9DBBAE62545A32600566953 /* gothom_tilde.c */,
+				E993814925489A9C005541D6 /* delayerr~.c */,
 				F28403062522449C00458C7E /* lbPDSwift-Bridging-Header.h */,
 				F28402BF252242E400458C7E /* AppDelegate.swift */,
 				F28403492522495500458C7E /* PDPatch.h */,
@@ -399,6 +404,7 @@
 				E9C4B33D2523C17A00DEA99B /* envelope1.c in Sources */,
 				E9DBBAE72545A32600566953 /* gothom_tilde.c in Sources */,
 				F28402C2252242E400458C7E /* SceneDelegate.swift in Sources */,
+				E993814D25489A9C005541D6 /* delayerr~.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -410,6 +416,7 @@
 				F284034B2522495500458C7E /* PDPatch.m in Sources */,
 				E9DBBAE82545A32600566953 /* gothom_tilde.c in Sources */,
 				F28402D7252242ED00458C7E /* lbPDSwiftTests.swift in Sources */,
+				E993814E25489A9C005541D6 /* delayerr~.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -421,6 +428,7 @@
 				F284034C2522495500458C7E /* PDPatch.m in Sources */,
 				E9DBBAE92545A32600566953 /* gothom_tilde.c in Sources */,
 				F28402E2252242ED00458C7E /* lbPDSwiftUITests.swift in Sources */,
+				E993814F25489A9C005541D6 /* delayerr~.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
