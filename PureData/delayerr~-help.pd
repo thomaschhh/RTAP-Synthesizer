@@ -1,0 +1,49 @@
+#N canvas 95 159 849 636 12;
+#X obj 200 373 *~;
+#X floatatom 199 158 0 0 0 0 - - -;
+#X obj 370 311 line~;
+#X msg 370 255 0.1 100;
+#X msg 389 280 0 100;
+#X text 427 308 envelope;
+#X text 427 321 generator;
+#X text 354 230 amplitude controls:;
+#X text 228 521 audio output;
+#X text 62 169 change frequency;
+#X text 64 155 incoming numbers;
+#X obj 199 187 osc~ 1000;
+#X text 272 187 <= creation argument sets initial frequency;
+#X obj 187 520 dac~;
+#X msg 535 68 \; pd dsp 0;
+#X text 608 33 <= turn DSP on;
+#X text 609 82 <= turn DSP off;
+#X obj 199 453 delayerr~ 200 0.6;
+#X text 447 256 <= click to start;
+#X text 447 281 <= click to stop;
+#X msg 536 20 \; pd dsp 1;
+#X obj 459 403 hsl 50 15 0 1 0 0 empty empty decay_factor -2 -8 0 10
+-262144 -1 -1 0 1;
+#X obj 312 403 hsl 80 15 0 1000 0 0 empty empty delay_time -2 -8 0
+10 -262144 -1 -1 0 1;
+#X text 219 401 0-1000 [ms];
+#X text 421 401 0-1;
+#X text 393 593 created by: Thomas Holz \, Tim Grund & Gonzalo Gallo-Robador
+;
+#X obj 48 15 delayerr~;
+#X text 119 14 - simple delay effect;
+#X text 45 53 The delayerr~ object takes an audio signal in the leftmost
+input and outputs it with a delay effect. The first and second argument
+set the initial delay time and the initial decay factor respectively.
+Both can be modified using the 2nd & 3rd inputs \, which take float
+messages.;
+#X text 336 452 <= creation arguments: 1 sets initial delay time \,
+2 sets initial decay factor;
+#X connect 0 0 17 0;
+#X connect 1 0 11 0;
+#X connect 2 0 0 1;
+#X connect 3 0 2 0;
+#X connect 4 0 2 0;
+#X connect 11 0 0 0;
+#X connect 17 0 13 0;
+#X connect 17 0 13 1;
+#X connect 21 0 17 2;
+#X connect 22 0 17 1;
