@@ -1,0 +1,57 @@
+#N canvas 203 159 1096 719 12;
+#X obj 122 261 osc~ 440;
+#X obj 122 428 gothom~, f 34;
+#X floatatom 161 287 5 0 1 0 - - -;
+#X floatatom 200 309 5 0 1 0 - - -;
+#X floatatom 239 331 5 0 1 0 - - -;
+#X floatatom 278 356 5 0 1 0 - - -;
+#X floatatom 326 379 5 0 1 0 - - -;
+#X floatatom 359 401 5 0 1 0 - - -;
+#X text 206 286 coefficient for combfilter 0;
+#X text 240 308 coefficient for combfilter 1;
+#X text 281 333 coefficient for combfilter 2;
+#X text 326 356 coefficient for combfilter 3;
+#X text 369 378 coefficient for all 3 allpasses;
+#X text 112 80 it consists of three allpassfilters in series \, which
+feed into 4 combfilters in parallel;
+#X text 652 284 6777;
+#X text 652 305 9789;
+#X text 652 326 8283;
+#X text 652 347 12801;
+#X text 652 389 1050;
+#X text 652 410 674;
+#X text 652 431 226;
+#X text 652 368 allpass delay lengths:;
+#X text 652 263 combfilter delay lengths:;
+#X obj 122 478 *~ 0.1;
+#X text 112 20 gothom is a mono schroeder reverberator loosely based
+on the set-up provided by https://ccrma.stanford.edu/~jos/pasp/Example_Schroeder_Reverberators.html
+;
+#X obj 122 540 dac~;
+#X obj 122 453 *~;
+#X obj 175 235 mtof;
+#X obj 140 160 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 175 160 metro 300;
+#X text 404 400 wet/dry mixing factor;
+#X text 112 114 !!!all float inputs get cut off at 1 to prevent accidental
+ear damage;
+#X obj 175 210 + 50;
+#X obj 175 185 random 30;
+#X connect 0 0 1 0;
+#X connect 1 0 26 0;
+#X connect 2 0 1 1;
+#X connect 3 0 1 2;
+#X connect 4 0 1 3;
+#X connect 5 0 1 4;
+#X connect 6 0 1 5;
+#X connect 7 0 1 6;
+#X connect 23 0 25 0;
+#X connect 23 0 25 1;
+#X connect 26 0 23 0;
+#X connect 27 0 0 0;
+#X connect 28 0 29 0;
+#X connect 28 0 26 1;
+#X connect 29 0 33 0;
+#X connect 32 0 27 0;
+#X connect 33 0 32 0;
