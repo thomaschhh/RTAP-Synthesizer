@@ -1,77 +1,87 @@
 /**
- * include the interface to Pd and the string library. The latter will
- * let us use the "memset" function
+ * @file delayerr~.c
+ * @brief Source code of the Pd external "delayerr~"
+ *
+ * This files contains both functions as well as structs.
+ *
+ * @author Tim-Tarek Grund
+ * @author Gonzalo Gallo
+ * @author Thomas Holz
  */
+
 #include "m_pd.h"
 #include "string.h"
 
 /**
- * define a new class
+ * preparing the class
+ * delayerr_tilde_class is a pointer to the new class
  */
 static t_class *delayerr_tilde_class;
 
 /**
- * this is the dataspace of our new object
- * the first element is the mandatory t_object
- * f_delay is the delay time [ms]
- * f_decay is the decay factor
- * f_position will be used to cycle through the buffer
- * *f_vec is a pointer to the beginning of the buffer vector
- * f is a dummy and is used to be able to send floats AS signals.
+ * @struct _delayerr_tilde
+ * @brief A structure of _delayerr_tilde
+ * @var _delayerr_tilde::t_object x_obj
+ * @var _delayerr_tilde::t_float delay
+ * @var _delayerr_tilde::t_float decay
+ * @var _delayerr_tilde::t_float f_position
+ * @var _delayerr_tilde::t_sample *f_vec
+ * @var _delayerr_tilde::t_sample f
+ * @var _delayerr_tilde::t_inlet *x_in2
+ * @var _delayerr_tilde::t_inlet *x_in3
+ * @var _delayerr_tilde::t_outlet *x_out
+ * @var _delayerr_tilde::t_delayerr_tilde
  */
 typedef struct _delayerr_tilde {
-  t_object  x_obj;
-  t_float f_delay;
-  t_float f_decay;
-  t_float f_position;
-  t_sample *f_vec;
-  t_sample f;
+  t_object  x_obj;      /**< is used to store internal object-properties (mandatory)*/
+  t_float f_delay;      /**< delay time in ms */
+  t_float f_decay;      /**< decay factor */
+  t_float f_position;   /**< used to cycle through the buffer */
+  t_sample *f_vec;      /**< pointer to the beginning of the buffer vector */
+  t_sample f;           /**< a dummy and is used to be able to send floats AS signals */
 
-  t_inlet *x_in2;
-  t_inlet *x_in3;
-  t_outlet*x_out;
-} t_delayerr_tilde;
+  t_inlet *x_in2;       /**< pointer for the inlet 2 XXXXX */
+  t_inlet *x_in3;       /**< pointer for the inlet 3 XXXXX */
+  t_outlet*x_out;       /**< pointer for the outlet XXXXX */
+} t_delayerr_tilde;     /**< structure t_delayerr_tilde is the data space of the class */
 
-/* define sample rate and maximal delay time*/
-#define SR 44.1
-#define MAX_DELAY 2000
-
+#define SR 44.1         // sample rate
+#define MAX_DELAY 2000  // max delay time
 
 /**
- * this is the perform routine
+ * @brief delayerr perform method <br>
+ * @param w data space as argument, COULD manipulate dataspace
+ * @var delayerr_tilde_perform::t_delayerr_tilde *x
+ * @var delayerr_tilde_perform::t_sample *in
+ * @var delayerr_tilde_perform::t_sample *out
+ * @var delayerr_tilde_perform::t_float f_delay
+ * @var delayerr_tilde_perform::t_sample *mybuffer
  */
 t_int *delayerr_tilde_perform(t_int *w)
 {
-  /* the first element is a pointer to the dataspace of this object */
-  t_delayerr_tilde *x = (t_delayerr_tilde *)(w[1]);
-  /* here is a pointer to the t_sample arrays that holds the input signal */
-  t_sample  *in =    (t_sample *)(w[2]);
-  /* here is a pointer to the t_sample arrays that holds the output signal */
-  t_sample  *out =    (t_sample *)(w[3]);
-  /* the in and out arrays a have the same length */
-  int          n =           (int)(w[4]);
+  t_delayerr_tilde *x = (t_delayerr_tilde *)(w[1]);  /**< first element is a pointer to the dataspace of this object */
+  t_sample *in  =    (t_sample *)(w[2]);             /**< pointer to the t_sample arrays that holds the input signal */
+  t_sample *out =    (t_sample *)(w[3]);             /**< pointer to the t_sample arrays that holds the output signal */
+  int      n    =    (int)(w[4]);                    /* the in and out arrays a have the same length */
+  t_float f_delay = (x->f_delay < 0) ? 0 : (x->f_delay > MAX_DELAY) ? MAX_DELAY : x->f_delay;  /**< get (and clip) the delay time */
+  t_float f_decay = (x->f_decay<0)?0.0:(x->f_decay>1)?1.0:x->f_decay;   /**< get (and clip) the decay factor */
 
- /* get (and clip) the delay time */
-  t_float f_delay = (x->f_delay < 0) ? 0 : (x->f_delay > MAX_DELAY) ? MAX_DELAY : x->f_delay;
-  
-  /* get (and clip) the decay factor */
-  t_float f_decay = (x->f_decay<0)?0.0:(x->f_decay>1)?1.0:x->f_decay;
+  int i;  /* a counter */
 
-  /* just a counter */
-  int i;
-
-  /* save the pointer to the beginning of buffer vector to an intern variable */
-  t_sample *mybuffer = x->f_vec;
+  t_sample *mybuffer = x->f_vec;    /**< save the pointer to the beginning of buffer vector to an intern variable */
 
   /* this is the main routine */
   for(i=0; i<n; i++)
     {
       // STORE-TO-PLAY: Mix sample with the one stored in the buffer at f_position
       out[i]=in[i] + f_decay*mybuffer[(int) x->f_position];
+        
       // STORE-TO-BUFFER: Record this new value in the buffer at f_position
       mybuffer[(int) x->f_position] = out[i];
+        
       // Increment buffer position wrapping around
       x->f_position = x->f_position + 1;
+        
       // If f_position reaches the top of the buffer, we set it back to 0 again
       if(x->f_position >= (f_delay * SR)) x->f_position = 0;
     }
@@ -82,8 +92,10 @@ t_int *delayerr_tilde_perform(t_int *w)
 
 
 /**
- * this is the DSP method
- * */
+ * @brief DSP method
+ * @param x pointer to the class-data space
+ * @param sp pointer to an array of signals
+ */
 void delayerr_tilde_dsp(t_delayerr_tilde *x, t_signal **sp)
 {
   /* add delayerr_tilde_perform() to the DSP-tree */
@@ -92,7 +104,8 @@ void delayerr_tilde_dsp(t_delayerr_tilde *x, t_signal **sp)
 }
 
 /**
- * this is the "destructor" of the class
+ * @brief destructor of delayerr
+ * @var delayerr_tilde_free::x
  */
 void delayerr_tilde_free(t_delayerr_tilde *x)
 {
@@ -109,7 +122,11 @@ void delayerr_tilde_free(t_delayerr_tilde *x)
 }
 
 /**
- * this is the "constructor" of the class
+ * @brief constructor of delayerr
+ * @param i_delay XXXXX
+ * @param i_decay XXXXX
+ * @var delayerr_tilde_new::x
+ * @return void *x
  */
 void *delayerr_tilde_new(t_floatarg i_delay, t_floatarg i_decay)
 {
@@ -141,7 +158,7 @@ void *delayerr_tilde_new(t_floatarg i_delay, t_floatarg i_decay)
 
 
 /**
- * this is the function-space of the class
+ * @brief functions space of the class
  */
 void delayerr_tilde_setup(void) {
   delayerr_tilde_class = class_new(gensym("delayerr~"),

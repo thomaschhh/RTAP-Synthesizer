@@ -7,7 +7,6 @@
  * @author Tim-Tarek Grund
  * @author Gonzalo Gallo
  * @author Thomas Holz
- * @bug Envelope randomly crashes.
  */
 
 /* -- Includes -- */
@@ -33,7 +32,7 @@ static t_class *envelope1_class;
  // @var _envelope1::t_float mode
  * @var _envelope1::t_float exp_setting
  * @var _envelope1::t_symbol *x_arrayname
- * @var _envelope1::t_word *x_vec
+ // @var _envelope1::t_word *x_vec
  * @var _envelope1::t_inlet *x_in1
  * @var _envelope1::t_inlet *x_in2
  * @var _envelope1::t_inlet *x_in3
@@ -44,7 +43,7 @@ static t_class *envelope1_class;
  * @var _envelope1::t_envelope1
  */
 typedef struct _envelope1 { //data space definition
-    t_object  x_obj;    /**< is used to store internal object-properties*/
+    t_object  x_obj;    /**< is used to store internal object-properties (mandatory)*/
     t_float attack;     /**< >0 in ms */
     t_float decay;      /**< >=0 in ms */
     t_float sustain;    /**< 1 - 0 */
@@ -62,7 +61,7 @@ typedef struct _envelope1 { //data space definition
     
     //t_outlet *f_out, *b_out;    /**< XXXXXX f_out comment is missing*/
     
-} t_envelope1; /**< structure t_envelope is the data space of the class */
+} t_envelope1;
 
 //method space
 /**
@@ -76,10 +75,10 @@ typedef struct _envelope1 { //data space definition
  */
 void envelope1_bang(t_envelope1 *x) //has data space as argument, COULD manipulate dataspace
 {
-    t_float attack_ms = x->attack;     /**< reads attack value from pointer x */
-    t_float decay_ms = x->decay;      /**<  reads decay value from pointer x */
-    t_float sustain = x->sustain;    /**<  reads sustain value from pointer x */
-    t_float release_ms = x->release;    /**<  reads release value from pointer x */
+    t_float attack_ms = x->attack;              /**< reads attack value from pointer x */
+    t_float decay_ms = x->decay;                /**<  reads decay value from pointer x */
+    t_float sustain = x->sustain;               /**<  reads sustain value from pointer x */
+    t_float release_ms = x->release;            /**<  reads release value from pointer x */
     t_float curve_faktor = x->exp_setting;      /**<  reads exp setting value from pointer x, faktor = 1 -> linear, faktor > 1 -> exponential */
     
     // cutting off a higher sustain than 1
@@ -89,10 +88,10 @@ void envelope1_bang(t_envelope1 *x) //has data space as argument, COULD manipula
         sustain = 0;
     };
     
-    t_float sr = 10000; /**< interne samplerate  */
-    t_float attack_sp = sr/1000 * attack_ms; /**< attack in number of samples  */
-    t_float decay_sp = sr/1000 * decay_ms; /**< decay in number of samples  */
-    t_float release_sp = sr/1000 * release_ms; /**< release in number of samples  */
+    t_float sr = 10000;                                 /**< internal samplerate  */
+    t_float attack_sp = sr/1000 * attack_ms;            /**< attack in number of samples  */
+    t_float decay_sp = sr/1000 * decay_ms;              /**< decay in number of samples  */
+    t_float release_sp = sr/1000 * release_ms;          /**< release in number of samples  */
     t_float length = attack_sp + decay_sp + release_sp; /**< total length of array in samples  */
     
     int vecsize;    /**< size of vector or array  */
@@ -171,7 +170,9 @@ void *envelope1_new(t_symbol *s)
 }
 
 
-
+/**
+ * @brief functions space of the class
+ */
 void envelope1_setup(void) { //generation of a new class
     envelope1_class = class_new(gensym("envelope1"), /* the object's name is "envelope1", class_new creates new class and returns pointer, name in gensym needs to be the one called in pd */
         (t_newmethod)envelope1_new, /* the object's constructor is "envelope1_new()" */
