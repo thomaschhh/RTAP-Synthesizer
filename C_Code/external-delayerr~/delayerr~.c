@@ -17,7 +17,7 @@ static t_class *delayerr_tilde_class;
  * f_decay is the decay factor
  * f_position will be used to cycle through the buffer
  * *f_vec is a pointer to the beginning of the buffer vector
- * f is a dummy and is used to be able to send floats AS signals.
+ * f is a dummy and is used to be able to send floats as signals.
  */
 typedef struct _delayerr_tilde {
   t_object  x_obj;
@@ -44,11 +44,11 @@ t_int *delayerr_tilde_perform(t_int *w)
 {
   /* the first element is a pointer to the dataspace of this object */
   t_delayerr_tilde *x = (t_delayerr_tilde *)(w[1]);
-  /* here is a pointer to the t_sample arrays that holds the input signal */
+  /* here is a pointer to the t_sample array that holds the input signal */
   t_sample  *in =    (t_sample *)(w[2]);
-  /* here is a pointer to the t_sample arrays that holds the output signal */
+  /* here is a pointer to the t_sample array that holds the output signal */
   t_sample  *out =    (t_sample *)(w[3]);
-  /* the in and out arrays a have the same length */
+  /* the in and out arrays have the same length */
   int          n =           (int)(w[4]);
 
  /* get (and clip) the delay time */ 
