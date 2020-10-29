@@ -213,11 +213,10 @@ typedef struct _gothom_tilde {
 
 /**
  * @brief constructor of gothom
- * @param f XXXXX
  * @var gothom_tilde_new::x
  * @return void *x
  */
-void *gothom_tilde_new(t_floatarg f)
+void *gothom_tilde_new()
 {
     t_gothom_tilde *x = (t_gothom_tilde *)pd_new(gothom_tilde_class);
     
@@ -280,7 +279,7 @@ t_int *gothom_tilde_perform(t_int *w)
     t_allpassF0    *ap0 =    (t_allpassF0 *)(w[8]);     /**< pointer to all-pass filter 0 in gothom tilde object */
     t_allpassF1    *ap1 =    (t_allpassF1 *)(w[9]);     /**< pointer to all-pass filter 1 in gothom tilde object */
     t_allpassF2    *ap2 =    (t_allpassF2 *)(w[10]);    /**< pointer to all-pass filter 2 in gothom tilde object */
-    int            n    =    (int)(w[11]);              // XXX block size
+    int            n    =    (int)(w[11]);              // block size
     
     int length_buff0  = sizeof(cf0->cf_buffer)/sizeof(cf0->cf_buffer[0]);  // length of first combfilter buffer
     int length_buff1  = sizeof(cf1->cf_buffer)/sizeof(cf1->cf_buffer[0]);  // length of second combfilter buffer
