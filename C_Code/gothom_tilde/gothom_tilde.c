@@ -173,26 +173,26 @@ typedef struct _gothom_tilde {
         
     t_float     a_coef;     /**< amount of all-pass filter*/
     
-    t_combF0    x_cspace0;  /**< XXXXX*/
-    t_combF0    *x_ctl0;    /**< XXXXX*/
+    t_combF0    x_cspace0;  /**< first combfilter*/
+    t_combF0    *x_ctl0;    /**< pointer to first combfilter*/
     
-    t_combF1    x_cspace1;  /**< XXXXX*/
-    t_combF1    *x_ctl1;    /**< XXXXX*/
+    t_combF1    x_cspace1;  /**< second combfilter*/
+    t_combF1    *x_ctl1;    /**< pointer to second combfilter*/
     
-    t_combF2    x_cspace2;  /**< XXXXX*/
-    t_combF2    *x_ctl2;    /**< XXXXX*/
+    t_combF2    x_cspace2;  /**< third combfilter*/
+    t_combF2    *x_ctl2;    /**< pointer to third combfilter*/
         
-    t_combF3    x_cspace3;  /**< XXXXX*/
-    t_combF3    *x_ctl3;    /**< XXXXX*/
+    t_combF3    x_cspace3;  /**< fourth combfilter*/
+    t_combF3    *x_ctl3;    /**< pointer to fourth combfilter*/
     
-    t_allpassF0 x_aspace0;  /**< XXXXX*/
-    t_allpassF0 *x_atl0;    /**< XXXXX*/
+    t_allpassF0 x_aspace0;  /**< first allpass filter*/
+    t_allpassF0 *x_atl0;    /**< pointer to first allpass filter*/
     
-    t_allpassF1 x_aspace1;  /**< XXXXX*/
-    t_allpassF1 *x_atl1;    /**< XXXXX*/
+    t_allpassF1 x_aspace1;  /**< second allpass filter*/
+    t_allpassF1 *x_atl1;    /**< pointer to second allpass filter*/
     
-    t_allpassF2 x_aspace2;  /**< XXXXX*/
-    t_allpassF2 *x_atl2;    /**< XXXXX*/
+    t_allpassF2 x_aspace2;  /**< third allpass filter*/
+    t_allpassF2 *x_atl2;    /**< pointer to third allpass filter*/
     
     t_sample    wet;        /**< amount of wet in signal */
     
@@ -282,16 +282,16 @@ t_int *gothom_tilde_perform(t_int *w)
     t_allpassF2    *ap2 =    (t_allpassF2 *)(w[10]);    /**< pointer to all-pass filter 2 in gothom tilde object */
     int            n    =    (int)(w[11]);              // XXX block size
     
-    int length_buff0  = sizeof(cf0->cf_buffer)/sizeof(cf0->cf_buffer[0]);  // XXXXX
-    int length_buff1  = sizeof(cf1->cf_buffer)/sizeof(cf1->cf_buffer[0]);  // XXXXX
-    int length_buff2  = sizeof(cf2->cf_buffer)/sizeof(cf2->cf_buffer[0]);  // XXXXX
-    int length_buff3  = sizeof(cf3->cf_buffer)/sizeof(cf3->cf_buffer[0]);  // XXXXX
-    int length_buff0a = sizeof(ap0->ap_buffer)/sizeof(ap0->ap_buffer[0]);  // XXXXX
-    int length_buff1a = sizeof(ap1->ap_buffer)/sizeof(ap1->ap_buffer[0]);  // XXXXX
-    int length_buff2a = sizeof(ap2->ap_buffer)/sizeof(ap2->ap_buffer[0]);  // XXXXX
+    int length_buff0  = sizeof(cf0->cf_buffer)/sizeof(cf0->cf_buffer[0]);  // length of first combfilter buffer
+    int length_buff1  = sizeof(cf1->cf_buffer)/sizeof(cf1->cf_buffer[0]);  // length of second combfilter buffer
+    int length_buff2  = sizeof(cf2->cf_buffer)/sizeof(cf2->cf_buffer[0]);  // length of third combfilter buffer
+    int length_buff3  = sizeof(cf3->cf_buffer)/sizeof(cf3->cf_buffer[0]);  // length of fourth combfilter buffer
+    int length_buff0a = sizeof(ap0->ap_buffer)/sizeof(ap0->ap_buffer[0]);  // length of first allpass filter buffer
+    int length_buff1a = sizeof(ap1->ap_buffer)/sizeof(ap1->ap_buffer[0]);  // length of second allpass filter buffer
+    int length_buff2a = sizeof(ap2->ap_buffer)/sizeof(ap2->ap_buffer[0]);  // length of third allpass filter buffer
     
-    int i, z0, z1, z2, z3, n_s0, n_s1, n_s2, n_s3;  //counter of blocksamples, counter of ringbuffer, difference between head and tail
-    int a0, a1, a2, m_s0, m_s1, m_s2;   // XXXXX
+    int i, z0, z1, z2, z3, n_s0, n_s1, n_s2, n_s3;  //counter of blocksamples, counter of ringbuffer for combfilters, difference between head and tail
+    int a0, a1, a2, m_s0, m_s1, m_s2;   // counter of blocksamples, counter of ringbuffer for allpass filters, difference between head and tail
     
     n_s0 = x->x_cspace0.cf_n_samps; //number of samples behind z
     n_s0 = (n_s0<0)?0:(n_s0>length_buff0-1)?length_buff0-1:n_s0;
