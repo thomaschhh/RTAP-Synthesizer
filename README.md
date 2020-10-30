@@ -1,5 +1,4 @@
 # Shimmer Synth 
-![Logo](https://github.com/thomaschhh/RTAP-Synthesizer/blob/master/Images/projectlogo.jpg?raw=true)
 
 This synthesizer was created during the 2nd semester in our Audio Communication and Technology studies in 2020 as a final project in the class Real-Time Audio Programming. The task consisted of creating a Pure Data patch and writing an external for it in C. 
 
