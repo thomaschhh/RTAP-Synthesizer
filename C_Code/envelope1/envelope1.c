@@ -48,10 +48,10 @@ typedef struct _envelope1 { //data space definition
     t_float decay;      /**< >=0 in ms */
     t_float sustain;    /**< 1 - 0 */
     t_float release;    /**< >0 in ms*/
-    //t_float mode;       /**<  1 = ar, 2 = adsr, 3 = adshr*/
+    
     t_float exp_setting;/**<  curvature of attack*/
     t_symbol *x_arrayname;      /**< save array name*/
-    //t_word *x_vec;              /**< vector*/
+    
     
     t_inlet *x_in1;     /**< pointer for the inlet 1 (attack) */
     t_inlet *x_in2;     /**< pointer for the inlet 2 (decay) */
@@ -59,7 +59,7 @@ typedef struct _envelope1 { //data space definition
     t_inlet *x_in4;     /**< pointer for the inlet 4 (release) */
     t_inlet *x_in5;     /**< pointer for the inlet 5 (exp_setting) */
     
-    //t_outlet *f_out, *b_out;    /**< XXXXXX f_out comment is missing*/
+    
     
 } t_envelope1;
 
@@ -135,12 +135,12 @@ void envelope1_bang(t_envelope1 *x) //has data space as argument, COULD manipula
         garray_redraw(a);           // redraw array
         
     }
-    //outlet_float(x->f_out, length);
+    
 }
 
 /**
  * @brief new envelope
- * @param s XXXX
+ * @param s array_name
  * @var envelope1_new::x
  * @return void *x
  */
@@ -160,11 +160,11 @@ void *envelope1_new(t_symbol *s)
     floatinlet_new(&x->x_obj, &x->decay);
     floatinlet_new(&x->x_obj, &x->sustain);
     floatinlet_new(&x->x_obj, &x->release);
-    //floatinlet_new(&x->x_obj, &x->mode);
+    
     floatinlet_new(&x->x_obj, &x->exp_setting);
     
-    //x->f_out = outlet_new(&x->x_obj, &s_float);
-    //x->b_out = outlet_new(&x->x_obj, &s_bang);
+    
+ 
     
   return (void *)x;
 }
@@ -179,11 +179,11 @@ void envelope1_setup(void) { //generation of a new class
         0,                          /* no special destructor */
         sizeof(t_envelope1),        /* the size of the data structure */
         CLASS_DEFAULT,              /* a normal pd object, graphical representation of object */
-        //A_DEFFLOAT,               //numeric object argument
+        
         A_DEFSYMBOL,                /* symbolic object argument */
                                     //no arguments need to be passed at creation time
         0);                         /* placeholder for something, zero ends argument list */
     class_addbang(envelope1_class, envelope1_bang); //add method space to class
-    //class_addfloat(envelope1_class, (t_method)tabwrite_float); // aus tabwrite
+    
     
 }
