@@ -26,7 +26,7 @@ As of today, the xy-pad that's implemented in the TouchOSC app is not yet implem
 - Port 8000 is used in the *dumpOSC* box in Pd. 
 - Port 9000 is used int the *connect* box in Pd.
 - Inside the **synth_osc.pd** patch, type in the iPad's IP address (*local IP address*) inside the *connect message box* (**1**).
-    - Click the *connect* message box in order to connect to the iPad.
+    - Click the *connect* message box to connect to the iPad.
     - Adjust the attack, decay, sustain, release sliders to your liking (**2**).
     - Do the same thing with the Fundamentals (**3**) as well as its Shimmer Strength / Shimmer Frequency (**4**).
     - Select the desired waveform (**5**), determine to what extend the notes should be spaced between left and right (**6**) adjust the the amount of reverb (**7**)  and delay (**8**), turn up the volume (**9**) and turn on the dsp (**10**). 
@@ -34,5 +34,4 @@ As of today, the xy-pad that's implemented in the TouchOSC app is not yet implem
     
 ![iPad App](https://github.com/thomaschhh/RTAP-Synthesizer/blob/master/Images/ipad.png?raw=true)
 
-***
     
