@@ -3,7 +3,7 @@
 
 This synthesizer was created during the 2nd semester in our Audio Communication and Technology studies in 2020 as a final project in the class Real-Time Audio Programming. The task consisted of creating a Pure Data patch and writing an external for it in C. 
 
-After we had decided to develop a synthesizer and create an app for the iPad, we found the option to use [TouchOSC](https://hexler.net/docs/touchosc-getting-started). 
+After we had decided to develop a synthesizer and create an app for the iPad, we found the option to use [](https://hexler.net/docs/touchosc-getting-started). 
 We implemented our own Pd patch [synth_osc.pd](https://github.com/thomaschhh/RTAP-Synthesizer/blob/master/PureData/synth_osc.pd) into the already existing [basic.pd](https://hexler.net/pub/touchosc/basic.pd) patch and found out that we had to work with [purr-data](https://agraef.github.io/purr-data/) instead of [Pd Vanilla](http://puredata.info/downloads/pure-data). The reason for this was the fact that we actually needed [Pd-Extended](http://puredata.info/downloads/pd-extended) for OSC to work which is no longer supported.
 
 For the iPad app, we adjusted the [swift patch](https://github.com/thomaschhh/RTAP-Synthesizer/blob/master/PureData/synth_swift.pd) a little bit for it to work with Swift.
